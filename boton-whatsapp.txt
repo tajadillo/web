@@ -1,0 +1,95 @@
+Botón de WhatsApp sin plugins en cualquier web Tutorial de cómo crear un botón de WhatsApp en HTML 
+sin plugins Ernesto Barrachina18 septiembre, 2020Desarrollo web2 Comentarios
+
+5 / 5 ( 6 votos ) En este post te explico cómo poner un botón de WhatsApp en tu web «sin plugins», 
+con un poquito de código HTML y sin necesidad de saber programar. Así, tus usuarios podrán 
+contactar contigo mediante un mensaje directo al móvil enviado desde tu página web,
+
+Por cierto, este tutorial sirve para integrar WhatsApp en todo tipo de páginas web, no es un 
+tutorial exclusivo para WordPress. Únicamente tienes que saber de qué va eso del HTML.
+
+Cómo poner un botón de WhatsApp en tu web con «la función clic para chatear» La función Clic para 
+Chatear, es la que nos permite chatear con un número de teléfono que no tengamos guardado en la 
+lista de contactos.
+
+Solo tenemos que crear un enlace conectado al dominio wa.me (propiedad de Facebook, a su vez 
+propietario de WhatsApp), que se utiliza para iniciar sus chats de mensajería instantánea sin 
+tener que abrir la aplicación, desde cualquier navegador y en forma de ventana.
+
+
+
+
+
+
+ Con esto, en cuanto cliquemos sobre el enlace HTML se abrirá un chat automáticamente. Y lo mejor 
+ es que también lo soporta WhatsApp Web. O sea que, si lo tienes instalado, podrás abrir WhatsApp 
+ desde el ordenador.
+
+ Para que funcione correctamente, el código HTML del enlace de WhatsApp, debe tener la sintaxis:
+
+ <a href="https://wa.me/ + número prefijo país "sin signo +" + número de teléfono">Anchor text</a> 
+ ¡Así de fácil! 😎
+
+ Para un ejemplo real con los datos:
+
+ Código del país: +34 (España). Teléfono: 555 00 55 00. El número de teléfono en formato 
+ internacional a incluir en el enlace sería: 34555005500.
+
+ Por lo que el vínculo para el chat de WhatsApp quedaría de la siguiente manera:
+
+ <a href="https://wa.me/34555005500">Anchor text</a> ➡ Aunque en algunos artículos verás que los 
+ links incluyen la url api.whatsapp.com, ese es el método antiguo y está en desuso.
+
+ Desde Noviembre de 2018, la manera correcta de implementar botones de WhatsApp es como te estoy 
+ explicando; con la url wa.me.
+
+ Crear enlace de WhatsApp con un mensaje personalizado Este mensaje se escribirá automáticamente 
+ como inicio de la conversación de WhatsApp.
+
+ El texto se inserta añadiendo al enlace que ya conocemos /?text=un-texto-personalizado, usando 
+ como espaciador de palabras los caracteres %20.
+
+ Por lo que el enlace a WhatsApp con un mensaje predeterminado será:
+
+ <a href="https://wa.me/34555005500/?text=tu%20texto%20personalizado">Anchor text</a> Con este 
+ mensaje escrito automáticamente, le ahorrarás al usuario tener que escribir frases del tipo: 
+ «Hola buenos días, estoy interesado/a en…» o cosas así.
+
+ Recuerda que para abrir el enlace una ventana nueva debes usar el atributo target="_blank".
+
+ El botón de WhatsApp Como en el caso de los enlaces de llamada telefónica, lo ideal en los 
+ hipervínculos de WhatsApp es que se identifiquen a la primera.
+
+ Para ello podemos utilizar un call to action tipo botón creado con CSS, una imagen de WhatsApp, o 
+ un icono de Font Awesome, que es lo que más me gusta.
+
+ El código CSS para un enlace de WhatsApp con Font Awesome V.6 sería algo así:
+
+ .fab { padding: 20px; font-size: 30px; width: 30px; text-align: center; text-decoration: none; 
+ margin: 5px 2px; border-radius: 50%;
+ }
+
+ .fab:hover { opacity: 0.7;
+ }
+
+ .fa-whatsapp { background: #45bbff; color: white;
+ }
+ Y el HTML del botón:
+
+ <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" 
+ target="_blank">Anchor text</a> Sin embargo, como no todo el mundo está dispuesto a implementar 
+ estas fuentes en su web, puede que la mejor solución sea un enlace a partir de la imagen del logo 
+ de WhatsApp.
+
+ En ese caso, el enlace que debes utilizar será:
+
+ <a href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank"> <img 
+     src="logo.png" width="50" height="50">
+      </a> Así que si quieres pedirme el presupuesto de una página web, mi botón de WhatsApp 
+      quedaría:
+
+
+      Al que recomiendo que le añadas algún efecto :hover para que tenga alguna animación por 
+      pequeña que sea cuando pongas el cursor encima ¿Qué tal algo como opacity:0.5?
+
+      Solo me queda decirte que si no tienes botón de WhatsApp en tu web es porque no quieres

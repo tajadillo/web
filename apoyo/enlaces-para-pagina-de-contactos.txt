@@ -1,0 +1,25 @@
+enlace a whatsapp
+
+https://wa.me/message/interesado%20en%20servicios
+
+
+
+enlace para llamadas por telefono
+
+tel:12345667
+
+
+
+enlace para mandar e-mail
+
+mailto:correo@correo.correo
+
+si quieres agregar sujeto al mensaje seria
+
+mailto:correo@correo.correo?subject=interesado%20en%20servicios
+
+
+
+enlace para telegram
+
+https://t.me/tunombredeusuario
