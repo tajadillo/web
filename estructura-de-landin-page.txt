@@ -1,0 +1,47 @@
+Que?
+
+-Titulo
+
+-Subtitulo
+
+-Video
+
+-Boton
+
+
+
+Por que?
+
+-Descripsion
+
+-Beneficios
+
+-Para quien
+
+
+
+Como?
+
+-Como funciona
+
+-Cuales son los pasos
+
+-Presio
+
+-Prueba social
+
+-Resumen
+
+-Boton
+
+-Preguntas frecuentes
+
+
+
+Footer
+
+-Avisos y politicas
+
+
+
+Poner codigos de seguimiento
