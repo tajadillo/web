@@ -1,0 +1,566 @@
+body {
+	background-image: url(../medios/interestelar.gif);
+	background-size: 100vw 100vH;
+	background-attachment: fixed;
+	margin: 0;
+	font-family: arial, times, serif;
+	color: #ff0;
+	font-size: 1.2rem;
+	line-height: 1.6em;
+	}
+
+
+h1 {
+	font-size: 2rem;
+	line-height: 1.3em;
+	}
+
+p{
+	margin-botton: 1.6em;
+	align-items: center;
+}
+
+a{
+	text-decoration-line: none;
+	color: #fff;
+}
+
+
+
+
+ul.li {
+	text-decoration-line: none;
+	align-items: baseline}	
+
+.container {
+	width: 85%;
+	max-width: 850px;
+	margin: 0  auto;
+	}
+
+
+.container2 {
+	width: 85%;
+	max-width: 850px;
+	margin: 0  auto;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	padding: 0.2rem 0;
+	text-align: left;
+	margin-top: 6rem;
+	border-radius: 18px;
+	}
+
+
+.container3 {
+	width: 85%;
+	max-width: 850px;
+	margin: 0  auto;
+	color: #ff0;
+	background: rgba(0,0,0,0.5);
+	padding: 0.2rem 0;
+	text-align: left;
+	margin-top: 6rem;
+	border-radius: 18px;
+	}
+
+
+
+.container5 {
+	width: 85%;
+	max-width: 850px;
+	margin: 0  auto;
+	color: #f00;
+	background: rgba(0,0,0,0.5);
+	padding: 0.2rem 0;
+	text-align: left;
+	margin-top: 6rem;
+	border-radius: 18px;
+	}
+
+
+.container8 {
+	width: 85%;
+	max-width: 850px;
+	margin: 0  auto;
+	color: #ff0;
+	background: rgba(0,0,0,0.1);
+	padding: 0.2rem 0;
+	text-align: left;
+	margin-top: 6rem;
+	}
+
+
+/* blog */
+.post-list{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    pad: 30px 30px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* imagenes del blog */
+
+.post-img-1{
+    background: url(../medios/blog/por-que-lo-haces.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-2{
+    background: url(../medios/blog/reglamento.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-3{
+    background: url(../medios/blog/bolso-baile.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-4{
+    background: url(../medios/blog/financiar-grupo.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-5{
+    background: url(../medios/blog/ganar-publico.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-6{
+    background: url(../medios/blog/ropa-bailar.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-7{
+    background: url(../medios/blog/tipos-coreografos.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-8{
+    background: url(../medios/blog/vivir-danza.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-9{
+    background: url(../medios/blog/pedir-testimonios-que-vendan-por-ti.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-10{
+    background: url(../medios/blog/cobrar-por-adelantado\ .jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-11{
+    background: url(../medios/blog/metodo-trabajo.png);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.post-img-12{
+    background: url(../medios/blog/presupuesto.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+/* fin imagenes del blog */
+
+.post{
+    box-shadow: 0 1px 6px 1px rgba(229, 253, 12, 0.0);
+    overflow: hidden;
+    transition: .1s;
+    border-radius: 20px;
+}
+
+.post:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 1px 14px 2px rgba(229, 253, 12, .15);
+    border-radius: 20px;
+}
+
+.post-header{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post:hover .post-img-1,
+.post:hover .post-img-2,
+.post:hover .post-img-3{
+    transform:scale(1.1);
+}
+
+.post-body{
+    padding: 15px;
+    text-align: center;
+}
+
+.post-body span{
+    display: inline-block;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-body h2{
+    margin-bottom: 15px;
+}
+
+.post-body p{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.post-body .post-link{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: #2b6ebb;
+    color: #fff;
+     width: 50%;
+     margin: auto;
+     border-radius: 20px;
+     box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .1);
+     transition: .2s;
+}
+
+.post-body .post-link:hover{
+    background: #5b9ebb;
+    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 840px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* fin blog */
+
+
+
+
+
+
+.top-banner{
+	background-color: rgba(255,255,255,0.25);	
+}
+
+
+.top-banner a{
+	color: ff0;
+	text-decoration: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+	background: #000;
+	color: #ff0;
+	padding: 1rem 0;
+	}
+
+.header a{
+	color: ff0;
+	text-decoration: none;
+	}
+
+.logo-nav-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	}
+
+.logo {
+	letter-spacing: 15px;
+	font-size: 1.4em;
+	}
+
+.menu-icon {
+	display: none;
+	}
+
+.navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+
+
+	.navigation ul li{
+		display: block;
+	}
+
+	
+	.navigation ul li a{
+		display: block;
+		padding: 0.5rem 1rem;
+	}
+
+
+.footer {
+	background: rgba(0,0,0,0.0);
+	padding: 0.2rem 0;
+	text-align: center;
+	margin-top: 6rem;
+	}
+.main{
+	padding-top: 8rem;
+	}
+
+
+
+.btn {
+
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 10px;
+	border-radius: 9px;
+	text-shadow: 0 2px 0 rgba(255,255,255,0.3);
+	box-shadow: 0 7px 7px rgba(0,0,0,0.3);
+	align:"center"
+	}
+
+.btn-green {
+	background-color: #3cc93f;
+	color: #fff;
+	}
+
+.btn-green:hover {
+	background-color: #37b839;
+	}
+
+
+.btn-green:active {
+	background-color: #29962a;
+	}
+
+
+
+
+.redondorichard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	}
+
+
+
+
+.logo-diaspora-cabecera {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	align:"center"
+	}
+
+
+
+
+.logo-foter {
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+	flex-wrap: wrap;
+	}
+
+
+
+
+
+
+form {
+	width: 450px;
+	margin: auto;
+	background: rgba(0,0,0,0.5);
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	border-radius: 18px;
+}
+
+
+
+
+
+
+
+
+
+header{
+	background: #000000;
+	display: flex;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	}
+
+
+header ul{
+	display: flex;
+	list-style: none;
+	}
+
+header ul li a{
+	display: block;
+	padding: 20px 20px;
+	color: #ff0;
+	text-decoration: none;
+	}
+
+header ul ul{
+	position: absolute;
+	top: 90px;
+	display: block;
+	background: #000000;
+	transform: translateX(10%);
+	opacity: 0;
+	transition: all .6s;
+	}
+
+header ul li a{
+	transition: all 1s;
+	}
+
+header ul li a:hover{
+	transform: translateY(10px);
+	opacity: 0;
+	}
+
+
+header ul li:hover ul{
+	opacity: 1;
+	transform: translateX(0%);
+	}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+	.menu-icon {
+		display: block;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+	}
+	
+	.navigation {
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.navigation ul {
+		display: none;
+	}
+
+
+	.navigation ul.show {
+		display: block;
+	}
+	
+	.navigation ul li{
+		display: block;
+		transform: translateX(10%);
+
+	}
+
+	
+	.navigation ul li a{
+		top: 0px;
+		display: block;
+		padding: 0.5rem 0;
+		width: 1500px;
+		right: 5px;   		
+	}
+
+
+
+}

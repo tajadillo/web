@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php -->
+<html lang="es" dir="ltr" class=" applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers audio canvas canvastext video webgl cssgradients opacity multiplebgs rgba inlinesvg hashchange hsla supports svgclippaths smil generatedcontent fontface textshadow cssanimations backgroundsize bgsizecover borderimage borderradius boxshadow flexbox csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside cssfilters cssreflections csstransforms csstransitions csstransforms3d indexeddb indexeddb-deletedatabase"><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cómo enviar un formulario por e-mail usando PHP</title>
+    <script src="./Cómo enviar un formulario por e-mail usando PHP_files/osd.js"></script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/ca-pub-3295671961621260.js"></script><script id="facebook-jssdk" src="./Cómo enviar un formulario por e-mail usando PHP_files/xfbml.ad.js"></script><script type="text/javascript" async="" src="./Cómo enviar un formulario por e-mail usando PHP_files/ga.js"></script><script async="" src="./Cómo enviar un formulario por e-mail usando PHP_files/gpt.js"></script><script type="text/javascript">$ccmprms={"user":{"connected":false,"nick":"","fbid":null,"has_oas":true},"app":{"locale":"es_ES","site_url":"es.ccm.net","main_cat":"parallaxeinfeed","is_portable":false},"facebook":{"enabled":true,"appid":"375175752544928","url":"https:\/\/www.facebook.com\/es.ccm.net","autologin":true,"scope":"email,user_birthday,publish_actions,user_website"}}</script><meta http-equiv="Content-Language" content="es">
+<meta property="og:image" content="http://static.commentcamarche.net/es.ccm.net/faq/images/ZousgBGi-php.png">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Cuando estamos trabajando en un sitio web, muchas veces existe la necesidad de proveer al usuario con un formulario de contacto para hacernos llegar sus consultas, comentarios u otro tipo de información. En este truco te mostramos un ejemplo de cómo...">
+<meta property="og:title" content="Cómo enviar un formulario por e-mail usando PHP">
+<meta property="og:url" content="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cómo enviar un formulario por e-mail usando PHP">
+<meta name="twitter:description" content="Cuando estamos trabajando en un sitio web, muchas veces existe la necesidad de proveer al usuario con un formulario de contacto para hacernos llegar sus consultas, comentarios u otro tipo de información. En este truco te mostramos un ejemplo de cómo...">
+<meta name="twitter:site" content="ccm_es">
+<meta name="twitter:image" content="http://static.commentcamarche.net/es.ccm.net/faq/images/ZousgBGi-php.png">
+<meta name="description" content="Cuando estamos trabajando en un sitio web, muchas veces existe la necesidad de proveer al usuario con un formulario de contacto para hacernos llegar sus consultas, comentarios u otro tipo de información. En este truco te mostramos un ejemplo de cómo...">
+<meta property="og:site_name" content="CCM">
+<meta property="fb:admins" content="392815744108612"><script>_logmatic=[],logmatic={log:function(){_logmatic.push(Array.prototype.slice.call(arguments))}};var Asl=function(e){this.conf=e,this.init()};Asl.prototype={conf:{},writers:{},isZen:!1,loaded:null,state:{net:null,dom:null},positionsToWrite:[],positionsLoaded:[],eventPushed:{},callbackFunc:{firstLoad:[],slotLoaded:[],allSlotLoaded:[]},init:function(){var e=this;this.styleObserver(function(t){e.state.dom=t,t&&(e.loaded=0,e.execCallbackFunc("firstLoad",0))}),this.sourceObserver(function(t){e.state.net=t,t&&(e.loaded=0,e.execCallbackFunc("firstLoad",0))});var t=this.getScreenName();for(var n in this.conf.positions){var o=this.getParametersForPosition(n,t);o!==!1&&this.positionsToWrite.push(n)}return this.pushCallbackFunc("firstLoad",this.pushEvent),(/www\.commentcamarche\.net/.test(document.location.hostname)||/www\.qlf\.commentcamarche\.net/.test(document.location.hostname)||/journaldesfemmes\.com/.test(document.location.hostname)&&"cuisine"===location.hostname.split(/\./)[0]||/acceptance/.test(location.search))&&this.initAcceptanceObserver(),"undefined"==typeof _eStat_Whap_loaded&&!function(e){null===e.domain.match(/^m\..*$/i)&&null!==e.domain.match(/(journaldunet|linternaute|journaldesfemmes|copainsdavant)\.com$/i)&&!function(t,n,o,i,s,a){n&&n("DOMContentLoaded",function(){!i&&(i=s),a()},!1),t=setInterval(function(){(i||"complete"==e.readyState)&&(!i&&a(),i=s,clearInterval(t))},o)}(0,window.addEventListener,100,!1,!0,function(){if("undefined"==typeof _eStat_Loaded?0:!_eStat_Loaded){for(var t=e.getElementsByTagName("script"),n=t.length,o=0,i=e.createElement("script"),s=function(){"undefined"!=typeof eStatWhap&&(eStatWhap.serial("800000206960"),eStatWhap.send())};n>o;++o)if(null!==t[o].src.match(/whap\.js/))return;i.type="text/javascript",i.async=!0,"undefined"!=typeof i.onload?i.onload=s:i.onreadystatechange=function(){("loaded"==this.readyState||"complete"==this.readyState)&&setTimeout(s,200)},i.src="https://w.estat.com/js/whap.js",e.getElementsByTagName("head")[0].appendChild(i)}})}(document),"undefined"==typeof window._comscore&&(window._comscore=window._comscore||[],window._comscore.push({c1:"2",c2:"13184767"}),this.getScript(("https:"===document.location.protocol?"https://sb":"http://b")+".scorecardresearch.com/beacon.js")),this.initZen()},pushEvent:function(e){if(this.eventPushed!==!0){if("undefined"==typeof _gaq&&"undefined"==typeof gaCCMBG)return void setTimeout(function(){asl.pushEvent(e)},50);var t="fail";1===e?t="success":0===e&&(t="fail"),"undefined"!=typeof _gaq&&_gaq.push(["_trackEvent","oas_loaded",t,null,null,!0]),"undefined"!=typeof gaCCMBG&&gaCCMBG("send",{hitType:"event",eventCategory:"oas_loaded",eventAction:t,nonInteraction:!0}),this.eventPushed=!0}},sendToGA:function(e,t,n){var o=function(){"undefined"!=typeof _gaq||"undefined"!=typeof gaCCMBG?("undefined"!=typeof _gaq&&_gaq.push(["_trackEvent",e,t,n,void 0,!0]),"undefined"!=typeof gaCCMBG&&gaCCMBG("send","event",e,t,n,void 0,!0)):setTimeout(o,100)};return o(),this},sendToGAOnce:function(e,t,n){"undefined"==typeof this.sendToGAOnce.sent&&(this.sendToGAOnce.sent={});var o=[e,t,n].join(":");return"undefined"==typeof this.sendToGAOnce.sent[o]&&(this.sendToGAOnce.sent[o]=!0,this.sendToGA(e,t,n)),this},initAcceptanceObserver:function(){return this.inAcceptance?this.sendToGAOnce("global","acceptance","accepted"):this.scrollObserver().clickObserver(),this},inAcceptance:/ccmbgoic=/.test(document.cookie),on:function(e,t){return document.addEventListener?document.addEventListener(e,t):document.attachEvent&&("scroll"===e?window.attachEvent("on"+e,t):document.attachEvent("on"+e,t)),this},off:function(e,t){return document.removeEventListener?document.removeEventListener(e,t):document.detachEvent&&("scroll"===e?window.detachEvent("on"+e,t):document.detachEvent("on"+e,t)),this},getScrollY:function(){return void 0!==window.pageYOffset?window.pageYOffset:"undefined"!=typeof document.documentElement.scrollTop?document.documentElement.scrollTop:"undefined"!=typeof document.body.scrollTop?document.body.scrollTop:0},onLoad:function(e){var t=window.onload;return window.onload=function(){e.call(this),"function"==typeof t&&t.call(this)},this},closestByNames:function(e,t){if(e.nodeName){for(var n=0,o=t.length;o>n;++n)if(t[n].toLowerCase()===e.nodeName.toLowerCase())return e;if(e.parentNode)return this.closestByNames(e.parentNode,t)}return!1},closestByClassNames:function(e,t){if(e.nodeName&&e.className){for(var n=e.className.split(/ /),o=0,i=t.length,s=n.length,a=0;i>o;++o)for(a=0;s>a;++a)if(t[o]===n[a])return e;if(e.parentNode)return this.closestByClassNames(e.parentNode,t)}return!1},clickObserver:function(){var e=this,t=function(n){var o=n.target||n.srcElement,i=e.closestByNames(o,["a","button"]);i&&(e.closestByClassNames(o,["ba"])||"undefined"!=typeof i.href&&/twitter|facebook|pinterest|google/.test(i.href)||e.sendToGAOnce("global","acceptance","accepted").off("click",t))};return this.on("click",t)},scrollObserver:function(){var e=this,t=this.getScrollY(),n=function(){t=e.getScrollY()},o=function(){e.scrollObserver._scrolled||(e.sendToGAOnce("global","scrolled","scrolled").scrollObserver._scrolled=!0),!e.scrollObserver._scrolledMin&&Math.abs(e.getScrollY()-t)>20&&(e.sendToGAOnce("global","acceptance","accepted").off("scroll",o).scrollObserver._scrolledMin=!0)};return this.on("scroll",o).on("DOMContentLoaded",n).onLoad(n)},pushCallbackFunc:function(e,t){return"function"==typeof t&&"undefined"!=typeof this.callbackFunc[e]&&this.callbackFunc[e].push(t),this},execCallbackFunc:function(e,t){if("[object Array]"===Object.prototype.toString.call(this.callbackFunc[e]))for(var n=0,o=this.callbackFunc[e].length;o>n;n++)"function"==typeof this.callbackFunc[e][n]&&this.callbackFunc[e][n](t);return this},initZen:function(){for(var e=document.cookie.split("; "),t=null,n=0;n<e.length;n++)if(t=e[n].split("="),"asl_zen"===t[0])return this.isZen=!0,this;if(window.location.search.search(/utm_medium=(e)?mail/gi)>0){var o=new Date;o.setTime(o.getTime()+5*6e4),document.cookie="asl_zen=1; expires="+o.toUTCString()+"; path=/",this.isZen=!0}return this},getScreenWidth:function(){var e=document.documentElement;return"undefined"!=typeof e&&"undefined"!=typeof e.clientWidth&&0!==e.clientWidth?e.clientWidth:window.screen.width},getScreenName:function(){var e,t=this.getScreenWidth();for(e in this.conf.screens){var n=this.conf.screens[e];if(!n.min&&!n.max)return e;if(n.min&&n.max){if(t>=n.min&&t<=n.max)return e}else{if(n.min&&t>n.min)return e;if(n.max&&t<n.max)return e}}},sourceObserver:function(e){if("undefined"==typeof MutationObserver)return void e.call(!1,!1);var t=document.getElementsByTagName("html")[0],n={childList:!0,attributes:!0,characterData:!0,subtree:!0},o=0,i=new MutationObserver(function(t){t.forEach(function(t){var n,s="";if("childList"===t.type&&t.addedNodes.length&&(n=t.addedNodes[0],"undefined"!=typeof n.src&&(s=n.nodeName,"SCRIPT"===s))){var a=t.addedNodes[0].onerror;t.addedNodes[0].onerror=function(){2===++o&&(i.disconnect(),e(!0)),"function"==typeof a&&a.apply(this,Array.prototype.slice.call(arguments))}}})});i.observe(t,n)},styleObserver:function(e){if("undefined"==typeof MutationObserver)return void e.call(!1,!1);var t=document.createElement("div"),n=document.getElementsByTagName("html")[0],o={},i={childList:!0,attributes:!0,characterData:!0,subtree:!0},s=!1,a=new MutationObserver(function(t){t.forEach(function(t){"style"===t.attributeName&&(a.disconnect(),"none"===t.target.style.display&&!e.called&&(e.called=!0)&&e.call(o,!0))})}),c=new MutationObserver(function(n){n.forEach(function(n){if("childList"===n.type&&"HTML"===n.target.nodeName&&n.addedNodes.length&&"BODY"===n.addedNodes[0].nodeName&&!s){s=!0,n.addedNodes[0].appendChild(t);var i=getComputedStyle(t);if(o=n.addedNodes[0],c.disconnect(),/Trident/.test(navigator.userAgent))return void setTimeout(function(){!e.called&&(e.called=!0)&&e.call(o,!1)},50);setTimeout(function(){n.addedNodes[0].removeChild(t)},60),a.disconnect(),e.call(n.addedNodes[0],"none"===i.getPropertyValue("display")||/url\("about:abp/.test(i.getPropertyValue("-moz-binding")))}})});t.id="mutant",t.className="textAd AdBox pub_300x250 pub_300x250m pub_728x90 text-ad textAd Ligatus text_ad text_ads text-ads text-ad-links",t.style.display="block",c.observe(n,i),a.observe(t,i)},getClientByScreen:function(e){return this.conf.screens[e].client},isInsvePosition:function(e){return this.isZen&&this.conf.positions[e].insve===!0},getParametersForPosition:function(e,t){return this.isInsvePosition(e)?!1:this.conf.positions[e].mapping&&this.conf.positions[e].mapping[t]?this.conf.positions[e].mapping[t]:!1},setLoadedPosition:function(e,t){return this.execCallbackFunc("slotLoaded",t),this.positionsLoaded.indexOf(e)!==-1?this:(this.positionsLoaded.push(e),this.isLoaded()===!0&&this.initPositionsLoaded().execCallbackFunc("allSlotLoaded",t),this)},isLoaded:function(){return this.positionsToWrite.length===this.positionsLoaded.length},initPositionsLoaded:function(){return this.positionsLoaded=[],this},write:function(e){if(this.conf.positions[e]){var t=this.getScreenName(),n=this.getParametersForPosition(e,t);if(n!==!1)return this.notice&&this.notice(e),this.writers[this.getClientByScreen(t)](e,n)}},getQuery:function(){var e=[];return"object"==typeof this.conf.keywords&&(e=this.conf.keywords),this.isZen&&e.push("noinsve"),e},getKeywords:function(){var e=[];"object"==typeof this.conf.keywords&&(e=this.conf.keywords),this.isZen&&e.push("noinsve");for(var t in e)e.hasOwnProperty(t)&&(e[t]=e[t].replace(/keyword=/,""));return e},pushKeyword:function(e){this.conf.keywords.push(e)},getScript:function(e,t,n){var o=document.createElement("script");o.type="text/javascript",o.async=!0,"function"==typeof t&&("undefined"!=typeof o.onload?(o.onload=t,o.onerror=n):o.onreadystatechange=function(){if(/loaded|complete/.test(this.readyState)){"complete"===o.readyState&&t();var e=o.readyState;o.children,"loaded"===e&&"loading"===o.readyState&&n()}}),o.src=e,document.getElementsByTagName("head")[0].appendChild(o)}};
+Asl.prototype.inject=function(from){var match=from.match(/<!--\[(([^ ]+)=(.*))\]-->/);null!==match&&("undefined"!=typeof JSON&&"undefined"!=typeof JSON.parse?window[match[2]]=JSON.parse(match[3]):eval(""+match[2]+"="+match[3]+";"))};
+Asl.prototype.writers.dfp = function (pos, params) {googletag.cmd.push(function() { googletag.display('ba_'+pos.toLowerCase()); });};asl = new Asl({screens: {"mobile":{"max":480,"client":"dfp"},"tablet":{"min":480,"max":1024,"client":"dfp"},"desktop":{"min":1024,"client":"dfp"}},positions: {"Top":{"insve":false,"mapping":{"mobile":{"size":[[320,50]],"fullName":"TopBanner"},"tablet":{"size":[[728,90]],"fullName":"TopBanner"},"desktop":{"size":[[1000,250],[1000,90],[728,90]],"fullName":"TopBanner"}}},"Top1":{"insve":false,"mapping":[]},"Right":{"insve":false,"mapping":{"mobile":{"size":[[300,600]],"fullName":"TopRight"},"tablet":{"size":[[300,600],[300,250]],"fullName":"TopRight"},"desktop":{"size":[[300,600],[300,900],[300,250],[300,1050]],"fullName":"TopRight"}}},"Position1":{"insve":false,"mapping":[]},"Position2":{"insve":false,"mapping":{"mobile":{"size":[[300,600],[300,250]],"fullName":"BottomRight"},"tablet":{"size":[[300,600],[300,250]],"fullName":"BottomRight"},"desktop":{"size":[[300,600],[300,250]],"fullName":"BottomRight"}}},"Position3":{"insve":false,"mapping":[]},"Position4":{"insve":false,"mapping":[]},"x01":{"insve":false,"mapping":[]},"x02":{"insve":true,"mapping":{"mobile":{"size":[[1,1]],"fullName":"BackgroundSkin"},"tablet":{"size":[[1,1],[1024,768]],"fullName":"BackgroundSkin"},"desktop":{"size":[[1,1],[1024,768]],"fullName":"BackgroundSkin"}}},"TopLeft":{"insve":true,"mapping":{"mobile":{"size":[[1,1]],"fullName":"Overlay"},"tablet":{"size":[[1,1],[1024,768]],"fullName":"Overlay"},"desktop":{"size":[[1,1],[1024,768]],"fullName":"Overlay"}}},"Infeed":{"insve":false,"mapping":[]},"Middle":{"insve":false,"mapping":[]},"Intext":{"insve":false,"mapping":{"mobile":{"size":[[640,360]],"fullName":"BodyInText"},"tablet":{"size":[[640,360]],"fullName":"BodyInText"},"desktop":{"size":[[640,360],[640,1]],"fullName":"BodyInText"}}}},clients: {"dfp":{"clientId":"62615953\/CCM_LATAM","lang":"es","theme":"hightech","loaded":2}},sitepage: 'es_kioskea_hightech/faq',keywords: ["keyword=parallaxeinfeed","keyword=programacion","keyword=lenguajes","keyword=faq-10887","Faq"]});OAS_AD = function (pos) {asl.write(pos);};var slotAccessList={},googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(e){var t=document.createElement("script");t.async=!0;var o=e.conf.clients.dfp,a=e.getScreenName();if("dfp"===e.getClientByScreen(a)){e.conf.clients.dfp.addPosition=function(e,t,a,g,s){"undefined"==typeof o.separator&&(o.separator="//");var n="/"+o.clientId+o.separator+a,i=googletag.defineSlot(n,t,"ba_"+e.toLowerCase()).setTargeting("Pos",[a]).addService(googletag.pubads()).setCollapseEmptyDiv(!0,!0);g[i.getAdUnitPath()]=e,slotAccessList[e]=i,s===!0&&(googletag.display("ba_"+e.toLowerCase()),googletag.pubads().refresh([i]))},t.src="//www.googletagservices.com/tag/js/gpt.js";var g=document.getElementsByTagName("script")[0];g.parentNode.insertBefore(t,g),googletag.cmd.push(function(){var t={};googletag.pubads().setTargeting("Langue",[o.lang]).setTargeting("Section",e.getQuery()).setTargeting("Sitepage",[e.conf.sitepage]).setTargeting("Theme",[o.theme]);for(var g in e.conf.positions){var s=e.getParametersForPosition(g,a);s!==!1&&e.conf.clients.dfp.addPosition(g,s.size,s.fullName,t,!1)}googletag.pubads().addEventListener("slotRenderEnded",function(o){e.setLoadedPosition(t[o.slot.getAdUnitPath()],{event:o})}),googletag.enableServices()})}}(asl);</script><script type="text/javascript" async="" src="./Cómo enviar un formulario por e-mail usando PHP_files/beacon.js"></script><script>if (typeof OAS_RICH != 'undefined') { asl.inject(OAS_RICH.toString()); } </script><link rel="canonical" href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php">
+<link href="http://es.ccm.net/rss/" rel="alternate" title="Actualidades" type="application/rss+xml">
+<link rel="icon" href="http://estatic.ccmbg.com/es.ccm.net/favicon.ico?1"><script src="./Cómo enviar un formulario por e-mail usando PHP_files/jquery.min.js" type="text/javascript"></script>
+<script src="./Cómo enviar un formulario por e-mail usando PHP_files/main" type="text/javascript"></script><link href="./Cómo enviar un formulario por e-mail usando PHP_files/css" rel="stylesheet" type="text/css" media="screen">
+<link href="./Cómo enviar un formulario por e-mail usando PHP_files/componentsCCM" rel="stylesheet" type="text/css" media="screen">
+<link href="./Cómo enviar un formulario por e-mail usando PHP_files/main(1)" rel="stylesheet" type="text/css" media="all"><script type="text/javascript">
+    var _gaq = _gaq || [],
+        _custom_var_tech = _custom_var_tech || [];
+    if (typeof asl == 'object' && typeof asl.loaded == 'number') {
+        _custom_var_tech.push('oas' + asl.loaded);
+    }
+
+            _gaq.push(['_setAccount', 'UA-6560367-3']);
+                    _gaq.push(['_setCustomVar', 1, 'faq', 'lenguajes-1', 3]);
+            _gaq.push(['_setCustomVar', 4, 'tech/all', _custom_var_tech.join('|'), 3]);
+                        _gaq.push(['_trackPageview']);
+
+    if ((typeof ua_supp) != 'undefined') {
+        for (var key in ua_supp) {
+            if (ua_supp.hasOwnProperty(key)) {
+                _gaq.push([key+'._setAccount', ua_supp[key]]);
+                _gaq.push([key+'._setCustomVar', 1, 'faq', 'lenguajes-1', 3]);
+                _gaq.push([key+'._setCustomVar', 4, 'tech/all', _custom_var_tech.join('|'), 3]);
+                                                _gaq.push([key+'._trackPageview']);
+            }
+        }
+    }
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="./Cómo enviar un formulario por e-mail usando PHP_files/pubads_impl_89.js" async=""></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-4/html/container.html"><script src="./Cómo enviar un formulario por e-mail usando PHP_files/js.php" type="text/javascript"></script><link href="./Cómo enviar un formulario por e-mail usando PHP_files/css.php" rel="stylesheet" media="all" type="text/css"></head><body class="app--rwd ">
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=375175752544928";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="ba_x02" class="ba x02" style="display: none;"><script>OAS_AD('x02');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//BackgroundSkin_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BackgroundSkin_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//BackgroundSkin_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource.html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BackgroundSkin_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//BackgroundSkin_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(4).html"></iframe></div><div id="tt" style="display:none">
+    <div id="tttop"></div>
+    <div id="ttcont"></div>
+    <div id="ttbot"></div>
+</div>
+<span class="tooltips" style="display:none" id="ntt"><span id="nttcont"></span><span class="arrowDown"></span></span>
+
+<div class="ccmcss_offcanvas_1">
+
+    <div class="ccmcss_offcanvas_2">
+
+        <div id="fb-root"></div>
+<div id="globalmsg" class="loadingMsg" style="display:none"></div>
+
+<header class="ccmcss_rwd_header ccm_rwd_header--light">
+
+    <div class="ccmcss_rwd_header__top">
+        <a href="javascript:void(0)" id="jMenuResp" class="ccmcss_rwd_header__burger" aria-hidden="true" data-icomoon=""></a>
+                <a href="javascript:void(0)" id="jSearchResp" class="ccmcss_rwd_header__search" aria-hidden="true" data-icomoon=""></a>
+                <a href="http://es.ccm.net/">
+            <img class="ccmcss_rwd_header__logo" src="./Cómo enviar un formulario por e-mail usando PHP_files/logo_ccm.svg" alt="CCM">
+        </a>
+    </div>
+
+        <div class="ccmcss_rwd_search">
+        <div class="ccmcss_rwd_search__form ccmcss_form ccmcss_form--inline">
+            <form action="http://es.ccm.net/search/index" method="get" id="content_search_form">
+                <fieldset>
+                    <legend>Buscar</legend>
+                    <div style="position: relative;" class="ccmcss_form__line grid_row grid--norwd">
+                        <div class="grid_col w100">
+                            <input placeholder="Recherche" name="q" value="" type="search">
+                        </div>
+                        <div class="grid_col">
+                            <button type="submit">
+                                <span class="ccmcss_btn ccmcss_btn--primary" aria-hidden="true" data-icomoon=""></span>
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+        <nav class="ccmcss_rwd_header__nav">
+      <div class="ccmcss_rwd_header__log grid_row grid_row--fixed grid--norwd">
+
+          
+              <div class="grid_col w50">
+                  <a href="http://es.ccm.net/register/">Registrarse</a>
+              </div>
+
+              <div class="grid_col w50">
+                  <a href="https://secure.ccm.net/es.ccm.net/profile/login?txtUrl=%2Ffaq%2F10887-como-enviar-un-formulario-por-e-mail-usando-php">
+                    Conectarse                  </a>
+              </div>
+
+                </div>
+
+        <ul id="mmenu_ul_id" onmouseout="if (mmenu) mmenu.tempo();">
+        <li class="ccm_ico_home" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/">
+            <span>Inicio</span>
+        </a>
+        <div class="ccm_submenu">
+                    </div>
+    </li>
+        <li id="forum" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/forum/">Foros</a>
+                </li>
+            <li class="selected current" id="tips" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/faq/">Trucos</a>
+                </li>
+            <li id="download" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/download/">Descargas</a>
+                </li>
+            <li onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/news/">Noticias</a>
+                </li>
+            <li onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/contents/">Enciclopedia</a>
+                </li>
+        </ul>    </nav>
+    </header>
+
+<header role="banner" class="ccm_header ccm_header--light">
+    <div class="ccm_top_bar">
+    <div class="layout">
+
+        <div role="main" class="layout_main"><ul class="ccmNetwork">
+                                            <li class="selected">
+                            <a href="http://es.ccm.net/">
+                                High-Tech                            </a>
+                        </li>
+                                            <li>
+                            <a href="http://salud.ccm.net/" name="top">
+                                Salud                            </a>
+                        </li>
+                    </ul><div class="clear"></div>
+                </div>
+                    <div class="layout_right"><ul class="ccm_top_nav">
+    <li>
+        <a class="userName" href="https://secure.ccm.net/es.ccm.net/register/">Registrarse</a>
+    </li>
+        <li id="language" class="ccm_usermenu_language">
+            <a href="javascript:void(0);" class="ccm_usermenu_language__btn">Idioma</a>
+
+            <div class="ccm_box_hover">
+                <ul>
+                                            <li>
+                            <a href="http://ccm.net/" lang="en">English</a>
+                        </li>
+                                            <li>
+                            <a href="http://es.ccm.net/" lang="es">Español</a>
+                        </li>
+                                            <li>
+                            <a href="http://de.ccm.net/" lang="de">Deutsch</a>
+                        </li>
+                                            <li>
+                            <a href="http://www.commentcamarche.net/" lang="fr">Français</a>
+                        </li>
+                                            <li>
+                            <a href="http://it.ccm.net/" lang="it">Italiano</a>
+                        </li>
+                                            <li>
+                            <a href="http://br.ccm.net/" lang="pt">Português</a>
+                        </li>
+                                            <li>
+                            <a href="http://nl.ccm.net/" lang="nl">Nederlands</a>
+                        </li>
+                                            <li>
+                            <a href="http://pl.ccm.net/" lang="pl">Polski</a>
+                        </li>
+                                            <li>
+                            <a href="http://in.ccm.net/" lang="hi">हिंदी</a>
+                        </li>
+                                    </ul>
+            </div>
+        </li>
+        <li id="identification">
+        <a href="https://secure.ccm.net/es.ccm.net/profile/login?txtUrl=%2Ffaq%2F10887-como-enviar-un-formulario-por-e-mail-usando-php" id="a_boxbutton">
+            Conectarse        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+</div>       <div class="ccm_middle_bar">
+
+        <div class="layout">
+
+         <div class="ccm_logo_ccm">
+             <a href="http://es.ccm.net/" title="CCM">
+                 <img src="./Cómo enviar un formulario por e-mail usando PHP_files/logo_ccm.svg" onerror="this.src=&#39;http://estatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/logo_ccm.png&#39;; this.onerror=null;" alt="CCM">
+             </a>
+         </div>
+         <div class="ccm_social_header">
+                            <a id="jSearchBt" href="javascript:void(0)" aria-hidden="true" data-icomoon=""></a>
+                                          <a href="http://www.twitter.com/ccm_es" aria-hidden="true" data-icomoon="" target="_blank">
+                     <img src="./Cómo enviar un formulario por e-mail usando PHP_files/shim.gif" alt="CCM / Twitter" title="CCM / Twitter" width="1" height="1">
+                 </a>
+                                     <a href="https://www.facebook.com/es.ccm.net" aria-hidden="true" data-icomoon="" target="_blank">
+                <img src="./Cómo enviar un formulario por e-mail usando PHP_files/shim.gif" alt="CCM / Facebook" title="CCM / Facebook" width="1" height="1">
+                                <div class="ccm_social__box">
+                    <span></span>
+                    <iframe src="./Cómo enviar un formulario por e-mail usando PHP_files/likebox.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:62px;" class="dontPrint" allowtransparency="true"></iframe>                </div>
+                            </a>
+            
+    <a href="javascript:void(0)" class="ccm_social_header__newsletter" aria-hidden="true" data-icomoon="">
+      <img src="./Cómo enviar un formulario por e-mail usando PHP_files/shim.gif" alt="Recevez notre newsletter" title="Newsletter" width="1" height="19">
+
+      <div class="ccm_social__box">
+          <span></span>
+          <div class="marB5">Recibe el newsletter</div>
+          <form action="http://es.ccm.net/newsletter/" method="POST">
+                            <fieldset>
+                  <input type="text" class="search" name="email" id="email" placeholder="Tu correo electrónico">
+                  <input type="submit" class="submit" value="OK">
+              </fieldset>
+          </form>
+      </div>
+
+  </a>
+
+
+
+<a href="http://es.ccm.net/rss/" aria-hidden="true" data-icomoon=""></a>
+
+
+    <div id="jSearchForm" class="ccm_header_form">
+
+     <form action="http://es.ccm.net/search/index" method="get" class="headerFooter" onsubmit="if(!$j(&#39;#searchform_input&#39;).val().length){ return false;}">
+     <fieldset>
+         <legend>Buscar</legend>
+         <input type="text" onfocus="headerAction.searchformFocusedAction();" placeholder="Buscar" class="ccm_search" name="q" id="searchform_input">
+         <input type="hidden" value="0" name="already_focused" id="searchform_focused">
+         <input type="submit" value="OK" class="ccm_submit">
+     </fieldset>
+ </form>
+ <script type="text/javascript">
+                   //<![CDATA[
+                   headerAction.searchformInputUpdate(headerAction.refk());
+                   //]]>
+               </script>
+               </div><!-- /ccm_header_form -->
+</div>
+           <nav id="ccm_nav" role="navigation">
+               <div id="ccm_scroller">
+                   <div class="layout_ct">
+                       <ul id="mmenu_ul_id" onmouseout="if (mmenu) mmenu.tempo();">
+        <li class="ccm_ico_home" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/">
+            <span>Inicio</span>
+        </a>
+        <div class="ccm_submenu">
+                    </div>
+    </li>
+        <li id="forum" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/forum/">Foros</a>
+            <div class="ccm_submenu"><ul>
+    <li><a href="http://es.ccm.net/forum/new" class="ftGreen"><strong>Haz una pregunta</strong></a></li>
+    <li><a href="http://es.ccm.net/forum/pending" class="ftGreen"><strong>Últimas preguntas</strong></a></li>
+    <li><a href="http://es.ccm.net/forum/windows-11" class="ftBold">Windows</a></li>
+    <li><a href="http://es.ccm.net/forum/macos-14" class="ftBold">Mac</a></li>
+    <li><a href="http://es.ccm.net/forum/linux-unix-13" class="ftBold">Linux</a></li>    
+    <li><a href="http://es.ccm.net/forum/internet-28">Internet</a></li>
+    <li><a href="http://es.ccm.net/forum/videojuego-19">Videojuegos</a></li>
+    <li><a href="http://es.ccm.net/forum/software-1">Software</a></li>
+    <li><a href="http://es.ccm.net/forum/hardware-2">Hardware</a></li>
+    <li><a href="http://es.ccm.net/forum/moviles-26">Móviles</a></li>
+    <li><a href="http://es.ccm.net/forum/redes-5">Redes</a></li>     
+    <li><a href="http://es.ccm.net/forum/virus-seguridad-7">Virus</a></li>
+	<li><a href="http://es.ccm.net/forum/cafe-de-los-miembros-4" class="ftBold ftRed">Café</a></li></ul></div>    </li>
+            <li class="selected current" id="tips" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/faq/">Trucos</a>
+            <div class="ccm_submenu">
+    <ul>
+        <li><a class="cat" href="http://es.ccm.net/faq/ofimatica-8">Ofimática</a></li>
+        <li><a class="cat" href="http://es.ccm.net/faq/internet-156">Internet</a></li>  
+        <li><a class="cat" href="http://es.ccm.net/faq/programas-7">Programas</a></li>       
+        <li><a class="cat" href="http://es.ccm.net/faq/hardware-3">Hardware</a></li>         
+        <li><a class="cat" href="http://es.ccm.net/faq/moviles-503">Móviles</a></li>
+        <li><a class="cat" href="http://es.ccm.net/faq/virus-137">Virus</a></li>
+        <li><a class="cat" href="http://es.ccm.net/faq/windows-102">Windows</a></li>
+        <li><a class="cat" href="http://es.ccm.net/faq/windows-7-519">Windows 7</a></li>
+        <li><a class="cat" href="http://es.ccm.net/faq/windows-8-562">Windows 8</a></li>
+    </ul></div>    </li>
+            <li id="download" onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/download/">Descargas</a>
+            <div class="ccm_submenu"><ul>
+        <li><a href="http://es.ccm.net/forum/programas-1/new" class="ftGreen"><strong>Haz una pregunta</strong></a></li>
+	<li><a href="http://es.ccm.net/download/windows/"><strong>Windows</strong></a></li>
+	<li><a href="http://es.ccm.net/download/mac/"><strong>Mac</strong></a></li>
+	<li><a href="http://es.ccm.net/download/linux/"><strong>Linux</strong></a></li>
+	<li><a href="http://es.ccm.net/download/android/">Android Apps</a></li>
+	<li><a href="http://es.ccm.net/download/blackberry/">BlackBerry Apps</a></li>
+	<li><a href="http://es.ccm.net/download/iphone/">iPhone Apps</a></li>
+        <li><a href="http://es.ccm.net/download/windows-phone/">Windows Phone Apps</a></li>
+</ul></div>    </li>
+            <li onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/news/">Noticias</a>
+                </li>
+            <li onmouseover="if (mmenu) mmenu.select(this)">
+        <a href="http://es.ccm.net/contents/">Enciclopedia</a>
+                </li>
+        </ul>                        <div class="ccm_status_bar">
+                          <div id="statusbar">
+                                                        </div>
+                        </div>
+                    </div>
+               </div>
+           </nav>
+       </div>
+   </div><!-- /ccm_middle_bar -->
+</header>
+
+        <div id="oasLayout" class="layout layout--offcanvas gutter">
+
+                            <div class="ccmcss_oas_top">
+                    <div id="ba_top" class="ba top"><script>OAS_AD('Top');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//TopBanner_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//TopBanner_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//TopBanner_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; width: 728px; height: 90px; visibility: hidden;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(5).html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//TopBanner_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//TopBanner_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(6).html"></iframe></div><div id="ba_top1" class="ba top1"><script>OAS_AD('Top1');</script></div>                </div>
+            
+            <div class="layout_ct">
+
+                
+<section class="grid_line grid--norwd">
+
+    <div class="grid_left">
+    <nav class="ccmcss_breadcrumb">
+        <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="http://es.ccm.net/" itemprop="url">
+                <span itemprop="title" aria-hidden="true" class="icomoon-home" title="Inicio"><span style="display:none">Inicio</span></span>
+            </a>
+        </div>
+        <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="http://es.ccm.net/faq/" itemprop="url" title="Trucos">
+                <span itemprop="title">
+                    Trucos                </span>
+            </a>
+        </div>
+        <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="http://es.ccm.net/faq/programacin-2" itemprop="url" title="Programación">
+                <span itemprop="title">
+                    Programación                </span>
+            </a>
+        </div>
+        <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="http://es.ccm.net/faq/lenguajes-1" itemprop="url" title="Lenguajes">
+                <span itemprop="title">
+                    Lenguajes                </span>
+            </a>
+        </div>
+        <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none">
+            <a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php" itemprop="url" title="">
+                <span itemprop="title">
+                                    </span>
+            </a>
+        </div>
+    </nav>
+    </div>
+
+    <div class="grid_right">
+        <ul id="toolsLinks" class="ccmcss_ft_s">
+        <li><a class="" href="http://es.ccm.net/contents/79-condiciones-de-uso-para-es-ccm-net">Aviso legal</a></li>
+    </ul>
+        </div>
+</section>
+
+
+                <div class="layout_ct__1">
+
+                    <div class="layout_ct__2">
+
+                        <div class="layout_main" role="main"><div id="InfMsgDiv">
+    </div><div class="ccm_page--faq">
+    
+<div style="display:none" id="colpdf"></div>
+<script type="text/javascript">
+<!--
+var _ctnstart = $('colpdf');
+var _ctnintro = $('intro_contents');
+
+var _M = window.document.URL.match(/#([0-9]+)/);
+
+if (_M && _M.length === 2) {
+    if(_ctnintro){
+        _ctnintro.innerHTML='';
+    }
+    new Ajax.Request(
+        '/xhr/module/', {
+            method: 'get',
+            parameters: 'ID='+_M[1]+'&module=faq',
+            evalScripts: true,
+            onSuccess:function(transport) {                
+                if(transport && transport.responseText){ 
+                    _j = eval("(" + transport.responseText + ")");    
+                    if(_j.start && _ctnstart) {
+                        _ctnstart.style.display='block';
+                        _ctnstart.innerHTML=_j.start;
+                    }      
+                }
+            },
+            onFailure:function(transport) {
+                _ctnstart.innerHTML = '';
+            }
+        }
+    );
+    document.onload = articlesutils.init({
+        'c1':60,
+        'c2':1,
+        'id':_M[1],
+        'module': 'faq'
+    });
+    setTimeout(function(){window.location='/#ID='+_M[1]+'&module=faq'},60000);
+    }
+-->
+</script>
+
+    <a href="http://es.ccm.net/forum/mensajerias-y-chat-27/new" class="button overlayW btGreen btSmall floatRight dontPrint" style="z-index:999">Haz una pregunta&nbsp;»</a><div class="titleContent">    <a name="topedit" style="float:left;visibility:hidden;"></a>
+        <h1 id="art_title" class="h2_like">
+        Cómo enviar un formulario por e-mail usando PHP    </h1>
+    
+    </div>
+        <section class="ccm_separator_1" style="margin-top:20px">
+            <div class="ccm_social_buttons grid--norwd grid_row dontPrint">
+        <!-- <div class="grid_col ccm_social_buttons__fb">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.journaldesfemmes.com/voiture/toyota/essai-verso/" aria-hidden="true" data-icomoon="&#59241;"></a>
+        </div>
+        <div class="grid_col ccm_social_buttons__tw">
+            <a target="_blank" title="Cliquez pour partager sur Tweeter" href="http://twitter.com/intent/tweet?text=En+train+de+lire+%22Essai+Toyota+Verso%2C+embarquez+pour+l%27aventure+familiale%22+%3D%3E+www.journaldesfemmes.com%2Fvoiture%2Ftoyota%2Fessai-verso%2F+via+%40toyota_france" via="toyota_france" rel="nofollow" data-icomoon="&#59245;"></a>
+        </div>
+        <div class="grid_col ccm_social_buttons__gplus">
+            <a href="" aria-hidden="true" data-icomoon="&#59236;"></a>
+
+        </div>  -->
+
+
+    
+        <div class="grid_col ccm_social_buttons__fb">
+        <a class="jSocialShare" aria-hidden="true" data-icomoon="" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fes.ccm.net%2Ffaq%2F10887-como-enviar-un-formulario-por-e-mail-usando-php" target="_blank"></a>
+    </div>
+
+        <div class="grid_col ccm_social_buttons__tw">
+        <a class="jSocialShare" aria-hidden="true" data-icomoon="" href="https://twitter.com/intent/tweet/?text=C%C3%B3mo+enviar+un+formulario+por+e-mail+usando+PHP&amp;url=http%3A%2F%2Fes.ccm.net%2Ffaq%2F10887-como-enviar-un-formulario-por-e-mail-usando-php&amp;via=ccm_es" target="_blank"></a>
+    </div>
+
+        <div class="grid_col ccm_social_buttons__gplus">
+        <a class="jSocialShare" aria-hidden="true" data-icomoon="" href="https://plus.google.com/share?url=http%3A%2F%2Fes.ccm.net%2Ffaq%2F10887-como-enviar-un-formulario-por-e-mail-usando-php" target="_blank"></a>
+    </div>
+
+</div>
+    </section>
+    
+    <div class="container " style="border-top:0" id="article_ctn">
+            <div class="floatRight ftGrey marT5 marR10">Mayo 2016</div>
+        <div class="clear"></div>
+        <br>
+        
+        <div id="overlay" style="display:none" class="loaderAjax"></div>
+        <div class="contentTemplate" id="article_cnt">
+<div id="ba_infeed" class="ba infeed"><script>OAS_AD('Infeed');</script></div><img src="./Cómo enviar un formulario por e-mail usando PHP_files/ZousgBGi-php-s-.png" alt="" width="250" style="display:block;float:right;clear:none;" border="0">Cuando estamos trabajando en un sitio web, muchas veces existe la necesidad de proveer al usuario con un formulario de contacto para hacernos llegar sus consultas, comentarios u otro tipo de información. 
+<br>
+<br>En este truco te mostramos un ejemplo de <b>cómo hacer un formulario </b>usando <a href="http://es.ccm.net/contents/241-introduccion-a-html">HTML</a> para crearlo y <a href="http://es.ccm.net/download/descargar-24710-php">PHP</a> para procesarlo y enviarlo por e-mail.
+<br>
+<br><div id="toc" class="toc">
+
+<ul><li><a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php#el-formulario">El formulario</a>
+</li><li><a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php#el-script-php">El script PHP</a></li><li>Consulta también: <a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php#simili_main">Crear formulario contacto php</a></li></ul>
+<br></div>
+<br><a name="el-formulario"></a><h2>El formulario</h2>
+
+<br>Se trata de un fragmento de código HTML que usando el TAG <i>&lt;form&gt;</i> nos permite crear el formulario de entrada de datos a ser completado por el usuario:
+<br>
+<br><i>formulario.html</i>
+<br>
+<br><pre class="code codeSnippeted lang-php sh_sourceCode line-numbers skin_msvcpp" data-mode="php"><span class="sh_symbol">&lt;</span>form name<span class="sh_symbol">=</span><span class="sh_string">"frmContacto"</span> method<span class="sh_symbol">=</span><span class="sh_string">"post"</span> action<span class="sh_symbol">=</span><span class="sh_string">"sendbymail.php"</span><span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>table width<span class="sh_symbol">=</span><span class="sh_string">"500px"</span><span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>label <span class="sh_keyword">for</span><span class="sh_symbol">=</span><span class="sh_string">"first_name"</span><span class="sh_symbol">&gt;</span>Nombre<span class="sh_symbol">:</span> <span class="sh_symbol">*&lt;/</span>label<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>td<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>input type<span class="sh_symbol">=</span><span class="sh_string">"text"</span> name<span class="sh_symbol">=</span><span class="sh_string">"first_name"</span> maxlength<span class="sh_symbol">=</span><span class="sh_string">"50"</span> size<span class="sh_symbol">=</span><span class="sh_string">"25"</span><span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;/</span>td<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;/</span>tr<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>tr<span class="sh_symbol">&gt;</span>
+<span class="sh_symbol">&lt;</span>td valign<span class="sh_symbol">=</span><span class="sh_string">"top""&gt;</span>
+<span class="sh_string">&lt;label for="</span>last_name<span class="sh_string">"&gt;Apellido: *&lt;/label&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;input type="</span>text<span class="sh_string">" name="</span>last_name<span class="sh_string">" maxlength="</span><span class="sh_number">50</span><span class="sh_string">" size="</span><span class="sh_number">25</span><span class="sh_string">"&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;/tr&gt;</span>
+<span class="sh_string">&lt;tr&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;label for="</span>email<span class="sh_string">"&gt;Dirección de E-mail: *&lt;/label&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;input type="</span>text<span class="sh_string">" name="</span>email<span class="sh_string">" maxlength="</span><span class="sh_number">80</span><span class="sh_string">" size="</span><span class="sh_number">35</span><span class="sh_string">"&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;/tr&gt;</span>
+<span class="sh_string">&lt;tr&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;label for="</span>telephone<span class="sh_string">"&gt;Número de teléfono:&lt;/label&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;input type="</span>text<span class="sh_string">" name="</span>telephone<span class="sh_string">" maxlength="</span><span class="sh_number">25</span><span class="sh_string">" size="</span><span class="sh_number">15</span><span class="sh_string">"&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;/tr&gt;</span>
+<span class="sh_string">&lt;tr&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;label for="</span>comments<span class="sh_string">"&gt;Comentarios: *&lt;/label&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;td&gt;</span>
+<span class="sh_string">&lt;textarea name="</span>comments<span class="sh_string">" maxlength="</span><span class="sh_number">500</span><span class="sh_string">" cols="</span><span class="sh_number">30</span><span class="sh_string">" rows="</span><span class="sh_number">5</span><span class="sh_string">"&gt;&lt;/textarea&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;/tr&gt;</span>
+<span class="sh_string">&lt;tr&gt;</span>
+<span class="sh_string">&lt;td colspan="</span><span class="sh_number">2</span><span class="sh_string">" style="</span>text<span class="sh_symbol">-</span>align<span class="sh_symbol">:</span>right<span class="sh_string">"&gt;</span>
+<span class="sh_string">&lt;input type="</span>submit<span class="sh_string">" value="</span>Enviar<span class="sh_string">"&gt;</span>
+<span class="sh_string">&lt;/td&gt;</span>
+<span class="sh_string">&lt;/tr&gt;</span>
+<span class="sh_string">&lt;/table&gt;</span>
+<span class="sh_string">&lt;/form&gt;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+<br><a name="el-script-php"></a><h2>El script PHP</h2>
+
+<br>La otra parte de código a escribir será entonces la encargada de tomar los datos del formulario anterior, validarlos y si todo está bien, enviar el formulario por correo electrónico a una dirección de destino determinada en el código. 
+<br>
+<br>Veamos este ejemplo:
+<br>
+<br><i>sendbymail.php</i>
+<br>
+<br><pre class="code codeSnippeted lang-php sh_sourceCode line-numbers skin_msvcpp" data-mode="php"><span class="sh_symbol">&lt;?php</span>
+<span class="sh_keyword">if</span><span class="sh_symbol">(</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'email'</span><span class="sh_symbol">]))</span> <span class="sh_cbracket">{</span>
+
+<b><span class="sh_comment">// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias</span></b>
+<span class="sh_variable">$email_to</span> <span class="sh_symbol">=</span> <span class="sh_string">"destinatario@sudominio.com"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_subject</span> <span class="sh_symbol">=</span> <span class="sh_string">"Contacto desde el sitio web"</span><span class="sh_symbol">;</span>
+
+<b><span class="sh_comment">// Aquí se deberían validar los datos ingresados por el usuario</span></b>
+<span class="sh_keyword">if</span><span class="sh_symbol">(!</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'first_name'</span><span class="sh_symbol">])</span> <span class="sh_symbol">||</span>
+<span class="sh_symbol">!</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'last_name'</span><span class="sh_symbol">])</span> <span class="sh_symbol">||</span>
+<span class="sh_symbol">!</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'email'</span><span class="sh_symbol">])</span> <span class="sh_symbol">||</span>
+<span class="sh_symbol">!</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'telephone'</span><span class="sh_symbol">])</span> <span class="sh_symbol">||</span>
+<span class="sh_symbol">!</span><span class="sh_keyword">isset</span><span class="sh_symbol">(</span><span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'comments'</span><span class="sh_symbol">]))</span> <span class="sh_cbracket">{</span>
+
+<span class="sh_keyword">echo</span> <span class="sh_string">"&lt;b&gt;Ocurrió un error y el formulario no ha sido enviado. &lt;/b&gt;&lt;br /&gt;"</span><span class="sh_symbol">;</span>
+<span class="sh_keyword">echo</span> <span class="sh_string">"Por favor, vuelva atrás y verifique la información ingresada&lt;br /&gt;"</span><span class="sh_symbol">;</span>
+<span class="sh_keyword">die</span><span class="sh_symbol">();</span>
+<span class="sh_cbracket">}</span>
+
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">=</span> <span class="sh_string">"Detalles del formulario de contacto:\n\n"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">.=</span> <span class="sh_string">"Nombre: "</span> <span class="sh_symbol">.</span> <span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'first_name'</span><span class="sh_symbol">]</span> <span class="sh_symbol">.</span> <span class="sh_string">"\n"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">.=</span> <span class="sh_string">"Apellido: "</span> <span class="sh_symbol">.</span> <span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'last_name'</span><span class="sh_symbol">]</span> <span class="sh_symbol">.</span> <span class="sh_string">"\n"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">.=</span> <span class="sh_string">"E-mail: "</span> <span class="sh_symbol">.</span> <span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'email'</span><span class="sh_symbol">]</span> <span class="sh_symbol">.</span> <span class="sh_string">"\n"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">.=</span> <span class="sh_string">"Teléfono: "</span> <span class="sh_symbol">.</span> <span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'telephone'</span><span class="sh_symbol">]</span> <span class="sh_symbol">.</span> <span class="sh_string">"\n"</span><span class="sh_symbol">;</span>
+<span class="sh_variable">$email_message</span> <span class="sh_symbol">.=</span> <span class="sh_string">"Comentarios: "</span> <span class="sh_symbol">.</span> <span class="sh_variable">$_POST</span><span class="sh_symbol">[</span><span class="sh_string">'comments'</span><span class="sh_symbol">]</span> <span class="sh_symbol">.</span> <span class="sh_string">"\n\n"</span><span class="sh_symbol">;</span>
+
+
+<b><span class="sh_comment">// Ahora se envía el e-mail usando la función mail() de PHP</span></b>
+<span class="sh_variable">$headers</span> <span class="sh_symbol">=</span> <span class="sh_string">'From: '</span><span class="sh_symbol">.</span><span class="sh_variable">$email_from</span><span class="sh_symbol">.</span><span class="sh_string">"\r\n"</span><span class="sh_symbol">.</span>
+<span class="sh_string">'Reply-To: '</span><span class="sh_symbol">.</span><span class="sh_variable">$email_from</span><span class="sh_symbol">.</span><span class="sh_string">"\r\n"</span> <span class="sh_symbol">.</span>
+<span class="sh_string">'X-Mailer: PHP/'</span> <span class="sh_symbol">.</span> <span class="sh_function">phpversion</span><span class="sh_symbol">();</span>
+<span class="sh_variable">@mail</span><span class="sh_symbol">(</span><span class="sh_variable">$email_to</span><span class="sh_symbol">,</span> <span class="sh_variable">$email_subject</span><span class="sh_symbol">,</span> <span class="sh_variable">$email_message</span><span class="sh_symbol">,</span> <span class="sh_variable">$headers</span><span class="sh_symbol">);</span>
+
+<span class="sh_keyword">echo</span> <span class="sh_string">"¡El formulario se ha enviado con éxito!"</span><span class="sh_symbol">;</span>
+<span class="sh_cbracket">}</span>
+<span class="sh_symbol">?&gt;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><!--es:es.ccm.net/faq/10887-como-enviar-un-formulario-por-email-usando-php--><div id="ba_intext" class="ba intext"><script>OAS_AD('Intext');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//BodyInText_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BodyInText_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//BodyInText_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(7).html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BodyInText_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//BodyInText_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(8).html"></iframe></div><div class="clear"></div>
+<div class="marT20" id="lig_es-ccm-net_tc_Web_smartbox"><style>#lig_es-ccm-net_tc_Web_smartbox{max-width:900px;} #lig_es-ccm-net_tc_Web_side{max-width:300px;} #lig_footer_sm, #lig_footer_side {float:right; padding:7px 0 0 0; font-size:14px;  font-family:Arial, sans-serif; color:#bdbdbd} #lig_footer_sm img, #lig_footer_side img {height:19px !important; vertical-align:top;  display:inline !important; margin:0} .clear {clear:both}</style><div id="es-ccm-net_tc_Web_smartbox"><iframe id="es-ccm-net_smartbox" name="es-ccm-net_smartbox" src="./Cómo enviar un formulario por e-mail usando PHP_files/timeout.html" width="100%" height="560" scrolling="no" frameborder="no"></iframe></div><div id="lig_footer_sm">Ofrecido por <a href="http://www.ligatus.es/" title="Ligatus DirectAds"><img src="./Cómo enviar un formulario por e-mail usando PHP_files/logo-ligatus.png"></a></div><div class="clear"></div></div>
+    <div class="marT10">
+        <script async="" src="./Cómo enviar un formulario por e-mail usando PHP_files/adsbygoogle.js"></script>
+        <!-- sf_500*150 -->
+        <style type="text/css">
+            .sfadslot_1 { min-width:320px; max-width:1200px; width:100%; height: 280px; }
+            @media (min-width:820px) { .sfadslot_1 { height: 220px; } }
+        </style>
+        <ins class="adsbygoogle sfadslot_1" style="display: inline-block; width: 640px; height: 220px;" data-language="es" data-ad-client="pub-3295671961621260" data-ad-slot="1620199525" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:220px;margin:0;padding:0;position:relative;visibility:visible;width:640px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:220px;margin:0;padding:0;position:relative;visibility:visible;width:640px;background-color:transparent"><iframe width="640" height="220" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(9).html"></iframe></ins></ins></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <div class="clear"></div>
+    </div>
+    <div class="dontPrint resp_hidden--s"><br>Consulta este artículo sin tener que estar conectado, descárgalo gratis aquí en formato PDF:<br>
+    <a href="http://es.ccm.net/faq/lenguajes-1#10887" onclick="window.open(&#39;/faq/pdf/10887-cmo-enviar-un-formulario-por-e-mail-usando-php&#39;);" class="ftBlue ftBold ftSize14">
+    <img src="./Cómo enviar un formulario por e-mail usando PHP_files/yYFOR3pc9e0iRgXIFKNB3pGqRq1d5LQFAFUZkI8PG04Y2bVh19kfd1vHQktxwrmB-icone-pdf-s-.png" alt="" width="46" style="display:block;float:left;clear:none;" border="0">
+    <div class="marT10">Como-enviar-un-formulario-por-e-mail-usando-php.pdf</div>
+    </a></div>
+        <div class="floatRight dontPrint"><div style="width: 300px;">
+<div class="fb-page" data-href="https://www.facebook.com/es.ccm.net" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false">
+</div>
+</div></div>
+        <div class="clear"></div>    <div class="dontPrint"><a name="simili_main"></a>
+
+    <h2>Consulta también</h2><div id="simili" class="borderNone"><a name="simili"></a><script type="text/javascript">
+<!--
+var plus ='M&aacute;s';
+var minus ='Menos';
+//-->
+</script>
+
+<div class="hidelast">
+<ul><li>
+    <a id="otherContentsLink2" href="http://es.ccm.net/s/crear+formulario+contacto+php?qlc#k=7c9ef5c1b47a99c2da0654c6ad91a3e4" rel="nofollow" class="ftBlue ftBold ftUnderline">
+        Crear formulario contacto php    </a>
+      </li>
+
+<li>
+    <a href="http://es.ccm.net/s/funcion+mail+php?qlc#k=7c9ef5c1b47a99c2da0654c6ad91a3e4" rel="nofollow" class="ftBlue ftBold ftUnderline">
+        Funcion mail php    </a>
+      </li>
+<li>
+    <a href="http://es.ccm.net/s/enviar+correo+con+php?qlc#k=7c9ef5c1b47a99c2da0654c6ad91a3e4" rel="nofollow" class="ftBlue ftBold ftUnderline">
+        Enviar correo con php    </a>
+      </li>
+    <li>
+
+        <a href="http://es.ccm.net/forum/affich-1458069-como-enviar-un-formulario-por-e-mail" class="ftUnderline ftBlue">
+            Cómo enviar un formulario por e-mail        </a>
+                <span class="ftGrey2"> »
+        <a href="http://es.ccm.net/forum/webmastering-24" class="ftUnderline">Foro - Webmastering</a>        </span>
+    </li>
+            <li>
+
+        <a href="http://es.ccm.net/faq/13864-safari-desactivar-las-notificaciones-de-envio-de-formularios-no-seguros" class="ftUnderline ftBlue">
+            Safari: Desactivar  las notificaciones de envío de formularios no seguros        </a>
+                <span class="ftGrey2"> »
+        <a href="http://es.ccm.net/faq/safari-543" class="ftUnderline">Consejos - Safari</a>        </span>
+    </li>
+            <li>
+
+        <a href="http://es.ccm.net/faq/13864-como-desactivar-las-notificaciones-de-envio-de-formularios-no-seguros-en-safari" class="ftUnderline ftBlue">
+            Cómo desactivar las notificaciones de envío de formularios no seguros en Safari        </a>
+                <span class="ftGrey2"> »
+        <a href="http://es.ccm.net/faq/safari-543" class="ftUnderline">Consejos - Safari</a>        </span>
+    </li>
+            <li>
+
+        <a href="http://es.ccm.net/faq/12023-whatsapp-enviar-por-e-mail-el-historial-de-una-conversacion" class="ftUnderline ftBlue">
+            WhatsApp: Enviar por e-mail el historial de una conversación        </a>
+                <span class="ftGrey2"> »
+        <a href="http://es.ccm.net/faq/mensajeria-instantanea-341" class="ftUnderline">Consejos - Mensajería instantánea </a>        </span>
+    </li>
+            <li>
+
+        <a href="http://es.ccm.net/faq/6746-gmail-enviar-un-email-con-un-archivo-adjunto" class="ftUnderline ftBlue">
+            Gmail : Enviar un email con un archivo adjunto        </a>
+                <span class="ftGrey2"> »
+        <a href="http://es.ccm.net/faq/gmail-516" class="ftUnderline">Consejos - Gmail</a>        </span>
+    </li>
+        </ul>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var q = headerAction.cleanRefk();
+
+if (q && q != ' ')
+{
+    if (jQuery('#otherContentsLink2')[0])
+    {
+        jQuery('#otherContentsLink2')[0].href       = '/s/'+escape(q);
+        jQuery('#otherContentsLink2')[0].innerHTML  = q;
+    }
+    if (jQuery('#otherResultsTopic')[0] && jQuery('#otherResultsLink')[0])
+    {
+        jQuery('#otherResultsLink')[0].href         = '/s/'+escape(q);
+        jQuery('#otherResultsTopic')[0].innerHTML   = q;
+    }
+    if (jQuery('#new_question_button')[0])
+    {
+        jQuery('#new_question_button')[0].href = jQuery('#new_question_button')[0].href+'?depose_string='+escape(q);
+    }
+}
+
+if(jQuery('#simili')[0] && jQuery('#simili_placeholder')[0])
+{
+    jQuery('#simili_placeholder')[0].innerHTML = jQuery('#simili')[0].innerHTML;
+}
+
+
+    if (jQuery('#toc')[0] && jQuery('#toc')[0].childNodes[1])
+    {
+        var s_li = document.createElement('li');
+        s_li.innerHTML += 'Consulta tambi&eacute;n: <a href="#simili_main">'
+            +'Crear formulario contacto php</a>';
+        jQuery('#toc')[0].childNodes[1].appendChild(s_li);
+}
+//]]>
+</script></div>
+<section class="clearfix">
+<a name="same_cat"></a><h2>En la misma categoría</h2>
+    
+    <div class="floatLeft" style="width: 48%"><ul><li><a href="http://es.ccm.net/faq/11239-iniciarse-con-maven">Iniciarse con Maven</a></li><li><a href="http://es.ccm.net/faq/3972-introduccion-a-dark-basic">Introducción a Dark Basic</a></li><li><a href="http://es.ccm.net/faq/1034-lenguajes-enviar-un-email-con-un-archivo-adjunto"><b>Lenguajes</b> - Enviar un email con un archivo adjunto</a></li><li><a href="http://es.ccm.net/faq/5067-vb-net-limitar-la-entrada-de-un-textbox-solo-a-numeros"><b>VB.Net</b> - Limitar la entrada de un TextBox sólo a números</a></li></ul></div><div class="floatRight" style="width: 48%"><ul><li><a href="http://es.ccm.net/faq/4194-vb6-encontrar-los-valores-rgb-de-un-color">VB6: encontrar los valores RGB de un color</a></li><li><a href="http://es.ccm.net/faq/5002-vba-vb6-net-funcion-round-con-redondeo-hacia-arriba-o-abajo"><b>VBA.VB6/.Net</b> - función Round con redondeo hacia arriba o abajo</a></li><li><a href="http://es.ccm.net/faq/540-que-lenguaje-de-programacion-aprender-primero">¿Qué lenguaje de programación aprender primero?</a></li><li><a href="http://es.ccm.net/faq/2737-un-clon-de-c">¿Un clon de C?</a></li></ul></div></section></div>
+<div class="bottomContent dontPrint">
+    Publicado por <a href="http://es.ccm.net/profile/user/pablojorgesanguinetti1" class="ftBold">pablojorgesanguinetti1</a>. - <span class="ftGrey">última actualización por <a href="http://es.ccm.net/profile/user/ibero.modo" class="ftBold">ibero.modo</a></span></div><span class="Footer">El documento «<a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php">Cómo enviar un formulario por e-mail usando PHP</a>» de <a href="http://es.ccm.net/">CCM</a> (<a href="http://es.ccm.net/">es.ccm.net</a>) se encuentra disponible bajo una licencia <a href="http://es.ccm.net/ccmguide/ccmlicence.php3">Creative Commons</a>. Puedes copiarlo o modificarlo siempre y cuando respetes las condiciones de dicha licencia y des crédito a CCM.</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <script type="text/javascript">
+        <!--
+        articlesutils.config.tabs=[
+            ['article_tab', 'article_ctn'],
+            ['history_tab', 'history_ctn'],
+            ['diff_tab', 'diff_ctn']
+        ];
+        //-->
+    </script>
+
+<section class="ccmcss_paginator ccmcss_paginator--button">
+            <div class="ccmcss_paginator_prev dontPrint">
+            <a href="http://es.ccm.net/faq/5067-vb-net-limitar-la-entrada-de-un-textbox-solo-a-numeros" rel="prev" class="dontPrint" title="VB.Net - Limitar la entrada de un TextBox sólo a números">
+                <span>Anterior</span>
+                <i aria-hidden="true" data-icon="&#39;"></i>
+                <p>VB.Net - Limitar la entrada de un TextBox sólo a números</p>
+            </a>
+        </div>
+    
+            <div class="ccmcss_paginator_next dontPrint">
+            <a href="http://es.ccm.net/faq/11239-iniciarse-con-maven" rel="next" class="dontPrint" title="Iniciarse con Maven">
+                <span>Siguiente</span>
+                <i aria-hidden="true" data-icon="#"></i>
+                <p>Iniciarse con Maven</p>
+            </a>
+        </div>
+    </section>
+
+<!-- <div class="pagination2 marB15 dontPrint">
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="ico">
+                        <span class="icoPrevious"></span>
+                    </td>
+            <td class="prev">
+                        <div class="dontPrint"><a href="/faq/5067-vb-net-limitar-la-entrada-de-un-textbox-solo-a-numeros" class="ftUnderline dontPrint">VB.Net - Limitar la entrada de un TextBox sólo a números</a></div>
+                    </td>
+                       <td class="next">
+                        <div class="dontPrint"><a href="/faq/11239-iniciarse-con-maven" class="ftUnderline dontPrint"><span></span>Iniciarse con Maven</a></div>
+                    </td>
+            <td class="ico">
+                        <span class="icoNext"></span>
+                    </td>
+        </tr>
+    </table>
+</div> -->
+<div id="simili-cnt" class="simili2" style="display:none;"></div>
+</div></div>
+                    </div>
+                </div>
+
+                <div class="layout_right">
+    <div id="shortcuts"></div>
+    <div class="ad_right" id="bloc_middle">
+    <div id="ba_right" class="ba " style=""><script>OAS_AD('Right');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//TopRight_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//TopRight_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//TopRight_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(10).html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//TopRight_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//TopRight_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(11).html"></iframe></div></div>
+<div class="ad_right bloc_09">
+    <div class="fb-page" data-href="https://www.facebook.com/es.ccm.net" data-width="300" data-show-facepile="true" data-show-posts="false" data-header="true">
+    </div>
+</div>
+    <div class="ad_right bloc_09">
+        <div id="ba_position1" class="ba position1"><script>OAS_AD('Position1');</script></div>    </div>
+<div class="clear"></div>
+<div class="marT20" id="lig_es-ccm-net_tc_Web_side"><div id="es-ccm-net_tc_Web_side"><iframe id="es-ccm-net_side" name="es-ccm-net_side" src="./Cómo enviar un formulario por e-mail usando PHP_files/timeout(1).html" width="100%" height="850" scrolling="no" frameborder="no"></iframe></div><div id="lig_footer_side">Ofrecido por <a href="http://www.ligatus.es/" title="Ligatus DirectAds"><img src="./Cómo enviar un formulario por e-mail usando PHP_files/logo-ligatus.png"></a></div><div class="clear"></div></div>
+
+<script language="javascript" src="./Cómo enviar un formulario por e-mail usando PHP_files/tc-site.js"></script>
+    <div class="ad_right bloc_09">
+        <div id="ba_position2" class="ba position2" style=""><script>OAS_AD('Position2');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//BottomRight_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BottomRight_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//BottomRight_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(12).html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//BottomRight_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//BottomRight_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(13).html"></iframe></div>    </div>
+<div class="ad_right" id="bloc_sponsor">
+    <div id="ba_position3" class="ba position3"><script>OAS_AD('Position3');</script></div></div>
+<div id="ba_position4" class="ba position4"><script>OAS_AD('Position4');</script></div></div>
+
+                <div class="newLoading" style="display:none">
+                    <div class="loaderNew"></div>
+                </div>
+                            </div>
+        </div>
+        
+<footer role="contentinfo" class="ccmcss_footer ccmcss_footer--dark">
+    <div class="layout">
+                <section class="grid_row ccm_footer__first">
+            <div class="grid_col w33">
+                            </div>
+            <div class="grid_col w33 grid_col--middle">
+                           </div>
+           <div class="grid_col w33 ccmcss_align_r">
+
+                
+                <div class="ccm_search_form ccmcss_form ccmcss_form--inline w80" style="margin:0;display:inline-block">
+                    <form action="http://es.ccm.net/newsletter/" method="POST" class="headerFooter">
+                                                <fieldset>
+                            <legend style="display:block;margin-bottom:5px">Recibe nuestro newsletter</legend>
+                            <div class="ccmcss_form__line grid_row gutter grid--norwd">
+                                <div class="grid_col w100">
+                                    <input placeholder="Tu correo electrónico" type="text" name="email" id="email">
+                                </div>
+                                <div class="grid_col">
+                                    <button>
+                                        <a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php#" class="ccmcss_btn ccmcss_btn--primary" aria-hidden="true" data-icomoon=""></a>
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                            </div>
+    </section>
+    
+    
+    <ul class="toolLinks">
+        <li><a href="http://es.ccm.net/register/">Inscribirse</a></li>
+                <li><a href="http://es.ccm.net/contents/81-el-equipo-de-kioskea-net">Equipo</a></li>
+                <li><a href="http://es.ccm.net/contents/89-terminos-y-condiciones-generales-de-uso">Condiciones de uso</a></li>
+
+                <li><a href="http://es.ccm.net/contact/">Contacto</a></li>
+                <li><a href="http://es.ccm.net/contents/79-condiciones-de-uso-para-es-ccm-net">Aviso legal</a></li>
+            </ul>
+    
+        <div class="logo">
+        <a original-title="CCM Benchmark Group" href="http://www.ccmbenchmark.com/">
+            <hgroup>
+                <span>CCM Benchmark Group</span>
+            </hgroup>
+        </a>
+    </div>
+        <p class="foot_links"><a href="http://salud.ccm.net/" lang="es">salud.ccm.net</a>
+        </p>
+                            </div>
+        </footer>
+                <div class="modoActionsNew" id="modo_div_new" style="display: none;"></div>
+        <div id="gotop" style="display: block;">
+    <a href="http://es.ccm.net/faq/10887-como-enviar-un-formulario-por-e-mail-usando-php#top"></a>
+</div>
+
+<div id="goprev" style="display: block;">
+    <a href="http://es.ccm.net/faq/5067-vb-net-limitar-la-entrada-de-un-textbox-solo-a-numeros#goprev">
+        <span class="goLogo"></span>
+        <span class="goTxt">VB.Net - Limitar la entrada de un TextBox sólo a números</span>
+    </a>
+</div>
+
+<div id="gonext" style="display: block;">
+    <a href="http://es.ccm.net/faq/11239-iniciarse-con-maven#gonext">
+        <span class="goLogo"></span>
+        <span class="goTxt">Iniciarse con Maven</span>
+    </a>
+</div>
+<div id="ba_x01" class="ba x01"><script>OAS_AD('x01');</script></div><div id="ba_topleft" class="ba topleft" style="display: none;"><script>OAS_AD('TopLeft');</script><div id="google_ads_iframe_/62615953/CCM_LATAM//Overlay_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62615953/CCM_LATAM//Overlay_0" title="3rd party ad content" name="google_ads_iframe_/62615953/CCM_LATAM//Overlay_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(14).html"></iframe></div><iframe id="google_ads_iframe_/62615953/CCM_LATAM//Overlay_0__hidden__" title="" name="google_ads_iframe_/62615953/CCM_LATAM//Overlay_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(15).html"></iframe></div><script type="text/javascript"> $data = {"services":{"appCode":{"start":true,"options":{"editor":{"enabled":true}}},"fancybox":{"start":true}},"lang":"ES","common":{"staticHost":"http:\/\/estatic.ccmbg.com"}}</script><script type="application/x-jet-extend" data-target="jQuery.jet.env.packager" data-priority="1" data-load="init">{"url":{"css":"\/ressource\/css\/css.php","js":"\/ressource\/js\/js.php"},"host":"http:\/\/estatic.ccmbg.com"}</script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/core,lang.fr" type="text/javascript"></script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/responsive" type="text/javascript"></script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/codesnippet" type="text/javascript"></script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/app.bottom,start" type="text/javascript"></script><script src="./Cómo enviar un formulario por e-mail usando PHP_files/whap.js" type="text/javascript"></script><script>
+        typeof jQuery !== 'undefined'
+    && typeof jQuery.jet !== 'undefined'
+    && jQuery.jet.started === false
+    && jQuery(document).trigger('start',
+        [
+            {
+                services : {
+                    tipsy : { start : false }
+                    , fancybox : _$('$data.services')._.fancybox
+                    , appSlider : { start : false }
+                    , goTop : { start : false }
+                    , inRead : { start : true }
+                    , inputDefault : { start : false }
+                    , warningCNIL : { options: { setCookieOnDomain: !/http:\/\/[^\/]*commentcamarche\.net/.test(document.location.toString())}}
+                    , cabestanRetargeting : { start : true }
+                    , videoOnScroll : { options : { forceStart : window.document.URL.match(/#.*?ID=([-a-z0-9\.]+).*?&module=([a-z]+)/) != null } }
+                }
+            }
+        ]
+    );
+</script>            <script type="text/javascript">
+                (function($){
+                    $(document).ready(function () {
+                                            });
+                }(jQuery));
+            </script>
+            <style type="text/css">
+                /* place fancybox 150px from top of the viewport */
+                div#fancybox-wrap {z-index: 2147483644 !important;}
+                .fancybox-title {top: -36px !important}
+            </style>
+            </div>
+</div>
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="scr_check1.0.0" style="position: absolute; width: 1px; height: 1px; left: 0px; top: -5000px; z-index: 0; overflow: hidden; visibility: visible; border-width: 0px; margin: 0px; padding: 0px; display: inline; text-align: left; background: transparent;">&nbsp;</div><div id="scr_68458068222remotediv1466229079472" style="position: absolute; width: 728px; height: 90px; left: 310.5px; top: 125px; z-index: 0; overflow: hidden; visibility: visible; border-width: 0px; margin: 0px; padding: 0px; display: inline; text-align: left; background: transparent;"><span id="scr_68458068222banner1466229079472SPAN" style="position:static;clear:none;float:none;display:inline;background:transparent;border:0px;margin:0px;padding:0px;text-align:left;" onmouseover="scr_win59685361513.x1bb.x1et(&#39;starttimer:scrhover&#39;,&#39;&#39;,0,&#39;banner&#39;);" onmouseout="scr_win59685361513.x1bb.x1et(&#39;stoptimer:scrhover&#39;,&#39;&#39;,0,&#39;banner&#39;);"><iframe id="scr_68458068222banner1466229079472" name="scr_68458068222banner1466229079472" src="./Cómo enviar un formulario por e-mail usando PHP_files/728X90.swf.html" style="width:728px;height:90px" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"></iframe></span></div><div id="x1n2" style="position: absolute; width: 1px; height: 1px; left: 0px; top: 300px; z-index: 0; overflow: hidden; visibility: hidden; border-width: 0px; margin: 0px; padding: 0px; display: inline; text-align: left; background: transparent;"><iframe src="./Cómo enviar un formulario por e-mail usando PHP_files/external.html" width="1" height="1" frameborder="0" style="border:0px;"></iframe></div><iframe id="google_osd_static_frame_2604321185285" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Cómo enviar un formulario por e-mail usando PHP_files/saved_resource(16).html"></iframe></body></html>

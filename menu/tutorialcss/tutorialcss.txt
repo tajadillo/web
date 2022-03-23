@@ -1,0 +1,540 @@
+Aprender CSS nivel personalizado web El tutorial donde aprender CSS 
+gratis y desde cero. Descubre cómo se personaliza una web con 
+código CSS Ernesto Barrachina15 abril, 2017Apariencia Web, 
+Desarrollo webDeja tu comentario
+
+Contenido actualizado a fecha: 3 junio 2021 4.9 / 5 ( 17 votos ) 
+Durante los artículos anteriores de esta serie orientada a aprender 
+CSS (CSS3) hemos descubierto qué es, cómo funciona y para qué sirve 
+CSS, mediante un montón de ejercicios prácticos que han ido 
+aumentando en dificultad paulatinamente.
+
+¡Pero sin complicarnos demasiado! 😉
+
+Si llegas ahora, te dejo los enlaces para que puedas aprender CSS 
+desde cero, gratis y a tu ritmo, y además obtener los conocimientos 
+necesarios para el seguimiento de este tutorial.
+
+Guía CSS. Lo más imprescindible. Cómo y desde dónde utilizar CSS. 
+Descubriendo los selectores CSS. En esta cuarta y última parte del 
+manual, terminaremos de aprender CSS de una vez por todas.
+
+➡ A partir de aquí deberías ser capaz de personalizar una página 
+web.
+
+Al finalizar, no me iré sin proponerte algunas animaciones CSS 
+sencillas con las que puedas investigar en el futuro y ampliar tus 
+cocimientos de CSS3.
+
+Contenido [Ocultar]
+
+1 ¿Qué falta para terminar de aprender CSS? 1.1 Propiedades CSS 
+para HTML 1.2 Ejercicios prácticos con algunas propiedades CSS 
+1.2.1 Asignar el mismo padding a todos los lados del elemento 1.2.2 
+Padding diferente a cada lado del elemento 1.2.3 Añadir bordes a un 
+elemento 1.2.4 Estilo de borde personalizado 1.2.5 Borde solo en un 
+lado del elemento 2 Comentado de una regla CSS 3 La declaración 
+!important 3.1 ¿Cuándo y cómo usar la declaración !important? 3.2 
+Sobrescribir una declaración !important 4 Selector :hover 4.1 Crear 
+un botón sencillo aplicando propiedades CSS 4.2 Cambiar el color de 
+un botón con transition 5 Ejemplos de elementos con estilo CSS 5.1 
+Cómo darle sombra al texto de un botón 5.2 Cómo hacer un texto con 
+sombra 5.3 Cómo hacer un contenedor con sombra externa 5.4 Cómo 
+añadir una línea a un texto 5.5 Cómo hacer una caja con esquinas 
+redondeadas diferentes 5.6 Cambiar el tamaño de un elemento al 
+poner el cursor encima 5.7 Rotación de un elemento al poner el 
+cursor encima 6 Estudia e investiga para aprender más CSS ¿Qué 
+falta para terminar de aprender CSS? Si repasamos los artículos 
+anteriores, donde comenzamos a aprender CSS desde cero, hemos 
+creado reglas, usado selectores, aprendido a incrustar CSS en 
+línea, a enlazarlo desde un archivo externo y realizado algunas 
+prácticas, pero… ¿no notas que te falta algo?
+
+➡ La respuesta es sí.
+
+Te falta conocer la lista de propiedades CSS que permiten manipular 
+elementos HTML.
+
+Es posible que no lo hayas pensado porque te he estado guiando por 
+los ejemplos, pero existen muchas propiedades CSS a las que 
+recurrir durante el diseño de páginas web.
+
+Para aprender CSS desde cero debes conocer la lista de propiedades 
+CSS Aunque te recomiendo que pospongas su lectura por el momento, 
+te dejo un PDF con la lista de propiedades CSS.
+
+Propiedades CSS para HTML Ahora que ya sabemos cómo aplicar estilo 
+de diferentes formas, es importante conocer y aprender cuáles son 
+las propiedades básicas CSS que modifican un elemento HTML.
+
+Desde dentro y hacia afuera las propiedades CSS más comunes son las 
+siguientes:
+
+Padding: Es el espacio de relleno que separa al elemento HTML de su 
+borde. Border: Borde visible o invisible que enmarca al elemento. 
+Margin: Indica el margen entre este elemento y el siguiente (hacia 
+cualquiera de sus lados). Propiedades CSS3 básicas en su modelo de 
+caja Este modelo de caja es aplicable a cualquier elemento HTML, ya 
+sea un párrafo, un enlace, un texto, una imagen o cualquier otro.
+
+Puedes afectar a las propiedades de cada elemento de forma general; 
+atacando a su cuatro lados, o de forma individual; asignado valores 
+diferentes a cada uno.
+
+➡ Te lo explico de otra forma.
+
+Como verás aquí, un contenedor div puede tener borde solo en uno de 
+sus lados. En este caso, he incrustado en línea el siguiente 
+código: border-left: 5px solid #5882FA; para asignar el borde solo 
+a la izquierda.
+
+Así que ya sabes, discrimina dónde implementas el estilo siguiendo 
+estas directrices:
+
+Con padding:15px; los cuatro lados del elemento tienen el mismo 
+valor. padding-left:15px; aplica estilo solo al lado izquierdo. 
+Mediante padding:15px 3px 15px 5px; cada lado tiene un valor 
+diferente. En el sentido de las agujas del reloj: arriba, derecha, 
+abajo, izquierda. Y con padding:15px 10px; se asigna el mismo valor 
+con un atajo por parejas: «arriba y abajo» y «derecha e izquierda». 
+➡ Del mismo modo que tratamos el padding lo haremos con el margin o 
+el border.
+
+Ejercicios prácticos con algunas propiedades CSS En nuestro afán de 
+aprender CSS y como de costumbre, realizaremos unos ejercicios 
+prácticos con los archivos de anteriores tutoriales.
+
+Si los tienes llenos de código de haber estado trabajando en ellos, 
+puedes descargarlos en su estado original desde estos enlaces: HTML 
+y CSS.
+
+Puedes aprender CSS desde casa practicando con los ejercicios CSS 
+que te propongo Asignar el mismo padding a todos los lados del 
+elemento Puesto que el padding no se visualiza, lo primero es 
+añadir color de fondo al elemento, que va a ser un párrafo por 
+seguir con la tradición de estos tutoriales.
+
+En el archivo externo programamos una regla que aporte color de 
+fondo y padding al párrafo.
+
+p{ background: #2E9AFE; padding: 15px;
+}
+En el HTML escribimos un párrafo y de paso también añadimos color 
+en línea.
+
+<p style="color:white;">Aprender a dar color de fondo y padding con 
+CSS.</p> El resultado será el siguiente:
+
+Aprender a dar color de fondo y padding con CSS.
+
+➡ Acuérdate de que si no ponemos padding el párrafo quedaría así de 
+chungo 😳
+
+Aprender a dar color de fondo y padding con CSS.
+
+Ahora te estarás preguntando por qué el fondo azul ocupa todo el 
+ancho y no se ajusta al texto.
+
+Los elementos HTML llamados de bloque se muestran ocupando líneas 
+completas. Para que un elemento de bloque, como un h1 o un párrafo, 
+se ajuste al texto debes aplicar la propiedad display, con el valor 
+inline-block.
+
+Aprender a dar color de fondo, padding y display con CSS. Lo vemos 
+en el siguiente ejemplo 😉
+
+Padding diferente a cada lado del elemento Sigue practicando y 
+asigna a un párrafo diferentes valores de padding en cada uno de 
+sus lados.
+
+p{ background: #2E9AFE; padding-top: 25px; padding-right: 15px; 
+padding-bottom: 20px; padding-left: 30px; display: inline-block;
+}
+O lo que es lo mismo, ahorra unas líneas de código asignando «en el 
+sentido de las agujas del reloj», los valores para cada uno de sus 
+lados.
+
+p{ background: #2E9AFE; padding: 25px 15px 20px 30px; display: 
+inline-block;
+}
+Párrafo con color de fondo y diferentes valores de padding Añadir 
+bordes a un elemento Los bordes, que por defecto también son 
+transparentes, delimitan el relleno (padding) de un elemento.
+
+Se les puede asignar estilo de grosor, tipo y color.
+
+Veamos cómo añadir un borde 🙂
+
+p{ background: #FACC2E; padding:15px; display: inline-block; 
+border: 2px solid #FE9A2E;
+}
+Párrafo con fondo, padding y borde Estilo de borde personalizado 
+Como te he comentado, además de color y grosor podemos decidir el 
+tipo de borde que queremos.
+
+En el ejemplo anterior hemos aplicado al borde un estilo solid, y 
+ahora aplicaremos otros estilos.
+
+p{ background: #FACC2E; padding:15px; display: inline-block; 
+border: 5px dashed #FE9A2E;
+}
+Párrafo con fondo, padding y borde Descubre tú mismo los diferentes 
+estilos de borde utilizando los siguientes valores:
+
+dotted. double. groove. ridge. inset. outset. initial. inherit. 
+dashed. solid. none. hidden. Por ejemplo:
+
+p{ background: #FACC2E; padding:15px; display: inline-block; 
+border: 5px outset #FE9A2E;
+}
+Párrafo con fondo, padding y borde outset Borde solo en un lado del 
+elemento Como en el caso del margin y el padding, podemos asignar 
+borde solo a uno de los lados, por ejemplo para destacar un texto.
+
+p{ background: #fcfcfc; padding:15px; display: inline-block; 
+border-top: 5px solid #FE9A2E; font-weight: bold;
+}
+Párrafo con borde a uno de los lados Prueba con el resto de lados, 
+incluso añadiendo borde a dos de ellos simultáneamente. Cambia el 
+color del background, del borde y del texto.
+
+➡ No olvides que debes practicar mucho si quieres aprender CSS.
+
+Recibe nuevos artículos mensualmente
+
+y aprende más sobre los temas que te interesan directamente desde 
+la bandeja de entrada de tu correo electrónico.
+
+ ¡ME APUNTO! Comentado de una regla CSS Si en algún momento durante 
+ el personalizado web necesitamos desconectar temporalmente una 
+ regla o parte de ella, en vez de borrarla usaremos los comentarios 
+ que vienen definidos con /* */.
+
+ Los comentarios en CSS permiten ocultar de forma temporal o 
+ permanente una regla o sentencia CSS Eso sí, si va a ser algo 
+ permanente, te recomiendo que la borres y no la comentes porque 
+ nunca está de más evitar código innecesario en nuestros archivos.
+
+ Vamos a comentar la regla del ejercicio anterior haciendo que el 
+ elemento <p> no se vea afectado por ninguna de sus sentencias.
+
+ /* p{ background: #fcfcfc; padding:15px; display: inline-block; 
+ border-left: 5px solid #FE9A2E; font-weight: bold;
+ }
+ */ ➡ También puedes ocultar una o varias de las sentencias.
+
+ Esto te hubiera venido muy bien en el ejercicio anterior para ir 
+ conectando y desconectando los diferentes tipos de bordes.
+
+ p{ background: #fcfcfc; padding:15px; display: inline-block; /* 
+ border-left: 5px solid #FE9A2E; */ /* border-left: 5px double 
+ #FE9A2E; */ /* border-left: 5px inset #FE9A2E; */ /* border-left: 
+ 5px outset #FE9A2E; */ border-left: 5px dotted #FE9A2E; 
+ font-weight: bold;
+ }
+ Haz pruebas y comenta algunas reglas y sentencias por tu cuenta.
+
+ La declaración !important Nos encontraremos situaciones en que por 
+ diversas causas una regla no surta el efecto previsto 😳
+
+ Bien porque hayamos asignado estilo con un selector que priorice 
+ sobre la actual, o porque estemos manipulando un código en que 
+ hayan usado la declaración !important para evitar un cambio de 
+ estilo.
+
+ ➡ En estos casos usaremos !important.
+
+ Pero cuidado, no abuses de ella porque una declaración !important 
+ solo se anula con otra declaración !important. A !important no lo 
+ sobrescribe otra regla, con lo que debes usarlo con precaución 
+ Quizás lo entendamos mejor con unos ejercicios 😉
+
+ ¿Cuándo y cómo usar la declaración !important? Si estamos 
+ modificando código programado por otros, como una plantilla de 
+ WordPress, tal vez los programadores hayan decidido que un 
+ elemento se muestre de una forma especial mediante una selección 
+ con selectores anidados.
+
+ En el ejemplo siguiente, el autor a decidido que todos los 
+ elementos span contenidos en un párrafo que esté dentro de un 
+ contenedor de clase general, se muestren de color rojo:
+
+ .general p span{ color: red;
+ }
+ Para este código HTML:
+
+ <div class="general"> <p>Cum sociis natoque penatibus et magnis 
+   <span>dis parturient montes</span>, nascetur ridiculus mus.</p>
+     <p>Nulla consequat massa quis enim. <span>Donec pede 
+     justo</span>, fringilla vel, aliquet nec, vulputate eget, 
+     arcu.</p> <div> La consecuencia de esta acción, es que por 
+     mucho que añadamos una nueva regla posteriormente, los span no 
+     se verán afectados y seguirán siendo de color rojo.
+
+     .general p span{ color: red;
+     }
+     span{ color: green;
+     }
+     Compruébalo ejecutando tu archivo en el navegador.
+
+     La declaración !important permite que una regla priorice sobre 
+     otra regla más selectiva. Así que ya sabes, aplica esta 
+     declaración en el ejemplo y vuelve a ejecutar el código en el 
+     navegador.
+
+     .general p span{ color: red;
+     }
+     span{ color: green !important;
+     }
+     En la vida real, si conoces la regla que está causando el 
+     conflicto siempre puedes reprogramarla, o eliminarla 
+     directamente.
+
+     No obstante, si las reglas están repartidas por diferentes 
+     archivos y no eres capaz de descubrir desde dónde modificar la 
+     dichosa regla, lo mejor es utilizar !important para evitar que 
+     priorice.
+
+     Sobrescribir una declaración !important Supongamos que desde 
+     el archivo CSS hemos decidido que los párrafos de nuestra 
+     página web sean siempre negros, añadiendo a la sentencia la 
+     declaración !important.
+
+     Pero ahora resulta que en una página en concreto queremos que 
+     sean de color gris.
+
+     Pega en tu archivo externo esta regla:
+
+     p{ color: black!important;
+     }
+     Esto provoca que por mucho que asignemos otros colores a los 
+     párrafos siempre serán negros.
+
+     Para anular el primer !important añadiremos un segundo 
+     !important en la regla posterior. Así que prueba a pegar en el 
+     head del HTML esta regla, con la que no conseguirás nada en 
+     absoluto:
+
+     p{ color: silver;
+     }
+     Y luego prueba con está otra a la que hemos añadido 
+     !important:
+
+     p{ color: silver!important;
+     }
+     Ahora por fin has conseguido que tus párrafos sean de color 
+     gris.
+
+     Te puede interesar
+
+     Aplicar diferentes estilos CSS a letras y palabras de una 
+     misma frase Enlaces a un PDF descargable desde mi web. Cómo 
+     crear un enlace HTML de llamada Selector :hover No puedes 
+     aprender CSS si no conoces los efectos que genera el selector 
+     :hover.
+
+     ¿Te has fijado que al poner el cursor sobre un botón suele 
+     cambiar de color? 😀
+
+     El selector :hover cambia temporalmente una regla CSS por 
+     otra. Esto se traduce en que puedes crear sencillas 
+     animaciones CSS.
+
+     Aprender CSS implica saber cómo se usa el selector :hover para 
+     aplicar estilos de forma temporal El caso más típico es el de 
+     los enlaces, que al situarnos encima cambian de color.
+
+     Para darle una vuelta, en el ejemplo pintaremos el enlace de 
+     verde.
+
+     a{ color: green;
+     }
+     <a 
+     href="http://undominio.com/url-a-la-que-apunta-el-enlace">Texto 
+     del enlace</a> la regla para que cambie de color al colocar el 
+     cursos encima:
+
+     a:hover{ color: red;
+     }
+     Texto en color verde que será rojo si te pones encima
+
+     En el CSS tendrás que añadir las dos reglas, una para su 
+     comportamiento normal y otra para su comportamiento con hover, 
+     que siempre irá en segundo lugar. a{ color: green;
+     }
+     a:hover{ color: red;
+     }
+     El selector hover puede afectar a cualquier elemento HTML 
+     cambiando su estilo de forma temporal, siendo capaz de iniciar 
+     animaciones más complejas gracias a la propiedad transition.
+
+     Como el objetivo de esta serie de artículos es estudiar y 
+     aprender CSS practicando lo aprendido para aplicarlo a nuestra 
+     web, vamos por fin con unos ejemplos más creativos donde poner 
+     en práctica los conocimientos adquiridos en CSS.
+
+     Practica los conocimientos adquiridos mientras aprendes CSS 
+     Crear un botón sencillo aplicando propiedades CSS Vamos a 
+     crear nuestro primer botón en su versión más simple utilizando 
+     algunas de las técnicas que hemos aprendido durante el manual.
+
+     Para generar un botón partiremos de un enlace, y como sabes 
+     nos hace falta una regla para el enlace estándar y otra regla 
+     para el enlace con selector hover.
+
+     El resultado que buscamos es un botón que simplemente cambie 
+     de color al colocar el cursor sobre él.
+
+     BOTÓN QUE CAMBIA DE COLOR Las reglas que debes aplicar desde 
+     el HEAD o tu documento CSS externo son:
+
+     #ejemploHover1{
+     text-decoration: none; padding: 15px 20px; display: 
+     inline-block; background: #91b4c0; color: white; 
+     border-radius: 6px;
+     }
+     #ejemploHover1:hover{
+     background: #66cdaa;
+     }
+     Observa que he introducido algo nuevo en esta regla: 
+     «text-decoration: none» para eliminar el subrayado que los 
+     anchor text tienen por defecto. El código HTML para el botón 
+     será un enlace:
+
+     <a id="ejemploHover1" href="http://undominio.com">BOTÓN QUE 
+     CAMBIA DE COLOR</a> No creo que te resulte muy complicado 
+     hacer que también cambie el color del texto. Solo tienes que 
+     añadir una nueva sentencia al selector hover.
+
+     Después crea otros botones con diferente id y prueba con 
+     distintos estilos.
+
+     Cambiar el color de un botón con transition La verdad es que 
+     el cambio de estilos en el botón anterior no es para echar 
+     cohetes, así que es el momento de ir un poco más allá y crear 
+     una animación suave en el botón, que es lo que mola.
+
+     Pega este código en tu archivo:
+
+     #ejemploHover2{
+     text-decoration: none; padding: 15px 20px; display: 
+     inline-block; background: #ff0081; color: white; 
+     -webkit-transition: background 1s;/* PARA VERSIONES 3.1 A 6.0 
+     DE SAFARI */ transition: background 1s;
+     }
+     #ejemploHover2:hover{
+     background: #524d9c;
+     }
+     El HTML del botón:
+
+     <a id="ejemploHover2" href="http://undominio.com"BOTÓN CON 
+     TRANSICIÓN DE COLOR</a> BOTÓN CON TRANSICIÓN DE COLOR Si 
+     destripamos un poco la propiedad transition verás que tiene 2 
+     valores:
+
+     La propiedad a modificar con la transición, que en este caso 
+     es el color de fondo. La duración en segundos de la 
+     transición. Cuando quieras un efecto de transición en más de 
+     un elemento, usa «all» para todas las transiciones.
+
+     Como con el siguiente botón, en el que queremos un cambio de 
+     color suave tanto para el fondo como para el texto.
+
+     #ejemploHover3{
+     text-decoration: none; padding: 15px 20px; display: 
+     inline-block; background: #464646; color: white; 
+     -webkit-transition: all 0.8s, color 0.8s; transition: all 
+     0.8s, color 0.8s;
+     }
+     #ejemploHover3:hover{
+     background: silver; color: #464646;
+     }
+     <a id="ejemploHover3" href="http://undominio.com">BOTÓN Y 
+     TEXTO QUE CAMBIAN DE COLOR</a> BOTÓN Y TEXTO QUE CAMBIAN DE 
+     COLOR Ejemplos de elementos con estilo CSS Ahora es cuando 
+     debes echar un vistazo al archivo de ayuda con las propiedades 
+     CSS, que has descargado al principio del post, para descubrir 
+     muchas propiedades CSS que utilizar durante la personalización 
+     de una página web.
+
+     Vemos algunos ejemplos que te serán de ayuda y que podrás 
+     incluir en el diseño de tu página 😉
+
+     Cómo darle sombra al texto de un botón a{ text-decoration: 
+     none; padding: 15px 20px; display: inline-block; background: 
+     #91b4c0; color: white; font-weight: bold; text-shadow: 1px 1px 
+     2px #464646;
+     }
+     BOTÓN CON SOMBRA EN TEXTO Cómo hacer un texto con sombra p{ 
+     color: #e54444; font-size: 30px; font-weight: bold; 
+     text-shadow: 2px 2px 1px #464646;
+     }
+     Este texto tiene sombra
+
+     Cómo hacer un contenedor con sombra externa p{ background: 
+     #3cb0fd; -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.40); 
+     -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.40); box-shadow: 
+     5px 5px 3px 0px rgba(0,0,0,0.40);
+     }
+     Este párrafo tiene una sombra en su contenedor
+
+     Como en este último ejemplo, observa que a veces hay que 
+     aplicar el mismo estilo de diferentes formas para adaptarnos a 
+     los distintos navegadores, porque no todos entenderán según 
+     qué tipo de sentencias CSS genéricas.
+
+     Cómo añadir una línea a un texto p{ font-size: 20px; 
+     font-weight: bold; text-decoration: underline;
+     }
+     Este párrafo está remarcado con una línea
+
+     Cómo hacer una caja con esquinas redondeadas diferentes p{ 
+     background: #e0c72d; color:white; text-align: center; 
+     -webkit-border-radius: 60px 4px 40px 10px; border-radius: 60px 
+     4px 40px 10px;
+     }
+     Este párrafo tiene diferente border-radius en las esquinas
+
+     Cambiar el tamaño de un elemento al poner el cursor encima 
+     div{ width: 150px; height: 93px; background: #3cb0fd; 
+     -webkit-transition: width 1s; transition: width 1s;} div: 
+     hover{ width: 100%;
+     }
+     . Rotación de un elemento al poner el cursor encima div{ 
+     width: 93px; height: 93px; background: #b0fd3c; transition: 
+     transform 2s;
+     }
+     div:hover{ transform: rotate(1080deg);
+     }
+     . Estudia e investiga para aprender más CSS Bueno, creo que no 
+     te voy a dar más la brasa, porque durante estos cuatro 
+     tutoriales has descubierto herramientas suficientes como para 
+     que puedas investigar por tu cuenta.
+
+     Hemos aprendido qué es, dónde y cómo se utiliza CSS, además de 
+     realizado un montón de ejercicios prácticos orientados a 
+     aprender CSS desde cero. Hemos estudiado reglas, las clases, 
+     los id, selectores, propiedades… Opino que es más que 
+     suficiente porque «qué más da que sea un párrafo, un div, o un 
+     h3». Todos los elementos comparten propiedades y los vas a 
+     tener que tratar igual. Para que te vayas con un buen sabor de 
+     boca te voy a contar algún secreto 😉
+
+     No hace falta que aprendas de golpe todas las propiedades. Ya 
+     las irás descubriendo conforme las vayas necesitando. Lo 
+     importante es que sepas que existen. Tampoco es necesario que 
+     programes todas las reglas, dispones de generadores CSS a los 
+     que recurrir para ahorrarte trabajo. Te queda mucho camino por 
+     delante hasta aprender CSS de verdad, pero ahora ya sabes 
+     dónde buscar lo que necesitas. En el caso de que tu web sea de 
+     este tipo, el tutorial HTML WordPress puede ayudarte a 
+     aprender aún más CSS, ya que aporta información complementaria 
+     sobre este código en esa plataforma.
+
+     Y pásate por este artículo sobre cómo usar sprites para 
+     empezar a ver de lo que eres capaz.
+
+     Solo añadir que espero que además de aprender CSS hayas 
+     disfrutado del curso, y que si necesitas algún consejo sobre 
+     programación con CSS, no dudes en recurrir al formulario de 
+     comentarios.
