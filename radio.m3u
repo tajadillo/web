@@ -1,7 +1,7 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
-https://20813.live.streamtheworld.com/CRP_MAR_SC?csegid=20001&dist=20001&ttag=20001
+ https://20813.live.streamtheworld.com/CRP_MAR_SC?csegid=20001&dist=20001&t
 
 #EXTINF:-1 tvg-id="Nacional Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/radionacionaldelperu/picture?width=200&height=200" group-title="General" , Radio Nacional Perú
 https://cdnh4.iblups.com/hls/OisZOgZAOB.m3u8
