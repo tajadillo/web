@@ -1,7 +1,7 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
-https://23103.live.streamtheworld.com/CRP_MARAAC_TOKEN.aac?tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODA4NjAxOSwiZXhwIjoxNjQ4MDg2MDM0LCJhdWQiOiJ0ZCIsImlzcyI6InBsYXllciIsInN1YiI6Ik9wZW5TdHJlYW1pbmcifQ.ahi5sdWcGz0gQM5itoDltEUI4VXak4ioMWJyjxLMeg4&csegid=1010&dist=1010&ttag=crp%3Ap1crp&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=1cf52473-c597-4e8a-a47d-bd2a954fb786
+https://20813.live.streamtheworld.com/CRP_MAR_SC?csegid=20001&dist=20001&ttag=20001
 
 #EXTINF:-1 tvg-id="Nacional Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/radionacionaldelperu/picture?width=200&height=200" group-title="General" , Radio Nacional Perú
 https://cdnh4.iblups.com/hls/OisZOgZAOB.m3u8
