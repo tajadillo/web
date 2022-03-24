@@ -1,0 +1,31 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
+https://23103.live.streamtheworld.com/CRP_MARAAC_TOKEN.aac?tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODA4NjAxOSwiZXhwIjoxNjQ4MDg2MDM0LCJhdWQiOiJ0ZCIsImlzcyI6InBsYXllciIsInN1YiI6Ik9wZW5TdHJlYW1pbmcifQ.ahi5sdWcGz0gQM5itoDltEUI4VXak4ioMWJyjxLMeg4&csegid=1010&dist=1010&ttag=crp%3Ap1crp&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=1cf52473-c597-4e8a-a47d-bd2a954fb786
+
+#EXTINF:-1 tvg-id="Nacional Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/radionacionaldelperu/picture?width=200&height=200" group-title="General" , Radio Nacional Perú
+https://cdnh4.iblups.com/hls/OisZOgZAOB.m3u8
+
+#EXTINF:-1 tvg-id="La Zona" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Radiolazona/picture?width=200&height=200" group-title="General" , Radio La Zona
+https://mdstrm.com/audio/5fada54116646e098d97e6a5/icecast.audio
+
+ #EXTINF:-1 tvg-id="RPP Noticias Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rppnoticias/picture?width=200&height=200" group-title="General" , RPP Noticias Perú
+https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/icecast.audio
+
+#EXTINF:-1 tvg-id="Radio Z Rock & Pop Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ZRocknPop/picture?width=200&height=200" group-title="General" , Radio Z Rock & Pop Perú
+http://167.114.118.120:7440/;.mp3
+
+#EXTINF:-1 tvg-id="FM Rock & Pop Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/FmRockandPop/picture?width=200&height=200" group-title="General" , FM Rock & Pop Argentina
+https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3
+
+#EXTINF:-1 tvg-id="Jazz Radio Francia" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/jazzradio.fr/picture?width=200&height=200" group-title="General" , Jazz Radio Francia
+https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3
+
+#EXTINF:-1 tvg-id="Radio Francia Internacional" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rfienespanol/picture?width=200&height=200" group-title="General" , Radio Francia Internacional
+https://rfienespagnol64k.ice.infomaniak.ch/rfienespagnol-64.mp3
+
+#EXTINF:-1 tvg-id="Total Rock UK" tvg-country="UK" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Total Rock UK
+https://s04.whooshclouds.net:8220/live
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
+https://publiradio.tk:9000/live
