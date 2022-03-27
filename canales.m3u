@@ -7,7 +7,7 @@ https://stream-04.nyc.dailymotion.com/sec(ekpi6JmRB5KslkTtNqtBmsOFz8Q8iW450m9OZE
 https://d2tr4gdfol9ja.cloudfront.net/atv/smil:atv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="panamericana.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General",Panamericana Television
-https://www.dailymotion.com/embed/video/x774s7s?api=postMessage&autoplay=true&id=player&mute=false&origin=https%3A%2F%2Fpanamericana.pe
+http://free.fullspeed.tv/iptv-query?streaming-ip=https://www.dailymotion.com/PanamericanaPTV
 
 #EXTINF:-1 tvg-id="Hispantv.ir" tvg-country="IR;ES;HISPAM" tvg-language="Spanish" tvg-logo="https://en.wikipedia.org/wiki/File:HispanTv_logo.svg" group-title="News",HispanTV
 https://live1.presstv.ir/live/hispan.m3u8
@@ -36,9 +36,6 @@ http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="OvacionTV.pe" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",Ovación TV (720p) [Not 24/7]
 https://5c3fb01839654.streamlock.net:1963/iptvovacion1/liveovacion1tv/playlist.m3u8
-
-#EXTINF:-1 tvg-id="PanamericanaTV.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://i.imgur.com/uQhEDES.png" group-title="General",Panamericana TV (720p) [Not 24/7]
-http://free.fullspeed.tv/iptv-query?streaming-ip=https://www.dailymotion.com/PanamericanaPTV
 
 #EXTINF:-1 tvg-id="PeruChannel.br" tvg-country="BR;PE" tvg-language="Portuguese;Spanish" tvg-logo="https://i.imgur.com/01KEiEp.png" group-title="General",Perú Channel (720p) [Not 24/7]
 https://stmv1.duvoxtv.com.br/novelaplz/novelaplz/playlist.m3u8
