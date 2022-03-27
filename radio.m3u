@@ -39,6 +39,12 @@ https://rfienespagnol64k.ice.infomaniak.ch/rfienespagnol-64.mp3
 #EXTINF:-1 tvg-id="Total Rock UK" tvg-country="UK" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Total Rock UK
 https://s04.whooshclouds.net:8220/live
 
+#EXTINF:-1 tvg-id="Universidad de Tarapaca" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Universidad de Tarapaca
+http://stream5.eltelon.com:8000/universidad-de-tarapaca.aac
+
+#EXTINF:-1 tvg-id="Radio Puerta Norte" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Puerta Norte
+http://192.99.18.164:9654/;
+
 #EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
 https://publiradio.tk:9000/live
 
@@ -60,8 +66,14 @@ https://stream10.usastreams.com/9314/stream/;
 #EXTINF:-1 tvg-id="Radio Carolina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Carolina
 https://unlimited1-eu.dps.live/carolina/gotardis/audio/now/livestream1.m3u8
 
+#EXTINF:-1 tvg-id="RadioActiva" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RadioActiva
+https://26513.live.streamtheworld.com/ACTIVAAAC.aac?csegid=12000&dist=radioactiva_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=e448f3d2-b64b-4d30-e454-209f1d63b6a3
+
 #EXTINF:-1 tvg-id="Radio Corazon" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Corazon
 https://24253.live.streamtheworld.com/CORAZONAAC.aac
+
+#EXTINF:-1 tvg-id="FM Dos" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , FM Dos
+https://26293.live.streamtheworld.com/FMDOSAAC.aac?csegid=12000&dist=fmdos_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=d1677c77-b8fb-4953-e054-2dccecbb9b5a
 
 #EXTINF:-1 tvg-id="Radio Pudahuel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pudahuel
 https://24383.live.streamtheworld.com/PUDAHUELAAC.aac?csegid=12000&dist=pudahuel_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=26e77291-92aa-4af9-cc52-c07aeba534e3
