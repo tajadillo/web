@@ -76,7 +76,7 @@ https://america-crtvg.flumotion.com/playlist.m3u8
 #EXTINF:-1 tvg-id="Euronews Internacional EN" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional INGLES
 https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live
 
-#EXTINF:-1 tvg-id="Euronews Internacional EN" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional INGLES
+#EXTINF:-1 tvg-id="Euronews Internacional ES" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional ESPAÑOL
 https://youtu.be/JbKgQhFlMdU
 
 #EXTINF:-1 tvg-id="Euronews Internacional PT" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional PORTUGUES
