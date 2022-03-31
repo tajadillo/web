@@ -1,0 +1,195 @@
+#EXTM3U 
+
+#EXTINF:-1 tvg-id="Willax tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal Willax-tv
+https://stream-04.nyc.dailymotion.com/sec(ekpi6JmRB5KslkTtNqtBmsOFz8Q8iW450m9OZEQI2YQ)/dm/3/x7x4dgx/s/live-1.m3u8
+
+#EXTINF:-1 tvg-id="ATV-PERU" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal atv peru
+https://d2tr4gdfol9ja.cloudfront.net/atv/smil:atv.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="panamericana.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General",Panamericana Television
+http://free.fullspeed.tv/iptv-query?streaming-ip=https://www.dailymotion.com/PanamericanaPTV
+
+#EXTINF:-1 tvg-id="Hispantv.ir" tvg-country="IR;ES;HISPAM" tvg-language="Spanish" tvg-logo="https://en.wikipedia.org/wiki/File:HispanTv_logo.svg" group-title="News",HispanTV
+https://live1.presstv.ir/live/hispan.m3u8
+
+#EXTINF:-1 tvg-id="HiperconectadosTV.cl" tvg-country="HISPAM" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/hiperconectadostv/picture?width=320&height=320" group-title="Science",Hiperconectados Televisión
+https://mediacpstreamchile.com:1936/hiperconectados/hiperconectados/playlist.m3u8
+
+#EXTINF:-1 tvg-id="LimaLive.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/GrupoLimaLive/picture?width=320&height=320" group-title="Local",LimaLive (720p) [Not 24/7]
+https://stmv.panel.grupolimalive.com/limalive/limalive/playlist.m3u8
+
+#EXTINF:-1 tvg-id="MINEDUiptv1.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/mineduperu/picture?width=320&height=320" group-title="Education",MINEDU IPTV 1 (320p) [Not 24/7]
+http://iptv.perueduca.pe:1935/canal1/canal11/playlist.m3u8
+
+#EXTINF:-1 tvg-id="MINEDUiptv2.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/mineduperu/picture?width=320&height=320" group-title="Education",MINEDU IPTV 2 (320p) [Not 24/7]
+http://iptv.perueduca.pe:1935/canal2/canal22/playlist.m3u8
+
+#EXTINF:-1 tvg-id="NacionalTV.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/NacionalTVComunicaciones/picture?width=320&height=320" group-title="General",Nacional TV
+https://stmv.panel.grupolimalive.com/nacionaltv/nacionaltv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Onda Digital Peru" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/OndaDigitalPeru/picture?width=200&height=200" group-title="General",Onda Digital Peru
+https://tv.ondadigital.pe:1936/ondatv2/ondatv2/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ESTO ES FÚTBOL" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",ESTO ES FÚTBOL
+https://youtu.be/l7BA3LGQXBM
+
+#EXTINF:-1 tvg-id="OvacionTV.pe" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",Ovacion TV (720p) [Not 24/7]
+http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="OvacionTV.pe" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",Ovación TV (720p) [Not 24/7]
+https://5c3fb01839654.streamlock.net:1963/iptvovacion1/liveovacion1tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="PeruChannel.br" tvg-country="BR;PE" tvg-language="Portuguese;Spanish" tvg-logo="https://i.imgur.com/01KEiEp.png" group-title="General",Perú Channel (720p) [Not 24/7]
+https://stmv1.duvoxtv.com.br/novelaplz/novelaplz/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TopLatino.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/toplatinotv/picture?width=320&height=320" group-title="Music",Top Latino TV (404p) [Not 24/7]
+https://5cefcbf58ba2e.streamlock.net/tltvweb/tvweb.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Radio Uno Tacna" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/toplatinotv/picture?width=320&height=320" group-title="Music",Radio Uno Tacna
+https://youtu.be/jKmov2ILQdU
+
+#EXTINF:-1 tvg-id="TVPeru.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://www.tvperu.gob.pe/sites/all/themes/stability/images/logo_TVPE_PLAY.png" group-title="General",TV Perú (450p) [Not 24/7]
+https://cdnh8.iblups.com/hls/R9WtilpKKB.m3u8
+
+#EXTINF:-1 tvg-id="TVPeruNoticias.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://www.tvperu.gob.pe/sites/all/themes/stability/images/logo_TVPE_NOTICIAS_PLAY.png" group-title="New",TV Perú Noticias
+https://cdnh8.iblups.com/hls/RMuwrdk7M9.m3u8
+
+#EXTINF:-1 tvg-id="Canal Sierra de Cadiz HD" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/canalsierradecadiz/picture?width=200&height=200" group-title="General",Canal Sierra de Cadiz HD
+http://217.125.136.93:8080/canalsierradecadiz1080.m3u8
+
+#EXTINF:-1 tvg-id="PTV Malaga" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/PTVMalaga/picture?width=200&height=200" group-title="General",PTV Malaga
+https://streamer.zapitv.com/PTV-Malaga/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-id="Cordoba TV" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/cordobatvonline/picture?width=200&height=200" group-title="General",Cordoba TV
+https://cloudvideo.servers10.com:8081/8020/index.m3u8
+
+#EXTINF:-1 tvg-id="Costa Noroeste TV" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Costanoroestetv/picture?width=200&height=200" group-title="General",Costa Noroeste TV
+https://limited31.todostreaming.es/live/noroestetv-livestream.m3u8
+
+#EXTINF:-1 tvg-id="Cancionero TV" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://www.cancionero.es/portal/images/imagesweb/LogoTV_Trans.png" group-title="General",Cancionero TV
+http://89.140.229.4/hls1/cancionero.m3u8
+
+#EXTINF:-1 tvg-id="Mirame TV" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/MirameTVCanarias/picture?width=200&height=200" group-title="General",Mirame TV
+https://bit.controlstreams.com:5443/LiveApp/streams/mirametv.m3u8
+
+#EXTINF:-1 tvg-id="Telemadrid" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/telemadrid/picture?width=200&height=200" group-title="New",Telemadrid
+https://telemadridhls2-live-hls.secure2.footprint.net/egress/chandler/telemadrid/telemadrid_1/index.m3u8
+
+#EXTINF:-1 tvg-id="TVG America" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/CRTVG/picture?width=200&height=200" group-title="General",GALICIA TVG America
+https://america-crtvg.flumotion.com/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Euronews Internacional EN" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional INGLES
+https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live
+
+#EXTINF:-1 tvg-id="Euronews Internacional ES" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional ESPAÑOL
+https://youtu.be/JbKgQhFlMdU
+
+#EXTINF:-1 tvg-id="Euronews Internacional PT" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional PORTUGUES
+https://www.youtube.com/channel/UCUmEPYxmnyQDeRUcFkslmQw/live
+
+#EXTINF:-1 tvg-id="CNN Internacional" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/CNNee/picture?width=320&height=320" group-title="New",CNN Internacional
+https://cnn-cnninternational-1-gb.samsung.wurl.com/manifest/playlist.m3u8
+
+#EXTINF:-1 tvg-id="France 24 Francia Es" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/FRANCE24/picture?width=200&height=200" group-title="New",France 24 Francia Es
+https://static.france24.com/live/F24_ES_HI_HLS/live_web.m3u8
+
+#EXTINF:-1 tvg-id="France 24 Francia FR" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/FRANCE24/picture?width=200&height=200" group-title="New",France 24 Francia FR (614p) [Not 24/7]
+https://static.france24.com/live/F24_FR_HI_HLS/live_web.m3u8
+
+#EXTINF:-1 tvg-id="Rai News 24 Italia IT" tvg-country="IT" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rainews.it/picture?width=200&height=200" group-title="New",News 24 Italia IT
+https://streamcdnb11-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/playlist_mo.m3u8
+
+#EXTINF:-1 tvg-id="DW Alemania Es" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/dw.espanol/picture?width=200&height=200" group-title="Docu",DW Alemania Es
+https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8
+
+#EXTINF:-1 tvg-id="Porto Canal Portugal PT" tvg-country="PT" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/portocanal/picture?width=200&height=200" group-title="General",Porto Canal Portugal PT
+https://streamer-b02.videos.sapo.pt/live/portocanal/master.m3u8
+
+#EXTINF:-1 tvg-id="Televizija Eslovenia" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Televizija.Slovenija/picture?width=200&height=200" group-title="New",Televizija Eslovenia
+https://31-rtvslo-tv-slo1-int.cdn.eurovisioncdn.net/playlist.m3u8?DVR
+
+#EXTINF:-1 tvg-id="Canal 6 Multimedios Mexico" tvg-country="MX" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/multimediostv/picture?width=200&height=200" group-title="General",Canal 6 Multimedios Mexico
+https://mdstrm.com/live-stream-playlist/57b4dbf5dbbfc8f16bb63ce1.m3u8
+
+#EXTINF:-1 tvg-id="Milenio Mexico" tvg-country="MX" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/MilenioDiario/picture?width=200&height=200" group-title="New",Milenio Mexico
+https://www.youtube.com/channel/UCFxHplbcoJK9m70c4VyTIxg/live
+
+#EXTINF:-1 tvg-id="Televisa News Mexico" tvg-country="MX" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/FOROtv/picture?width=200&height=200" group-title="General",Televisa News Mexico
+https://channel02-notusa.akamaized.net/hls/live/2023914-b/event01/index.m3u8
+
+#EXTINF:-1 tvg-id="ADN40 Mexico" tvg-country="MX" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ADN40mx/picture?width=200&height=200" group-title="New",ADN40 Mexico
+https://pubads.g.doubleclick.net/ssai/event/XZLLJIhJRNqz33DGp6NdkA/master.m3u8
+
+#EXTINF:-1 tvg-id="Noticias Caracol Colombia" tvg-country="CO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/NoticiasCaracol/picture?width=200&height=200" group-title="New",Noticias Caracol Colombia
+https://mdstrm.com/live-stream-playlist_800/58dc3d471cbe05ff3c8e463e.m3u8
+
+#EXTINF:-1 tvg-id="Todo Noticias Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/todonoticias/picture?width=200&height=200" group-title="New",Todo Noticias Argentina
+https://youtu.be/wHn1_QVoXGM
+
+#EXTINF:-1 tvg-id="C5N Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/C5N.Noticias/picture?width=200&height=200" group-title="New",C5N Argentina
+https://www.youtube.com/channel/UCFgk2Q2mVO1BklRQhSv6p0w/live
+
+
+#EXTINF:-1 tvg-id="America TV Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/AmericaTV/picture?width=200&height=200" group-title="General",America TV Argentina
+https://www.youtube.com/channel/UC6NVDkuzY2exMOVFw4i9oHw/live
+
+#EXTINF:-1 tvg-id="TeleSUR Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teleSUR/picture?width=200&height=200" group-title="New",TeleSUR Venezuela
+https://cdnesmain.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Venevision TV Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teleSUR/picture?width=200&height=200" group-title="New",Venevision TV
+https://www.youtube.com/watch?v=x3ez7JK8Usk
+
+#EXTINF:-1 tvg-id="Globovision Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/globovision/picture?width=200&height=200" group-title="New",Globovision Venezuela
+https://www.youtube.com/channel/UCfJtBtmhnIyfUB6RqXeImMw/live
+
+#EXTINF:-1 tvg-id="CHV Noticias Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",CHV Noticias Chile
+https://www.youtube.com/embed/KpoesopyFTs?feature=oembed
+
+#EXTINF:-1 tvg-id="24h Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",24h Chile
+https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
+
+#EXTINF:-1 tvg-id="Bio Bio tv" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Bio Bio TV BBTV
+https://rudo.video/live/bbtv?autostart=1&volume=0&streamingLabel=home
+
+#EXTINF:-1 tvg-id="TELE13 Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",TELE13 Chile
+https://www.youtube.com/channel/UCsRnhjcUCR78Q3Ud6OXCTNg/live
+
+#EXTINF:-1 tvg-id="Meganoticias Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/meganoticiascl/picture?width=200&height=200" group-title="New",Meganoticias Chile
+https://www.youtube.com/channel/UCkccyEbqhhM3uKOI6Shm-4Q/live
+
+#EXTINF:-1 tvg-id="TC TV Ecuador" tvg-country="EC" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/tctelevision10/picture?width=200&height=200" group-title="New",TC TV Ecuador
+https://www.dailymotion.com/embed/video/x7wijay?autoplay=1
+
+#EXTINF:-1 tvg-id="TeleAmazonas Ecuador" tvg-country="EC" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/TeleamazonasEcuador/picture?width=200&height=200" group-title="General",TeleAmazonas Ecuador
+https://api.new.livestream.com/accounts/1359588/events/4428723/live.m3u8
+
+#EXTINF:-1 tvg-id="Bolivia 7.1 TV" tvg-country="BO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/BoliviatvOficial/picture?width=200&height=200" group-title="General",Bolivia 7.1 TV
+http://www.boliviatv.bo/principal/tvenvivo71.php
+
+#EXTINF:-1 tvg-id="Bolivia 7.2 TV" tvg-country="BO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/BoliviatvOficial/picture?width=200&height=200" group-title="General",Bolivia 7.2 TV
+https://video1.getstreamhosting.com:1936/8224/8224/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Red Pat Bolivia" tvg-country="BO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/patboliviahd/picture?width=200&height=200" group-title="General",Red Pat Bolivia
+https://master.tucableip.com/pat/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CGTN" tvg-country="AS"Spanish" tvg-logo="https://graph.facebook.com/cgtnenespanol/picture?width=200&height=200" group-title="General",CGTN.TV en español Asia
+https://news.cgtn.com/resource/live/espanol/cgtn-e.m3u8
+
+#EXTINF:-1 tvg-id="kPOP" tvg-country="AS" tvg-logo="https://graph.facebook.com/cgtnenespanol/picture?width=200&height=200" group-title="Baile",The K-POP Korea-1
+https://www.youtube.com/channel/UCITH7URIRpb8yoshUwGE9jg/live
+
+#EXTINF:-1 tvg-id="kPOP" tvg-country="AS" tvg-logo="https://graph.facebook.com/cgtnenespanol/picture?width=200&height=200" group-title="Baile",The K-POP Korea-2
+https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live
+
+
+#EXTINF:-1 tvg-id="Fashion TV" tvg-country="EN" tvg-logo="https://graph.facebook.com/FTV/picture?width=200&height=200" group-title="Moda",Fashion TV  
+https://publica.cloudycdn.services/playlist.m3u8?network_id=569
+
+#EXTINF:-1 tvg-id="Miami TV-1" tvg-country="EN" tvg-logo="https://graph.facebook.com/miamitv/picture?width=200&height=200" group-title="Moda",Miami TV-1
+https://59ec5453559f0.streamlock.net/miamitv/smil:miamitvROKU/chunklist_w1195980091_b2592000.m3u8
+
+
+#EXTINF:-1 tvg-id="Miami TV-2" tvg-country="EN" tvg-logo="https://graph.facebook.com/miamitv/picture?width=200&height=200" group-title="General",Miami TV-2
+
+https://59ec5453559f0.streamlock.net/JennyLive/JennyLive/playlist.m3u8
+
