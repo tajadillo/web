@@ -7,7 +7,7 @@ https://stream-04.nyc.dailymotion.com/sec(ekpi6JmRB5KslkTtNqtBmsOFz8Q8iW450m9OZE
 https://d2tr4gdfol9ja.cloudfront.net/atv/smil:atv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="CTC Compañía de Televisión Cusqueña" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General",CTC CompañíCTC Compañía de Televisión Cusqueñaa
-https://directostv.teleame.com/ctcenvivo/
+https://web.facebook.com/v2.11/plugins/video.php?app_id=&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2059ff2a5a5f58%26domain%3Ddirectostv.teleame.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fdirectostv.teleame.com%252Ff1b24c3953f4ea4%26relation%3Dparent.parent&container_width=640&href=https%3A%2F%2Fwww.facebook.com%2Fctc.pe%2Flive%2F&locale=en_US&sdk=joey&show_text=false
 
 #EXTINF:-1 tvg-id="Hispantv.ir" tvg-country="IR;ES;HISPAM" tvg-language="Spanish" tvg-logo="https://en.wikipedia.org/wiki/File:HispanTv_logo.svg" group-title="News",HispanTV
 https://live1.presstv.ir/live/hispan.m3u8
