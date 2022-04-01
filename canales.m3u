@@ -214,10 +214,7 @@ https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
 <<<<<<< HEAD
 >>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
 =======
-#EXTINF:-1 tvg-id="Bio Bio tv" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Bio Bio TV BBTV
-https://rudo.video/live/bbtv?autostart=1&volume=0&streamingLabel=home
 
->>>>>>> a5bfd767209d0b1ce6d7a74ced39339ce564d2d2
 #EXTINF:-1 tvg-id="TELE13 Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",TELE13 Chile
 https://www.youtube.com/channel/UCsRnhjcUCR78Q3Ud6OXCTNg/live
 
