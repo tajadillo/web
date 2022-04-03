@@ -96,8 +96,5 @@ https://26293.live.streamtheworld.com/FMDOSAAC.aac?csegid=12000&dist=fmdos_cl-we
 #EXTINF:-1 tvg-id="Radio Pudahuel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pudahuel
 https://24383.live.streamtheworld.com/PUDAHUELAAC.aac?csegid=12000&dist=pudahuel_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=26e77291-92aa-4af9-cc52-c07aeba534e3
 
-#EXTINF:-1 tvg-id="Radio Corazon" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Corazon
-https://24253.live.streamtheworld.com/CORAZONAAC.aac
-
 #EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Luna de miel
 https://delta.radioplayer.com.ar:9130/radiolunademiel
