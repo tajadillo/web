@@ -187,9 +187,6 @@ https://www.dailymotion.com/embed/video/x7wijay?autoplay=1
 #EXTINF:-1 tvg-id="TeleAmazonas Ecuador" tvg-country="EC" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/TeleamazonasEcuador/picture?width=200&height=200" group-title="General",TeleAmazonas Ecuador
 https://api.new.livestream.com/accounts/1359588/events/4428723/live.m3u8
 
-#EXTINF:-1 tvg-id="Bolivia 7.1 TV" tvg-country="BO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/BoliviatvOficial/picture?width=200&height=200" group-title="General",Bolivia 7.1 TV
-http://www.boliviatv.bo/principal/tvenvivo71.php
-
 #EXTINF:-1 tvg-id="Bolivia 7.2 TV" tvg-country="BO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/BoliviatvOficial/picture?width=200&height=200" group-title="General",Bolivia 7.2 TV
 https://video1.getstreamhosting.com:1936/8224/8224/playlist.m3u8
 
@@ -209,11 +206,6 @@ https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live
 #EXTINF:-1 tvg-id="Fashion TV" tvg-country="EN" tvg-logo="https://graph.facebook.com/FTV/picture?width=200&height=200" group-title="Moda",Fashion TV  
 https://publica.cloudycdn.services/playlist.m3u8?network_id=569
 
-#EXTINF:-1 tvg-id="Miami TV-1" tvg-country="EN" tvg-logo="https://graph.facebook.com/miamitv/picture?width=200&height=200" group-title="Moda",Miami TV-1
-https://59ec5453559f0.streamlock.net/miamitv/smil:miamitvROKU/chunklist_w1195980091_b2592000.m3u8
-
-
 #EXTINF:-1 tvg-id="Miami TV-2" tvg-country="EN" tvg-logo="https://graph.facebook.com/miamitv/picture?width=200&height=200" group-title="General",Miami TV-2
-
 https://59ec5453559f0.streamlock.net/JennyLive/JennyLive/playlist.m3u8
 
