@@ -154,24 +154,6 @@ https://www.youtube.com/watch?v=x3ez7JK8Usk
 #EXTINF:-1 tvg-id="Globovision Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/globovision/picture?width=200&height=200" group-title="New",Globovision Venezuela
 https://www.youtube.com/channel/UCfJtBtmhnIyfUB6RqXeImMw/live
 
-#EXTINF:-1 tvg-id="CHV Noticias Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",CHV Noticias Chile
-https://www.youtube.com/embed/KpoesopyFTs?feature=oembed
-
-#EXTINF:-1 tvg-id="24h Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",24h Chile
-https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
-
-#EXTINF:-1 tvg-id="Bio Bio tv" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Bio Bio TV BBTV
-https://rudo.video/live/bbtv?autostart=1&volume=0&streamingLabel=home
-
-#EXTINF:-1 tvg-id="Venevision TV Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teleSUR/picture?width=200&height=200" group-title="New",Venevision TV
-https://www.youtube.com/watch?v=x3ez7JK8Usk
-
-#EXTINF:-1 tvg-id="Globovision Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/globovision/picture?width=200&height=200" group-title="New",Globovision Venezuela
-https://www.youtube.com/channel/UCfJtBtmhnIyfUB6RqXeImMw/live
-
-#EXTINF:-1 tvg-id="CHV Noticias Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",CHV Noticias Chile
-https://www.youtube.com/embed/KpoesopyFTs?feature=oembed
-
 #EXTINF:-1 tvg-id="24h Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/24horas.cl/picture?width=200&height=200" group-title="New",24h Chile
 https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
 
