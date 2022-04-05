@@ -69,6 +69,9 @@ http://217.125.136.93:8080/canalsierradecadiz1080.m3u8
 #EXTINF:-1 tvg-id="PTV Malaga" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/PTVMalaga/picture?width=200&height=200" group-title="General",PTV Malaga
 https://streamer.zapitv.com/PTV-Malaga/tracks-v1a1/mono.m3u8
 
+#EXTINF:-1 tvg-id="#EXTINF:-1 tvg-id="Canal Encuentro" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/PTVMalaga/picture?width=200&height=200" group-title="General",Canal Encuentro
+https://www.youtube.com/watch?v=NYdCsz61Hog
+
 #EXTINF:-1 tvg-id="Cordoba TV" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/cordobatvonline/picture?width=200&height=200" group-title="General",Cordoba TV
 https://cloudvideo.servers10.com:8081/8020/index.m3u8
 
