@@ -297,6 +297,13 @@ ul.li {
     transform: translateY(-2px);
 }
 
+
+
+.formulario{
+	color: #ff0;
+
+}
+
 @media (max-width: 840px){
     .content{
         grid-template-columns: repeat(1, 1fr);
