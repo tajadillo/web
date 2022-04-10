@@ -1,0 +1,37 @@
+¿Por que llegaste aquí?
+
+
+a) quiero vender los cursos que ya doy de manera aniñe
+b) tengo ganas de independizarme
+c) tengo una idea que me gustaría convertir en curso
+
+¿que te detiene para empezar "nombre del seminario que venderé"?
+
+a) no se si va a funcionar para mi
+b) no puedo pagarlo en estos momentos
+c) no tengo tiempo para hacerlo
+d) otro
+
+
+¿cual crees que es tu mayor obstáculo/miedo para lograr vender tus
+cursos anulen?
+
+(escribe aquí tu respuesta)
+
+
+
+¡gracias por contestar esta pequeña encuesta!
+
+Haz dinero y Cambia Al mundo con Tu Pasión.
+
+Descarga tu POF
+
+
+
+
+
+
+
+( archivo "vimrc" del sistema: "$VIM/sysinit.vim"
+            predefinido para $VIM: "/usr/share/nvim"
+)
