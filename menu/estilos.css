@@ -13,11 +13,12 @@ body {
 h1 {
 	font-size: 2rem;
 	line-height: 1.3em;
+	align-items: center;
 	}
 
 p{
 	margin-botton: 1.6em;
-	align-items: center;
+	align-items: justify;
 }
 
 a{
@@ -30,12 +31,14 @@ a{
 
 ul.li {
 	text-decoration-line: none;
-	align-items: baseline}	
+	align-items: baseline
+	}	
 
 .container {
 	width: 85%;
 	max-width: 850px;
 	margin: 0  auto;
+	align: justify;
 	}
 
 
