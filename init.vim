@@ -10,7 +10,9 @@ set nocompatible
 set shiftwidth=4
 set autoindent
 autocmd BufEnter * set indentexpr=
-
+"abrir terminal
+set splitbelow
+set splitright
 
 
 "--------------------------------------Inicio PluginsS
@@ -154,3 +156,14 @@ let g:html5_event_handler_attributes_complete = 0
 let g:html5_rdfa_attributes_complete = 0
 let g:html5_microdata_attributes_complete = 0
 let g:html5_aria_attributes_complete = 0
+
+"TERMINAL
+"abrir terminal
+vnoremap <c-t> :split<CR>:ter<CR>:resize 10<CR>
+nnoremap <c-t> :split<CR>:ter<CR>:resize 10<CR>
+
+"DIVIDIR PANTALL
+"Abrir split vertical
+nnoremap <c>sv :vsp<CR>
+"Abrir split horizontal
+nnoremap <c>sh :sp<CR>
