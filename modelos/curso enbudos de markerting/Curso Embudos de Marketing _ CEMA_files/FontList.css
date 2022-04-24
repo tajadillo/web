@@ -1,0 +1,142 @@
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url("FontList/Lato/Lato.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Black';
+    font-weight: 900;
+    src: url("FontList/Lato/Lato-Black.woff2") format('woff2');
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: 'Lato Light';
+    src: url("FontList/Lato/Lato-Light.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Thin';
+    font-weight: 100;
+    src: url("FontList/Lato/Lato-Thin.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url("FontList/Muli/Muli.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Muli Black';
+    font-weight: 900;
+    src: url("FontList/Muli/Muli-Black.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Muli Light';
+    src: url("FontList/Muli/Muli-Light.woff2") format('woff2');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: andale mono;
+  src: url('./FontList/Andale-Mono/Andale-Mono.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: arial black;
+  src: url('./FontList/Arial-Black/arial-black.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: book antiqua;
+  src: url('./FontList/Book-Antiqua/Book-Antiqua.ttf') format('truetype');
+}
+@font-face {
+  font-weight: 300;
+  font-family: montserrat;
+  src: url('./FontList/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url("./FontList/Montserrat/Montserrat-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat Semi Bold';
+    src: url("./FontList/Montserrat/Montserrat-SemiBold.ttf") format('truetype');
+}
+@font-face {
+  font-weight: 300;
+  font-family: open sans;
+  src: url('./FontList/Open-Sans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-weight: 300;
+  font-family: playfaur display;
+  src: url('./FontList/Playfair-Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-weight: 300;
+  font-family: roboto;
+  src: url('./FontList/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: comic sans ms;
+  src: url('./FontList/Comic-Sans-MS/Comic-Sans-MS.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: georgia;
+  src: url('./FontList/Georgia/georgia.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: impact;
+  src: url('./FontList/Impact/Impact.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: tahoma;
+  src: url('./FontList/Tahoma/Tahoma.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: terminal;
+  src: url('./FontList/Terminal/Monaco.ttf') format('truetype'); /* fake terminal for windowns */
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: trebuchet ms;
+  font-style: normal;
+  src: url('./FontList/TrebuchetMS/trebuc.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: verdana;
+  src: url('./FontList/Verdana/VerdanaPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: webdings;
+  src: url('./FontList/Webdings/WebdingsRegula.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: wingdings;
+  src: url('./FontList/Wingdings/wingding.ttf') format('truetype');
+}
