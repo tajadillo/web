@@ -63,6 +63,9 @@ https://cdnh8.iblups.com/hls/RMuwrdk7M9.m3u8
 #EXTINF:-1 tvg-id="Canal Sierra de Cadiz HD" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/canalsierradecadiz/picture?width=200&height=200" group-title="General",Canal Sierra de Cadiz HD
 http://217.125.136.93:8080/canalsierradecadiz1080.m3u8
 
+#EXTINF:-1 tvg-id="veranda-butacatv" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/canalsierradecadiz/picture?width=200&height=200" group-title="General",veranda butaca tv
+https://veranda-butacatv-1-es.samsung.wurl.tv/2000.m3u8
+
 #EXTINF:-1 tvg-id="PTV Malaga" tvg-country="ES" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/PTVMalaga/picture?width=200&height=200" group-title="General",PTV Malaga
 https://streamer.zapitv.com/PTV-Malaga/tracks-v1a1/mono.m3u8
 
