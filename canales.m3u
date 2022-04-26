@@ -166,6 +166,9 @@ https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
 #EXTINF:-1 tvg-id="TELE13 Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",TELE13 Chile
 https://www.youtube.com/channel/UCsRnhjcUCR78Q3Ud6OXCTNg/live
 
+#EXTINF:-1 tvg-id="LA RED Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",LA RED Chile
+https://d2ab26kihxq8p0.cloudfront.net/hls/live.m3u8
+
 #EXTINF:-1 tvg-id="Meganoticias Chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/meganoticiascl/picture?width=200&height=200" group-title="New",Meganoticias Chile
 https://www.youtube.com/channel/UCkccyEbqhhM3uKOI6Shm-4Q/live
 
