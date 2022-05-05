@@ -1,24 +1,36 @@
-set number
 set mouse=a
 syntax enable
 set showcmd
 set encoding=UTF-8
 set showmatch
+set number
 set relativenumber
 setlocal spell spelllang=es
 set nocompatible
 set shiftwidth=4
 set autoindent
-autocmd BufEnter * set indentexpr=
+"autocmd BufEnter * 
+set indentexpr=
 "abrir terminal
 set splitbelow
 set splitright
 
 
+
+"----------------------------------------MAPEO DE TECLADO
+
+nnoremap <silent> <right> :vertical resize +5<CR>
+nnoremap <silent> <left> :vertical resize -5<CR>
+nnoremap <silent> <up> :vertical resize +5<CR>
+nnoremap <silent> <down> :vertical resize -5<CR>
+
+"------------------------------------------FIN MAPEO
+
 "--------------------------------------Inicio PluginsS
 call plug#begin('~/.config/nvim/plugged')
 "Guías de indentación
 Plug 'Yggdroot/indentLine'
+
 
 "SYNTAX
 Plug 'sheerun/vim-polyglot'
@@ -34,11 +46,16 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'dracula/vim' , { 'as': 'dracula' }
 "MONOKAI
 Plug 'crusoexia/vim-monokai'
-Plug 'tanvirtin/monokai.nvim'
+Plug 'patstockwell/vim-monokai-tasty'
 "PAPAYA
 Plug 'henrynewcomer/vim-theme-papaya'
 "CI DARK
 Plug 'yunlingz/ci_dark'
+"OCEANIC MATERIAL
+Plug 'glepnir/oceanic-material'
+"TOKYO NIGHT
+Plug 'ghifarit53/tokyonight-vim'
+
 "FIN TEMAS
 
 "ADMINISTRADOR DE ARCHIVOS
@@ -57,8 +74,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 "Deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-Plug 'Shougo/neco-syntax'  " Fuente general de auto completado"
-
+ " Fuente general de auto completado"
+Plug 'Shougo/neco-syntax' 
 call plug#end()
 "---------------------------------------Fin Plugins
 
@@ -71,12 +88,31 @@ call plug#end()
  let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 
 "--------------------------------TEMAS DE COLOR
-""GRUVBOX configuracion
-set background=dark
-let g:gruvbox_material_background='medium'
-let g:airline_theme='gruvbox-material'
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox-material
+"GRUVBOX configuracion
+"set background=dark
+"let g:gruvbox_material_background='medium'
+"let g:airline_theme='gruvbox-material'
+"let g:gruvbox_contrast_dark='hard'
+"colorscheme gruvbox-material
+
+"OCEANIC MATERIAL
+"set background=dark
+"colorscheme oceanic_material
+"let g:oceanic_material_transparent_background
+"let g:oceanic_material_background
+"let g:oceanic_material_allow_bold
+"let g:oceanic_material_allow_italic
+"let g:oceanic_material_allow_underline
+"let g:oceanic_material_allow_undercurl
+"let g:oceanic_material_allow_reverse
+
+"TOKYO NIGHT
+set termguicolors
+" available: night, storm
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+let g:airline_theme = "tokyonight"
+colorscheme tokyonight
 
 "DRACULA configuracion
 "let g:airline_theme='dracula'
@@ -160,11 +196,6 @@ let g:html5_aria_attributes_complete = 0
 
 "TERMINAL
 "abrir terminal
-vnoremap <c-t> :split<CR>:ter<CR>:resize 10<CR>
-nnoremap <c-t> :split<CR>:ter<CR>:resize 10<CR>
+vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 
-"DIVIDIR PANTALL
-"Abrir split vertical
-nnoremap <c>sv :vsp<CR>
-"Abrir split horizontal
-nnoremap <c>sh :sp<CR>
