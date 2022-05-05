@@ -34,6 +34,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'dracula/vim' , { 'as': 'dracula' }
 "MONOKAI
 Plug 'crusoexia/vim-monokai'
+Plug 'tanvirtin/monokai.nvim'
 "PAPAYA
 Plug 'henrynewcomer/vim-theme-papaya'
 "CI DARK
