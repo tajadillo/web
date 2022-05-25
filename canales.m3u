@@ -175,7 +175,7 @@ https://www.youtube.com/channel/UCkccyEbqhhM3uKOI6Shm-4Q/live
 #EXTINF:-1 tvg-id="Morrovisión Arica" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/meganoticiascl/picture?width=200&height=200" group-title="New",Morrovisión Arica y Parinacota
 https://5ff3d9babae13.streamlock.net:443/8032/8032/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Iquique TV" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/meganoticiascl/picture?width=200&height=200" group-title="New",Morrovisión Iquique TV
+#EXTINF:-1 tvg-id="Iquique TV" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/meganoticiascl/picture?width=200&height=200" group-title="New",Iquique TV
 https://marine2.miplay.cl/arcatel/iquiquetv720/video.m3u8
 
 #EXTINF:-1 tvg-id="TC TV Ecuador" tvg-country="EC" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/tctelevision10/picture?width=200&height=200" group-title="New",TC TV Ecuador
