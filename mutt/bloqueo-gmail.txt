@@ -1,0 +1,75 @@
+Mutt de bloqueo de Gmail
+Compártelo
+ 
+Tuitéalo
+ 
+Compártelo
+Hola, hemos encontrado la respuesta a lo que andabas buscando, deslízate y la encontrarás a continuación.
+
+Solución:
+Finalmente lo hice funcionar habilitando la verificación en dos pasos de Google y usando una contraseña específica de la aplicación para mutt.
+
+Mas detalle:
+
+Habilité la verificación en dos pasos en mi cuenta de Google, lo que significa que cuando inicio sesión en Google, tengo que ingresar un número de PIN de un mensaje de texto o de la aplicación Google Authenticator.
+
+Luego tuve que obtener una contraseña específica de la aplicación para mutt. Puede generar una contraseña específica de la aplicación aquí.
+
+Luego usé esa contraseña específica de la aplicación para iniciar sesión en mutt en lugar de mi contraseña normal. Y luego no tengo que ingresar un número PIN.
+
+Como dice uno de los comentarios, parece que Google se ha movido para bloquear aplicaciones que usan autenticación IMAP / SMTP PLAIN de forma predeterminada y puede leer blogs oficiales que indican que Google recomienda encarecidamente que los usuarios del protocolo IMAP / SMTP cambien a OAuth 2.0 (ya que XMPP también lo es en la lista Me pregunto si (¿más antiguo?) OSX iChat dejará de funcionar con GTalk en algún momento). En otros lugares, hay algunas especulaciones divertidas sobre el fundamento de este cambio. En el momento de escribir este artículo, la investigación anecdótica sugiere:
+
+Cuentas comerciales de Google no lo haré vea este problema: continúan aceptando automáticamente inicios de sesión IMAP / SMTP basados ​​en contraseña y actualmente no hay ninguna configuración para rechazarlos (no puede causar problemas a todos los usuarios que pagan con programas que usan inicios de sesión con contraseña "heredada", ¿eh?).
+Las cuentas de Google que no son "comerciales" ahora tienen una configuración para permitir o no permitir inicios de sesión IMAP / SMTP basados ​​en contraseña ("aplicaciones menos seguras"). Las cuentas de Google que han existido durante años pueden haber optado automáticamente por rechazarlas, pero es posible que esto no les suceda a todos.
+Primero intenté iniciar sesión en GMail usando un navegador web y luego usando mutt desde la misma máquina. Intenté cambiar la configuración de muttrc para asegurarme de que TLS siempre se use. Probé el enlace del captcha de desbloqueo. Ninguno de ellos ha podido dejar que mi perro callejero trabaje con una cuenta de GMail "no permitir aplicaciones menos seguras" (pero puede resolver problemas de inicio de sesión en diferentes escenarios). Tus opciones son:
+
+Cambie su cuenta de Google para requerir la verificación en dos pasos y cree una contraseña específica de la aplicación para mutt.
+Cambie a mutt 1.11.0 o posterior y configure el soporte de OAUTHBEARER.
+Utilice la configuración de la cuenta de Google que permite que las aplicaciones menos seguras se conecten.
+Muévase a otro cliente IMAP que utilice OAuth.
+(Quien haya votado mi respuesta original, gracias)
+
+A juzgar por la descripción de aharris88, Gmail estaba bloqueando el acceso a su cuenta a través de mutt porque mutt usa conexiones inseguras cuando se comunica con los servidores de Gmail. Esto significa que su nombre de usuario y contraseña se envían a través de la red local e Internet de forma no cifrada; generalmente una muy mala idea y algo que debe evitarse siempre que sea posible. Gmail intentaba desalentar esta configuración arriesgada rechazando el intento de conexión de mutt. Cambiar la configuración de su cuenta de Google para permitir "Acceso para aplicaciones menos seguras" anuló este comportamiento, permitiendo que mutt se conecte de manera insegura.
+
+Una solución para esto es configurar mutt para usar la seguridad TLS al conectarse a Gmail. De esta manera, sus credenciales no se envían en forma de texto sin formato y, por lo tanto, puede deshabilitar "Acceso para aplicaciones menos seguras" en la configuración de su cuenta de Google.
+
+Para usar TLS, edite su archivo de configuración mutt (~ / .muttrc) ser similar a lo siguiente:
+
+set realname = 'Your Full Name'
+set imap_user = 'youraccount@gmail.com'
+set smtp_url = "smtp://youraccount@smtp.gmail.com:587/"
+set spoolfile = imaps://imap.gmail.com:993/INBOX
+set folder = "imaps://imap.gmail.com:993"
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file=~/.mutt/certificates
+
+# These two lines appear to be needed on some Linux distros, like Arch Linux
+set ssl_starttls = yes
+set ssl_force_tls = yes
+Además, cree los directorios y archivos que utilizará mutt para almacenar en caché la información de los mensajes y almacenar certificados ejecutando:
+
+mkdir -p ~/.mutt/cache/bodies
+mkdir ~/.mutt/cache/headers
+touch ~/.mutt/certificates
+Las líneas 3-5 del archivo de configuración de mutt le dicen a mutt que se conecte a Gmail mediante puertos y protocolos seguros. Asegúrate de completar 'Tu nombre completo' en la línea 1 y reemplace "su cuenta" en las dos líneas 2 y 3. Las dos últimas líneas obligarán a mutt a conectarse de forma segura y pueden ser necesarias en algunas distribuciones de Linux. El resto de la configuración es bastante común para que mutt juegue bien con Gmail.
+
+También necesitará tener OpenSSL (o algo equivalente) instalado en su sistema, aunque la mayoría de los sistemas probablemente ya lo tengan.
+
+Ahora, empieza mutt. Se le pedirá la contraseña de su cuenta de Gmail. También es posible que se le solicite que acepte un certificado que le enviará el servidor de Gmail; Adelante, hazlo. Si ve su bandeja de entrada, ¡debería estar listo!
+
+Si todavía no se está conectando, algo más está impidiendo que mutt se conecte de forma segura. Intente ejecutar: mutt -v para mostrar la versión de mutt y las opciones de compilación. En la sección "Opciones de compilación" del resultado, busque +USE_SSL o algo similar como +USE_SSL_OPENSSL o +USE_SSL_GNUTLS. Si ninguno de estos aparece con un signo más junto a ellos, entonces mutt se compiló sin la capacidad de conectarse con TLS y necesitaría volver a compilarlo.
+
+Otra posibilidad es que OpenSSL (o un paquete SSL equivalente) aún no esté instalado en su sistema. El método de instalación dependerá de la distribución de Linux / Unix que esté utilizando. Intente buscar guías específicas para su distribución. Es posible que también deba instalar un paquete adicional que contenga las Autoridades de certificación.
+
+Una vez que las cosas funcionen, si no desea escribir su contraseña de Gmail cada vez que ejecuta mutt, puede almacenarla directamente en el ~ / .muttrc archivo agregando una línea como:
+
+set imap_pass = 'yourpassword'
+Sin embargo, tenga en cuenta que esto presenta un riesgo de seguridad., especialmente si comparte un sistema con otros usuarios. Para reducir este riesgo, puede hacer ~ / .muttrc legible solo por usted ejecutando:
+
+chmod 600 ~/.muttrc
+Esto evita que los usuarios no root y los servicios que se ejecutan en su sistema lean su contraseña almacenada en el archivo ~ / .muttrc.
+
+Recuerda que tienes autorización de glosar tu experiencia si te fue preciso.

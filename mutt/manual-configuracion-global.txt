@@ -1,0 +1,560 @@
+El 30-Jul-00 José Esteban dijo:
+> No es necesario entrar en esos directorios. Mutt ve el directorio
+> maildir como buzón de entrada si le pones, en el entorno:
+> 
+> MAIL=~/maildir
+> export MAIL
+> 
+> 
+> ... siendo maildir el nombre de tu directorio maildir
+> 
+> A ver si va a ser la versión de mutt que uses. La mía firma los mensajes
+> con mutt 1.0pre3i.
+> 
+> De todas formas, ahí te envío mi .muttrc.
+
+Vale, puede que sea por la version; la mia es la 0.95.3i, ya probare otra, ya
+que sigue sin funcionarme.
+
+De todas formas, mis variables de entorno son: 
+
+#####################
+# Opciones de QMAIL #
+#####################
+export QMAILHOST="yahoo.com"
+export QMAILUSER="xscript.geo"
+export QMAILNAME="Lluís Vilanova"
+export QMAILINJECT=f #controlar las modificaciones que qmail-inject realiza sob
+re los campos de cabecera
+
+##########################
+# Otras Opciones de mail #
+##########################
+#alias fetchmail='fetchmail -vvv --mda "formail -s procmail"'
+export MAILHOST=yahoo.com
+export MAILUSER=xscript.geo
+export QMAILINJECT=f
+export MAIL=$HOME/Mailproba
+
+Siendo Mailproba el directorio donde pongo correo para intentarlo leer con
+mutt. Tambien adjunto el .muttrc por si a caso...
+# 
+# Fichero de configuración .muttrc (Mutt 0.95.6)
+# 
+# Este fichero de configuración funciona con la versión arriba indicada.
+# Las variables aquí configuradas podrían no funcionar con otras versiones.
+# 
+# Para cualquier duda, sugerencia, o comentario, escribidme a la dirección:
+# <homega@ciberia.es>
+# 
+# o mejor a la lista de discusión sobre mutt en castellano:
+# mutt@oninet.es
+# 
+# para subscribirse, enviar un mensaje a:       majordomo@oninet.es
+# con la orden:                                 subscribe mutt
+# 
+# Notas:
+# Cada variable de configuración va en una línea.
+# Los comentarios van precedidos del signo almohadilla (#).
+
+
+
+## Directorio en el que se encuentran las carpetas de correo.
+set folder=~/Mailproba
+
+## Al enviar, desechar el mensaje al que se esté respondiendo si el usuario
+## no lo ha cambiado.
+#set abort_unmodified=yes
+
+## Si no se ha rellenado la línea de asunto, preguntará si queremos
+## desecharlo.
+set abort_nosubject=ask-yes
+
+## Dónde se encuentra el fichero con las direcciones de correo.
+#source ~/.mail_aliases          # Incluir mail aliases. Ya está al final 
+		                 # del fichero de configuración
+
+## Convertir los datos de 8 bits a 7 bits para su envío (Quoted Printable).
+set allow_8bit
+
+############ especificar direcciones alternativas desde las que podemos recibir 
+correo.
+##########set alternates='homega@(vlc\.servicom\.)?(ciberia\.)es'
+
+## Usar -> en lugar de resaltar la línea de la entrada corriente.
+unset arrow_cursor
+
+## Usar caracteres ASCII en los hilos de conversación.
+unset ascii_chars
+
+## Preguntar si se desea incluir destinatarios en un campo de copia oculta.
+set askbcc
+
+## Preguntar si se desea incluir destinatarios en un campo de copia visible.
+set askcc
+
+## Línea con la que comenzarán los mensajes de respuesta. Nota: para que la
+## fecha y hora se vean en castellano, ver "date_format".
+#set attribution="On %d, %n wrote:"
+set attribution="El %d, %n dijo:"
+
+## Al componer un mensaje, ir directamente al editor sin preguntar por las
+## cabeceras.
+unset autoedit
+
+## Al ejecutar una orden, hacer que ésta opere sobre todos los mensajes que
+## estén marcados (*).
+set auto_tag
+
+## Desactivar el pitido.
+set nobeep
+
+## Avisar con un sonido cuando reciba correo nuevo (útil si tienes una
+## conexión permanente, la recogida del correo automatizada, y mutt abierto
+## todo el tiempo).
+#set beep_new
+
+## Juego de caracteres con el que se visualizarán los mensajes
+set charset="iso-8859-1"
+
+## No preguntar si deseo añadir (guardar) mensajes a un buzón si éste ya
+## existe (ver confirmcreate).
+set noconfirmappend
+
+## Preguntar si deseo añadir (guardar) mensajes a un buzón que no exista.
+## Si aceptamos el nombre, el buzón será creado.
+set confirmcreate
+
+## ¿Guardar siempre una copia de los mensajes salientes?
+#set copy=no
+set copy=yes
+
+## Formato de la fecha (ver también "locale").
+set date_format="%a, %d de %b de %Y, a las %I:%M:%S%p %Z"
+
+## ¡borrar los mensajes marcados para su eliminación sin preguntar!
+set delete=yes
+
+## Al componer un mensaje, editar también las cabeceras ¡ojito con lo que
+## ponemos en ellas!
+set edit_headers
+
+## ¿Qué editor queremos que use para componer mensajes?  (mutt dispone de un
+## editor propio integrado, si no le indicamos uno externo, usará el editor
+## interno).
+## Como está configurado aquí, para editar un mensaje escogerá vim con un
+## fichero de configuración personalizado.
+set editor="/usr/bin/vim +8 -u ~/Mailproba/.vimrc.mutt"
+
+## Al responder a un mensaje, ir directamente al editor, no pasar por los
+## campos de las cabeceras.
+#set fast_reply 
+
+## Guardar los adjuntos a un mensaje junto al mismo.
+#set fcc_attach
+
+## ¿Qué quiero ver al abrir el visualizador (explorador) de buzones?
+set folder_format="%N %d %F %l %u %g %s %f"
+
+## Al responder a una lista, generar el campo Followup-To. Con esta variable,
+## cuando alguien nos responda desde la lista, sólo se incluirá la dirección
+## de la lista, evitando que nos mande un duplicado.
+set followup_to
+
+## ¿Guardar una copia de un mensaje saliente, usando el nombre del
+## destinatario del mensaje (crearlo si no existe)? ¡No! (ver save_name)
+unset force_name        
+
+## Controla la descodificación de mensajes tipo MIME complejos a texto plano,
+## cuando éstos están siendo reenviados. Si la variable $mime_forward está
+## activada, se usará $mime_forward_decode en su lugar.
+#set forward_decode
+
+## Controla que al reenviar un mensaje previamente cifrado, éste vaya
+## descifrado. Esta variable sólo funciona si la variable $mime_forward está
+## activada y la variable $mime_forward_decode desactivada.
+set forward_decrypt
+
+## Formato de la línea de asunto al reenviar un mensaje. La configuración por
+## defecto es "[%a: %s]"
+set forward_format="FW: %s"
+
+## Cuando reenviemos (forward) un mensaje (no adjunto MIME - ver
+## mime_forward), incluir el texto y las cabeceras.
+set forward_quote
+
+## Usar las valores especificados por `my_hdr' en los mensajes salientes
+## (ver "my_hdr")
+set hdrs
+
+## Incluir las cabeceras del mensaje al que vayamos a responder. 
+#set header
+
+## Mostrar los menús de ayuda (`?').
+set help
+
+## Número de líneas que recordará del historial.
+#set history=20 
+
+## Mi dominio ("DNS"). Para el From: @<hostname>
+set hostname="yahoo.com"
+
+## ¿Obsoleta?  Configura la línea In-Reply-To.
+#set in_reply_to="%i; from \""%n\" on %{!%a, %b %d, %Y at %I:%M:%S%p}"
+
+## Al responder a un mensaje, incluir el texto de éste.
+set include
+
+## Cómo incluir el texto del mensaje al que respondemos. La convención es un
+## signo «mayor que» seguido de un «espacio».
+set indent_string="> "
+
+## Personalizar la pantalla del índice (¡ojo!).
+#set index_format="%L %n %a %s %b %D"
+set index_format="%4C %Z %{%b %d} (%4l) [%M] <%n> %s"
+
+## ¡En español!
+set locale="es_ES"
+
+
+## Para tipos MIME, indicar la localización de los ficheros `mailcap'.
+set mailcap_path="~/Mailproba/.mailcap.mutt:/etc/mailcap"
+
+## ¿Cada cuánto tiempo debe bucar Mutt el correo? (en segundos).
+#set mail_check=10
+
+## No marcar un mensaje «viejo» no leído con «O» (para lo contrario, usar
+## mark_old).
+set nomark_old
+
+## Carpeta en la que se guardan los mensajes leídos.  Si usamos "set move=no",
+## esta variable queda inactivada.
+#set mbox=+inbox
+
+## Tipo de carpeta que se creará por defecto. Esto sólo afecta a las carpetas
+## que mutt crea automáticamente, no a las que ya han sido creadas. Es posible
+## tener diferentes tipos de carpetas.
+## Las opciones son "mbox", "MH", "MMDF", y "Maildir".
+#set mbox_type=mbox
+set mbox_type=Maildir
+
+## ¿Página anterior / posterior?
+#unset menu_scroll
+
+set message_format="%c %s %d %Z"
+
+## Al responder en grupo a un mensaje, si éste lleva mi dirección, no
+## incluirla entre los destinatarios.
+unset metoo                     # remove my address when replying
+
+## Si está activada esta opción, al reenviar (forward) un mensaje éste será
+## un adjunto al mensaje principal, y no parte del contenido. Esta opción es
+## especialmente útil para el reenvío de mensajes tipo MIME, de modo que el
+## destinatario pueda recibirlo tal y como lo recibió el usuario.
+set mime_forward=ask-yes
+
+## Descodificar los mensajes complejos tipo MIME a texto plano.
+unset mime_forward_decode
+
+## ¿Pedir confirmación para mover mensajes? ¡No!
+set move=no
+#set move=yes                    # Mover mensajes sin preguntar.
+
+
+
+## ¿Qué paginador quiero usar para ver los mensajes?  En este caso no tengo
+## configurado ningún paginador externo.
+#set pager=/usr/bin/less
+
+## Número de renglones que pasarán al pulsar <RePág>/<AvPág> con
+## el paginador externo.
+set pager_context=10
+
+## Estado de la barra de estado del paginador.
+#set pager_format="-%S- %-20.20f %s"
+
+## Cuando estemos viendo un mensaje en el paginador, cuántas líneas
+## del índice queremos ver.
+set pager_index_lines=2         # how many index lines to show in the pager
+
+## Al llegar al final de un mensaje, no pasar al siguiente mensaje.
+set pager_stop                  # don't move to the next message on next-page
+
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager p previous-undeleted
+bind pager n next-undeleted
+
+## Si salimos del menú de composición sin enviar un mensaje,
+## preguntar si lo queremos guardar para enviar más tarde.
+set postpone=ask-yes
+
+## Buzón en el que se guardarán los mensajes pospuestos.
+set postponed=+draft           # mailbox to store postponed messages in
+
+## Con qué línea queremos acabar la respuesta a un mensaje.
+set post_indent_string='---fin de respuesta al mensaje %i---'
+
+## Imprimir un mensaje. Para «manazas» como yo es muy útil que cada vez que
+## presiono la tecla <p> por error, me pregunte si quiero imprimir.
+set print=ask-no
+
+## Orden que se ejecutará para imprimir. Ésta puede ser un guión (script) que
+## hayamos creado, la orden de impresión por defecto (lpr), o ninguna acción
+## (/bin/false).
+set print_command=/bin/false
+
+## Al salir del paginador externo, ¿pedir que introduzcamos una orden?
+#set noprompt_after
+
+## Cómo reconoce el paginador externo un texto en cita.
+set quote_regexp="^ *[a-zA-Z]*[>:#}]"
+
+## Salir de mutt. Otra variable para «manazas». A veces presiono la tecla <p>
+## por error.
+set quit=ask-yes
+
+## Mostrar el progreso al leer los mensajes (de 25 en 25).
+set read_inc=25
+
+## Nombre real del usuario (por defecto lo saca de /etc/passwd). Nombre para el 
+From.
+set realname="Lluís Vilanova <xscript.geo@yahoo.com>"
+
+## Cuando compongamos un mensaje nuevo con <n>, ¿preguntar
+## si queremos editar un mensaje pospuesto?
+set recall=no
+
+## Dónde se guardan los mensajes salientes (si decido guardar copias).
+set record=~/Mailproba/cur/Enviados
+
+## Si existe el campo "Reply-To:", preguntar si deseo usarlo.
+set reply_to=ask-yes
+
+## Cómo identificar una respuesta en la línea de asunto. Las más usadas son
+## "re:" en inglés y "aw:" en alemán.
+set reply_regexp="^(re|aw):[ \t]*"
+
+## Pasar al siguiente mensaje una vez ha finalizado una acción.
+set resolve
+
+## Buscar en el fichero de alias el nombre del remitente de un mensaje,
+## y mostrar éste en lugar del campo "From:".
+set reverse_alias
+
+## Al responder a un mensaje, enviarlo con mi dirección
+## en la que lo he recibido.
+set reverse_name
+
+## Si se eliminan todos los mensajes de un buzón, eliminar también
+## el buzón (no funciona con carpetas de tipo MH).
+set nosave_empty
+
+## ¿Guardar los mensajes salientes en el buzón con el nombre del
+## destinatario (si existe este buzón)? ¡No! (ver force_name)
+unset save_name
+
+## Cómo se distribuye el correo.
+#set sendmail="/usr/lib/sendmail -oi -oem"
+set sendmail=/var/qmail/bin/qmail-inject
+
+## Qué shell usaremos para órdenes externas.
+set shell="/bin/sh"
+
+## Anteponer la línea `-- ' (dos guiones y un espacio) a las líneas de la
+## firma del usuario.  Esto es convencional, y se aconseja que así sea ya que
+## muchos clientes de correo lo usan para reconocer la firma y poder operar
+## sobre ella en varios modos.
+set sig_dashes
+
+## Dónde se encuentra el fichero con mi firma.
+set signature="~/Mailproba/.signature"
+
+# I subscribe to a lot of mailing lists, so this is _very_ useful.  This
+# groups messages on the same subject to make it easier to follow a
+# discussion.  Mutt will draw a nice tree showing how the discussion flows.
+
+## Método principal para ordenar los mensajes.  Esta configuración es
+## especialmente útil si estamos subscritos a muchas listas de correo, ya
+## que nos agrupará los mensajes por temas.
+set sort=threads
+
+## Método para ordenar los mensajes correspondientes a grupos temáticos
+## (hilos de discusión).
+set sort_aux=last-date
+
+## Método para ordenar los ficheros en el explorador de directorios.
+set sort_browser=reverse-date
+
+## Adjuntar mensajes en subhilos de discusión
+## (sólo si "strict_threads" está activada).
+set sort_re
+
+## Buzón de cola para el correo nuevo. Por regla general será
+## '/var/spool/mail/usuario'.
+## Si usais procmail descomentad esto y dirigidlo a vuestro mbox.
+set spoolfile='~/Mailproba'
+
+## Cómo mostrar las barras de estado en el índice de mutt.
+#set status_format="-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?d? Del:%d?%?F? Fl
+ag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?  %l]---(%s)-%>-(%P)---"
+
+## Ver la barra de estado en la parte superior.
+#set status_on_top
+
+## Usar los campos "In-Reply-To:" y "References:" para agrupar mensajes
+## en hilos de discusión.  No usar "Subject:".
+set strict_threads
+
+## Rellenar las líneas en blanco con virgulillas (~)
+## en el paginador interno («a la "vi"»).
+set tilde
+
+## Tiempo que esperará mutt (segundos) para que pulsemos una tecla
+## antes de buscar correo nuevo (un valor 0 espera indefinidamente).
+set timeout=0
+
+## Directorio donde se crearán los ficheros temporales.
+set tmpdir=/tmp 
+#set tmpdir=/home/yo/Mail/tmp
+
+## Carácter para indicar a quién está dirigido el mensaje. En la
+## configuración por defecto (" +TCF"):
+## el primer carácter (espacio) indica que el destinatario es una dirección
+## distinta a la del usuario (por ejemplo, una lista de correo;
+## el segundo carácter (+) indica que el usuario es el único destinatario del
+## mensaje;
+## el tercer carácter (T) indica que la dirección del usuario aparece en el
+## campo "To:", aunque no es el único destinatario;
+## el cuarto carácter (C) indica que la dirección del usuario aparece en el
+## campo "Cc:";
+## el quinto carácter (F) indica que el remitente del mensaje es el usuario.
+set to_chars=" HTCF"
+
+## ¡¡¡ATENCIÓN!!! No activar esta variable a menos que se utilice `sendmail
+## 8.8.x', o no se podrá enviar correo. Activa la marca -B8BITMIME para el
+## envío de mensajes de 8 bits, para permitir la negociación con ESMTP.
+unset use_8bitmime
+
+## No cualificar direcciones locales con `$domain'.
+set nouse_domain
+
+## Generar automáticamente el campo "From:" basándose en el nombre de usuario
+## y en $hostname. La orden "my_hdr" anula esta variable.
+unset use_from
+
+## editor que invocará ~v dentro del editor integrado.
+set visual=vim
+
+## no preguntar que pulse una tecla después de una orden externa.
+set nowait_key
+
+## Al finalizar una búsqueda, volver a empezar.
+unset wrap_search
+
+## Mostrar el progreso mientras se escribe en los buzones.
+set write_inc=25
+
+## ¡¡¡ATENCIÓN!!! Las dos variables a continuación sólo se deben activar si
+## utilizamos `sendmail 8.8.x', o no podremos enviar correo.
+#set dsn_notify='failure,delay' # when to return an error message
+#set dsn_return=hdrs            # what to return in the error message
+
+
+#-----
+
+# Qué cabeceras NO quiero ver.
+ignore *
+
+# Qué cabeceras SÍ quiero ver.
+unignore        from: subject to cc bcc mail-followup-to \
+                date x-mailer x-url
+
+#-----
+
+# Cabeceras definidas por el usuario
+
+unmy_hdr From:
+my_hdr From: Lluís Vilanova <xscript.geo@yahoo.com>
+my_hdr Reply-To: xscript.geo@yahoo.com (Lluís)
+my_hdr X-Mailer: Mutt 0.95.3i
+my_hdr X-Editor: Vim 5.3
+#my_hdr X-DSA/ElGamal-KeyID: 0x42337AE6
+#my_hdr X-Operating-System: `uname -a`
+
+#-----
+
+## ¡GANCHOS!
+## Existen otros tipos de gancho.
+## Para más información, ver el manual.
+
+## Especificar la firma según la lista a que se envíe el mensaje.
+send-hook .             'set signature=~/Mailproba/.signature'
+#send-hook .*mutt-users@* 'set signature=~/.mutt.cfg/.mutt.int.sig'
+#send-hook @.*oninet.es 'set signature=~/mutt.cfg/.mutt.esp.sig'
+
+## Cambiar a inglés cuando responda a la lista de mutt-users:
+## On <weekday>, <month> <date>, at <time> <+GMT>, <real_name> said:
+send-hook .             'set date_format="%a, %d de %b de %Y, a las %I:%M:%S%p %
+Z"'
+send-hook .             'set attribution="El %d, %n dijo:"'
+send-hook .*mutt-users@* 'set date_format="!%a, %b %d, %Y at %I:%M:%S%p %Z"'
+send-hook .*mutt-users@* 'set attribution="On %d, %n said:"'
+
+## Forzar el colapso de todos los hilos
+## de conversación al abrir las carpetas.
+folder-hook . "push <esc>V"
+
+#-----
+
+## Buzones en los que
+## buscará correo nuevo.
+
+## De esta manera buscará en todos.
+#mailboxes `echo $HOME/Mail/*`
+mailboxes ! =Maildir
+## O podemos indicarle en qué buzones debe buscar.
+#mailboxes ! +linux +mutt +unix +debian-es +slackware-es +procmail +minix \
+#            +debian-en +slackware-en +gpg +pgp +sgml
+
+#-----
+
+## Especificar en qué orden aparecerán
+## las cabeceras al abrir un mensaje.
+
+hdr_order date from reply-to subject to cc
+
+#-----
+
+## Identificar las listas a las
+## que estoy subscrito.
+
+lists debian-user-spanish debian-l10n-spanish hack-argo angelosoQUITAESTODEAQUIP
+ARACONTESTARR hacking raredudez noticias@hispasec.com
+auto_view application/x-gunzip
+
+#-----
+
+## Usar automáticamente entradas de
+## ~/.mailcap para ver estos tipos MIME.
+
+auto_view application/x-gunzip
+auto_view application/x-gzip
+auto_view application/zip
+auto_view application/pgp-signature
+auto_view application/pgp
+auto_view application/html
+auto_view application/htm
+
+
+#-----
+
+## Usar los siguientes ficheros
+## de configuración con muttrc.
+
+source ~/Mailproba/.color.mutt
+source ~/Mailproba/.keybind.mutt
+source ~/Mailproba/.gnupgp.mutt
+source ~/Mailproba/.mail_aliases.mutt
+
+# Fin
