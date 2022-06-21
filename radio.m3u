@@ -109,5 +109,8 @@ https://24383.live.streamtheworld.com/PUDAHUELAAC.aac?csegid=12000&dist=pudahuel
 #EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Luna de miel
 https://delta.radioplayer.com.ar:9130/radiolunademiel
 
+#EXTINF:-1 tvg-id="Radio Luna Azul" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Luna Azul 
+https://node-06.zeno.fm/7tk2v9gm21zuv?zs=pq3beApqSfq11sVNRHyXow&rj-tok=AAABgYi3ZjkACGg0SgnoLj_5wg&rj-ttl=5
+
 #EXTINF:-1 tvg-id="Radio México" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio México IRC
 http://46.4.40.246:8591/stream
