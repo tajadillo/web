@@ -10,7 +10,7 @@ set nocompatible
 set shiftwidth=4
 set autoindent
 autocmd BufEnter * set indentexpr=
-
+set nospell
 
 
 
