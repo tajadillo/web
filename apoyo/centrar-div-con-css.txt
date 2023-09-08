@@ -1,0 +1,234 @@
+
+https://www.freecodecamp.org/espanol/news/centrar-en-html-div-con-css/
+
+
+/
+#CSS
+Como Centrar Cualquier Cosa con CSS - Alinear un Div, Texto y Mas
+Kris Koishigawa
+Autor: Kris Koishigawa (Inglés)
+Arturo Maltos
+Traductor: Arturo Maltos
+Como Centrar Cualquier Cosa con CSS - Alinear un Div, Texto y Mas
+Original article: How to Center Anything with CSS - Align a Div, Text, and More
+
+Centrar es uno de los aspectos mas complicados de CSS.
+
+Estos métodos usualmente no son complicados de entender. Por el contrario, se debe mas al hecho de que existen muchas formas de centrar cosas.
+
+El método utilizado puede variar dependiendo del elemento HTML que estas intentando utilizar para centrar, o si es que estas centrando horizontal o verticalmente.
+
+En este tutorial, iremos aprendiendo como centrar elementos de forma horizontal, vertical, y de ambas formas.
+
+Como Centrar Horizontalmente
+Centrar elementos de forma horizontal es por lo general mas sencillo que hacerlo verticalmente. A continuación encontrarás algunos elementos comunes que es posible que desees centrar horizontalmente y las diferentes formas de hacerlo.
+
+Como Centrar Texto con la Propiedad CSS text-align Center
+Para centrar el texto o los hipervínculos de forma horizontal, solo basta utilizar la propiedad text-align con el valor asignado center‌
+
+<div class="contenedor">
+  <p>Hello, (centered) World!</p>
+</div>
+p {
+  text-align: center;
+}
+image-15
+‌
+
+Como Centrar un Div Utilizando CSS Margin Auto
+Utilizando la propiedad margin con el valor 0 auto para centrar horizontalmente elementos de nivel bloque como un div:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.hijo {
+  ...
+  margin: 0 auto;
+}
+box-centered-horizontally
+‌
+
+Como Centrar un Div Horizontalmente Utilizando Flexbox
+Flexbox es la forma mas moderna de centrar cosas dentro de una página, y convierte el diseño de layouts responsivos en una actividad mucho mas sencilla de lo que solía ser. Sin embargo, no es soportado completamente en navegadores antiguos como Internet Explorer.
+
+Para centrar un elemento horizontalmente con Flexbox, solo aplica display: flex y justify-content: center al elemento padre:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  display: flex;
+  justify-content: center;
+}
+box-centered-horizontally-1
+‌
+
+Como Centrar Verticalmente
+Centrar elementos verticalmente sin un método moderno como Flexbox puede resultan un trabajo laborioso. Aquí iremos primero a través de algunos de los métodos mas antiguos de centrado vertical, y después como hacer lo mismo con Flexbox.
+
+Como Centrar un Div Verticalmente con Posición Absoluta y Margenes Negativos
+Durante un largo tiempo esta fue la manera de centrar cosas verticalmente. Para este método era necesario conocer el alto de los elementos que se deseaban poder centrar.
+
+Primero, asigne la propiedad position del elemento contenedor como relative.
+
+Después para el elemento hijo, asigne la propiedad position con el valor absolute y la propiedad top a 50%:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  position: relative;
+}
+
+.hijo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* centrado vertical */
+  position: absolute;
+  top: 50%;
+}
+box-centered-vertically-1
+‌
+
+Pero si podemos notar esto solo permite centrar verticalmente la parte superior del elemento.
+
+Para centrar de forma real el elemento, asigne la propiedad margin-top como -(la mitad de la altura del elemento hijo)  ‌
+
+.contenedor {
+  ...
+  position: relative;
+}
+
+.hijo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* centrado vertical */
+  position: absolute;
+  top: 50%;
+  margin-top: -25px; /* (- menos) la mitad del valor de la altura del elemento hijo */
+}
+box-centered-vertically-final
+‌
+
+Como Centrar un Div de Forma Vertical con Transform y Translate
+Si no conoces la altura de un elemento que deseas centrar (o incluso si conoces esta altura), este método es un truco ingenioso.
+
+Este método es muy similar al de los márgenes negativos explicado anteriormente. Asigna el valor de la propiedad position del elemento padre como relative.
+
+Para los elementos hijos, asigna la propiedad position como absolute y el valor top a 50%. Ahora en lugar de utilizar un valor de margen negativo para centrar el elemento hijo, solo utiliza transform: translate(0, -50%):‌
+
+<div class="contendor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  position: relative;
+}
+
+.hijo {
+  ... 
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+box-centered-vertically-final-1
+‌
+
+Considera que translate(0, -50%) es una atajo para translateX(0) y translateY(-50%). También podrías escribir esto así transform: translateY(-50%) para centrar el elemento verticalmente.
+
+Como Centrar un Div Verticalmente con Flexbox
+Así como Flexbox hace muy sencillo el centrar horizontalmente, permite de forma sencilla centrar verticalmente.
+
+Para centrar un elemento verticalmente, aplica display: flex y align-items: center al elemento padre:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  display: flex;
+  align-items: center;
+}
+box-centered-vertically-final-2
+‌
+
+Como Centrar de Forma Vertical y Horizontal Simultaneamente
+Como Centrar un Div Vertical y Horizontalmente con Posiciones CSS Absolutas y Margenes Negativos
+Este es un método muy similar al anterior para centrar un elemento vertical. Como la última ocasión, se debe conocer el ancho y el alto de un elemento que se desea centrar.
+
+Asigne a la propiedad position del elemento padre el valor relative.
+
+Después, a la propiedad position del hijo, el valor absolute, top a 50% y left a 50%. Esto centra la esquina superior izquierda del elemento hijo de forma vertical y horizontal.
+
+Para completar el centrado del elemento hijo, aplique un margen negativo a la mitad de la altura del elemento hijo, y un margen izquierdo negativo con un valor de la mitad de la anchura del elemento hijo:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  position: relative;
+}
+
+.hijo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  /* centrar vertical y horizontalmente */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px; /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */
+}
+box-centered-vertically-and-horizontally
+‌
+
+Como Centrar un Div Vertical y Horizontalmente con Transform y Translate
+Utiliza este método para centrar un elemento vertical y horizontalmente si no conoces cuales son las dimensiones exactas y no puedes hacer uso de Flexbox.
+
+Primero, asigne a la propiedad position del elemento padre el valor relative.
+
+A continuación, asigne a la propiedad position del elemento hijo el valor absolute, top a 50%, y left a 50%.
+
+Finalmente, use transform: translate(-50%, -50%) para completar el centrado del elemento hijo:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  position: relative;
+}
+
+.hijo {
+  ... 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+box-centered-vertically-and-horizontally-1
+‌
+
+Como Centrar un Div Vertical y Horizontalmente con Flexbox
+Flexbox es la forma mas sencilla de centrar un elemento de ambas formas, vertical y horizontalmente.
+
+Esto es en realidad una combinación de dos métodos de previos que usan Flexbox. Aplica entonces las propiedades justify-content: center y align-items: center para centrar el elemento hijo horizontalmente y verticalmente:‌
+
+<div class="contenedor">
+  <div class="hijo"></div>
+</div>
+.contenedor {
+  ...
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+box-centered-vertically-and-horizontally-2
+‌
+
+Eso es todo lo que necesitas conocer para centrar con estos métodos. Ahora pon manos a la obra y centra todo aquello que necesites.
