@@ -1,9 +1,6 @@
 #EXTM3U 
 
 #EXTINF:-1 tvg-id="Willax tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal Willax-tv
-https://stream-04.nyc.dailymotion.com/sec(ekpi6JmRB5KslkTtNqtBmsOFz8Q8iW450m9OZEQI2YQ)/dm/3/x7x4dgx/s/live-1.m3u8
-
-#EXTINF:-1 tvg-id="Willax tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal Willax-tv
 https://dai.ly/x7x4dgx
 
 #EXTINF:-1 tvg-id="Nativa tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal Nativa tv
