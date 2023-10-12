@@ -3,7 +3,6 @@
 #EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
 https://24073.live.streamtheworld.com/CRP_MAR_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTk2NiwiZXhwIjoxNjQ4MjQwMDI2fQ.hHTxmZXUY02CjH3sjoYgbgIU2yYR1XjZzRCs4WQVTO8&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=bb3e6e11-5058-4f2c-963c-8e012568fe46
 
-<<<<<<< HEAD
 #EXTINF:-1 tvg-id="Radio Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Moda
 https://23093.live.streamtheworld.com/CRP_MOD_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTYzNSwiZXhwIjoxNjQ4MjM5Njk1fQ.MRoE4rNaKajFi7OknN8FYeNDtKp89wXJykjtsEEhxAk&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=253254d3-c2ce-4274-808c-e46165a5b2b5
 
@@ -16,14 +15,12 @@ https://18813.live.streamtheworld.com/CRP_NQ_ADP.aac?autoplay=1&tdtok=eyJhbGciOi
 #EXTINF:-1 tvg-id="La Karibeña" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , La Karibeña
 https://7.innovatestream.pe:2020/stream/karibenaoficial/stream/1/
 
-=======
 #EXTINF:-1 tvg-id="Radiomar Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Moda
 https://23093.live.streamtheworld.com/CRP_MOD_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTYzNSwiZXhwIjoxNjQ4MjM5Njk1fQ.MRoE4rNaKajFi7OknN8FYeNDtKp89wXJykjtsEEhxAk&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=253254d3-c2ce-4274-808c-e46165a5b2b5
 
-#EXTINF:-1 tvg-id="Nueva Q" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Nueva Q
-https://18813.live.streamtheworld.com/CRP_NQ_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODI0MDA2MCwiZXhwIjoxNjQ4MjQwMTIwfQ.-TsHOghU39w9q61FXmC95tisxzciD2HdAVfx56lDx7Q&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=c57a0629-a3c2-4fce-cce8-e2b66798fa62
+#EXTINF:-1 tvg-id="Radiomar Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio RCCTACNA
+https://noveltieserver.com:8000/radio.mp3
 
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
 #EXTINF:-1 tvg-id="Nacional Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/radionacionaldelperu/picture?width=200&height=200" group-title="General" , Radio Nacional Perú
 https://cdnh4.iblups.com/hls/OisZOgZAOB.m3u8
 
