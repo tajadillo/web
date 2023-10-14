@@ -1,7 +1,8 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
-https://24073.live.streamtheworld.com/CRP_MAR_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTk2NiwiZXhwIjoxNjQ4MjQwMDI2fQ.hHTxmZXUY02CjH3sjoYgbgIU2yYR1XjZzRCs4WQVTO8&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=bb3e6e11-5058-4f2c-963c-8e012568fe46
+https://25083.live.streamtheworld.com/CRP_MARAAC.aac?csegid=1010&dist=1010&_=519125
+#https://24073.live.streamtheworld.com/CRP_MAR_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTk2NiwiZXhwIjoxNjQ4MjQwMDI2fQ.hHTxmZXUY02CjH3sjoYgbgIU2yYR1XjZzRCs4WQVTO8&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=bb3e6e11-5058-4f2c-963c-8e012568fe46
 #https://14933.live.streamtheworld.com/CRP_MAR.mp3?csegid=1010&dist=1010&_=300960
 
 #EXTINF:-1 tvg-id="Radio Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Moda
