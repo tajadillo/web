@@ -7,11 +7,10 @@ https://stream-04.nyc.dailymotion.com/sec(ekpi6JmRB5KslkTtNqtBmsOFz8Q8iW450m9OZE
 https://d2tr4gdfol9ja.cloudfront.net/atv/smil:atv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="panamericana.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General",Panamericana Television
-<<<<<<< HEAD
+
 http://free.fullspeed.tv/iptv-query?streaming-ip=https://www.dailymotion.com/PanamericanaPTV
-=======
-https://www.dailymotion.com/embed/video/x774s7s?api=postMessage&autoplay=true&id=player&mute=false&origin=https%3A%2F%2Fpanamericana.pe
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
+#https://www.dailymotion.com/embed/video/x774s7s?api=postMessage&autoplay=true&id=player&mute=false&origin=https%3A%2F%2Fpanamericana.pe
+
 
 #EXTINF:-1 tvg-id="Hispantv.ir" tvg-country="IR;ES;HISPAM" tvg-language="Spanish" tvg-logo="https://en.wikipedia.org/wiki/File:HispanTv_logo.svg" group-title="News",HispanTV
 https://live1.presstv.ir/live/hispan.m3u8
@@ -34,11 +33,9 @@ https://stmv.panel.grupolimalive.com/nacionaltv/nacionaltv/playlist.m3u8
 #EXTINF:-1 tvg-id="Onda Digital Peru" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/OndaDigitalPeru/picture?width=200&height=200" group-title="General",Onda Digital Peru
 https://tv.ondadigital.pe:1936/ondatv2/ondatv2/playlist.m3u8
 
-<<<<<<< HEAD
+
 #EXTINF:-1 tvg-id="ESTO ES FÚTBOL" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",ESTO ES FÚTBOL
 https://youtu.be/l7BA3LGQXBM
-=======
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
 
 #EXTINF:-1 tvg-id="OvacionTV.pe" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",Ovacion TV (720p) [Not 24/7]
 http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
@@ -46,24 +43,20 @@ http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
 #EXTINF:-1 tvg-id="OvacionTV.pe" tvg-country="PE;UY" tvg-language="Spanish" tvg-logo="https://ovacion.pe/sites/default/files/logo-ovacion.png" group-title="Sports",Ovación TV (720p) [Not 24/7]
 https://5c3fb01839654.streamlock.net:1963/iptvovacion1/liveovacion1tv/playlist.m3u8
 
-<<<<<<< HEAD
-=======
 #EXTINF:-1 tvg-id="PanamericanaTV.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://i.imgur.com/uQhEDES.png" group-title="General",Panamericana TV (720p) [Not 24/7]
 http://free.fullspeed.tv/iptv-query?streaming-ip=https://www.dailymotion.com/PanamericanaPTV
 
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
+
 #EXTINF:-1 tvg-id="PeruChannel.br" tvg-country="BR;PE" tvg-language="Portuguese;Spanish" tvg-logo="https://i.imgur.com/01KEiEp.png" group-title="General",Perú Channel (720p) [Not 24/7]
 https://stmv1.duvoxtv.com.br/novelaplz/novelaplz/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TopLatino.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/toplatinotv/picture?width=320&height=320" group-title="Music",Top Latino TV (404p) [Not 24/7]
 https://5cefcbf58ba2e.streamlock.net/tltvweb/tvweb.stream/playlist.m3u8
 
-<<<<<<< HEAD
+
 #EXTINF:-1 tvg-id="Radio Uno Tacna" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/toplatinotv/picture?width=320&height=320" group-title="Music",Radio Uno Tacna
 https://youtu.be/jKmov2ILQdU
 
-=======
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
 #EXTINF:-1 tvg-id="TVPeru.pe" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://www.tvperu.gob.pe/sites/all/themes/stability/images/logo_TVPE_PLAY.png" group-title="General",TV Perú (450p) [Not 24/7]
 https://cdnh8.iblups.com/hls/R9WtilpKKB.m3u8
 
@@ -97,12 +90,10 @@ https://america-crtvg.flumotion.com/playlist.m3u8
 #EXTINF:-1 tvg-id="Euronews Internacional EN" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional INGLES
 https://www.youtube.com/channel/UCSrZ3UV4jOidv8ppoVuvW9Q/live
 
-<<<<<<< HEAD
+
 #EXTINF:-1 tvg-id="Euronews Internacional ES" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional ESPAÑOL
 https://youtu.be/JbKgQhFlMdU
 
-=======
->>>>>>> 1e7ba97f59b236ca5e3fc15005606570007b26b9
 #EXTINF:-1 tvg-id="Euronews Internacional PT" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/es.euronews/picture?width=200&height=200" group-title="New",Euronews Internacional PORTUGUES
 https://www.youtube.com/channel/UCUmEPYxmnyQDeRUcFkslmQw/live
 
@@ -155,7 +146,7 @@ https://www.youtube.com/channel/UC6NVDkuzY2exMOVFw4i9oHw/live
 #EXTINF:-1 tvg-id="TeleSUR Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teleSUR/picture?width=200&height=200" group-title="New",TeleSUR Venezuela
 https://cdnesmain.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8
 
-<<<<<<< HEAD
+
 #EXTINF:-1 tvg-id="Venevision TV Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teleSUR/picture?width=200&height=200" group-title="New",Venevision TV
 https://www.youtube.com/watch?v=x3ez7JK8Usk
 
@@ -171,7 +162,7 @@ https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
 #EXTINF:-1 tvg-id="Bio Bio tv" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Bio Bio TV BBTV
 https://rudo.video/live/bbtv?autostart=1&volume=0&streamingLabel=home
 
-=======
+
 #EXTINF:-1 tvg-id="Globovision Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/globovision/picture?width=200&height=200" group-title="New",Globovision Venezuela
 https://www.youtube.com/channel/UCfJtBtmhnIyfUB6RqXeImMw/live
 
@@ -221,7 +212,6 @@ https://59ec5453559f0.streamlock.net/miamitv/smil:miamitvROKU/chunklist_w1195980
 
 https://59ec5453559f0.streamlock.net/JennyLive/JennyLive/playlist.m3u8
 
-#EXTM3U
 #EXTINF:-1 tvg-id="002RadioTV.do" tvg-logo="https://i.imgur.com/7oNe8xj.png" group-title="General",002 Radio TV (720p)
 https://cdn.002radio.com:3909/live/radio002live.m3u8
 #EXTINF:-1 tvg-id="4DmasNoticiasTV.py" tvg-logo="https://i.ibb.co/1fb5BtN/unnamed.png" group-title="News",4DmásNoticias TV (1080p)
