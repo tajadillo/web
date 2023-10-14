@@ -2,5 +2,5 @@
     curl https://tajadillo.github.io/web/canales.m3u > radio.m3u
     cvlc --extraintf ncurses radio.m3u
 
-
+# https://tajadillo.github.io/web/radio.m3u
 # lista de canales https://github.com/iptv-org/iptv
