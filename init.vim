@@ -302,6 +302,21 @@ nnoremap <silent> <left> :vertical resize -5<CR>
 nnoremap <silent> <up> :resize +5<CR>
 nnoremap <silent> <down> :resize -5<CR>
 
+
+
+""Hay varias formas de poder desplazarse por los buffers:
+
+"":bnext o de manera abreviada puedes utilizar :bn para ir al buffer siguiente (:bprevious o :bp para ir al buffer previo).
+
+"":buffer + nombre_de_archivo. De manera abreviada puedes utilizar :b. Vim puede autocompletar el nombre de archivo con Tab.
+
+"":buffer + n, donde n es el número del buffer. También puedes reemplazar :buffer por :b. Por ejemplo, escribiendo: :buffer 2 o :b 2 te llevará al buffer número 2.
+
+""Salta a la antigua posición en la lista de saltos con Ctrl-O y a la nueva posición con Ctrl-I. Estos no son métodos específicos para buffers, pero pueden ser utilizados para saltar entre diferentes buffers. Explicaré más detalles sobre los saltos en el capítulo 5.
+
+""Ir al buffer previamente editado con Ctrl-^.
+
+
 """"""""""""""""""""""""""
 "Arbol gestor de archivos
 """"""""""""""""""""""""""
@@ -427,6 +442,11 @@ noremap <kj> <Esc>
 
 "FIN MAPEOS
 """"""""""""
+
+"Para arrancar Vim con múltiples pestañas, puedes ejecutar esto desde la terminal:"
+"vim -p archivo1.js archivo2.js archivo3.js"
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "COLORES Y TEMAS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -463,4 +483,4 @@ highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm
 
 """"""""""""""
 "FIN COLORES
-"""""""" 
+""""""""
