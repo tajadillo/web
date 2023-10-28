@@ -176,7 +176,6 @@ set statusline+=\ [Total_Lineas=%L]
 "CONFIGURACION DE PLUGINS
 """""""""""""""""""""""""""
 
-
 "--------------------------------------Inicio Plugins
 call plug#begin('.config/nvim/plugged')
 
@@ -198,6 +197,10 @@ Plug 'yunlingz/ci_dark'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
+"AUTOCOMPLETADO"
+""Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+""Plug 'matt/emmet-vim'
 call plug#end()
 "---------------------------------------Fin Plugins
 
@@ -272,6 +275,7 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap </ </><Esc>i
 inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
 inoremap ¿ ¿?<Esc>i
 inoremap {<CR> {<CR>}<Esc>O
 
@@ -450,8 +454,8 @@ highlight PreProc      guifg=#c678dd ctermfg=5  guibg=none    ctermbg=none cterm
 highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=none
 highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=none
 highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=none
-highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8 cterm=none
-"highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8 cterm=none
+highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none
+"highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8    cterm=none
 highlight ColorColumn                                         ctermbg=8
 highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
 
@@ -459,4 +463,4 @@ highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm
 
 """"""""""""""
 "FIN COLORES
-""""""""
+"""""""" 
