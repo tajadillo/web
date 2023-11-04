@@ -167,3 +167,21 @@ https://server.laradio.online/proxy/sayhueque887?mp=/stream
 
 #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Rebelde Cuba
 https://icecast.teveo.cu/zrXXWK9F
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , COPE
+http://195.10.10.46/cope/net1.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RNE
+http://195.10.10.221/rtve/rne.mp3
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RNE5
+http://195.10.10.45/rtve/radio5.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RE
+http://195.10.10.45/rtve/radioexterior.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Clásica
+http://radiolive-mp3-rtve.flumotion.com/rtve/radioclasica.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Euskadi
+http://hdstreamflash-lh.akamaihd.net/i/Radio_Euskadi_1@109208/master.m3u8
