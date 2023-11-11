@@ -166,6 +166,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 #mis aliasses
+alias clima="curl wttr.in"
 alias ver-imagen="kitty +kitten icat"
 alias apagar='shutdown -h now'
 alias reiniciar='shutdown -r now'
