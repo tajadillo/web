@@ -166,12 +166,12 @@ alias la='ls -A'
 alias l='ls -CF'
 
 #mis aliasses
-alias clima="curl wttr.in"
+alias clima="curl wttr.in/arica?lang=es"
 alias ver-imagen="kitty +kitten icat"
-alias apagar='shutdown -h now'
+alias apagar='sudo poweroff'
 alias reiniciar='shutdown -r now'
-alias radio='bash /home/tajadillo/radio/radio'
-alias tv='bash /home/tajadillo/radio/tv'
+alias radio='bash /home/tajadillo/radio/radio.sh'
+alias tv='bash /home/tajadillo/radio/tv.sh'
 alias reloj='tty-clock -s -c -D'
 alias alarma='bash alarma.sh'
 alias mecano='typespeed'
