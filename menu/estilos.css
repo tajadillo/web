@@ -230,6 +230,19 @@ ul.li {
     border-radius: 20px;
 }
 
+.post-img-12{
+    background: url(../medios/blog/zanahary.webp);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: .2s;
+    border-radius: 20px;
+}
+
+
+
+
 /* fin imagenes del blog */
 
 .post{
