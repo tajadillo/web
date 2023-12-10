@@ -85,6 +85,7 @@ set ts=4
 set expandtab
 "corta las palabras para comenzar en el espacio de abajo"
 set linebreak
+
 "marca linea de tabulación"
 ""set fillchars=fold:\ | set foldtext=CustomFold() "minimalistic folding"
 ""set listchars=tab:\|\ ,trail:- list "alternate tab: #>-----"
@@ -195,7 +196,8 @@ Plug 'yunlingz/ci_dark'
 "ADMINISTRADOR DE ARCHIVOS
 "NERDTREE
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+""Plug 'ryanoasis/vim-devicons'
+""Plug 'nvim-tree/nvim-web-devicons'
 
 "AUTOCOMPLETADO"
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -437,6 +439,26 @@ nnoremap <S-t> :diffthis<CR>
 nnoremap <C-a> ggVG
 """"""""""""
 
+""""""""""""""""""""""""""""""""""""""
+"""""""""""""Identación"""""""""""""""
+""""""recorrer linea a la derecha"""""
+""    >>
+""""""recorrer linea a la izquierda"""""
+""    <<
+""""""""contenido bloque entre llaves a la derecha""""""""
+""    >%
+""""""""contenido bloque entre llaves a la izquierda""""""""
+""    <%
+""""""""contenido bloque entre parentesis a la derecha""""""""""
+""    >i
+""""""""contenido bloque entre parentesis a la izquierda""""""""""
+""    <b
+""""""""identar todo el codigo""""""""
+""    gg=G
+    nnoremap <F2> gg=G
+
+
+
 """"""""""""""""""""""
 noremap <kj> <Esc>
 
@@ -466,14 +488,14 @@ highlight StatusLine   guifg=#202328 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm
 highlight StatusLineNC guifg=#202328 ctermfg=4  guibg=#5b6268 ctermbg=none cterm=none
 highlight Constant     guifg=#3071db ctermfg=12 guibg=none    ctermbg=none cterm=none
 "comentarios con fuente italica"
-highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm=italic
+highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm=bold
 "highlight Comment      guifg=#57afef ctermfg=7  guibg=none   ctermbg=none cterm=italic
 highlight Special      guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
 highlight Identifier   guifg=#5699af ctermfg=6  guibg=none    ctermbg=none cterm=none
-highlight PreProc      guifg=#c678dd ctermfg=5  guibg=none    ctermbg=none cterm=none
-highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=none
-highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=none
-highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=none
+highlight PreProc      guifg=#c678dd ctermfg=5  guibg=none    ctermbg=none cterm=italic
+highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=italic
+highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=italic
+highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
 highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none
 "highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8    cterm=none
 highlight ColorColumn                                         ctermbg=8
