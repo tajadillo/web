@@ -1,0 +1,13 @@
+
+#! /bin/sh
+    #copiado desde
+    #https://youtu.be/YFE13MZPmCU?si=T0-3jLJi-Y0NBkhV
+
+chosen=$(printf "Apagar\nReiniciar\nCerrar" | rofi -dmenu -i)
+
+case "$chosen" in
+  "Apagar") systemctl poweroff ;;
+  "Reiniciar") systemctl reboot ;;
+  "Cerrar") i3-msg exit ;;
+  *) exit 1 ;;
+esac
