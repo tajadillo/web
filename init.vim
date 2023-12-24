@@ -182,20 +182,20 @@ call plug#begin('.config/nvim/plugged')
 
 "TEMAS
 "GRUVBOX
-Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/gruvbox-material'
 "DRACULA
-Plug 'dracula/vim' , { 'as': 'dracula' }
+"Plug 'dracula/vim' , { 'as': 'dracula' }
 "MONOKAI
-Plug 'crusoexia/vim-monokai'
+"Plug 'crusoexia/vim-monokai'
 "PAPAYA
-Plug 'henrynewcomer/vim-theme-papaya'
+"Plug 'henrynewcomer/vim-theme-papaya'
 "CI DARK
-Plug 'yunlingz/ci_dark'
+"Plug 'yunlingz/ci_dark'
 "FIN TEMAS
 
 "ADMINISTRADOR DE ARCHIVOS
 "NERDTREE
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 ""Plug 'ryanoasis/vim-devicons'
 ""Plug 'nvim-tree/nvim-web-devicons'
 
