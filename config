@@ -14,7 +14,8 @@
 
     # Font for window titles. Will also be used by the bar unless a different font
     # is used in the bar {} block below.
-    font pango:Mononoki 8
+    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:Mononoki 10
 
     # This font is widely installed, provides lots of unicode glyphs, right-to-left
     # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -92,6 +93,9 @@
     # Abrir a navegador web
     bindsym $mod+b exec brave-browser
 
+    # start a navegador
+    # Abrir a navegador de archivos
+    bindsym $mod+n exec nautilus
 
     # kill focused window
     #Quitar una aplicación
@@ -181,16 +185,20 @@
     # We use variables to avoid repeating the names in multiple places.
     #Definir el nombre de c/u de los escritorios
     #si se trata de caracteres quitar "number" en el apartado siguiente
-    set $ws1 "1:  "
-    set $ws2 "2: web"
-    set $ws3 "3"
-    set $ws4 "4: "
-    set $ws5 "5: "
-    set $ws6 "6"
-    set $ws7 "7"
-    set $ws8 "8"
-    set $ws9 "9"
-    set $ws10 "10"
+    # Fuentes de iconos https://fontawesome.com/icons/categories/
+
+    set $ws1 "1:  "
+    set $ws2 "2:  "
+    set $ws3 "3: "
+    set $ws4 "4:  "
+    set $ws5 "5:  "
+    set $ws6 "6:  "
+    set $ws7 "7:  "
+    set $ws8 "8:  "
+    set $ws9 "9:  "
+    set $ws10 "10:  "
+    #  
+
 
     # switch to workspace
     # Cambiar de escritorio (campo de trabajo)
@@ -286,26 +294,33 @@
 
     #Apariencia de la barra#
     #Podemos personalizar la barra cambiando fuentes, colores, posicion, etc.
-bar {
+    bar {
     position top
+    #i3bar_command /home/tajadillo/.config/i3/i3blocks
     #i3bar_command i3bar -t
-        status_command i3blocks
-        height 30
+    status_command i3blocks
+    height 30
         colors {
-            # background #222222ff
-            background #222222
-            statusline #eeeeee
-            separator #666666
-            #                   border  backgr. text
-            focused_workspace  #444444 #444444 #ffb52a
-            active_workspace   #333333 #5f676a #ffffff
-            inactive_workspace #333333 #222222 #888888
-            urgent_workspace   #2f343a #900000 #ffffff
+    #    # background #222222ff
+        background #222222
+        statusline #eeeeee
+        separator #666666
+    #    #                   border  backgr. text
+        #focused_workspace  #444444 #444444 #ffb52a
+    #     focused_workspace  #444444 #444444 #00b7eb
+         focused_workspace  #444444 #444444 #ffe570
+    #    #active_workspace   #333333 #5f676a #ffffff
+         active_workspace   #333333 #5f676a #ffffff
+    #    #inactive_workspace #333333 #222222 #888888
+    #     inactive_workspace #333333 #222222 #ffe570
+         inactive_workspace #333333 #222222 #00b7eb
+    #    #urgent_workspace   #2f343a #900000 #ffffff
+         urgent_workspace   #2f343a #900000 #ffffff
+            }
         }
-}
 
-#Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana"
-client.focused #444444 #bf7500 #444444 #ffff70
+    #Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana"
+    client.focused #444444 #bf7500 #444444 #ffff70
 
 
     #Podemos mostrar o esconder la barra con una simple combinación de teclas
@@ -320,23 +335,29 @@ client.focused #444444 #bf7500 #444444 #ffff70
     # "Para esto tengo que tener instalado dunst"
     exec dunst
 
+    #Captura de pantalla
+    bindsym --release $mod+t exec "scrot -s -e 'mv $f ~/'"
+
     #Bordes de las ventanas
     # "Para esto tengo que tener instalado i3gaps"
     gaps outer 5
-    gaps inner 10
+    gaps inner 1
     smart_gaps on
 
     #Quitar titulos de las ventanas
     for_window [class="^.*"] border pixel 3
 
     #Ventana flotante reproductor de video
-    for_window [title="video0 - mpv"] floating enable
-    for_window [title="video0 - mpv"] sticky enable
+    #for_window [title="video0 - mpv"] floating enable
+    #for_window [title="video0 - mpv"] sticky enable
 
     #Ventana flotante web-cam
-    for_window [title="video0 - mpv"] floating enable
-    for_window [title="video0 - mpv"] sticky enable
+    #for_window [title="video0 - mpv"] floating enable
+    #for_window [title="video0 - mpv"] sticky enable
 
+    #Ventana flotante web-cam
+    #for_window [title="video0 - vlc"] floating enable
+    #for_window [title="video0 - vlc"] sticky enable
 
     #Idioma de teclado
     #exec setxkbmap -layout es
