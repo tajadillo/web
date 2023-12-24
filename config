@@ -341,7 +341,7 @@ font pango:Mononoki 10
     #Bordes de las ventanas
     # "Para esto tengo que tener instalado i3gaps"
     gaps outer 5
-    gaps inner 1
+    gaps inner 8
     smart_gaps on
 
     #Quitar titulos de las ventanas
