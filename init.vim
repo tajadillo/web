@@ -178,7 +178,7 @@ set statusline+=\ [Total_Lineas=%L]
 """""""""""""""""""""""""""
 
 "--------------------------------------Inicio Plugins
-call plug#begin('.config/nvim/plugged')
+"call plug#begin('.config/nvim/plugged')
 
 "TEMAS
 "GRUVBOX
@@ -203,10 +203,6 @@ call plug#begin('.config/nvim/plugged')
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 ""Plug 'matt/emmet-vim'
-call plug#end()
-"---------------------------------------Fin Plugins
-
-
 
 ""call plug#end()
 """"""""""""
