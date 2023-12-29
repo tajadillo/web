@@ -189,17 +189,17 @@ font pango:Mononoki 10
     #si se trata de caracteres quitar "number" en el apartado siguiente
     # Fuentes de iconos https://fontawesome.com/icons/categories/
 
-    set $ws1 "1:  "
-    set $ws2 "2:  "
-    set $ws3 "3: "
-    set $ws4 "4:  "
-    set $ws5 "5:  "
-    set $ws6 "6:  "
-    set $ws7 "7:  "
-    set $ws8 "8:  "
-    set $ws9 "9:  "
-    set $ws10 "10:  "
-    #  
+    set $ws1 "1"
+    set $ws2 "2"
+    set $ws3 "3"
+    set $ws4 "4"
+    set $ws5 "5"
+    set $ws6 "6"
+    set $ws7 "7"
+    set $ws8 "8"
+    set $ws9 "9"
+    set $ws10 "10"
+    #
 
 
     # switch to workspace
@@ -297,10 +297,12 @@ font pango:Mononoki 10
     #Apariencia de la barra#
     #Podemos personalizar la barra cambiando fuentes, colores, posicion, etc.
     bar {
-    position top
+    #position top
+    position bottom
     #i3bar_command /home/tajadillo/.config/i3/i3blocks
     #i3bar_command i3bar -t
-    status_command i3blocks
+    #status_command i3blocks
+    status_command polybar
     height 30
         colors {
     #    # background #222222ff
@@ -362,13 +364,13 @@ font pango:Mononoki 10
     #for_window [title="video0 - vlc"] sticky enable
 
     #Idioma de teclado
-    #exec setxkbmap -layout es
-    exec "setxkbmap -layout us,de"
+    #exec "setxkbmap -layout us,de"
+    exec "setxkbmap -layout es_ES"
     exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
     #Fondo de escritorio
     # "Para esto tengo que tener instalado feh"
-    exec feh --bg-fill Imágenes/wallpaper/desktop-wallpaper-3d-skull-design-for-and-mobiles-1366x768-skull-pc.jpg
+    exec feh --bg-fill /home/tajadillo/Imágenes/wallpaper/fondo.jpg
 
     #Transparencia
     # "Para esto tengo que tener instalado picom"
@@ -376,3 +378,23 @@ font pango:Mononoki 10
     # colocar en false o true (verdadero o falso) "vsync"
     exec picom -b -f
 
+
+    #Instalar xrandr y arandr para la configuracion de los monitores
+    #Instalar wps-office desde pagina oficial o con sudo apt install
+    #https://github.com/wachin/wps-office-all-mui-win-language
+    #https://github.com/CodigoCristo/wpsoffice
+
+    #Instalar lxappearance (interface grafica para seleccionar el tema, los iconos y la tipografia
+
+    #Instalar rofi (lanzador de aplicaciones)
+
+    #Instalar pulseaudio
+    #Instalar pavucontrol (controlador de audio de pulse audio)
+
+    #Instalar arc-theme (instala el tema de arc)
+    #Instalar papirus-icon-theme (tema de iconos de papirus)
+
+    #Instalar blueman (administrador de dispositivos y conexiones a través de bluetooth)
+
+    #Configuración de la barra i3blocks
+    #https://youtu.be/0I01WVUcvsQ?si=Da9jA2G25IUfo-0G
