@@ -365,7 +365,7 @@ font pango:Mononoki 10
 
     #Idioma de teclado
     #exec "setxkbmap -layout us,de"
-    exec setxkbmap -layout es
+    exec "setxkbmap -layout es_ES"
     exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
     #Fondo de escritorio
@@ -378,3 +378,8 @@ font pango:Mononoki 10
     # colocar en false o true (verdadero o falso) "vsync"
     exec picom -b -f
 
+
+    #Instalar xrandr y arandr para la configuracion de los monitores
+    #Instalar wps-office desde pagina oficial o con sudo apt install
+    #https://github.com/wachin/wps-office-all-mui-win-language
+    #https://github.com/CodigoCristo/wpsoffice
