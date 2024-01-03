@@ -260,7 +260,7 @@ font pango:Mononoki 10
 
     #Bloquear la pantalla
     #por algun motivo no funciona
-    #bindsym $mod+$mod1+1 exec dm-tool lock
+    #bindsym $mod+$mod1+l exec dm-tool lock
 
     # resize window (you can also use the mouse for that)
     # Cambiar de tamaño las ventanas
@@ -301,7 +301,7 @@ font pango:Mononoki 10
     position bottom
     #i3bar_command /home/tajadillo/.config/i3/i3blocks
     #i3bar_command i3bar -t
-    #status_command i3blocks
+    status_command i3blocks
     status_command polybar
     height 30
         colors {
@@ -383,3 +383,15 @@ font pango:Mononoki 10
     #Instalar wps-office desde pagina oficial o con sudo apt install
     #https://github.com/wachin/wps-office-all-mui-win-language
     #https://github.com/CodigoCristo/wpsoffice
+
+    #Instalar lxappearance (interface grafica para seleccionar el tema, los iconos y la tipografia
+
+    #Instalar rofi (lanzador de aplicaciones)
+
+    #Instalar pulseaudio
+    #Instalar pavucontrol (controlador de audio de pulse audio)
+
+    #Instalar arc-theme (instala el tema de arc)
+    #Instalar papirus-icon-theme (tema de iconos de papirus)
+
+    #Instalar blueman (administrador de dispositivos y conexiones a través de bluetooth)
