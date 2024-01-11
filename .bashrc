@@ -185,6 +185,7 @@ alias bateria=acpi
 alias descargavideos=./ClipGrab-3.9.7-x86_64.AppImage
 alias ifconfig=/sbin/ifconfig
 alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
+alias neofetch="neofetch --size none"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
