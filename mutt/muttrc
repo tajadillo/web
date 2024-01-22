@@ -28,7 +28,7 @@ set alias_file="~/.config/mutt/contactos"
 # Configuracion richard_tajadillo@outlook.com
 
 set folder = imaps://imap-mail.outlook.com:993
-set imap_pass = "Afroperuan0"
+set imap_pass = "*********"
 set imap_user = 'richard_tajadillo@outlook.com'
 
 set smtp_url = "smtp://$imap_user@smtp-mail.outlook.com:587"
