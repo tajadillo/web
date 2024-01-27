@@ -1,0 +1,209 @@
+¿Te gusta este sitio?
+🎁
+Regala al autor un plan de WordPress.com.
+Regalar
+Saltar al contenido
+Victorhck in the free world
+Victorhck in the free world
+
+Blog personal sobre openSUSE, GNU/Linux y software libre
+
+Aprender Vim
+ 
+El programador mediocre
+ 
+Guía de openSUSE para recién llegados
+ 
+Contacto
+ 
+Invítame a una cerveza
+Cómo cambiar el tema de colores del reproductor moc
+ victorhck GNU/Linux  16/05/2019 2 minutos
+Veamos cómo darle otro estilo a nuestro reproductor moc, cambiando el tema de colores.
+
+
+Reproductor moc (pincha sobre la imagen para ampliar)
+En un artículo anterior pudiste leer en el blog un artículo sobre el reproductor de música moc para la línea de comandos de sistemas GNU/Linux.
+
+https://victorhckinthefreeworld.com/2019/05/14/escucha-musica-terminal-linux-moc/
+En el artículo describía un poco qué es y mi reciente uso de este reproductor sencillo, pero lleno de posibilidades, que se utiliza desde la consola de nuestros sistemas GNU/Linux.
+
+En este artículo de hoy veremos cómo añadir nuevos temas de colores para adaptar el reproductor a nuestro sistema, y a nuestros gustos.
+
+De manera predeterminada moc viene con varios temas de colores ya disponibles para utilizarlos. Si lanzamos el reproductor mediante mocp y pulsamos la tecla T nos aparecerán los temas disponibles.
+
+Estos temas de manera predeterminada están disponibles (por lo menos en mi openSUSE) en la ruta /usr/share/moc/themes. Son archivos de texto que podemos editar y configurar si lo deseamos.
+
+Cuando nos presenta los temas disponibles, podemos escoger entre uno u otro y ver el aspecto general que tiene moc. Pero al cerrar la interfaz y volver a abrirla, nos aparecerá de nuevo con el tema predeterminado.
+
+Veamos cómo establecer un tema de manera persistente o incluir otros temas que hayamos encontrado por la red de personas que los han creado y compartido.
+
+Para establecer un tema como persistente. Debemos establecerlo en el archivo de configuración, para ello lo editamos mediante nuestro editor favorito en la ruta ~/.moc/config
+
+Podemos utilizar uno de los temas predeterminados o podemos copiar nuevos temas y usarlos. Los nuevos temas que añadamos lo podemos hacer en la ruta ~/.moc/themes/
+
+En el archivo de configuración, si el tema está en /usr/share/moc/themes deberemos especificar la ruta completa. Si está en la carpeta themes de nuestro /home no hará falta, ya que de manera predeterminada busca en ~/.moc/themes
+
+Si no existe el archivo config lo creamos con estas dos líneas y si existe añadimos las siguiente dos líneas:
+
+Theme = solarized 
+XTermTheme = solarized
+Donde solarized en este caso es un tema de colores que tengo en ~/.moc/themes/
+
+De esta manera moc utilizará siempre de manera persistente este tema de colores para su interfaz gráfica. Quizás esto era lo que te faltaba para que moc sea ahora tu nuevo reproductor de música favorito.
+
+
+
+Comparte este artículo:
+Correo electrónicoMastodon, GNUsocialdiaspora, HubzillameneameRedditTelegramPocketTwitter
+
+Relacionado
+
+Escucha música desde la terminal de #Linux con moc
+14/05/2019
+En «GNU/Linux»
+
+
+Mi complemento para zsh para manejar el reproductor moc
+24/06/2021
+En «GNU/Linux»
+
+
+Parcheando el reproductor moc en openSUSE
+04/04/2022
+En «openSUSE»
+
+Etiquetadolínea de comandosMúsicasoftwarelibre
+Navegación de entradas
+Previous Post Curso de Vim: Abrir una consola mientras estamos editando con VimNext PostMejorando #KDE en facilidad de uso y productividad (semana 19 de 2019)
+14 comentarios sobre “Cómo cambiar el tema de colores del reproductor moc”
+Gabriel D'Atri
+17/05/2019 a las 2:42 pm
+Luego de leer el artículo anterior y comenzar a usarlo, ya quería cambiar el aspecto, así que quizás me leíste la mente 🙂
+No encontré solarized en mi instalación, así que quedó el black_theme y listo.
+Muchas gracias, Víctorhck!
+
+Responder
+victorhck
+17/05/2019 a las 4:38 pm
+jejeje, Saludos!
+
+Responder
+Devoto
+17/05/2019 a las 11:11 pm
+¡Hola!, yo uso este tema desde hace algún tiempo, en urxvt se ve genial. Ojalá algún día de con la configuración adecuada de Fbterm para que se vea igual:
+
+https://github.com/hringriin/dotfiles/blob/master/moc/themes/hringriin_theme
+
+¡Saludos hasta allá!
+
+Responder
+victorhck
+17/05/2019 a las 11:30 pm
+🙂
+saludos
+
+Responder
+Eskuineko
+19/05/2019 a las 12:53 am
+Que nostalgia, esto es volver al siglo pasado donde todo era texto.
+
+Responder
+victorhck
+19/05/2019 a las 4:51 pm
+La consola es poderosa! 😉
+
+Responder
+nasciiboy
+19/05/2019 a las 5:14 pm
+mas de temas obscuros que solarizados… por si quereis probar el «tema nas»
+
+
+
+http://nasciiboy.land/apt/moc-nascii-theme.zip
+
+Responder
+victorhck
+19/05/2019 a las 7:26 pm
+Hola!
+Pues muchas gracias por el aporte!
+Por cierto, buena colección de música!! Los míticos Sonic Youth y los no menos mìticos The Cure!!!
+Sube el volúmen!! 🙂
+
+Responder
+nasciiboy
+20/05/2019 a las 6:38 am
+ju, conoces a los youth! usas el sistema del ñu, has probado moc y encima (de las que reconosco: moon safari, deep purple, king crimson, muse) tienes buena musica, ya solo te falta abandonar vim en fabor de emacs! unete al culto!
+
+… en serio, vas a estar mejor en la unica fe verdadera fe
+
+victorhck
+20/05/2019 a las 11:11 am
+jejeje, de momento me arreglo con el editor del demonio!! :þ
+
+Saludos!
+
+gabriel
+28/06/2020 a las 5:20 pm
+Bueno, dejo enlace donde hay una cantidad de themes:
+https://github.com/wimstefan/mocp-themes
+
+Responder
+victorhck
+28/06/2020 a las 6:56 pm
+Muchas gracias por la contribución!!!
+Saludos!!!
+
+Responder
+oscar
+16/02/2023 a las 2:12 pm
+Gracias Victor! Mil gracias! Me ha funcionado!
+Saludos
+
+Responder
+victorhck
+16/02/2023 a las 2:16 pm
+Me alegro.
+Gracias por comentarlo…
+Saludos
+
+Responder
+Deja una respuesta 
+Licencia del blog
+Licencia Creative Commons
+
+Esta obra está bajo una Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional.
+
+Escrito por humanos, no por una IA
+Busca en el blog
+Buscar:
+Buscar …
+Donar con LiberaPay
+
+Canal Telegram
+Canal Telegram
+
+RSS del blog
+RSS Feed RSS - Entradas
+
+Sigue el blog por correo electrónico
+Introduce tu dirección de correo electrónico para seguir este Blog y recibir las notificaciones de las nuevas publicaciones.
+
+Dirección de correo electrónico:
+Dirección de correo electrónico
+
+Seguir
+
+Únete a otros 1.006 suscriptores
+Busca en el blog
+Buscar:
+Buscar …
+Licencia del blog
+Licencia Creative Commons
+
+Esta obra está bajo una Licencia Creative Commons Atribución-Compartir Igual 4.0 Internacional.
+
+Canal Telegram
+Canal Telegram
+Estadísticas del sitio
+4.386.048 hits
