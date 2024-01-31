@@ -227,3 +227,6 @@ https://flaixfm.streaming-pro.com:8003/flaixfm.aacp
 
    #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,SER
 https://20853.live.streamtheworld.com/CADENASERAAC.aac    
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,BESAME MEDELLIN
+https://14543.live.streamtheworld.com/BESAME_MEDELLINAAC.aac?csegid=2000&dist=besameco-web-tod-player&tdsdk=js-2.9&swm=false&pname=TDSdk&pversion=2.9&banners=none&burst-time=15&sbmid=ad0dbe3f-b081-476d-9f08-df36a18139ac
