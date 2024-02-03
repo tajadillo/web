@@ -257,11 +257,9 @@ font pango:Mononoki Nerd Font 10
     bindsym $mod+Shift+e exec "i3-msg exit"
 
     #Bloquear la pantalla
-    #por algun motivo no funciona
     bindsym $mod+CTRL+l exec /usr/local/bin/bloqueo.sh
-    #bindsym $mod+l exec i3lock-fancy
     #bloqueo automatico
-    #bindsym $mod+l exec xset s 5
+    #bindsym $mod+l exec xset s 10
 
     # resize window (you can also use the mouse for that)
     # Cambiar de tamaño las ventanas
