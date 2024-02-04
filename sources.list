@@ -1,0 +1,72 @@
+#deb cdrom:[Debian GNU/Linux 12.4.0 _Bookworm_ - Official amd64 NETINST with firmware 20231210-17:56]/ bookworm main non-free-firmware
+
+deb http://deb.debian.org/debian/ bookworm main non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
+
+#deb http://security.debian.org/debian-security bookworm-security main non-free-firmware
+#deb-src http://security.debian.org/debian-security bookworm-security main non-free-firmware
+
+# bookworm-updates, to get updates before a point release is made;
+# see https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_updates_and_backports
+deb http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm-updates main non-free-firmware
+
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.
+
+#chile
+deb http://ftp.cl.debian.org/debian/ bookworm main non-free-firmware
+
+deb http://debian.redlibre.cl/debian/ bookworm main non-free-firmware
+
+deb http://mirror.hnd.cl/debian/ bookworm main non-free-firmware
+
+deb http://mirror.insacom.cl/debian/ bookworm main non-free-firmware
+
+deb http://mirror.ufro.cl/debian/ bookworm main non-free-firmware
+
+
+#brasil
+deb http://ftp.br.debian.org/debian/ bookworm main non-free-firmware
+
+deb http://alcateia.ufscar.br/debian/ bookworm main non-free-firmware
+
+deb http://debian.c3sl.ufpr.br/debian/ bookworm main non-free-firmware
+
+deb http://mirror.uepg.br/debian/ bookworm main non-free-firmware
+
+deb [arch=amd64] http://ftp.br.debian.org/debian/ bullseye main contrib non-free
+deb-src [arch=amd64] http://ftp.br.debian.org/debian/ bullseye main contrib non-free
+
+deb [arch=amd64] http://ftp.br.debian.org/debian/ bullseye-updates main contrib non-free
+deb-src [arch=amd64] http://ftp.br.debian.org/debian/ bullseye-updates main contrib non-free
+
+
+#United States
+deb [arch=amd64] http://ftp.us.debian.org/debian/ bullseye main contrib non-free
+deb-src [arch=amd64] http://ftp.us.debian.org/debian/ bullseye main contrib non-free
+
+deb [arch=amd64] http://ftp.us.debian.org/debian/ bullseye-updates main contrib non-free
+deb-src [arch=amd64] http://ftp.us.debian.org/debian/ bullseye-updates main contrib non-free
+
+
+
+#Habilitar todos los repositorios en Debian 12
+ deb https://ftp.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+ deb-src https://ftp.debian.org/debian/ bookworm contrib main non-free non-free-firmware
+ 
+ deb https://ftp.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+ deb-src https://ftp.debian.org/debian/ bookworm-updates contrib main non-free non-free-firmware
+ 
+ deb https://ftp.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+ deb-src https://ftp.debian.org/debian/ bookworm-proposed-updates contrib main non-free non-free-firmware
+ 
+ deb https://ftp.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+ deb-src https://ftp.debian.org/debian/ bookworm-backports contrib main non-free non-free-firmware
+ 
+# deb https://security.debian.org/debian-se bookworm-security contrib main non-free non-free-firmware
+
