@@ -1,3 +1,3 @@
 #!/bin/bash
-i3lock-fancy ctrl
+i3lock-fancy -g -p ctrl
 
