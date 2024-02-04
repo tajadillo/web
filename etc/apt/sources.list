@@ -1,3 +1,8 @@
+
+
+
+
+
 #deb cdrom:[Debian GNU/Linux 12.4.0 _Bookworm_ - Official amd64 NETINST with firmware 20231210-17:56]/ bookworm main non-free-firmware
 
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware
