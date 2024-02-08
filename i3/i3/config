@@ -368,6 +368,9 @@ font pango:Mononoki Nerd Font 10
     #Fondo de escritorio
     # "Para esto tengo que tener instalado feh"
     exec feh --bg-fill /home/tajadillo/Imágenes/wallpaper/fondo.jpg
+    #nitrogen
+    #instalando nitrogen se puede cambiar el fondo de pantalla de manera grafica
+    #exec_always --no-startup-id nitrogen --restore
 
     #Transparencia
     # "Para esto tengo que tener instalado picom"
