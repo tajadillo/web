@@ -15,7 +15,9 @@
     set $mod Mod4
 
     # Font for window titles. Will also be used by the bar unless a different font
+    # Fuente para títulos de ventanas. También será utilizado por la barra a menos que se utilice una fuente diferente.
     # is used in the bar {} block below.
+    # se utiliza en el bloque bar {} a continuación.
     font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:Mononoki Nerd Font 10
 
@@ -257,9 +259,10 @@ font pango:Mononoki Nerd Font 10
     bindsym $mod+Shift+e exec "i3-msg exit"
 
     #Bloquear la pantalla
-    bindsym $mod+CTRL+l exec /usr/local/bin/bloqueo.sh
+    #bindsym $mod+CTRL+l exec /usr/local/bin/bloqueo.sh
     #bloqueo automatico
-    #bindsym $mod+l exec xset s 10
+    #bindsym $mod+l exec xset s 5
+    bindsym $mod+CTRL+l exec dm-tool lock
 
     # resize window (you can also use the mouse for that)
     # Cambiar de tamaño las ventanas
@@ -375,6 +378,7 @@ font pango:Mononoki Nerd Font 10
     #Transparencia
     # "Para esto tengo que tener instalado picom"
     # confifurar "sudo nvim /etc/xdg/picom.conf"
+    #estudiando bien la ruta correcta se aplica con este comando "cp /usr/share/doc/picom/examples/picom.sample.conf /home/tajadillo/.config/picom/picom.conf"
     # colocar en false o true (verdadero o falso) "vsync"
     exec picom -b -f
 
