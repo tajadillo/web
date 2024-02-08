@@ -1,4 +1,7 @@
     #! /bin/sh
+    #copiar o mover powermenu a esta ruta
+/usr/local/bin/powermenu
+
 
 chosen=$(printf "Apagar\nReiniciar\nCerrar" | rofi -dmenu -i)
 
