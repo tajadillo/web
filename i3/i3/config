@@ -111,7 +111,7 @@ font pango:Mononoki Nerd Font 10
     # There also is i3-dmenu-desktop which only displays applications shipping a
     # .desktop file. It is a wrapper around dmenu, so you need that installed.
     # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-    bindsym $mod+m exec dmenu_run -p ejecutar: -l 5 -nf "#6FCB9F" -sf "#ffe28a" -fn Hack
+    bindsym $mod+m exec dmenu_run -i -fn "Mononoki-16" -p ejecutar: -l 5 -nb "#222" -nf "#05a" -sf "#ffe28a"
 
     #niciar rofi a pantalla completa
     bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
