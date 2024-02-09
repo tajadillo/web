@@ -488,7 +488,7 @@ highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm
 "highlight Comment      guifg=#57afef ctermfg=7  guibg=none   ctermbg=none cterm=italic
 highlight Special      guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
 highlight Identifier   guifg=#5699af ctermfg=6  guibg=none    ctermbg=none cterm=none
-highlight PreProc      guifg=#c678dd ctermfg=5  guibg=none    ctermbg=none cterm=italic
+highlight PreProc      guifg=#c678dd ctermfg=3  guibg=none    ctermbg=none cterm=italic
 highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=italic
 highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=italic
 highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
