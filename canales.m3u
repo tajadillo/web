@@ -4077,3 +4077,54 @@ https://cnnsanjuan.com:9999/zonda/zonda/playlist.m3u8
 https://canalzoom.itex.com.co:3027/live/canalzoombr1live.m3u8
 #EXTINF:-1 tvg-id="ZTV.do" tvg-logo="https://i.imgur.com/7F4jQ13.png" group-title="Undefined",ZTV (720p) [Not 24/7]
 https://lb00zdigital.streamprolive.com/mnt/hls/live.m3u8
+
+#EXTM3U
+
+
+#EXTINF:0 tvg-id="Cine Club" tvg-logo="https://thumbs.subefotos.com/361a08e6ef56be76d6393f3ee7763d57o.jpg" group-title="Cine",Cine Club
+https://srv3.zcast.com.br/juancarlos9451/juancarlos9451/chunklist_w2054415583.m3u8
+
+#EXTINF:0 tvg-id="Orbit" tvg-logo="https://thumbs.subefotos.com/f7c7b7591fbc85b1999f65250069dc95o.jpg" group-title="Cine",Orbit
+https://ss3.domint.net:3134/otv_str/orbittv/chunklist_w818002091.m3u8
+
+#EXTINF:0 tvg-id="Dark Matter" tvg-logo="https://thumbs.subefotos.com/0ac4b218a9d080e9d97dfb6afecfdf45o.jpg" group-title="Cine",Dark Matter
+https://darkmatter-spanish-rakuten.amagi.tv/playlist480p.m3u8
+
+#EXTINF:-1 tvg-id="AME" tvg-logo="http://imgfz.com/i/5ZNoDVK.png" group-title="Cine",AME
+http://ss6.domint.net:2028/ame_str/amecanal47/chunklist_w1460023513.m3u8
+
+#EXTINF:-1 tvg-id="Geovision" tvg-logo="http://imgfz.com/i/9LdNWjt.png" group-title="Cine",Geovision
+https://5fa5de1a545ae.streamlock.net/Geovision/Geovision/chunklist_w663415590.m3u8
+
+#EXTINF:-1 tvg-id="EVA TV" tvg-logo="http://imgfz.com/i/BINEUhG.png" group-title="Cine",EVA TV
+https://stmv.panel.mivideo.pro/evastream/evastream/chunklist_w1422786726.m3u8
+
+#EXTINF:-1 tvg-id="TV Mas" tvg-logo="http://imgfz.com/i/Zdz7gmk.png" group-title="Cine",TV Mas
+https://593b04c4c5670.streamlock.net/8008/8008/chunklist_w1975917961.m3u8
+
+#EXTINF:0 tvg-id="ButacaTV" tvg-logo="http://imgfz.com/i/WsFZcKn.png" group-title="Cine",ButacaTV
+https://veranda-butacatv-1-es.samsung.wurl.tv/2000.m3u8
+
+#EXTINF:0 tvg-id="Retro Plus" tvg-logo="https://thumbs.subefotos.com/a60a822296f749d2e3ad2913694dff9ao.jpg" group-title="Cine",Retro Plus
+https://59f1cbe63db89.streamlock.net:1443/retroplussenal3/_definst_/retroplussenal3/playlist.m3u8
+
+#EXTINF:0 tvg-id="Retro Play" tvg-logo="http://imgfz.com/i/B8JkItX.png" group-title="Cine",Retro Play
+https://v4.tustreaming.cl/retroplaytv/tracks-v1a1/mono.m3u8
+
+#EXTINF:0 tvg-id="Runtime 1" tvg-logo="https://thumbs.subefotos.com/3b8394aa2513224984e9c9c49da344d1o.jpg" group-title="Cine",Runtime 1
+https://runtime-espanol-roku.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:0 tvg-id="Runtime 2" tvg-logo="https://thumbs.subefotos.com/3b8394aa2513224984e9c9c49da344d1o.jpg" group-title="Cine",Runtime 2
+https://runtimemx-samsungmx.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="PH TV" tvg-logo="https://thumbs.subefotos.com/ab17267973cab77ee91d997bfd8492eeo.jpg" group-title="Cine",PH TV
+https://cm.hostlagarto.com:4445/phtv/Phtv.myStream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="MiTV Clasica" tvg-logo="https://thumbs.subefotos.com/40462648fe488825b1fe586e83f891abo.jpg" group-title="Cine",MiTV Clasica 
+https://mitv.getstreamhosting.com:30443/live/livestream123/chunks.m3u8
+
+#EXTINF:-1 tvg-id="Super Classic" tvg-logo="https://thumbs.subefotos.com/c68c1b3b72b41ab1b13e43135acb5f96o.jpg" group-title="Cine",FM Super Classic
+https://cloud2.streaminglivehd.com:1936/8070/8070/chunklist_w87095848.m3u8
+
+#EXTINF:0 tvg-id="Pluto Cine Estelar" tvg-logo="http://imgfz.com/i/AeQc9y2.png" group-title="Cine",Pluto Cine Estelar
+https://service-stitcher-ipv4.clusters.pluto.tv/v2/stitch/hls/channel/5dcde437229eff00091b6c30/master.m3u8?advertisingId=&appName=web&appVersion=5.106.0-f3e2ac48d1dbe8189dc784777108b725b4be6be2&app_name=web&clientDeviceType=0&clientID=bf5b2a9b-8e09-4c64-810e-184646833c2c&clientModelNumber=1.0.0&country=AR&deviceDNT=false&deviceId=bf5b2a9b-8e09-4c64-810e-184646833c2c&deviceLat=-31.3918&deviceLon=-64.1848&deviceMake=chrome&deviceModel=web&deviceType=web&deviceVersion=95.0.4638&marketingRegion=VE&serverSideAds=true&sessionID=7d82612b-4b4e-11ec-8caa-0242ac110003&sid=7d82612b-4b4e-11ec-8caa-0242ac110003&userId=&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjY2ZjE5OTU5LTEzMDMtNDA5Zi1hZWE1LTk5MjMzYmQ3ZGE0MSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI3ZDgyNjEyYi00YjRlLTExZWMtOGNhYS0wMjQyYWMxMTAwMDMiLCJjbGllbnRJUCI6IjIwMC43My4xNjcuMTk0IiwiY2l0eSI6IkPDs3Jkb2JhIiwicG9zdGFsQ29kZSI6IjUwMDAiLCJjb3VudHJ5IjoiQVIiLCJkbWEiOjAsImFjdGl2ZVJlZ2lvbiI6IlZFIiwiZGV2aWNlTGF0IjotMzEuMzkxOCwiZGV2aWNlTG9uIjotNjQuMTg0OCwicHJlZmVycmVkTGFuZ3VhZ2UiOiJlcyIsImRldmljZVR5cGUiOiJ3ZWIiLCJkZXZpY2VWZXJzaW9uIjoiOTUuMC40NjM4IiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI1LjEwNi4wLWYzZTJhYzQ4ZDFkYmU4MTg5ZGM3ODQ3NzcxMDhiNzI1YjRiZTZiZTIiLCJjbGllbnRJRCI6ImJmNWIyYTliLThlMDktNGM2NC04MTBlLTE4NDY0NjgzM2MyYyIsImNtQXVkaWVuY2VJRCI6IiIsImlzQ2xpZW50RE5UIjpmYWxzZSwidXNlcklEIjoiIiwibG9nTGV2ZWwiOiJERUZBVUxUIiwidGltZVpvbmUiOiJBbWVyaWNhL0FyZ2VudGluYS9Db3Jkb2JhIiwic2VydmVyU2lkZUFkcyI6dHJ1ZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7fSwiYXVkIjoiKi5wbHV0by50diIsImV4cCI6MTYzNzU4NDkwMiwianRpIjoiNmNiZTYyYWUtMTEzZi00MTZlLWFmZWEtYjY5NzJiZWNhNjdlIiwiaWF0IjoxNjM3NTU2MTAyLCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOmRldmljZXM6VkU6WW1ZMVlqSmhPV0l0T0dVd09TMDBZelkwTFRneE1HVXRNVGcwTmpRMk9ETXpZekpqIn0.FgbvUcqA78FJMXplCC7RSIcWKZoQo8pQ7hZuR5o_4zg&masterJWTPassthrough=true
