@@ -275,6 +275,12 @@ https://www.youtube.com/channel/UCTXNz3gjAypWp3EhlIATEJQ/live
 #EXTINF:-1 tvg-id="Bio Bio tv" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Bio Bio TV BBTV
 https://rudo.video/live/bbtv?autostart=1&volume=0&streamingLabel=home
 
+#EXTINF:-1 tvg-id="tv Municipalidad de Arica" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",TV Municipalidad de Arica
+https://youtu.be/dGltygAXir4?si=qNK4l7IMpCx_eylF
+
+#EXTINF:-1 tvg-id="tv Milenio Noticias" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/teletrece/picture?width=200&height=200" group-title="New",Milenio Noticias
+https://www.youtube.com/live/KEjysURZo6Y?si=IGCr0FsS6c-mUyQx
+
 #EXTINF:-1 tvg-id="Globovision Venezuela" tvg-country="VE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/globovision/picture?width=200&height=200" group-title="New",Globovision Venezuela
 https://www.youtube.com/channel/UCfJtBtmhnIyfUB6RqXeImMw/live
 
