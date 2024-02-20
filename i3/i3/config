@@ -369,18 +369,6 @@ font pango:Mononoki Nerd Font 10
     for_window [class="TelegramDesktop"] floating enable
     #for_window [title="video0 - vlc"] sticky enable
 
-
-
-
-    #Ventana flotante telegram
-    for_window [class="nemo"] floating enable
-    #for_window [title="video0 - vlc"] sticky enable
-
-
-
-
-
-
     #Idioma de teclado
     #exec "setxkbmap -layout us,de"
     exec "setxkbmap -layout es_ES"
