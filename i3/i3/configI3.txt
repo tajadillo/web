@@ -1,0 +1,551 @@
+https://elblogdelazaro.org/posts/2019-01-10-mi-configuracion-i3/
+
+
+
+↓Ir al contenido
+el blog de lázaro
+Publicaciones
+Categorías
+Toots
+
+
+Publicaciones/
+Mi configuración de i3wm
+10 enero 2019
+·
+Actualizado: 25 octubre 2023
+·
+2290 palabras
+·
+11 mins
+linux
+i3wm
+Definiciones de Teclas
+Asignación de la tecla Windows para la variable $mod
+Variables para las teclas de movimiento
+Pantalla
+3 Menús
+Como salir, logoff, suspender…..
+Volver a cargar la configuración
+Reiniciar manteniendo estado de la sesión
+Parar una aplicación
+Movimiento alrededor de i3
+Movimiento por los espacios de trabajo
+Parámetros de configuración tiling (Mosaico)
+Cambio de tamaño de la ventana
+Fuentes
+Asignando espacios de trabajo a las aplicaciones
+Arrancar aplicaciones al iniciar sesión
+Aplicaciones que se inician en la barra
+Combinación de teclas para iniciar aplicaciones
+Captura de pantalla
+Ventana en mosaico o flotante
+Dar el foco a las aplicaciones (ventana activa)
+Preferencias de audio
+Control del borde de las ventanas
+Control del brillo de la pantalla
+Esconder o mostrar la barra de estado
+Control de ventanas popups
+Ajustes para i3 gaps-next
+Configuración i3 gaps
+Apariencia de la barra
+En este otro articulo expliquó como instalar i3-gaps en Arch Linux, como gestor de ventanas, en este articulo voy realizar una pequeña explicación mi fichero de configuración de i3-gaps, prácticamente se puede utilizar igualmente como fichero de configuración para i3wm, salvo la parte que he marcado para i3-gaps
+
+Recordarte que i3-gaps es un fork de i3wm pero con algunos extras como por ejemplo el espaciado entre ventanas.
+
+Definiciones de Teclas#
+Antes de empezar, esta es la descripción que he hecho para el teclado
+
+
+- $Mod = tecla WINDOWS
+
+- Mod1 = tecla ALT
+
+- Control = tecla CTRL
+
+- Shift = tecla SHIFT
+
+- Escape = tecla ESCAPE
+
+- Return = tecla ENTER
+
+- KP_Enter = Tecla Enter teclado numerico
+
+- Pause = tecla PAUSE
+
+- Print = tecla PRINT
+
+- Tab = tecla TAB
+Asignación de la tecla Windows para la variable $mod#
+set $mod Mod4
+Variables para las teclas de movimiento#
+set $up l
+set $down k
+set $left j
+set $right semicolon
+Pantalla#
+Cambiar de espacio de trabajo (escritorio virtual)
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+Mover la ventana que tiene el foco (activa) a otro espacio de trabajo
+
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+3 Menús#
+Iniciar dmenu
+
+bindsym $mod+d exec --no-startup-id dmenu_run
+Lanzar aplicaciones mediante gmrun
+
+bindsym mod1+F2 exec --no-startup-id gmrun
+Iniciar rofi a pantalla completa
+
+
+bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
+Iniciar/ rofi/ en una ventana pequeña con iconos
+
+bindsym $mod+F12 exec --no-startup-id rofi -modi run -show drun -show-icons -font "Noto Sans 13"
+Utilizar la combinación de teclas TAB + q para abrir rofi en una ventana con las aplicaciones que se están ejecutando
+
+bindsym $mod+q exec rofi -show window -show-icons
+Como salir, logoff, suspender…..#
+Para bloquear la sesión de trabajo llamo al script i3lock.sh, el cual realiza una captura de pantalla y aplica un filtro de desenfoque mediante imagemagick
+
+Para el resto de opciones (suspender, apagar, hibernar y salir de la sesión) utilizo otro script llamado i3exit.sh
+
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+Al pulsar $mod (tecla windows) + x ejecuta el script i3exit.sh y muestra el la barra de estado varias opciones para bloquear o salir de la sesión, suspender, hibernar, reiniciar o apagar el equipo
+
+
+bindsym $mod+X mode "$mode_system"
+bindsym control+mod1+Delete mode "$mode_system"
+
+set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    bindsym k exec --no-startup-id ~/.config/i3/scripts/i3lock.sh lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+Volver a cargar la configuración#
+Si hemos modificado el archivo de configuración de i3, no es necesario salir de la sesión o reiniciar el equipo, podemos volver a cargar la configuración con una combinación de teclas
+
+bindsym $mod+Shift+c reload
+Reiniciar manteniendo estado de la sesión#
+Podemos usar esta opción para actualizar i3 por ejemplo
+
+bindsym $mod+Shift+r restart
+Parar una aplicación#
+Podemos “matar” la aplicación que tiene el foco (activa)
+
+bindsym $mod+Shift+q kill
+Movimiento alrededor de i3#
+Uso el ratón+$mod para arrastrar una ventana flotante a otra posición
+
+floating_modifier $mod
+Cambia el modo de presentacion de las ventanas ente mosaico / flotante
+
+bindsym $mod+Shift+space floating toggle
+Cambiar el foco entre ventanas
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+Alternativamente podemos usar las teclas del cursor
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+Mover la ventana que tiene el foco
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+Alternativamente podemos usar las teclas del cursor
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+Movimiento por los espacios de trabajo#
+Próximo / previo espacio de trabajo
+
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
+bindsym $mod+Tab workspace back_and_forth
+Navegar al siguiente / previo espacio de trabajo
+
+bindsym Mod1+Ctrl+Right workspace next
+bindsym Mod1+Ctrl+Left workspace prev
+Parámetros de configuración tiling (Mosaico)#
+Orientación de las ventanas para nuevos espacios de trabajo
+
+default_orientation horizontal
+Ventanas horizontalmente
+
+bindsym $mod+h split h
+Ventanas verticalmente
+
+bindsym $mod+v split v
+Ventana que tiene el foco a pantalla completa
+
+bindsym $mod+f fullscreen toggle
+Cambiar la forma de mostrar las ventanas (apiladas, tabulador, suelta)
+
+bindsym $mod+s layout stacking
+bindsym $mod+z layout tabbed
+bindsym $mod+e layout toggle split
+Cambiar el foco entre ventanas apiladas o flotante
+
+bindsym $mod+space focus mode_toggle
+Contenedor padre coge el foco
+
+bindsym $mod+a focus parent
+Contenedor hijo coge el foco
+
+#bindsym $mod+d focus child
+Cambio de tamaño de la ventana#
+Tambión podemos utilizar el ratón
+
+bindsym $mod+r mode "resize"
+
+       mode "resize" {
+             # These bindings trigger as soon as you enter the resize mode
+
+             # Pressing left will shrink the window’s width.
+             # Pressing right will grow the window’s width.
+             # Pressing up will shrink the window’s height.
+             # Pressing down will grow the window’s height.
+             bindsym $left       resize shrink width 10 px or 10 ppt
+             bindsym $down       resize grow height 10 px or 10 ppt
+             bindsym $up         resize shrink height 10 px or 10 ppt
+             bindsym $right      resize grow width 10 px or 10 ppt
+
+             # same bindings, but for the arrow keys
+             bindsym Left        resize shrink width 10 px or 10 ppt
+             bindsym Down        resize grow height 10 px or 10 ppt
+             bindsym Up          resize shrink height 10 px or 10 ppt
+             bindsym Right       resize grow width 10 px or 10 ppt
+
+             # back to normal: Enter or Escape
+             bindsym Return mode "default"
+             bindsym Escape mode "default"
+       }
+Fuentes#
+Fuente para el tamaño de los títulos de las ventanas. Tambión se usará esta fuente para la barra a menos que utilicemos un fuente diferente cuando la configuremos
+
+font pango:Noto Mono Regular 8
+Asignando espacios de trabajo a las aplicaciones#
+Pomo demos elegir que una aplic0acción se ejecute en un espacio de trabajo determinado, podemos averiguar su clase (class) con el comando xprop para la configuración
+
+# Workspace 1 text editor related and meld
+assign [class="Emacs|Meld|Mousepad"]                               → 1
+
+# Workspace 2 browser related
+assign [class="Firefox|Chromium"]                                  → 2
+
+# Workspace 3 file managers
+assign [class="Pcmanfm"]                                           → 3
+
+# Workspace 4 Telegram
+assign [class="TelegramDesktop"]                                   → 4
+
+# Workspace 5 Images
+assign [class="Gpicview|Nitrogen"]                                 → 5
+
+# Workspace 6 all video related software
+assign [class="Vlc|vlc"]                                           → 6
+
+# Workspace 7 Gestor de Paquetes
+assign [class="pamac-manager|Pamac-Manager"]                       → 7
+
+# Workspace 9 email clients
+#assign [class="Geary|Evolution"]                                  → 9
+
+# Workspace 10 music related
+assign [class="Spotify|spotify"]                                   → 10
+# fix for spotify not moving to workspace 10
+for_window [class="Spotify"] move to workspace 10
+Arrancar aplicaciones al iniciar sesión#
+Tambión podemos seleccionar que aplicaciones se inicien cuando iniciamos nuestra sesión
+
+# Navegador
+exec --no-startup-id firefox
+for_window [class="Firefox"] focus
+
+# Editores de texto
+exec --no-startup-id emacs
+#exec --no-startup-id atom
+
+# Social
+exec --no-startup-id telegram-desktop
+Si instalamos xautolock podemos configurar para que pasado un tiempo sin actividad en el ordenador la pantalla se bloquee, mira la sección logout para entender el script i3lock,sh
+
+#xautolock
+exec --no-startup-id xautolock -time 10 -locker "~/.config/i3/scripts/i3lock.sh"
+Aplicaciones que se inician en la barra#
+Al igual que en el apartado anterior, tambión podemos iniciar aplicaciones en la barra, evidentemente tendremos que tener estas aplicaciones instaladas en el sistema
+
+# Authentication dialog
+  exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+  # Updater
+  exec --no-startup-id pamac-tray
+
+  # bluetooth
+  exec --no-startup-id blueberry-tray
+
+  # network
+  exec --no-startup-id nm-applet
+
+  # num lock activated
+  exec_always --no-startup-id numlockx on
+
+  # nitrogen
+  exec --no-startup-id "nitrogen --restore"
+Combinación de teclas para iniciar aplicaciones#
+# Aplicaciones que no tienen un espacio de trabajo asignado
+
+  # terminal
+  bindsym $mod+Return exec --no-startup-id termite;focus
+  bindsym $mod+KP_Enter exec --no-startup-id termite;focus
+
+  # keepassxc
+  bindsym control+$mod+k exec --no-startup-id keepassxc;focus
+
+  # catfish
+  bindsym control+$mod+c exec --no-startup-id catfish;focus
+
+  # pamac-manager
+  bindsym control+$mod+p exec --no-startup-id pamac-manager
+
+  #xkill
+  bindsym --release $mod+Escape exec xkill
+
+
+  # Aplicaciones con un espacio de trabajo asignado
+
+  # workspace 1 related
+  bindsym $mod+F1 exec --no-startup-id emacs;focus
+
+  # workspace 2 related
+  bindsym $mod+F2 exec --no-startup-id firefox;focus
+
+  # qwerty/azerty conflict with w
+  bindsym control+$mod+g exec --no-startup-id chromium;focus
+
+  # workspace 3 related
+  bindsym $mod+F3 exec --no-startup-id pcmanfm;focus
+
+  # workspace 4 related
+  bindsym $mod+F5 exec --no-startup-id meld;focus
+  bindsym control+mod1+i exec --no-startup-id nitrogen;focus
+
+  # workspace 5 related
+  bindsym $mod+F4 exec --no-startup-id gimp;focus
+
+  # workspace 6 related
+  bindsym $mod+F6 exec --no-startup-id vlc;focus
+
+  # workspace 10 related
+  bindsym $mod+F10 exec --no-startup-id spotify;focus
+  bindsym control+mod1+s exec --no-startup-id spotify;focus
+Captura de pantalla#
+Personalmente me gusta mucho flameshot, aunque tu puedes usar el que mas te agrade.
+
+bindsym Print exec --no-startup-id flameshot full -p ~/imagenes/capturas
+bindsym Control+Print exec --no-startup-id flameshot gui
+Ventana en mosaico o flotante#
+Podemos elegir si la ventana de una determianda aplicacion se inicia en modo flotante o en mosaico, podemos averiguar su clase con el programa xprop
+
+for_window [class="Blueberry.py"] floating enable
+for_window [class="mate-calculator"] floating enable
+for_window [class="^Gpick$"] floating enable
+for_window [class="Imagewriter"] floating enable
+for_window [class="Font-manager"] floating enable
+for_window [class="qt5ct|Lxappearance"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="^Spotify$"] floating enable
+for_window [class="System-config-printer.py"] floating enable
+for_window [class="etcher-electron"] floating enable
+for_window [class="^Vlc$"] floating enable
+for_window [class="TelegramDesktop"] floating enable
+
+#for_window [instance="gimp"] floating disable
+for_window [instance="script-fu"] border normal
+
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
+for_window [title="Moving"] floating enable
+for_window [title="^Terminator Preferences$"] floating enable
+
+
+#for_window [window_role="^gimp-toolbox-color-dialog$"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="^Preferences$"] floating enable
+for_window [window_role="setup"] floating enable
+Dar el foco a las aplicaciones (ventana activa)#
+Podemos elegir que cuando lanzamos una aplicación tome el foco (activa)
+
+for_window [class="Termite"] focus
+for_window [class="Terminator"] focus
+Preferencias de audio#
+Configuramos con que valor se incrementará o disminuirá el volumen
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+Control del borde de las ventanas#
+i3 tambión permite controlar el borde las ventanas, mostrar, esconder, etc.
+
+hide_edge_borders both
+bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+Incluso cambiar el estilo
+
+bindsym $mod+t border normal
+bindsym $mod+y border 1pixel
+bindsym $mod+u border none
+
+#new_window pixel 1
+new_window normal
+#new_window none
+
+#new_float pixel 1
+new_float normal
+#new_float none
+Control del brillo de la pantalla#
+El control del brillo de la pantalla lo haremos a travós de xbacklight y con un valor de +/- 10% de subida o bajada
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
+XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+Esconder o mostrar la barra de estado#
+Podemos mostrar o esconder la barra con una simple combinación de teclas
+
+bindsym $mod+b bar mode toggle
+Control de ventanas popups#
+Tamaño de las popups mientras estamos en el modo de pantalla completa
+
+popup_during_fullscreen smart
+Ajustes para i3 gaps-next#
+Estilo de bordes, distancia, etc.
+
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
+#smart_gaps on
+#smart_borders on
+Configuración i3 gaps#
+No puedo explicar mucho sobre los ajustes, simplemente me limitó a copiar y pegar la configuración de ejemplo
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+Apariencia de la barra#
+Podemos personalizar la barra cambiando fuentes, colores, posicion, etc.
+
+
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676e7d
+set $urgent-bg-color     #e53935
+set $indicator-color     #a0a0a0
+
+# set window colors
+#                       border             background         text                 indicator
+client.focused          $bg-color          $bg-color          $text-color          $indicator-color
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
+client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    status_command i3status
+    font pango:monospace 9
+    position top
+
+      colors {
+      background $bg-color
+      separator #757575
+      #                  border             background         text
+      focused_workspace  $bg-color          $bg-color          $text-color
+      inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+      urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    }
+}
+En lineas generales esta es mi configuración de i3wm, y como escribía al principio del articulo, quitando la parte para gaps, es totalmente compatible con i3wm, de todas formas puedes descargarte mi fichero de configuración y personalizarlo a tu gusto,
+
+Espero que te haya gustado, pasa un buen día. 🐧
+
+←
+Asus RT-AC68U: Instalación firmware alternativo Merlín
+8 enero 2019
+Emacs: Organiza tus contactos con org-contacts
+14 enero 2019
+→
+↑
+© el blog de lázaro - creative commons attribution 4.0 international license.
+
+Desarrollada con Hugo & Congo

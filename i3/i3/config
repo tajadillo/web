@@ -352,17 +352,22 @@ font pango:Mononoki Nerd Font 10
     #Quitar titulos de las ventanas
     for_window [class="^.*"] border pixel 3
 
-    #Ventana flotante reproductor de video
-    #for_window [title="video0 - mpv"] floating enable
-    #for_window [title="video0 - mpv"] sticky enable
+    #Ventana flotante video
+    for_window [class="mpv"] floating enable
+    for_window [class="vlc"] floating enable
 
-    #Ventana flotante web-cam
-    #for_window [title="video0 - mpv"] floating enable
-    #for_window [title="video0 - mpv"] sticky enable
-
-    #Ventana flotante web-cam
-    #for_window [title="video0 - vlc"] floating enable
+    #Ventana flotante calculadora
+    for_window [class="gnome-calculator"] floating enable
     #for_window [title="video0 - vlc"] sticky enable
+
+    #Ventana flotante spotify
+    for_window [class="^Spotify$"] floating enable
+    #for_window [title="video0 - vlc"] sticky enable
+
+    #Ventana flotante telegram
+    for_window [class="TelegramDesktop"] floating enable
+    #for_window [title="video0 - vlc"] sticky enable
+
 
     #Idioma de teclado
     #exec "setxkbmap -layout us,de"
