@@ -89,7 +89,10 @@ else
     PS1=' \nUsuario: \u @ Hostname: \h: \nDirectorio actual: \w \$:  \n'
 
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
+ #    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
+
+ PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0)$(tput setaf 2)\u$(tput sgr0)$(tput setaf 3)@$(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0) $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 2)😍😍😍$(tput sgr0)$(tput setaf 1)<<<<<$(tput sgr0)\n\n'
+
 
 fi
 
@@ -168,8 +171,8 @@ alias l='ls -CF'
 #mis aliasses
 alias clima="curl wttr.in/arica?lang=es"
 alias ver-imagen="kitty +kitten icat"
-alias apagar='sudo poweroff'
-alias reiniciar='shutdown -r now'
+alias apagar='sudo shutdown -h now'
+alias reiniciar='sudo shutdown -r now'
 alias radio='bash /home/tajadillo/radio/radio.sh'
 alias tv='bash /home/tajadillo/radio/tv.sh'
 alias reloj='tty-clock -s -c -D'
@@ -225,6 +228,6 @@ echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
 echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
 echo "                                                               "
 
-neofetch
+#neofetch
 
 export C_INCLUDE_PATH=/usr/lib/avr/include
