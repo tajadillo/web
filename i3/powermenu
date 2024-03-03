@@ -1,4 +1,6 @@
     #! /bin/sh
+#insertar en /usr/local/bin/
+
 
 chosen=$(printf "Apagar\nReiniciar\nCerrar Sesión" | rofi -dmenu -i)
 
