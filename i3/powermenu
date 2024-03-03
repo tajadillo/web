@@ -2,11 +2,11 @@
     #insertar en /usr/local/bin/
 
 
-chosen=$(printf " Apagar\n Reiniciar\n󰿅 Cerrar Sesión" | rofi -dmenu -i)
+chosen=$(printf " Apagar\n Reiniciar\n󰗼 Cerrar Sesión" | rofi -dmenu -i)
 
 case "$chosen" in
     " Apagar") systemctl poweroff ;;
     " Reiniciar") systemctl reboot ;;
-    "󰿅 Cerrar Sesión") i3-msg exit ;;
+    "󰗼 Cerrar Sesión") i3-msg exit ;;
     *) exit 1 ;;
 esac
