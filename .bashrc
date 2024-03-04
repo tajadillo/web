@@ -190,6 +190,8 @@ alias ifconfig=/sbin/ifconfig
 alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
 alias neofetch="neofetch --size none"
 alias donde='pwd | lolcat -a'
+#instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
+alias ls=lsd
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
