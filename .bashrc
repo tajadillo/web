@@ -91,7 +91,7 @@ else
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
  #    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
 
- PS1='$(tput bold; tput setaf 1)>>>>>$(tput sgr0)$(tput setaf 2)\u$(tput sgr0)$(tput setaf 3)@$(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0) $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 2)😍😍😍$(tput sgr0)$(tput setaf 1)<<<<<$(tput sgr0)\n\n'
+ PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)@$(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0)    $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
 
 
 fi
@@ -189,6 +189,8 @@ alias descargavideos=./ClipGrab-3.9.7-x86_64.AppImage
 alias ifconfig=/sbin/ifconfig
 alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
 alias neofetch="neofetch --size none"
+alias donde='pwd | lolcat -a'
+alias ls='lsd -lah'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -231,4 +233,3 @@ echo "                                                               "
 #neofetch
 
 export C_INCLUDE_PATH=/usr/lib/avr/include
-
