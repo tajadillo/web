@@ -96,7 +96,8 @@ font pango:Mononoki Nerd Font 10
     # start a navegador
     # Abrir a navegador de archivos
     # antes ocupaba nautilus pero ahora tengo que instalar nemo
-    bindsym $mod+n exec nemo
+    # mentira pk ahora teng q instalar caja
+    bindsym $mod+n exec caja
 
     # kill focused window
     #Quitar una aplicación
