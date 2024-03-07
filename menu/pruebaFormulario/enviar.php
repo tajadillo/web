@@ -28,13 +28,13 @@ if($_POST) {
     }
     
     if($concerned_department == "billing") {
-    	$recipient = "billing@domain.com";
+    	$recipient = "richard.tajadillo@gmail.com";
     }
     else if($concerned_department == "marketing") {
-    	$recipient = "marketing@domain.com";
+    	$recipient = "richard.tajadillo@gmail.com";
     }
     else if($concerned_department == "technical support") {
-    	$recipient = "tech.support@domain.com";
+    	$recipient = "richard.tajadillo@gmail.com";
     }
     else {
     	$recipient = "contact@domain.com";
