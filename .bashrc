@@ -193,7 +193,12 @@ alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls=lsd
 #descargar é instalar https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
-alias cat=bat
+alias cat='/bin/bat'
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lah --group-dirs=first'
+alias ls='lsd --group-dirs=first'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
