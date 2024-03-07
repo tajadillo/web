@@ -192,7 +192,7 @@ alias neofetch="neofetch --size none"
 alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls=lsd
-#descargar é instalar https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
+#descargar é instalar con sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
 alias cat='/bin/bat'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
