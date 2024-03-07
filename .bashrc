@@ -192,6 +192,8 @@ alias neofetch="neofetch --size none"
 alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls=lsd
+#descargar é instalar https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
+alias cat=bat
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
