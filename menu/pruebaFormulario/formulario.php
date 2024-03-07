@@ -23,6 +23,9 @@
                 <input type="text" name="Telefono" placeholder="Teléfono">
                 <textarea name="Mensaje" placeholder="Escribe aquí tu mensaje" required></textarea>
                 <input type="submit" value="ENVIAR" id="boton">
+                <?php
+include("enviar.php");
+?>
             </form>
         </main>
         <footer class="footer">
