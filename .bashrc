@@ -199,6 +199,7 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lah --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+alias invisible='proxychains brave-browser google.com'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
