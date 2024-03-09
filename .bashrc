@@ -199,6 +199,11 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lah --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+#sudo apt-get install tor proxychains
+#nvim /etc/proxychains.conf comentar strict_chain y descomentar dynamic_chain
+#pegar nueva linea con [socks5 	127.0.0.1 9050}
+#sudo service tor start
+#sudo service tor status para verificar que todo va de forma correcta
 alias invisible='proxychains brave-browser google.com'
 
 # Add an "alert" alias for long running commands.  Use like so:
