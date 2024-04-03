@@ -19,6 +19,53 @@
 
 
 
+
+
+#mis aliasses
+alias clima="curl wttr.in/arica?lang=es"
+alias ver-imagen="kitty +kitten icat"
+alias apagar='sudo shutdown -h now'
+alias reiniciar='sudo shutdown -r now'
+alias radio='bash /home/tajadillo/radio/radio.sh'
+alias tv='bash /home/tajadillo/radio/tv.sh'
+alias reloj='tty-clock -s -c -D'
+alias alarma='bash alarma.sh'
+alias mecano='typespeed'
+alias instalar='sudo apt-get install'
+alias temperatura='sensors | lolcat -a'
+alias ficheros='df -h | lolcat -a'
+alias directorios='df -h | lolcat -a'
+alias vim=nvim
+alias vi=nvim
+alias bateria=acpi
+alias descargavideos=./ClipGrab-3.9.7-x86_64.AppImage
+alias ifconfig=/sbin/ifconfig
+alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
+alias neofetch="neofetch --size none"
+alias donde='pwd | lolcat -a'
+#instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
+alias ls=lsd
+#descargar é instalar con sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
+alias cat='/bin/bat'
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lah --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+#sudo apt-get install tor proxychains
+#nvim /etc/proxychains.conf comentar strict_chain y descomentar dynamic_chain
+#pegar nueva linea con [socks5 	127.0.0.1 9050}
+#sudo service tor start
+#sudo service tor status para verificar que todo va de forma correcta
+alias invisible='proxychains brave-browser google.com'
+alias procesos='ps -fax'
+
+
+
+
+
+
+
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
