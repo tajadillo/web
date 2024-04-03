@@ -205,6 +205,7 @@ alias ls='lsd --group-dirs=first'
 #sudo service tor start
 #sudo service tor status para verificar que todo va de forma correcta
 alias invisible='proxychains brave-browser google.com'
+alias procesos='ps -fax'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
