@@ -233,17 +233,17 @@ fi
 
 
 
-echo -e $amarillo "                                                               "
-echo "                                   XXX                         "
-echo -e $verde "                                 (o o)                        "
-echo "             ESTOY            ooO--(_)--Ooo           LISTO              "
-echo -e $amarillo " _______           _         _____ _____ _      _      ____   "
-echo " |__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \  "
-echo "    | |  /  \      | | /  \  | |  | || | | |    | |   | |  | | "
-echo "    | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | | "
-echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
-echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
-echo "                                                               "
+#echo -e $amarillo "                                                               "
+#echo "                                   XXX                         "
+#echo -e $verde "                                 (o o)                        "
+#echo "             ESTOY            ooO--(_)--Ooo           LISTO              "
+#echo -e $amarillo " _______           _         _____ _____ _      _      ____   "
+#echo " |__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \  "
+#echo "    | |  /  \      | | /  \  | |  | || | | |    | |   | |  | | "
+#echo "    | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | | "
+#echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
+#echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
+#echo "                                                               "
 
 #neofetch
 #tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
