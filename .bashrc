@@ -247,6 +247,7 @@ fi
 
 #neofetch
 #tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
+#git clone https://gitlab.com/barbolgroup/geek_ephemeris.git
 ~/geek_ephemeris/dayValidator.sh
 
 export C_INCLUDE_PATH=/usr/lib/avr/include
