@@ -246,5 +246,7 @@ echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
 echo "                                                               "
 
 #neofetch
+#tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
+~/geek_ephemeris/dayValidator.sh
 
 export C_INCLUDE_PATH=/usr/lib/avr/include
