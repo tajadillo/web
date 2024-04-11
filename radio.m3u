@@ -84,6 +84,10 @@ https://sonic.globalstream.pro/8124/stream/1/
 #EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
 https://publiradio.tk:9000/live
 
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Info Arica
+https://cast.radioservicios.cl/radio/8040/web
+
+
 #EXTINF:-1 tvg-id="Radio Neura" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Neura Arica
 https://node-02.zeno.fm/dtuqf5qha8zuv?zs=XQ1kUmS0QkGRbLit4GWX1w&rj-tok=AAABf8h_6h0AY1KyLbAXucpb0g&rj-ttl=5
 
