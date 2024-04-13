@@ -91,7 +91,7 @@ else
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
  #    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
 
- PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)@$(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0)    $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
+ PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)⚠️⚠️$(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0)    $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
 
 
 fi
@@ -185,13 +185,12 @@ alias directorios='df -h | lolcat -a'
 alias vim=nvim
 alias vi=nvim
 alias bateria=acpi
-alias descargavideos=./ClipGrab-3.9.7-x86_64.AppImage
 alias ifconfig=/sbin/ifconfig
 alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
 alias neofetch="neofetch --size none"
 alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
-alias ls=lsd
+alias ls='lsd -lah'
 #descargar é instalar con sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
 alias cat='/bin/bat'
 alias ll='lsd -lh --group-dirs=first'
@@ -199,13 +198,13 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lah --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-#sudo apt-get install tor proxychains
-#nvim /etc/proxychains.conf comentar strict_chain y descomentar dynamic_chain
-#pegar nueva linea con [socks5 	127.0.0.1 9050}
-#sudo service tor start
-#sudo service tor status para verificar que todo va de forma correcta
 alias invisible='proxychains brave-browser google.com'
 alias procesos='ps -fax'
+alias documentos="cd /home/tajadillo/Documentos && ls"
+alias escritorio="cd /home/tajadillo/Escritorio && ls"
+alias descargas="cd /home/tajadillo/Descargas && ls"
+alias musica="cd /home/tajadillo/Música && ls"
+alias videos="cd /home/tajadillo/Vídeos && ls"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -246,8 +245,10 @@ fi
 #echo "                                                               "
 
 #neofetch
-#tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
-#git clone https://gitlab.com/barbolgroup/geek_ephemeris.git
-~/geek_ephemeris/dayValidator.sh
 
+#tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
+~/geek_ephemeris/dayValidator.sh
 export C_INCLUDE_PATH=/usr/lib/avr/include
+
+#para esto tengo q tener instalado cmatrix "sudo apt-get install cmatrix"
+cmatrix -a
