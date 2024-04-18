@@ -250,5 +250,4 @@ fi
 ~/geek_ephemeris/dayValidator.sh
 export C_INCLUDE_PATH=/usr/lib/avr/include
 
-#para esto tengo q tener instalado cmatrix "sudo apt-get install cmatrix"
-cmatrix -a
+#cmatrix -a
