@@ -5,7 +5,7 @@
     }
 
     body{
-    background: url('../imagenes/bg.webp') no-repeat;
+    background: url('../imagenes/wallpaper.webp') no-repeat;
     background-size: cover;
     font-family: 'Century Gothic', sans-serif;
     }
@@ -16,7 +16,7 @@
     margin: 0 auto;
     margin-top: 4%;
     padding: 20px;
-    color: #fff;
+    color: #afdffc;
     text-align: center;
     border-radius: 15px;
     }
@@ -53,7 +53,7 @@
     }
 
     .box ul li a{
-        color: #fff;
+        color: #afdffc;
         font-size: 45px;
         padding: 10px 5px;
         transition: all .5s ease-in-out;
