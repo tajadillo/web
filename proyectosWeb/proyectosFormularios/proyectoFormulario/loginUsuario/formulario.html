@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Richard Alexander Tajadillo Pérez">
+        <meta name="Description" content="plantilla html">
+        <meta name="Keywords" content="">
+
+        <title>Formulario html</title>
+
+        <link rel="shortcut icon" href="medios/logo-richard-tajadillo.ico">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header class="header">
+        </header>
+        <main class="main">
+
+            <form action="login.php" method="POST">
+                <label>Usuario</label>
+                <input type="text" name="usuario" pattern="[a-zA-Z0-9$@.-_áéíóúÁÉÍÓÚñÑ() ]{3,11}" placeholder="Escribe tu nombre" maxlength="11" required>
+                <br>
+                <label>Clave</label>
+                <input type="password" name="clave" pattern="[a-zA-Z]{4,30}" placeholder="Contraseña" maxlength="30" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+
+        </main>
+        <footer class="footer">
+        </footer>
+    </body>
+</html>
+
+
+
+
+

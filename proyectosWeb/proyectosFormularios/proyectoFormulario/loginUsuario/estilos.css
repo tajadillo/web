@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  color: white;
+  font-family: sans-serif;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  background: #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+label, input,select {
+  width: 100%;
+  display: block;
+  font-size: 1.2em;
+}
+input, select {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+input[type="submit"] {
+  width: 30%;
+  margin: auto;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.error {
+  color: red;
+}

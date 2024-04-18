@@ -1,0 +1,179 @@
+/* Global Layout Set-up */
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Special+Elite');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+  color: #a3a3a3;
+  background: #1c1c1c;
+  width:100%;
+}
+
+
+  /*Styles for text*/
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  margin: 0%;
+}
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.25em;
+  margin: 0%;
+  padding-top:15px;
+  color:#fff;
+}
+
+/*Styles for content*/
+header {
+  background:#354658;
+  color:white;
+  height:75px;
+  padding:3%;
+  margin-bottom: 25px;
+}
+section {
+  border-bottom: 5px solid #354658;
+  width:90%;
+  margin:auto;
+}
+
+/*Global form styles*/
+fieldset {
+  border:none;
+  margin-top:25px;
+  border-bottom: 2px solid #354658;
+  margin-top: 3px;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+  border-top: 2px solid #354658;
+  margin-top: 3px;
+}
+label {
+  display:block;
+  float:left;
+  padding: 2px;
+  color:#6e94bb;
+}
+input, select, option, textarea, button {
+  display: block;
+  margin: auto;
+  margin-bottom:15px;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  background: #efefef;
+  color: black;
+  border-radius: 5px;
+  clear: both;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+input:focus, select:focus, option:focus, textarea:focus, button:focus {
+  background:#fff;
+  color:black;
+  outline:none;
+  border:3px solid #6e94bb;
+  box-shadow: -5px 5px 15px #6e94bb;
+  border: 1px solid #6e94bb;
+}
+option {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/*Styles for newletter section of form*/
+#newsletter {
+  margin-top:25px;
+  margin-top: 3px;
+  border-bottom: none;
+}
+#newsletter input {
+  width:initial;
+  margin:initial;
+  float:left;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+#newsletter p {
+  clear: both;
+  display: block;
+}
+textarea {
+  display: block;
+  width: 100%;
+  height:100px;
+  background: #efefef;
+  color: black;
+  border-radius: 5px;
+}
+button {
+  background: #354658;
+  color: white;
+  border-radius: 5px;
+  width:95%;
+  border: 2px solid #6e94bb;
+}
+
+  /* Styles for larger screens */
+
+@media screen and (min-width: 550px) {
+
+  /*Header and Nav restyling*/
+  main {
+    max-width: 600px;
+    margin:auto;
+  }
+  form {
+    text-align: left;
+  }
+  label {
+    float:left;
+    padding: 2px;
+    clear: right;
+    margin-top: 10px;
+  }
+  input, select {
+    float:right;
+    margin: auto;
+    margin-bottom:15px;
+    width: 50%;
+    height: 30px;
+    background: #efefef;
+    color: black;
+    border-radius: 5px;
+    clear:none;
+  }
+  #newsletter label {
+    margin-top: 0px;
+  }
+  #newsletter input {
+    clear: left;
+  }
+  button {
+    margin-left: 2.5%
+  }
+}
+header, main {
+  animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+@keyframes puff-in-center {
+  0% {
+    transform: scaleY(1.1);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

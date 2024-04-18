@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Richard Alexander Tajadillo Pérez">
+        <meta name="Description" content="plantilla html">
+        <meta name="Keywords" content="">
+
+        <title>Plantilla html</title>
+
+        <link rel="shortcut icon" href="medios/logo-richard-tajadillo.ico" type="image/x-icon">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header class="header">
+        </header>
+        <main class="main">
+            <form action="enviar.php" method="post">
+  <div class="elem-group">
+    <label for="name">Tu Nombre</label>
+    <input type="text" id="name" name="visitor_name" placeholder="Sin apellidos" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Tu E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="ejemplo@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="department-selection">Elije el departamento interesado</label>
+    <select id="department-selection" name="concerned_department" required>
+        <option value="">Select a Departamento</option>
+        <option value="billing">Facturación</option>
+        <option value="marketing">Marketing</option>
+        <option value="technical support">Soporte Tecnico</option>
+    </select>
+  </div>
+  <br>
+  <div class="elem-group">
+    <label for="title">Razón para contactar con nosotros</label>
+    <input type="text" id="title" name="email_title" required placeholder="Ejemplo: (Quier pertenecer a tu ballet)" pattern=[A-Za-z0-9\s]{8,60}>
+  </div>
+  <div class="elem-group">
+    <label for="message">Mensaje</label>
+    <textarea id="message" name="visitor_message" placeholder="Di lo que quieras." required></textarea>
+  </div>
+  <button type="submit" id="boton">Enviar Mensaje</button>
+</form>
+        </main>
+        <footer class="footer">
+        </footer>
+    </body>
+</html>
+
+
+
+
