@@ -267,6 +267,9 @@ font pango:Mononoki Nerd Font 10
     #bindsym $mod+l exec xset s 5
     bindsym $mod+CTRL+l exec dm-tool lock
 
+    #Hibernar el equipo
+    bindsym $mod+CTRL+z exec systemctl suspend-then-hibernate
+
     # resize window (you can also use the mouse for that)
     # Cambiar de tamaño las ventanas
     mode "resize" {
