@@ -20,8 +20,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     return;
   }
 
-  // Aquí puedes agregar la lógica para enviar los datos del formulario al servidor
-  // Por ahora, simplemente redireccionamos a una página de agradecimiento
+  // Redireccionar a la página de agradecimiento
   window.location.href = "gracias.html";
 });
-
