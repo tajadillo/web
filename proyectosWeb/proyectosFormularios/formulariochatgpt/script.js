@@ -1,5 +1,7 @@
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
+
 
   // Obtener los valores del formulario
   var name = document.getElementById('name').value;
@@ -20,3 +22,24 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   };
   xhr.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&whatsapp=' + encodeURIComponent(whatsapp));
 });
+
+ }
+
+  // Validar el formato del correo electrónico
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert('Por favor, introduce una dirección de correo electrónico válida.');
+    return;
+  }
+
+  // Aquí puedes agregar la lógica para enviar los datos por correo electrónico
+  var subject = 'Nuevo mensaje de contacto';
+  var body = 'Nombre: ' + name + '\nCorreo Electrónico: ' + email + '\nNúmero de WhatsApp: ' + whatsapp;
+  var mailtoLink = 'mailto:richard_tajadillo@outlook.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.location.href = mailtoLink;
+
+  // Limpiar el formulario
+  document.getElementById('contactForm').reset();
+});
+
+
