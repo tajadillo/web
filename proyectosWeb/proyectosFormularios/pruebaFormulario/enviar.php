@@ -1,5 +1,5 @@
 <?
-$destino = "richard.tajadillo@gmail.com";
+$destino = "richard_tajadillo@outlook.com";
 $Nombre = $_POST["Nombre"];
 $Correo = $_POST["Correo"];
 $Telefono = $_POST["Telefono"];
