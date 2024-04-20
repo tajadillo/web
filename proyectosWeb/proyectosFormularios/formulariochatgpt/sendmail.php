@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Envía el correo
     if (mail($to, $subject, $message, $headers)) {
-        echo "El mensaje ha sido enviado con éxito.";
+        header("Location: gracias.html");
     } else {
         echo "Hubo un error al enviar el mensaje.";
     }
@@ -28,3 +28,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Acceso denegado.";
 }
 ?>
+
