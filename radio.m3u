@@ -150,6 +150,15 @@ https://unlimited11-cl.dps.live/cnnradio/aac/icecast.audio
 #EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Carabineros de Chile
 https://sonic01.instainternet.com/8374/stream?_=0.31235030866665725
 
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Progreso cuba
+https://icecast.teveo.cu/XjfW7qWN
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Rebelde cuba
+https://icecast.teveo.cu/kHKL7tWd
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Campesina Cubana
+https://radiocampesinacubana.stream.laut.fm/radiocampesinacubana?t302=2024-04-24_22-00-51&uuid=820fcec0-102c-4d24-a1b4-3a250dc096d4
+
 #EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , WBQN Borinquen Radio
 https://livestreamcdn.net:2000/stream/WBQNBorinquenRadio
 
