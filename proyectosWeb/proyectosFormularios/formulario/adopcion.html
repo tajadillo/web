@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Animalatics</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-default barra">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Animalatics</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="activo"><a href="adopcion.html">Pre-Formulario de Adopción</a></li>
+          <li><a href="contacto.html">Contactanos</a></li>
+        </ul>
+        <ul id="wel" class="nav navbar-nav navbar-right">
+          <li id="reg"><a href="registro.html">Registrate</a></li>
+          <li id="ini"><a href="#" data-toggle="modal" data-target="#myModal">Iniciar Sesión</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="container-fluid top">
+    <div class="row">
+      <form id="adopcion" class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" method="get">
+        <h2>Pre-Formulario de adopción</h2>
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input name="nombre" type="text" class="form-control" error="El campo Nombre no es valido" id="nombPre" placeholder="Michelle" required>
+        </div>
+        <div class="form-group">
+          <label>Apellido:</label>
+          <input name="apellido" type="text" class="form-control" error="El campo Apellido no es valido" id="apelPre" placeholder="Torres" required>
+        </div>
+        <div class="form-group">
+          <label>Fecha de Nacimiento:</label>
+          <input name="fech" type="date" class="form-control" error="El campo Fecha de Nacimiento no puede estar vacio" id="fechPre" placeholder="01-01-1999" required>
+        </div>
+        <div class="form-group">
+          <label>Correo Electrónico:</label>
+          <input name="email" type="email" class="form-control" error="El campo Correo Electronico no es valido" id="emailPre" placeholder="usuario@ejemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label>Celular:</label>
+          <input name="cel" type="text" class="form-control" error="El campo Celular no es valido" id="celPre" placeholder="0412-1234567" required>
+        </div>
+        <button type="submit" id="botonPre" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Iniciar Sesión</h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input id="user" type="text" class="form-control" placeholder="Usuario" aria-describedby="sizing-addon2">
+          </div><br>
+          <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-asterisk" aria-hidden="true"></i></span>
+            <input id="pass" type="password" class="form-control" placeholder="Contraseña" aria-describedby="sizing-addon2">
+          </div><br>
+        </div>
+        <div class="modal-footer">
+          <button id="log" type="button" class="btn btn-success">Ingresar</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/adopcion.js"></script>
+</body>
+
+</html>
