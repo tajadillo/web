@@ -17,6 +17,7 @@
     --white-color: #fff;
     --morado: #fe04fc;
     --turquesa: #04fcea;
+    --aqua: #00ffff;
 
     /*========== Font and typography / Fuente y Tipografia ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -207,7 +208,7 @@ font-size: 1.5rem;
   }
 
   .nav__link:hover {
-      color: var(--turquesa);
+      color: var(--morado);
   }
 
 
@@ -289,7 +290,7 @@ font-size: 1.5rem;
       display: inline-flex;
       align-items: center;
       column-gap: 0.5rem;
-      background-color: var(--morado);
+      background-color: var(--aqua);
       padding: 1rem 1.5rem;
       border-radius: 4rem;
       color: var(--title-color);
@@ -298,7 +299,7 @@ font-size: 1.5rem;
   }
 
   .button i {
-      background-color: var(--morado);
+      background-color: var(--aqua);
       font-size: 1.5rem;
   }
 
