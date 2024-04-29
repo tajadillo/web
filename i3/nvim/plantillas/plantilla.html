@@ -11,6 +11,27 @@
 
         <link rel="shortcut icon" href="medios/logo-richard-tajadillo.ico">
         <link rel="stylesheet" href="estilos/estilos.css">
+
+        <!--script para evitar dar clic derecho en la pagina web-->
+        <script type="text/javascript">
+            document.oncontextmenu = function() {
+                            return false;
+                        }
+            function right(e) {
+                            var msg = "Clic derecho no avilitado!";
+                            if (navigator.appName == 'Netscape' && e.which == 3) {
+                                            alert(msg);
+                                        }
+                            else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {
+                                            alert(msg);
+                                            return false;
+                                        }
+                            return true;
+                        }
+            document.onmousedown = right;
+        </script>
+        <!--fin scriop-->
+
     </head>
     <body>
         <header class="header">
@@ -42,11 +63,13 @@
             </div>
         </header>
         <main class="main">
+           esta es una plantilla
         </main>
         <footer class="footer">
         </footer>
     </body>
 </html>
+
 
 
 
