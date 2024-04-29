@@ -1,3 +1,9 @@
+https://developer.mozilla.org/es/docs/Web/HTML/Element/marquee
+
+
+
+
+
 <marquee>
 Obsoleto: Esta característica ya no se recomienda. Aunque es posible que algunos navegadores aún lo admitan, probablemente ya se ha eliminado de los estándares web relevantes, está en proceso de eliminación o solo se conserva por motivos de compatibilidad. Evite usarlo y actualice el código existente si es posible; consulte la tabla de compatibilidad en la parte inferior de esta página para orientar su decisión. Tenga en cuenta que esta característica puede dejar de funcionar en cualquier momento.
 
