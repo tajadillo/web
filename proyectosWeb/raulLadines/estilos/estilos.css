@@ -1,16 +1,16 @@
-    *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
-    body{
+body{
     background: url('../imagenes/wallpaper.webp') no-repeat;
     background-size: cover;
     font-family: 'Century Gothic', sans-serif;
-    }
+}
 
-    .box{
+.box{
     width: 500px;
     background: rgba(0, 0, 0, .4);
     margin: 0 auto;
@@ -19,48 +19,60 @@
     color: #afdffc;
     text-align: center;
     border-radius: 15px;
-    }
+}
 
-    .box-img{
-        border-radius: 50%;
-    }
+.box-img{
+    border-radius: 50%;
+}
 
-    .box h1{
-        font-size: 40px;
-        letter-spacing: 4px;
-        font-weight: 100;
-        margin: 30px 0 20px;
-    }
+.box h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin: 30px 0 20px;
+}
 
-    .box h2{
-        font-size: 20px;
-        letter-spacing: 3px
-        font-weight: 100;
-        margin-bottom: 20px;
-    }
+.box h2{
+    font-size: 20px;
+    letter-spacing: 3px
+    font-weight: 100;
+    margin-bottom: 20px;
+}
 
-    .box p{
-        text-align: justify;
-    }
+.box p{
+    text-align: justify;
+}
 
-    .box ul{
-        list-style: none;
-        margin-top: 20px;
-    }
+.box ul{
+    list-style: none;
+    margin-top: 20px;
+}
 
-    .box ul li{
-        display: inline-block;
-    }
+.box ul li{
+    display: inline-block;
+}
 
-    .box ul li a{
-        color: #afdffc;
-        font-size: 45px;
-        padding: 10px 5px;
-        transition: all .5s ease-in-out;
-        display: block;
-    }
+.box ul li a{
+    color: #afdffc;
+    font-size: 45px;
+    padding: 10px 5px;
+    transition: all .5s ease-in-out;
+    display: block;
+}
 
-    .box ul li a:hover{
-        color: #b9b9b9;
-        transform: scale(1.1);
+.box ul li a:hover{
+    color: #b9b9b9;
+    transform: scale(1.1);
+}
+@media (max-width: 840px) {
+    .box {
+        width: 75%;
+        height: 95%;
     }
+    .icon {
+        width: 45%;
+        height: 45%;
+        display: flex;
+    }
+}
+
