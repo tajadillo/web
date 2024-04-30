@@ -70,9 +70,7 @@ body{
         height: 95%;
     }
     .icon {
-        width: 45%;
-        height: 45%;
-        display: flex;
+max-width: 90%;
     }
 }
 
