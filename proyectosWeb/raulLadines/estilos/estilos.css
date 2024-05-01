@@ -11,6 +11,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     font-family: 'Century Gothic', sans-serif;
+    font-size: 100%;
 }
 
 .box{
@@ -29,14 +30,14 @@ body{
 }
 
 .box h1{
-    font-size: 40px;
+    /*font-size: 40px;*/
     letter-spacing: 4px;
     font-weight: 100;
     margin: 30px 0 20px;
 }
 
 .box h2{
-    font-size: 20px;
+    /*font-size: 20px;*/
     letter-spacing: 3px
     font-weight: 100;
     margin-bottom: 20px;
@@ -57,7 +58,7 @@ body{
 
 .box ul li a{
     color: #afdffc;
-    font-size: 45px;
+    /*font-size: 45px;*/
     padding: 10px 5px;
     transition: all .5s ease-in-out;
     display: block;
