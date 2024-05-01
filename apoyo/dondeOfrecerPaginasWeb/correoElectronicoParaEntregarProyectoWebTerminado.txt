@@ -1,0 +1,33 @@
+###### Correo para copiar y pegar
+Estimado (NOMBRE_CLIENTE),
+
+Su sitio web está completo y listo. Ahora puede ver su sitio web en vivo y funcionando en (https://dominio.com).
+
+Cómo iniciar sesión en su sitio web:
+1. Abra una nueva pestaña en su navegador web y escriba (dominio.com/wp-admin)
+2. Inicie sesión con estos datos:
+
+Usuario: (USUARIO_CREADO)
+Contraseña: (CONTRASEÑA)
+
+Cómo editar y administrar su sitio web - Video Tutorial
+(ENLACE AL VIDEO)
+
+Si requiere acceder al panel administrativo de su hosting debe acceder a la dirección (dominio.com/cpanel)
+
+Usuario: (USUARIO_CREADO)
+Contraseña: (CONTRASEÑA)
+
+¿Ya cuenta con un plan de mantenimiento?
+
+Si es así, no hay necesidad de preocuparse. Voy a estar actualizando plugins, respaldos de su sitio web, y mantener todo funcionando sin problemas para garantizarle que su sitio nunca tenga problemas de seguridad o deje de estar disponible en internet, en caso de cualquier problema yo me encargare de restablecer todo inmediatamente.
+
+Si aún no cuenta con un plan de mantenimiento, le recomiendo lo contrate, responda a este correo para explicarle a detalle en que consiste,
+
+Gracias por trabajar conmigo. Quedo atento por si puedo ayudarlo en algo más.
+
+Saludos,
+Tu nombre
+Tu empresa o nombre comercial
+tusitioweb.com
+(123) 456 - 7890
