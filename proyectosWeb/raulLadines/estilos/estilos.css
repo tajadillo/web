@@ -68,13 +68,23 @@ body{
     color: #b9b9b9;
     transform: scale(1.1);
 }
+.icon {
+    width: 50px;
+    height: 50px;
+}
+.logo {
+    width:45px;
+    height: 45px;
+}
 @media (max-width: 840px) {
     .box {
         width: 75%;
         height: 95%;
     }
     .icon {
-max-width: 90%;
+max-width: 60%;
+    }
+    .logo {
+        max-width: 30%;
     }
 }
-

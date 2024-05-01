@@ -15,69 +15,17 @@
         <!--libreria de iconos en https://remixicon.com/-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--script para evitar dar clic derecho en la pagina web-->
-        <script type="text/javascript">
-            document.oncontextmenu = function() {
-                            return false;
-                        }
-            function right(e) {
-                            var msg = "Clic derecho no avilitado!";
-                            if (navigator.appName == 'Netscape' && e.which == 3) {
-                                            alert(msg);
-                                        }
-                            else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {
-                                            alert(msg);
-                                            return false;
-                                        }
-                            return true;
-                        }
-            document.onmousedown = right;
-        </script>
-        <!--fin scriop-->
+
     </head>
     <body>
         <!--<header class="header" id="header">
-            <div class="header__border">
-
-            </div>
-            <nav class="nav container">
-                <a href="" class="nav__logo">Raul Ladines
-                    <img src="medios/img/logo-richard-tajadillo.ico" alt="click en el logotipo de la empresa para volver a la pagina de inicio">
-                </a>
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="ri-home-5-fill"></i>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-award-fill"></i>
-                                <span>Quien soy</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-service-line"></i>
-                                <span>Servicios</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-contacts-line"></i>
-                                <span>Contactos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
         </header>-->
         <main class="main">
             <section class="box">
                 <img src="imagenes/images.jpeg" width="180" alt="" class="box-img">
-                <h1> Raul Ladines </h1>
+                <h1> Raul <img class="logo" src="imagenes/logo.png" alt=""> Ladines
+
+                </h1>
                 <h2> Prevencionista en Riezgos </h2>
                 <p>
                     <center>
