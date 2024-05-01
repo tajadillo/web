@@ -1,93 +1,80 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Author" content="Richard Alexander Tajadillo Pérez">
-        <meta name="Description" content="plantilla html">
-        <meta name="Keywords" content="">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <title>Raul Ladines</title>
+body{
+    background: url('../imagenes/wallpaper.webp') no-repeat;
+    /*background-size: cover;*/
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 100%;
+}
 
-        <link rel="shortcut icon" href="imagenes/logoLadines.ico">
-        <link rel="stylesheet" href="estilos/estilos.css">
+.box{
+    width: 500px;
+    background: rgba(0, 0, 0, .4);
+    margin: 0 auto;
+    margin-top: 4%;
+    padding: 20px;
+    color: #afdffc;
+    text-align: center;
+    border-radius: 15px;
+}
 
-        <!--libreria de iconos en https://remixicon.com/-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+.box-img{
+    border-radius: 50%;
+}
 
-    </head>
-    <body>
-        <!--<header class="header" id="header">
-            <div class="header__border">
+.box h1{
+    /*font-size: 40px;*/
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin: 30px 0 20px;
+}
 
-            </div>
-            <nav class="nav container">
-                <a href="" class="nav__logo">Raul Ladines
-                    <img src="medios/img/logo-richard-tajadillo.ico" alt="click en el logotipo de la empresa para volver a la pagina de inicio">
-                </a>
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="ri-home-5-fill"></i>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-award-fill"></i>
-                                <span>Quien soy</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-service-line"></i>
-                                <span>Servicios</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">
-                                <i class="ri-contacts-line"></i>
-                                <span>Contactos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>-->
-        <main class="main">
-            <section class="box">
-                <img src="imagenes/images.jpeg" width="180" alt="" class="box-img">
-                <h1> Raul Ladines </h1>
-                <h2> Prevencionista en Riezgos </h2>
-                <p>
-                    <center>
-               Trabajemos juntos con todo lo que necesitas para prevenir los riesgos en tu empresa.
-                    </center>
-                </p>
-                <ul>
-                    <!--enlace de facebook-->
-                    <!--<li><a href="#"><img class="icon" src="imagenes/facebookDoblado.ico" alt=""></a></li>-->
-                    <!--enlace para llamar por telefono-->
-                    <li><a href="tel:+56941308356"><img class="icon" src="imagenes/whatsappDoblado.ico" alt=""></a></li>
-                    <!--enlace instagram-->
-<li><a href="https://www.instagram.com/ladinesponce?igsh=dG5zM2twOGdqbmk1" target="_blank"><img class="icon" src="imagenes/instagramDoblado.ico" alt=""></a></li>
-                    <!--enlace e-mail-->
-                    <li><a href="mailto:raulladinesponce@gmail.com?Subject=Interesado%20en%20el%20asesorias" target="_blank"><img class="icon" src="imagenes/emailDoblado.ico" alt=""></a></li>
-                    <!--enlace de linkedin-->
-                    <!--<li><a href="https://www.linkedin.com/in/raul-ladines-ponce-4a228a212" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>-->
+.box h2{
+    /*font-size: 20px;*/
+    letter-spacing: 3px
+    font-weight: 100;
+    margin-bottom: 20px;
+}
 
+.box p{
+    text-align: justify;
+}
 
-                    <!--enlace para hablar por skype-->
-                    <!--<li><a href="skype:aquí_el_usuario_de_skype?call"><i class="fa-brands fa-skype"></i></a></li>-->
-               </ul>
-            </section>
-        </main>
-        <footer class="footer">
-        </footer>
-    </body>
-</html>
+.box ul{
+    list-style: none;
+    margin-top: 20px;
+}
 
+.box ul li{
+    display: inline-block;
+}
 
+.box ul li a{
+    color: #afdffc;
+    /*font-size: 45px;*/
+    padding: 10px 5px;
+    transition: all .5s ease-in-out;
+    display: block;
+}
+
+.box ul li a:hover{
+    color: #b9b9b9;
+    transform: scale(1.1);
+}
+@media (max-width: 840px) {
+    .box {
+        width: 75%;
+        height: 95%;
+    }
+    .icon {
+max-width: 90%;
+    }
+}
 
