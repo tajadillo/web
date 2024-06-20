@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Richard Alexander Tajadillo Pérez">
+        <meta name="Description" content="plantilla html">
+        <meta name="Keywords" content="">
+
+        <title>Academia de danzas</title>
+
+        <link rel="shortcut icon" href="medios/logo-richard-tajadillo.ico">
+        <link rel="stylesheet" href="../estilos/estilos.css">
+
+        <!--script para evitar dar clic derecho en la pagina web-->
+        <script type="text/javascript">
+            document.oncontextmenu = function() {
+                            return false;
+                        }
+            function right(e) {
+                            var msg = "Clic derecho no avilitado!";
+                            if (navigator.appName == 'Netscape' && e.which == 3) {
+                                            alert(msg);
+                                        }
+                            else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {
+                                            alert(msg);
+                                            return false;
+                                        }
+                            return true;
+                        }
+            document.onmousedown = right;
+        </script>
+        <!--fin scriop-->
+
+    </head>
+    <body>
+        <header class="header">
+            <div class="nav">
+                <input type="checkbox" id="btn-menu">
+                <label for="btn-menu">Menú </label>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                               Clases
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                               Horarios
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Precios
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                               Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="box">
+                Esta es una prueba de contenido
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="cliente">
+                <div class="contacto">
+                    <p><a href="mailto:raulladinesponce@gmail.com?Subject=Interesado%20en%20el%20asesorias" target="_blank">info@correo.com</a></p>
+</p>
+                    <p><a href="https://wa.me/56941308356/?text=Quiero%20información%20sobre%20su%20servicio%20de%20asesorías" target="_blank"><img class="icon svg" src="img/whatsapp-line.svg" alt=""></a></p>
+                    <p>                </div>
+                <div class="sociales">
+                <ul>
+                    <!--enlace de facebook-->
+                    <!--<li><a href="#"><img class="icon" src="imagenes/facebook-circle-line.svg alt=""></a></li>-->
+                    <!--enlace para llamar por telefono-->
+                    <!--enlace instagram-->
+                    <!--<li><a href="tel:+56941308356"><img class="icon svg" src="imagenes/whatsapp-line.svg" alt=""></a></li>-->
+                                        <li><a href="https://www.instagram.com/ladinesponce?igsh=dG5zM2twOGdqbmk1" target="_blank"><img class="icon svg" src="img/instagram-line.svg" alt=""></a></li>
+                                        <!--enlace de linkedin-->
+                    <li><a href="https://www.linkedin.com/in/raul-ladines-ponce-4a228a212" target="_blank"><img class="icon svg"  src="img/linkedin-box-line.svg"></a></li>
+
+
+                    <!--enlace para hablar por skype-->
+                    <!--<li><a href="skype:aquí_el_usuario_de_skype?call"><i class="fa-brands fa-skype"></i></a></li>-->
+                </ul>
+                </div>
+            </section>
+            <section class="desarrollador">
+                <p>2024 ® Todos los derechos reservados</p>
+            </section>
+        </footer>
+    </body>
+</html>
+
+
+
+
+
