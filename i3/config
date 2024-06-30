@@ -396,5 +396,8 @@ font pango:Mononoki Nerd Font 10
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
     
-    #instalar texlive-full para comenzar a trabajar con latex como editor de texto tipo pdf entre otro tipo de extenciones
+
+    #instalar texlive-full para comenzar a trabajar con LATEX como editor de texto tipo pdf entre otro tipo de extenciones
     # instalar pdflatex para compilar pdf
+    #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
+#buscar el canal de youtube: "vim y latex en español"
