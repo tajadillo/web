@@ -395,3 +395,6 @@ font pango:Mononoki Nerd Font 10
     #Screenshot / Captura de pantalla
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
+    
+    #instalar texlive-full para comenzar a trabajar con latex como editor de texto tipo pdf entre otro tipo de extenciones
+    # instalar pdflatex para compilar pdf
