@@ -411,3 +411,6 @@ font pango:Mononoki Nerd Font 10
     #Screenshot / Captura de pantalla
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
+
+    #polkit es un demonio que te avisa cuando necesitas ingresar como rut para ejecutar una aplicacion pidiendote la contraseña
+    #el que yo tengo instalado es (sudo apt-get install mate-polkit)
