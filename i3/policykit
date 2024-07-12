@@ -1,0 +1,94 @@
+Debian
+WIKI
+Ingresar
+PáginaInicial
+CambiosRecientes
+BuscarPágina
+HelpContents
+Búsqueda
+  
+Debian
+Wiki/
+IngresarInformaciónAdjuntos
+
+Más Acciones
+PolicyKit
+Translation(s): English - Italiano
+
+(!) ?Discussion
+
+
+Screenshot
+policykit-gnome
+
+PolicyKit is an application-level toolkit for defining and handling the policy that allows unprivileged processes to speak to privileged processes, in order to grant some user the right to perform some tasks in some situations. It is sometimes referred to as "the sudo of systemd".
+
+While PolicyKit has been replaced by polkit (which rewrote system component, breaking backwards compatibility) in many distributions, Debian continues to use PolicyKit from Debian 7 wheezy through Debian 10 buster.
+
+Sample uses:
+
+Let the user Hibernate and shutdown the computer.
+Let the user manage (Wireless) connections.
+Let the user mount/eject a removable media (CD/DVD, USB keys...)
+Let the user access devices, like audio, scanner, etc.
+As opposed to previous mechanisms used in GUI, PolicyKit, is a centralized place to define and enforce that policy.
+
+For a general introduction, read http://lwn.net/Articles/258592/ or polkit(8)'s man page.
+
+ToDo: explain how it works.
+
+Configuration
+Policies installed locally should be installed to /etc/polkit-1/localauthority/.
+
+While modern examples of polkit typically demonstrate the use of javascript rules, PolicyKit does not support this and instead relies on the use of *.conf and *.pkla files. See pklocalauthority(8)'s man page for details.
+
+Examples
+To allow users of group somegroup to manage systemd services, create /etc/polkit-1/localauthority/50-local.d/manage-units.pkla with the following content:
+
+
+[Allow users to manage services]
+Identity=unix-group:somegroup
+Action=org.freedesktop.systemd1.manage-units
+ResultActive=yes
+This is PolicyKit's equivalent of the following polkit rule which would be found at /etc/polkit-1/rules.d/50-manage-units.rules:
+
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.systemd1.manage-units"
+        && subject.isInGroup("somegroup") )
+    {
+        return polkit.Result.YES;
+    }
+});
+Limitations
+PolicyKit in Debian does not currently (as of Debian 11) allow the implementation of fine grained permissions using the lookup functionality which is available in polkit. e.g. Extending the above example to only allow start, stop and restart only of a single unit, with the polkit rules:
+
+
+   if (action.lookup("unit") == "openvpn.service") {
+      var verb = action.lookup("verb");
+      if (verb == "start" || verb == "stop" || verb == "restart")
+   }
+Is not currently possible with PolicyKit in Debian.
+
+
+
+See also
+
+freedesktop.org project page for PolicyKit
+https://www.freedesktop.org/wiki/Software/polkit/
+
+PolicyKit Library Reference Manual
+https://www.freedesktop.org/software/polkit/docs/0.105/
+
+PolicyKit Specification
+https://www.freedesktop.org/software/polkit/docs/0.105/polkit.8.html
+
+PolicyKit(8), PolicyKit.conf(8)
+
+http://smcv.pseudorandom.co.uk/2015/why_polkit/
+
+CategorySystemAdministration
+
+PolicyKit (última modificación 2022-03-10 15:42:38)
+
+Debian privacy policy, Wiki team, bugs and config.Powered by MoinMoin and Python, with hosting provided by Metropolitan Area Network Darmstadt.
