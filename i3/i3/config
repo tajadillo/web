@@ -18,8 +18,8 @@
     # Fuente para títulos de ventanas. También será utilizado por la barra a menos que se utilice una fuente diferente.
     # is used in the bar {} block below.
     # se utiliza en el bloque bar {} a continuación.
-    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:Mononoki Nerd Font 10
+    #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango: Mononoki Nerd Font Bold Italic 10
 
     # This font is widely installed, provides lots of unicode glyphs, right-to-left
     # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -96,24 +96,15 @@ font pango:Mononoki Nerd Font 10
     # start a navegador
     # Abrir a navegador de archivos
     # antes ocupaba nautilus pero ahora tengo que instalar nemo
-    # mentira pk ahora teng q instalar caja
+    # mentira pk antes ocupaba nautilus pero ahora tengo que instalar nemo
     bindsym $mod+n exec caja
 
     # kill focused window
     #Quitar una aplicación
-    bindsym $mod+Shift+q kill
-
-    #Lanzadores de aplicaciones
-    #Abrir dmenu
-    # start dmenu (a program launcher)
-    #bindsym $mod+d exec --no-startup-id dmenu_run
-    # A more modern dmenu replacement is rofi:
-    # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-    #bindsym $mod+d exec "rofi -show run"
-    # There also is i3-dmenu-desktop which only displays applications shipping a
-    # .desktop file. It is a wrapper around dmenu, so you need that installed.
-    # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-    bindsym $mod+m exec dmenu_run -i -fn "Mononoki-16" -p ejecutar: -l 5 -nb "#222" -nf "#05a" -sf "#ffe28a"
+    #bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
+    bindsym $mod+no-startup-id i3-dmenu-desktop
+    bindsym $mod+m exec dmenu_run -i -fn "Mononoki Nerd Font Bold Italic 10" -p ejecutar: -l 5 -nb "#222" -nf "#05a" -sf "#ffe28a"
 
     #niciar rofi a pantalla completa
     bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
@@ -123,7 +114,7 @@ font pango:Mononoki Nerd Font 10
     bindsym $mod+d exec --no-startup-id rofi -modi run -show drun -show-icons -font "Noto Sans 13"
 
     # Utilizar la combinación de teclas TAB + q para abrir rofi en una ventana con las aplicaciones que se están ejecutando
-    bindsym $mod+q exec rofi -show window -show-icons
+    #bindsym $mod+q exec rofi -show window -show-icons
 
 
     # change focus
@@ -311,7 +302,7 @@ font pango:Mononoki Nerd Font 10
     #i3bar_command i3bar -t
     status_command i3blocks
     status_command polybar
-    height 30
+    height 20
         colors {
     #    # background #222222ff
         background #222222
@@ -361,16 +352,9 @@ font pango:Mononoki Nerd Font 10
     for_window [class="mpv"] floating enable
     for_window [class="vlc"] floating enable
 
+
     #Ventana flotante calculadora
     for_window [class="gnome-calculator"] floating enable
-    #for_window [title="video0 - vlc"] sticky enable
-
-    #Ventana flotante spotify
-    for_window [class="^Spotify$"] floating enable
-    #for_window [title="video0 - vlc"] sticky enable
-
-    #Ventana flotante telegram
-    for_window [class="TelegramDesktop"] floating enable
     #for_window [title="video0 - vlc"] sticky enable
 
     #Idioma de teclado
@@ -412,5 +396,10 @@ font pango:Mononoki Nerd Font 10
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
 
-    #polkit es un demonio que te avisa cuando necesitas ingresar como rut para ejecutar una aplicacion pidiendote la contraseña
-    #el que yo tengo instalado es (sudo apt-get install mate-polkit)
+
+
+    #instalar texlive-full para comenzar a trabajar con LATEX como editor de texto tipo pdf entre otro tipo de extenciones
+    # instalar pdflatex para compilar pdf
+    #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
+
+
