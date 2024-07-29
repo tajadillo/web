@@ -66,125 +66,125 @@ body {
     background-image: radial-gradient(circle at 0 0, #a05, #003, #000);
     /*background-image: radial-gradient(circle at 0 0, #000, #003, #a05);*/
     min-height: 100vh;
- font-family: var(--body-font);
-font-size: var(--normal-font-size);
-background-color: var(--white-color);
-justify-content: center;
-padding-top: 80px;
-  }
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--white-color);
+    justify-content: center;
+    padding-top: 80px;
+}
 
-  ul {
-      list-style: none;
-  }
+ul {
+    list-style: none;
+}
 
-  a {
-      text-decoration: none;
-  }
+a {
+    text-decoration: none;
+}
 
-  img {
-      max-width: 100%;
-      height: auto;
-      height: 300px;
-      width: 300px;
-  }
+img {
+    max-width: 100%;
+    height: auto;
+    height: 300px;
+    width: 300px;
+}
 
-  /*=============== HEADER & NAV ===============*/
-  header {
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      color: #F5B041;
-      border: 1px solid var(--text-color-light);
-  }
-  #btn-menu {
-      display: none;
-      background: rgba(0, 0, 0, 0.1);
-      color: #F5B041;
-  }
+/*=============== HEADER & NAV ===============*/
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #0f0;
+    border: 1px solid var(--text-color-light);
+}
+#btn-menu {
+    display: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: #0f0;
+}
 
-  header label {
-      display: none;
-      width: 30px;
-      height: 30px;
-      padding: 10px;
-  }
-  header label:hover {
-      cursor: pointer;
-      background: rgba(0, 0, 0, 0);
-  }
-  .menu ul {
-      display: flex;
-      justify-content: flex-end;
-  }
-  .menu li:hover {
-      background: rgba(0, 0, 0, 0.3);
-  }
-  .menu li a {
-      display: block;
-      padding: 10px 20px;
-  }
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+}
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+}
 
-  /*=============== MAIN ===============*/
-  main {
-      padding: 20px;
-  }
-  p {
-      color: #F5B041;
-      align-items: center;
-      padding: 8%;
-  }
-  .nosDistingue {
-      width: 250px;
-      /*text-align: left;*/
-      /*text-align: right;*/
-  }
-  .nuestrasClases {
-      width: 250px;
-      /*margin-left: 80px;*/
-      /*text-align: left;*/
-      /*text-align: center;*/
-  }
+/*=============== MAIN ===============*/
+main {
+    padding: 20px;
+}
+p {
+    color: #F5B041;
+    align-items: center;
+    padding: 8%;
+}
+.nosDistingue {
+    width: 250px;
+    /*text-align: left;*/
+    /*text-align: right;*/
+}
+.nuestrasClases {
+    width: 250px;
+    /*margin-left: 80px;*/
+    /*text-align: left;*/
+    /*text-align: center;*/
+}
 
-  /*============WHATSAPP=============*/
-  .float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      background-color: #25d366;
-      bottom: 90px;
-      right: 40px;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 999;
-  }
-  .float:hover {
-      background-color: #28e76e;
-  }
-  .fa-whatsapp {
-      font-size: 60px;
-  }
+/*============WHATSAPP=============*/
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    bottom: 90px;
+    right: 40px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+}
+.float:hover {
+    background-color: #28e76e;
+}
+.fa-whatsapp {
+    font-size: 60px;
+}
 button-whatsapp {
     width: 100%;
 }
-  /*=============== FOOTER ===============*/
-  footer {
-      background: rgba(0, 0, 0, 0.3);
-      color: var(--text-color-light);
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      width: 100%;
-      height: 80px;
-  }
+/*=============== FOOTER ===============*/
+footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-color-light);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
 
-  .contacto {
-      margin: 5px;
-  }
+.contacto {
+    margin: 5px;
+}
 
-  .desarrollador {
-      margin: 5px;
-  }
+.desarrollador {
+    margin: 5px;
+}
 
 svg {
     background-color: rgba(0,0,0,0);
@@ -193,11 +193,11 @@ svg {
     padding: 5px;
 
 }
-  /*=============== RESPONSIVE ===============*/
-  /* For small devices */
-  /*@media screen and (max-width: 300px) {
+/*=============== RESPONSIVE ===============*/
+/* For small devices */
+/*@media screen and (max-width: 300px) {
 
-  }*/
+}*/
 /*@media screen and (min-width: 400px) {
 }*/
 
@@ -206,42 +206,42 @@ svg {
 }*/
 
 @media screen and (max-width: 768px) {
-  /*=============== HEADER & NAV ===============*/
+    /*=============== HEADER & NAV ===============*/
     body {
-    display: flex;
+        display: flex;
     }
-header {
-    border: 0;
-    background: rgba(0,0,0,0)
+    header {
+        border: 0;
+        background: rgba(0,0,0,0)
     }
-header label {
-    display: block;
+    header label {
+        display: block;
     }
-.menu {
-    position: absolute;
-    background: rgba(0, 0, 0, 0);
-    width: 60%;
-    margin-left: -60%;
-    transition: all 0.5s;
+    .menu {
+        position: absolute;
+        background: rgba(0, 0, 0, 0);
+        width: 60%;
+        margin-left: -60%;
+        transition: all 0.5s;
     }
-.menu ul {
-    flex-direction: column;
+    .menu ul {
+        flex-direction: column;
     }
-.menu li {
-    border-top: 1px solid var(--text-color-light);
+    .menu li {
+        border-top: 1px solid var(--text-color-light);
     }
-#btn-menu:checked ~ .menu {
-    margin: 0;
-    justify-content: center;
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+        justify-content: center;
     }
 }
 
 
-  /*=============== FOOTER ===============*/
-    .box {
-        width: 75%;
-        height: 95%;
-    }
+/*=============== FOOTER ===============*/
+.box {
+    width: 75%;
+    height: 95%;
+}
 
 /* For large devices */
 /*@media screen and (min-width: 1023px) {
