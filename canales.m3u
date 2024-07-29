@@ -228,7 +228,8 @@ https://youtu.be/1u2LF8Qqxjo
 https://pubads.g.doubleclick.net/ssai/event/XZLLJIhJRNqz33DGp6NdkA/master.m3u8
 
 #EXTINF:-1 tvg-id="Noticias Caracol Colombia" tvg-country="CO" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/NoticiasCaracol/picture?width=200&height=200" group-title="New",Noticias Caracol Colombia
-https://mdstrm.com/live-stream-playlist_800/58dc3d471cbe05ff3c8e463e.m3u8
+#https://mdstrm.com/live-stream-playlist_800/58dc3d471cbe05ff3c8e463e.m3u8
+https://www.youtube.com/live/__8J1Cjg34k?si=qWyT5LH-4lSCsuCl
 
 #EXTINF:-1 tvg-id="Todo Noticias Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/todonoticias/picture?width=200&height=200" group-title="New",Todo Noticias Argentina
 https://youtu.be/wHn1_QVoXGM
