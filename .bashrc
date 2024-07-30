@@ -192,7 +192,7 @@ alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls='lsd -lah'
 #descargar é instalar con sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
-alias cat='/bin/bat'
+#alias cat='/bin/bat'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
@@ -232,22 +232,22 @@ fi
 
 
 
-#echo -e $amarillo "                                                               "
-#echo "                                   XXX                         "
-#echo -e $verde "                                 (o o)                        "
-#echo "             ESTOY            ooO--(_)--Ooo           LISTO              "
-#echo -e $amarillo " _______           _         _____ _____ _      _      ____   "
-#echo " |__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \  "
-#echo "    | |  /  \      | | /  \  | |  | || | | |    | |   | |  | | "
-#echo "    | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | | "
-#echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
-#echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
-#echo "                                                               "
+echo -e $amarillo "                                                               "
+echo "                                   XXX                         "
+echo -e $verde "                                 (o o)                        "
+echo "             ESTOY            ooO--(_)--Ooo           LISTO              "
+echo -e $amarillo " _______           _         _____ _____ _      _      ____   "
+echo " |__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \  "
+echo "    | |  /  \      | | /  \  | |  | || | | |    | |   | |  | | "
+echo "    | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | | "
+echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
+echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
+echo "                                                               "
 
 #neofetch
 
 #tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
-~/geek_ephemeris/dayValidator.sh
-export C_INCLUDE_PATH=/usr/lib/avr/include
+#~/geek_ephemeris/dayValidator.sh
+#export C_INCLUDE_PATH=/usr/lib/avr/include
 
 #cmatrix -a
