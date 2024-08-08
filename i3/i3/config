@@ -12,7 +12,7 @@
     # Please see https://i4wm.org/docs/userguide.html for a complete reference!
 
     #Tecla lider
-    set $mod Mod5
+    set $mod Mod4
 
     # Font for window titles. Will also be used by the bar unless a different font
     # Fuente para títulos de ventanas. También será utilizado por la barra a menos que se utilice una fuente diferente.
@@ -62,9 +62,9 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #bindsym XF87AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
     set $refresh_i4status killall -SIGUSR1 i3status
-    bindsym Mod2+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-    bindsym Mod2+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-    bindsym Mod2+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+    bindsym Mod1+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+    bindsym Mod1+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+    bindsym Mod1+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
     bindsym XF87AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 
@@ -183,63 +183,63 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #si se trata de caracteres quitar "number" en el apartado siguiente
     # Fuentes de iconos https://fontawesome.com/icons/categories/
 
-    set $ws2 "1"
-    set $ws3 "2"
-    set $ws4 "3"
-    set $ws5 "4"
-    set $ws6 "5"
-    set $ws7 "6"
-    set $ws8 "7"
-    set $ws9 "8"
-    set $ws10 "9"
-    set $ws11 "10"
+    set $ws1 "1"
+    set $ws2 "2"
+    set $ws3 "3"
+    set $ws4 "4"
+    set $ws5 "5"
+    set $ws6 "6"
+    set $ws7 "7"
+    set $ws8 "8"
+    set $ws9 "9"
+    set $ws10 "10"
     #
 
 
     # switch to workspace
     # Cambiar de escritorio (campo de trabajo)
-    bindsym $mod+2 workspace  $ws1
-    bindsym $mod+3 workspace  $ws2
-    bindsym $mod+4 workspace  $ws3
-    bindsym $mod+5 workspace  $ws4
-    bindsym $mod+6 workspace  $ws5
-    bindsym $mod+7 workspace  $ws6
-    bindsym $mod+8 workspace  $ws7
-    bindsym $mod+9 workspace  $ws8
-    bindsym $mod+10 workspace  $ws9
-    bindsym $mod+1 workspace  $ws10
+    bindsym $mod+1 workspace  $ws1
+    bindsym $mod+2 workspace  $ws2
+    bindsym $mod+3 workspace  $ws3
+    bindsym $mod+4 workspace  $ws4
+    bindsym $mod+5 workspace  $ws5
+    bindsym $mod+6 workspace  $ws6
+    bindsym $mod+7 workspace  $ws7
+    bindsym $mod+8 workspace  $ws8
+    bindsym $mod+9 workspace  $ws9
+    bindsym $mod+10 workspace  $ws10
 
     # move focused container to workspace
     # Mover ventanas a otro escritorio (campo de trabajo)
-    bindsym $mod+Shift+2 move container to workspace number $ws1
-    bindsym $mod+Shift+3 move container to workspace number $ws2
-    bindsym $mod+Shift+4 move container to workspace number $ws3
-    bindsym $mod+Shift+5 move container to workspace number $ws4
-    bindsym $mod+Shift+6 move container to workspace number $ws5
-    bindsym $mod+Shift+7 move container to workspace number $ws6
-    bindsym $mod+Shift+8 move container to workspace number $ws7
-    bindsym $mod+Shift+9 move container to workspace number $ws8
-    bindsym $mod+Shift+10 move container to workspace number $ws9
-    bindsym $mod+Shift+1 move container to workspace number $ws10
+    bindsym $mod+Shift+1 move container to workspace number $ws1
+    bindsym $mod+Shift+2 move container to workspace number $ws2
+    bindsym $mod+Shift+3 move container to workspace number $ws3
+    bindsym $mod+Shift+4 move container to workspace number $ws4
+    bindsym $mod+Shift+5 move container to workspace number $ws5
+    bindsym $mod+Shift+6 move container to workspace number $ws6
+    bindsym $mod+Shift+7 move container to workspace number $ws7
+    bindsym $mod+Shift+8 move container to workspace number $ws8
+    bindsym $mod+Shift+9 move container to workspace number $ws9
+    bindsym $mod+Shift+10 move container to workspace number $ws10
 
 
     #Movimiento por los espacios de trabajo#
     #Próximo / previo espacio de trabajo
-    bindsym Mod2+Tab workspace next
-    bindsym Mod2+Shift+Tab workspace prev
+    bindsym Mod+Tab workspace next
+    bindsym Mod+Shift+Tab workspace prev
     bindsym $mod+Tab workspace back_and_forth
 
     #Navegar al siguiente / previo espacio de trabajo
-    bindsym Mod2+Ctrl+Right workspace next
-    bindsym Mod2+Ctrl+Left workspace prev
+    bindsym Mod+Ctrl+Right workspace next
+    bindsym Mod+Ctrl+Left workspace prev
 
 
     #Poner programas especificos en workspace especificas
     #assign [class="kitty"] $ws2
     #assign [class="brave-browser"] $ws3
     #assign [class="gimp"] $ws4
-    #assign [class="shotcut"] $ws5
-    #assign [class="audacity"] $ws6
+    assign [class="shotcut"] $ws5
+    assign [class="audacity"] $ws6
 
     #Reiniciar la configuración
     # reload the configuration file
@@ -401,5 +401,4 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #instalar texlive-full para comenzar a trabajar con LATEX como editor de texto tipo pdf entre otro tipo de extenciones
     # instalar pdflatex para compilar pdf
     #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
-
 
