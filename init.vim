@@ -276,6 +276,7 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ¿ ¿?<Esc>i
 inoremap /* /*<CR>/<Esc>O
+inoremap <! <!--<CR>--><Esc>O
 inoremap {<CR> {<CR>}<Esc>O
 
 """"""""""""""""""""""""""""""""""""""""
