@@ -231,7 +231,7 @@ set statusline+=\ [Total_Lineas=%L]
 "if (has("termguicolors"))
 "	set termguicolors
 "endif
-"colorscheme dracula
+colorscheme dracula
 
 "MONOKAI configuracion
 "let g:monokai_term_italic = 1
@@ -275,6 +275,7 @@ inoremap </ </><Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ¿ ¿?<Esc>i
+inoremap /* /*<CR>/<Esc>O
 inoremap {<CR> {<CR>}<Esc>O
 
 """"""""""""""""""""""""""""""""""""""""
@@ -320,17 +321,19 @@ nnoremap <silent> <down> :resize -5<CR>
 """"""""""""""""""""""""""
 """"Configuración Explore""""
 "Abrir explorador a la derecha
-"nmap <F3> :Vexplore!<CR>
+nmap <F3> :Vexplore!<CR>
 "Cerrar explorador
-"nmap <F4> :q<CR>
+nmap <F4> :q<CR>
 "Sincronizar el directorio actual y el directorio que está mostrando Netrw. Esto ayuda con el error cuando se intenta mover archivos.
-"let g:netrw_keepdir = 0
+let g:netrw_keepdir = 0
 "Porcentaje que ocupa cuando Netrw crea una división
-"let g:netrw_winsize = 30
+let g:netrw_winsize = 30
 "Ocultar el banner (Si quieren). Para mostrarlo temporalmente sólo deben presionar (I) en Netrw.
-"let g:netrw_banner = 0
+let g:netrw_banner = 0
 "Modificar el comando para copiar archivos. Para permitir copiar directorios de manera recursiva.
-"let g:netrw_localcopydircmd = 'cp -r'
+let g:netrw_localcopydircmd = 'cp -r'
+
+let NERDTreeQuitOnOpen=1
 
 """"Configuración NERDTree""""
 ""nmap <F3> :NERDTreeFind<CR>
@@ -343,11 +346,11 @@ nnoremap <silent> <down> :resize -5<CR>
 
 
 "NERDTREE configuracion
-let NERDTreeQuitOnOpen=1
+""let NERDTreeQuitOnOpen=1
 "Abrir explorador a la derecha
-let g:NERDTreeWinPos = "right"
-noremap <silent> <F3> :NERDTreeFind<CR>
-nnoremap <silent> <F4> :NERDTreeToggle<CR>
+""let g:NERDTreeWinPos = "right"
+""noremap <silent> <F3> :NERDTreeFind<CR>
+""nnoremap <silent> <F4> :NERDTreeToggle<CR>
 
 
 
@@ -355,7 +358,7 @@ nnoremap <silent> <F4> :NERDTreeToggle<CR>
 "Creando plantilla HTML
 """"""""""""""""""""""""
 nnoremap .html :-1read $HOME/.config/nvim/plantillas/plantilla.html<CR>
-nnoremap .css :-1read $HOME/.config/nvim/plantillas/plantilla.css<CR>
+nnoremap .css :-1read $HOME/.config/nvim/plantillas/estilos/plantilla.css<CR>
 
 """"""""""""""""""""""""""""""""""""
 "Llamando archivo de configuración
@@ -488,7 +491,7 @@ highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm
 "highlight Comment      guifg=#57afef ctermfg=7  guibg=none   ctermbg=none cterm=italic
 highlight Special      guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
 highlight Identifier   guifg=#5699af ctermfg=6  guibg=none    ctermbg=none cterm=none
-highlight PreProc      guifg=#c678dd ctermfg=5  guibg=none    ctermbg=none cterm=italic
+highlight PreProc      guifg=#c678dd ctermfg=3  guibg=none    ctermbg=none cterm=italic
 highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=italic
 highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=italic
 highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
@@ -497,7 +500,35 @@ highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm
 highlight ColorColumn                                         ctermbg=8
 highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
 
-""highlight CursorLine   guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
+highlight markup   guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
+""highlight markup     {'dark': "#F07178",  'light': "#F07178",  'mirage': "#F07178"}
+
+"algunas configuraciones de monokai"
+highlight Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+highlight Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
+hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
+hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
+hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
+hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
+hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
+hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
+hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
+hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+
+
+
+
+
 
 """"""""""""""
 "FIN COLORES
