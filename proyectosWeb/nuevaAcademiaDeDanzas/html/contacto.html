@@ -10,8 +10,8 @@
 
         <title>Academia de danzas</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
         <link rel="shortcut icon" href="medios/logo-richard-tajadillo.ico">
         <link rel="stylesheet" href="../estilos/estilos.css">
@@ -38,73 +38,116 @@
 
     </head>
     <body>
+        <header class="header">
+            <div class="nav">
+                <input type="checkbox" id="btn-menu">
+                <label for="btn-menu">Menú </label>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Clases
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Horarios
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Precios
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <main class="main">
-            <section class="box">
-    <div class="w-full max-w-xs">
-        <form id="form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                    Nombre
-                </label>
-                <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    name="name" id="name" type="text" placeholder="Ingresa tu nombre" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                    Apellidos
-                </label>
-                <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    name="lastname" id="lastname" type="text" placeholder="Ingresa tus apellidos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                    Correo
-                </label>
-                <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    name="email" id="email" type="email" placeholder="Ingresa tu correo" required>
-            </div>
-            <div class="flex items-center justify-between">
-                <button id="submit"
-                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    type="submit">
-                    <i class="fab fa-whatsapp"></i> Enviar WhatsApp
-                </button>
-            </div>
-        </form>
-        <!-- <p class="text-center text-gray-500 text-xs">
-            Desarrollado por: <b><a target="_blank" href="https://gabrielchavez.me">Gabriel Chávez</a></b>
-        </p>-->
-    </div>
-    <script src="https://kit.fontawesome.com/1e268974cb.js" crossorigin="anonymous"></script>
-    <script src="assets/js/helpers.js"></script>
-    <script src="assets/js/whatsapp.js"></script>
-            </section>
+            <center>
+                <section class="box">
+                    <div class="w-full max-w-xs">
+                        <form id="form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                    Nombre
+                                </label>
+                                <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        name="name" id="name" type="text" placeholder="Ingresa tu nombre" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                    Apellidos
+                                </label>
+                                <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        name="lastname" id="lastname" type="text" placeholder="Ingresa tus apellidos" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                    Correo
+                                </label>
+                                <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        name="email" id="email" type="email" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button id="submit"
+                                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                        type="submit">
+                                    <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+                                </button>
+                            </div>
+                        </form>
+                        <!-- <p class="text-center text-gray-500 text-xs">
+                            Desarrollado por: <b><a target="_blank" href="https://gabrielchavez.me">Gabriel Chávez</a></b>
+                            </p>-->
+                    </div>
+                    <script src="https://kit.fontawesome.com/1e268974cb.js" crossorigin="anonymous"></script>
+                    <script src="assets/js/helpers.js"></script>
+                    <script src="assets/js/whatsapp.js"></script>
+                </section>
+            </center>
         </main>
         <footer class="footer">
             <section class="cliente">
                 <div class="contacto">
                     <p><a href="mailto:raulladinesponce@gmail.com?Subject=Interesado%20en%20el%20asesorias" target="_blank">info@correo.com</a></p>
-</p>
+                    </p>
                     <p><a href="https://wa.me/56941308356/?text=Quiero%20información%20sobre%20su%20servicio%20de%20asesorías" target="_blank"><img class="icon svg" src="img/whatsapp-line.svg" alt=""></a></p>
                     <p>                </div>
                 <div class="sociales">
-                <ul>
-                    <!--enlace de facebook-->
-                    <!--<li><a href="#"><img class="icon" src="imagenes/facebook-circle-line.svg alt=""></a></li>-->
-                    <!--enlace para llamar por telefono-->
-                    <!--enlace instagram-->
-                    <!--<li><a href="tel:+56941308356"><img class="icon svg" src="imagenes/whatsapp-line.svg" alt=""></a></li>-->
-                                        <li><a href="https://www.instagram.com/ladinesponce?igsh=dG5zM2twOGdqbmk1" target="_blank"><img class="icon svg" src="../img/instagram-line.svg" alt=""></a></li>
-                                        <!--enlace de linkedin-->
-                    <li><a href="https://www.linkedin.com/in/raul-ladines-ponce-4a228a212" target="_blank"><img class="icon svg"  src="img/linkedin-box-line.svg"></a></li>
+                    <ul>
+                        <!--enlace de facebook-->
+                        <!--<li><a href="#"><img class="icon" src="imagenes/facebook-circle-line.svg alt=""></a></li>-->
+                        <!--enlace para llamar por telefono-->
+                        <!--enlace instagram-->
+                        <!--<li><a href="tel:+56941308356"><img class="icon svg" src="imagenes/whatsapp-line.svg" alt=""></a></li>-->
+                        <li><a href="https://www.instagram.com/ladinesponce?igsh=dG5zM2twOGdqbmk1" target="_blank"><img class="icon svg" src="../img/instagram-line.svg" alt=""></a></li>
+                        <!--enlace de linkedin-->
+                        <li><a href="https://www.linkedin.com/in/raul-ladines-ponce-4a228a212" target="_blank"><img class="icon svg"  src="img/linkedin-box-line.svg"></a></li>
 
 
-                    <!--enlace para hablar por skype-->
-                    <!--<li><a href="skype:aquí_el_usuario_de_skype?call"><i class="fa-brands fa-skype"></i></a></li>-->
-                </ul>
+                        <!--enlace para hablar por skype-->
+                        <!--<li><a href="skype:aquí_el_usuario_de_skype?call"><i class="fa-brands fa-skype"></i></a></li>-->
+                    </ul>
                 </div>
             </section>
             <section class="desarrollador">
