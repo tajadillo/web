@@ -322,7 +322,8 @@ font pango: Mononoki Nerd Font Bold Italic 11
             }
         }
 
-    #Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana"
+    #Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana" con control+h y control+v (horizontal y vertical)
+
     client.focused #444445 #bf7500 #444444 #ffff70
 
 
