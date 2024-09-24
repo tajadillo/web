@@ -1,6 +1,6 @@
 #!/bin/bash
 #Autor: Richard Tajadillo
-#Comando para fuscar archivos y directorios
+#Comando para buscar archivos y directorios
 # LICENCIA GNU GPL 3.0
 
 # comando find (buscar)
@@ -16,7 +16,6 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
-#/bin/bash
 
 #############################
 function ctrl_c(){
@@ -87,6 +86,7 @@ if
     read -p "Elije una opción: " menuFichero
     clear
     sleep 1
+    rizontal
     if
         [ "$menuFichero" == "a" ]; then
         read -p "¿Donde se buscará el fichero? " dondeFichero
