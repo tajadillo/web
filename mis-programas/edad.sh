@@ -30,9 +30,6 @@ yellowColour="\e[0;33m\033[1m"
 purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
-
-
-
 trap ctrl_c INT
 
 function ctrl_c(){
@@ -101,7 +98,7 @@ saludar
 #########
 echo
 
-echo -e "\n ${blueColour}Vamos a calcular los cobros por los distintos seminarios que se hagan .${endColour}"
+echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
 sleep 15
 clear
@@ -111,64 +108,25 @@ tput cnorm
 sleep 2
 clear
 
+read -p "Introduce tu año de nacimiento: " ano
+read -p "Introduce tu mes de nacimiento: " mes
+read -p "Introduce tu día de nacimiento: " dia
 
-echo
-read -p "¿cual es el pago básico por hora? " basicoPorHora
-sleep 1
-clear
+edad=$(($(date +%Y) - ano))
 
-echo
-read -p "¿cual es la cantidad en total de horas al día? " totalHoras
-sleep 1
-clear
+if [ $(date +%m) -lt $mes ]; then
+    edad=$(($edad-1))
+elif [ $(date +%m) -eq $mes -a $(date +%d) -lt $dia ]; then
+    edad=$(($edad-1))
+fi
 
-echo
-read -p "¿cuantos días en total serán? " dias
-sleep 1
-clear
+echo -e "Tienes $edad anos "
 
-echo
-read -p "¿el presupuesto para la movilidad diaria será de cuanto? " movilidadDiaria
-sleep 1
-clear
 
-echo
-read -p "¿y el presupuesto de la colacion diaria? " colacion
-sleep 1
-clear
-
-echo
-read -p "¿en total, cuanto costara el hospedaje por cada día presupuestados? " hospedaje
-sleep 1
-clear
-
-echo
-read -p "en caso de viajar a otra ciudad, ¿cuanto es el valor de los pasajes ida y vuelta? " pasajesViaje
-clear
-
-######### VARIABLES ############
-totalHorasSeminario=$(($totalHoras*$dias))
-viaticos=$(((($movilidadDiaria*4))+$((colacion*4))+$(($hospedaje*4))))
-sueldoTotal=$(($viaticos*$totalHorasSeminario))
-iva=$(($sueldoTotal*10/100))
-######### FIN VARIABLES ############
-
-clear
-echo
-echo -e "\n${redColour}##########################################################################${endColour}"
-echo
-echo -e "\n${greenColour}Correoto${endColour} ${yellowColor}$usuario.${endColour}\t ${greenColour}Al día de hoy${endColour} ${blueColour}$fecha${endColour} ${greenColour}el total de horas en el seminario sera de${endColour} ${grayColour}$totalHorasSeminario horas,${endColour} ${greenColour}los viaticos dan un total de${endColour} ${yellowColour}$ $viaticos${endColour} ${greenColour}mil pesos chilenos.${endColour}"
-echo
-echo -e "${greenColour}Por este motivo, el sueldo es de${endColour} ${yellowColour}$ $sueldoTotal${endColour} ${greenColour}pesos chilenos.${yellowColour}"
-echo
-echo -e "${greenColour}Si el cliente paga los${endColour} ${yellowColour}$ $iva${endColour} ${greenColour}mil pesos del IVA.${endColour}"
-echo
-echo -e "\n${greenColour}El total a cobrar sera de${endColour} ${redColour}$(($sueldoTotal-$iva))${endColour} ${greenColour}pesos chilenos${endColour}"
-echo
-echo -e "\n${redColour}##########################################################################${endColour}"
-
-echo
-echo
-read -p "pulsa la tecla ENTER para continuar" p
-clear
-exit
+#                             _   _
+#           o          |  o  | | | |
+# _|_  __,     __,   __|     | | | |  __
+#  |  /  |  | /  |  /  |  |  |/  |/  /  \_
+#  |_/\_/|_/|/\_/|_/\_/|_/|_/|__/|__/\__/
+#          /|
+#          \|

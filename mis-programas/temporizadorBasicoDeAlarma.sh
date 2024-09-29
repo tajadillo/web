@@ -37,8 +37,8 @@ function main(){
   while [ $s -gt 0 ]
   do
     s="$((time - (SECONDS - start)))"
-    echo -ne "\r                   \r"
-    echo -ne "\r$s seconds left"
+    echo -ne "\n                   \n"
+    echo -ne "\n$s seconds left"
     sleep 1
   done
 

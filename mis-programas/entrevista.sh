@@ -226,3 +226,10 @@ echo -e "\n${greenColour}Has intentado${endColour} ${yellowColour}$acciones${end
 echo -e "\n${greenColour}Y necesitas de mi porque${endColour} ${yellowColour}$pk_yo${endColour}"
 echo -e "\n${greenColour}¿Esto es correocto?${endColour}"
 
+#                             _   _
+#           o          |  o  | | | |
+# _|_  __,     __,   __|     | | | |  __
+#  |  /  |  | /  |  /  |  |  |/  |/  /  \_
+#  |_/\_/|_/|/\_/|_/\_/|_/|_/|__/|__/\__/
+#          /|
+#          \|

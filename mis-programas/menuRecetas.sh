@@ -16,14 +16,12 @@ grayColour="\e[0;37m\033[1m"
 
 #Aquí tienes un script en Bash que realiza los cálculos que has solicitado. El script permite al usuario agregar ingredientes con su costo al por mayor, calcular el costo según la receta y determinar el precio de venta al público.
 
-#Script en Bash
-#bash
-
-
-
-
-
-
+#La mejor manera (y la más logica) para describirle una receta al cliente seria.
+#1. Describir cual es la proteina o el ingrediente principal
+#2. Cual es el metodo de cocción de dicho ingrediente
+#3. Describir cual es la salsa o acompañante
+#4. Cual es el metodo de preparación de dicho acompañante (de no conocer cual es el metodo de preparacion se puede saltar este paso)
+#5. Describir cuales son las guarniciones para el ingrediente principal
 
 
 
