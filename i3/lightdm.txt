@@ -1,0 +1,611 @@
+Saltar al contenido
+geekland Blog de Tecnología
+Contacto Indice El Autor Buscar
+Twitter
+ 
+Reddit
+ 
+RSS
+ 
+Telegram
+
+Personalizar y configurar lightdm
+Publicado porJoan Carles
+16 junio, 2013
+39 comentariosen Personalizar y configurar lightdm
+Home » Linux » Personalizar y configurar lightdm
+
+Seguidamente veremos como personalizar y configurar el gestor de sesiones Lightdm pero antes de empezar con la personalización y configuración es interesante una breve introducción para que sepan que es exactamente Lightdm.
+
+¿QUÉ ES LIGHTDM?
+Muchos se preguntaran que es Lightdm. Lightdm es un gestor de sesiones. La parte visible del gestor de sesiones es la pantalla de bienvenida o de autenticación donde introducimos nuestro login y podremos configurar ciertos parámetros de nuestra sesión como por ejemplo el entorno de escritorio que queremos usar, el gestor de ventanas, la distribución de teclado a usar, etc.
+
+Las funciones que normalmente realiza un gestor de sesiones son las siguientes:
+
+Iniciar nuestra sesión de usuario sobre el servidor de las X desde nuestro mismo ordenador o desde un ordenador remoto.
+Autentificar los usuarios. Una vez autentificados los usuarios es cuando se inicia la sesión.
+Permite que múltiples usuarios puedan correr simultáneamente distintas sesiones en un mismo ordenador. En inglés a esta característica se la conoce como user switching o multiseat.
+Iniciar el servidor VNC antes de iniciar la sesión de usuario y de esta forma poder establecer conexiones remotas aunque el servidor no haya iniciado ninguna sesión de usuario.
+Ejecutar scripts antes del inicio de la sesión para prearrancar servicios en nuestro ordenador.
+Iniciar el servidor XDMCP antes de iniciar la sesión para poder efectuar logins remotos.
+Para terminar con la introducción solo decir que en la actualidad existen multitud de gestores de sesiones. Algunos de los más conocidos son los siguientes:
+
+Gdm
+Mdm
+Kdm
+Slim
+etc.
+¿POR QUÉ USAR LIGHTDM?
+Particularmente me gusta y uso lightdm por varios motivos. Los motivos y razones por los que considero a lightdm un gestor de sesiones muy aconsejable son los siguientes:
+
+Es en gestor de sesiones que tiene la totalidad de funciones que ofrecen otros gestores pero un su construcción fue diseñado para ser ligero, rápido y configurable. Para poner un ejemplo de lo ligero que es lightdm tan solo tenemos que analizar su código. Su código según datos extraídos de launchpad consta de menos 10,000 lineas mientras otros gestores como gdm disponen de más de 50,000 lineas y una multitud de parches. Por lo tanto podemos afirmar que lightdm tiene que ser más ligero, rápido y fácil de mantener y trabajar con el.
+Lightdm se puede usar en prácticamente la totalidad de distros existentes y en cualquier entorno de escritorio que instalemos. Por lo tanto podemos usar Lightdm tanto en Gnome, Kde, Unity, Lxde, Xfce, Enlightenment, etc. No se puede decir lo mismo por ejemplo de otros gestores como Gdm.
+Desarrollar temas para Lightdm es sencillo. Los temas se puedan programar fácilmente usando lenguaje html. También se pueden usar las bibliotecas gtk o qt.
+PERSONALIZAR Y CONFIGURAR LIGHTDM
+Antes de empezar a personalizar y configurar Lightdm os pongo la siguiente captura de pantalla para que podáis ver el diseño estandard de Lightdm en Debian:
+
+Personalización y configuración estandard en Lightdm
+
+Como podéis ver el diseño estandard es un poco espartano. Seguidamente veremos como modificar mínimamente el aspecto de la pantalla de bienvenida para hacerlo más agradable a nuestros ojos.
+
+Nota: El objetivo de este tutorial no es crear un greeter o pantalla de bienvenida. El objetivo es customizar de forma sencilla el que viene por defecto.
+Instalar Lightdm
+En el caso que no uséis lightdm y queráis probarlo, tan solo tenéis que seguir los siguiente pasos para su instalación:
+
+Tenéis que acceder a vuestra terminal y teclear el siguiente comando:
+
+sudo apt-get install lightdm
+En el caso de tener varios gestores de sesiones es probable que tengáis que configurar Lightdm para que sea vuestro gestor de sesiones predeterminado. Para ello tecleamos el siguiente comando en la terminal:
+
+sudo dpkg-reconfigure lightdm
+Una vez ejecutado el comando aparecerá un cuadro de dialogo. Cuando aparezca tan solo tenemos que seleccionar el gestor de sesiones que queremos por defecto.
+
+Copia de seguridad de los archivos de configuración
+Una vez instalado Lightdm lo primero que tenemos que realizar antes de empezar a modificar cualquier parámetro es guardar una copia de seguridad de los archivos de configuración. Para ello abrimos una terminal y tecleamos los siguientes comandos:
+
+sudo cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.old
+sudo cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.old
+Mostrar el selector de idiomas en Lightdm
+Para mostrar el selector de idiomas en el panel de lightdm tan solo tenemos que acceder al fichero de configuración. Para ello en la terminal tecleamos el siguiente comando:
+
+sudo gedit /etc/lightdm/lightdm-gtk-greeter.conf
+Una vez se ha abierto el editor de textos tenemos que ir a buscar la siguiente linea:
+
+#show-language-selector=
+Descomentamos la linea y establecemos el valor de la variable show-language-selector en true. Una vez realizado esto la linea quedará de la siguiente forma:
+
+show-language-selector=true
+Ahora tan solo tenemos que grabar las modificaciones. Cuando arranquemos de nuevo nuestro sistema aparecerá el selector de idiomas en el panel de Lightdm.
+
+Cambiar el tema de Lightdm
+Para cambiar el tema que usa Lightdm tan solo tenemos que acceder y modificar sus archivos de configuración. Para ello tan solo tenemos que introducir el siguiente comando en la terminal:
+
+sudo gedit /etc/lightdm/lightdm-gtk-greeter.conf
+Una vez abierto el editor de textos tenemos que localizar la siguiente linea:
+
+theme-name=Adwaita
+Una vez localizada la linea tan solo tendremos que sustituir el nombre del tema predeterminado, que es Adwaita, por el nombre del tema que queremos usar. En mi caso voy usar el tema greybird. Por lo tanto el resultado final de la linea que tenemos que modificar será el siguiente:
+
+theme-name=greybird
+Ahora tan solo tenemos que guardar las modificaciones y el nuevo tema aparecerá cuando arranquemos una nueva sesión.
+
+Cambiar el icono principal de Lightdm
+Como se puede en la captura de pantalla del inicio de este apartado, en la pantalla de bienvenida aparece la silueta de un hombre de color gris. En el caso de que queráis cambiar esta silueta para poner una foto vuestra o del logo de vuestra distro es sumamente fácil.
+
+Tan solo tenéis que elegir la foto que queréis poner. Una vez la tengáis la guardáis en vuestra home. Una vez la tengáis en vuestra home hay que cambiar el nombre del archivo. El nombre del archivo tiene que ser .face
+
+Una vez realizado cuando arranquéis el ordenador, en el recuadro donde aparecia el hombre gris aparecerá la imagen que hayáis elegido. En mi caso como podéis ver en el final del post he elegido un logo de mi distro que es Debian.
+
+Cambiar el fondo de pantalla
+En el caso de querer cambiar el fondo de vuestra pantalla de bienvenida también es fácil.
+
+Lo primero que tenemos que hacer es elegir el fondo de pantalla que queremos. Una vez elegido lo guardamos en la ubicación que queramos. En mi caso voy a guardarlo en la ubicación /home/joan/Imágenes/
+
+Seguidamente accedemos en los archivos de configuración introduciendo el siguiente comando en la terminal:
+
+sudo gedit /etc/lightdm/lightdm-gtk-greeter.conf
+Una vez abierto el editor de textos localizamos una linea que se parezca a la siguiente:
+
+background=/usr/share/images/desktop-base/login-background.svg
+Para finalizar sustituimos la ruta del viejo fondo de pantalla por la ruta del nuevo fondo de pantalla.
+
+En mi caso el fondo de pantalla tiene el el nombre Fondolight.jpg y lo he guardado dentro de la ubicación /home/joan/Imágenes/. Por lo tanto la linea del fichero de configuración quedará de la siguiente forma:
+
+background=/home/joan/Imágenes/Fondolight.jpg
+Guardamos el fichero y la próxima vez que arranquemos la sesión veremos que aparecerá el fondo de pantalla que hemos elegido.
+
+Mostrar los usuarios en un menú contextual
+Cada vez que entramos en el menú de Lightdm es un poco engorroso tener que introducir el nombre de nuestro usuario y seguidamente el password. Podemos simplificar este paso haciendo que la totalidad de usuarios aparezcan en un menú contextual del siguiente estilo:
+
+Menú Contextual en Lightdm
+
+Para disponer del menú contextual tan solo tenemos acceder a los archivos de configuración. Por lo tanto en la terminal tecleamos:
+
+sudo gedit /etc/lightdm/lightdm.conf
+Localizamos la siguiente linea:
+
+greeter-hide-users=true
+Una vez localizada la linea cambiamos el valor de true por false. Por lo tanto la linea a modificar quedará de la siguiente forma:
+
+greeter-hide-users=false
+Una vez realizado este paso guardamos el fichero. La próxima vez que arranquemos Lightdm ya nos aparecerá el menú contextual con la totalidad de usuario que tiene nuestro sistema operativo.
+
+Arrancar con Autologin
+En el caso que querías arrancar vuestra sesión sin necesidad ni de teclear vuestro usuario ni vuestro password también lo podemos hacer con lightdm. Tant solo tenemos que acceder a los archivos de configuración tecleando el siguiente comando en la terminal:
+
+ sudo gedit /etc/lightdm/lightdm.conf
+Una vez abierto el editor de texto tenemos que localizar la siguiente linea:
+
+ #autologin-user=
+Descomentamos la linea y después del igual introducimos el nombre de la sesión de usuario que queremos que arranque automáticamente. Como mi nombre de usuario es joan está linea quedará de la siguiente forma:
+
+autologin-user=joan
+Una vez hayamos realizado estos pasos la sesión de usuario joan arrancará directamente sin necesidad de introducir nuestro usuario ni password.
+
+Arrancar directamente como Root
+En el caso de querer arrancar directamente como root tan solo tenemos que seguir la instrucciones del apartado anterior (Arrancar con autologin). La única diferencia es que el valor de autologin-user en este caso tiene que ser root.
+
+autologin-user=root
+Después de realizar los pasos descritos cuando reiniciemos nuestro ordenadores accederemos directamente a la sesión de usuario root sin tener que introducir ningún usuario ni password.
+
+Introducir un reloj en  el panel superior
+En el caso que queramos introducir un reloj en la parte superior del panel de lightdm tan solo tenemos que entrar en los ficheros de configuración. Para entrar en el fichero introducimos el siguiente comando en la terminal:
+
+sudo gedit /etc/lightdm/lightdm-gtk-greeter.conf
+Dentro dentro del archivo de configuración pegamos los siguientes comandos:
+
+show-clock= true
+clock-format=%a, %d %b %H:%M
+Guardamos los cambios y la próxima vez que arranquemos Lightdm aparecerá un reloj en la parte central del panel superior.
+
+Reloj en el Panel de Lightdm
+
+Cambiar la tipografia de la letra
+Para cambiar el tipo de letra que utiliza Lightdm tan solo tenemos que teclear el siguiente comando en la terminal:
+
+sudo gedit /etc/lightdm/lightdm-gtk-greeter.conf
+Una vez se habrá el editor de texto tan solo tenemos que localizar la siguiente linea:
+
+#font-name=
+Una vez localizada la descomentamos e introducimos el nombre de la tipografía que queremos usar. En mi caso quiero usar la tipografia Ubuntu. Por lo tanto la linea quedará de la siguiente forma:
+
+font-name=ubuntu
+Seleccionar el entorno de escritorio por defecto (Default sesion)
+En lightdm, como se puede ver en la pantalla, se puede seleccionar con el entorno de escritorio con el que queremos arrancar por defecto.
+
+Selección del entorno de escritorio
+
+Para configurar el entorno de escritorio que queremos por defecto lo podemos hacer hacer de la siguiente forma.
+
+Abrimos una terminal y tecleamos:
+
+sudo gedit /usr/share/xsessions/lightdm-xsession.desktop
+Una vez abierto el editor intentamos localizar la siguiente linea:
+
+Exec=default
+El valor default lo tenemos que sustituir en función del entorno de escritorio que queramos que sea el predeterminado. Por lo tanto si queremos que nuestro entorno de escritorio predeterminado sea xfce la linea anterior quedará de la siguiente forma:
+
+Exec=startxfce4
+Si queremos que sea KDE:
+
+Exec=startkde
+Si queremos que sea Gnome:
+
+ Exec=gnome-session
+Si queremos que sea Enlightenment:
+
+ Exec=enlightenment_start
+Si queremos que sea Mate:
+
+ Exec=mate-session
+Si queremos que sea LXDE:
+
+ Exec=startlxde
+RESULTADO FINAL
+Para finalizar tan solo falta mostrar el resultado obtenido después de todas las acciones que hemos realizado. En la siguiente captura de pantalla podéis ver el resultado final:
+
+Resultado Final de la personalización
+
+Como podéis observar no se trata de ninguna obra de arte pero a mi forma de ver el aspecto visual a mejorado ostensiblemente en comparación con la estética inicial.
+
+FacebookTwitterTelegramEmailRedditLinkedInWhatsAppCompartir
+Publicado porJoan Carles16 junio, 2013Publicado enLinuxEtiquetas:Configuración, Debian, Lightdm
+Navegación de entradas
+Entrada anterior:
+Entrar en paginas web restringidas
+Entrada siguiente:
+Que es y para que sirve un firewall
+Únete a la conversación
+ 39 comentarios
+
+Eduardo
+dice:
+16 junio, 2013 a las 22:48
+Claro y bien explicado :)
+
+Gracias, ero lo que estaba buscando desde hace un tiempo :)
+
+Responder
+pol criollo
+dice:
+20 julio, 2019 a las 18:47
+Uso deepin 15 como lo hago, no me aparecen la la ventana para escribir el usuario.
+
+Responder
+Joan Carles
+dice:
+21 julio, 2019 a las 3:11
+Igual es porque tienes habilitado el autologin.
+
+Para habilitar o deshabilitar e autologin debes modificar la configuración del fichero /etc/lightdm/lightdm.conf
+
+En el post se indicar como hacerlo.
+
+Saludos
+
+Responder
+Benjamin Garcia Garcia
+dice:
+18 junio, 2013 a las 18:22
+Muy buen tutorial, mis felicitaciones. Me es muy útil.
+Saludos flamencos,
+
+Responder
+Gabriel
+dice:
+24 agosto, 2013 a las 15:43
+Buena info, lo unico que en lightDM no pude solucionar, es que le asigna a gnome 3 el icono de unity(ubuntu_badge.png), mientras que a los otros gnome(classic y classic sin efecto) le asigna el icono que le corresponde(gnome_badge.png), busque por todos y todavia no puedo encontrar donde guarda este tipo de informacion lightDM
+
+Responder
+Joan Carles
+dice:
+24 agosto, 2013 a las 16:19
+Buenas, No se si te podré ayudar porqué imagino que estarás usando ubuntu. Yo desde Unity no lo uso. Puedes intentar lo siguiente para cambiar el logo cuando arranques con Unity:
+
+Tienes que acceder a dconf-editor. Una vez estas dentro tienes que navegar en el menú que aparece en la parte izquierda de la pantalla. Las opciones donde tienes que entrar son com/canonical/unity/unitygreeter. Una vez hayas accedido verás que en la parte derecha de la ventana te aparecerá las opciones para poder modificar el tema que trae por defecto Unity. No se si te aparecerá la opción que estás buscando porqué hasta donde yo llego en Ubuntu no aparece ningún icono llamado ubuntu-badge.png.
+
+Lo que también puedes intentar es ver las opciones de usuarios y grupos. En usuarios y grupos puedes añadir fotos por perfil de usuario.
+
+Responder
+Gerardo
+dice:
+27 agosto, 2013 a las 18:30
+Buen artículo, de hecho es el que mas me ha servido e hice mis primeros cambios; pero tengo algunas dudas, quisiera ver si me puedes ayudar, he estado investigando pero no encuentro el como. Por ejemplo, como sabes cuales temas tienes disponibles. el Adwaita es el predeterminado pero como sabias del greybird? Segunda pregunta, como haces para que la caja del login User / Password a parezca a la izquierda y no al centro. Tengo entendido que lightdm funciona con HTML, donde lo programas para hacer que se vea como tu quieras? Por ejemplo no se si has visto la entrada de elementary OS, me encantaría hacer lo mismo pero para mi Debian. Es decir poner el reloj al estilo conky en la entrada del lado derecho. Cosas, por ese estilo. Es posible? Que recomiendas que lea para poder hacerlo? O por que no la caja del login ponerla transparente. Saludos y gracias de antemano.
+
+Responder
+Joan Carles
+dice:
+28 agosto, 2013 a las 10:35
+Buenas Gerardo.
+
+Por lo de los temas simplemente tienes que mirar los temas que tiene la distro que tengas instalada. Normalmente si te vas a configuración verás un apartado que ponga Apariencia. Allí puedes cambiar de tema y encontrarás el nombre de los temas.
+
+Para cambiar el aspecto tienes que cambiar o modificar el tema de lightdm. No lo he hecho nunca porqué la verdad es que si para mi fuese tan importante el aspecto estético lo que haría es instalar Ubuntu, Elementary OS u otras diferentes a Debian.
+
+Lo que puedes probar es instalar los greeter de las distros que a ti te gusten. Para conseguir el paquete que necesitas seguramente tendrás que añadir los repositorios de esta distro een Debian y configurar el apt-pinning para que los paquetes de las distros no se mezclen. Una vez instalado entras en los archivo de configuración /etc/lightdm/lightdm.conf
+
+En la linea greeter-session añades el nombre del greeter que has instalado. En el caso de elementary OS es pantheon-greeter.
+
+greeter-session=pantheon-greeter
+
+Repito que nunca he probado esto. Así que si el ordenador no te arranca después de intentar esto será tu problema Gerardo. La otra solución es aprender programación y modificar/crear un tema en lightdm. Esto es algo que no se aprende de la noche a la mañana.
+
+Responder
+Raúl
+dice:
+17 noviembre, 2013 a las 17:08
+Hola, tengo Debian con lightdm y he conseguido (no soy un experto…) instalar pantheon greeter con cmake desde los paquetes de launchpad. Lo he hecho así porque no quiero guarrear con repositorios de ubuntu.
+
+Cambio la línea del greeter que comentas por pantheon-greeter pero no me sale la pantalla de login. Se queda en los textos del arranque. Al construir e instalar pantheon-greeter no tuve fallos, de hecho, está en su directorio: /usr/share/xgreeters/pantheon-greeter
+
+Responder
+Joan Carles
+dice:
+17 noviembre, 2013 a las 20:37
+Como le dije al compañero Gerardo nunca he probado de hacer lo que estás probando y le aconseje que no lo probará. Si el aspecto de la pantalla de bienvenida es sumamente importante para ti lo que debes hacer es instalar elementary OS. Tener paquetes de otras distros en tu ordenador no es lo más recomendable.
+
+Una vez clarificado este punto te diré que en principio si instalas pantheon-greeter adecuadamente no deberías tener los problemas que tienes.
+
+Mi pregunta es si solo has instalado el paquete con nombre pantheon-greeter. Si la respuesta es que sí entonces quizás es normal que no te funcione porqué además de este paquete diría que como mínimo necesitas los siguientes para que funcione: elementary-theme fonts-open-sans y fonts-raleway
+
+Prueba instalando lo que es posible que te falta. Teóricamente te debería funcionar.
+
+Responder
+Mauel
+dice:
+8 mayo, 2014 a las 15:43
+Gracias, por el post, todo explicado al detalle.
+
+Sin embargo, me queda una duda. Puedo usar Lightdm con Elementary Os Luna configurado para que cada usuario deba escribir su nombre y clave para ingresar a la pc?
+
+Debe ser una pregunta muy tonta, pero sucede que soy nuevo con Linux /(elementary es la distro que uso) y necesito poder hacer esto que te indico. Gracias
+
+Responder
+Joan Carles
+dice:
+8 mayo, 2014 a las 21:30
+Hola Manuel,
+
+Desafortunadamente no soy un experto en Elementary y ni tan solo lo tengo instalado para hacer pruebas. Así que las pruebas las deberás hacer en tu máquina.
+
+Diría que que lo que quieres hacer es fácil. Pero hasta que no lo pruebes no lo sabrás. Lo que pienso que tienes que hacer es acceder al archivo lightdm.conf. Allí tienes que buscar la siguiente linea:
+greeter-hide-users=true
+
+Una vez localizada la cambias por:
+greeter-hide-users=false
+
+En el caso que no puedas localizar la primera de las linea simplemente copias greeter-hide-users=false dentro de lightdm.conf y listo.
+
+Ya reportarás si te ha funcionado.
+
+Saludos
+
+Responder
+wero
+dice:
+29 mayo, 2014 a las 2:52
+Muy bueno. Saludos cordiales.
+
+Responder
+Daniel P Z
+dice:
+18 julio, 2014 a las 8:00
+Muchas gracias por el aporte, lo pondré en practica justo ahora!
+
+Responder
+Señor Paquito
+dice:
+5 agosto, 2014 a las 13:49
+Aprovechando que el post va sobre LightDM, quería hacerte una pregunta sobre fondos de escritorio y LightDM. Espero que veas el comentario, aunque sea ya un post con un tiempecito.
+
+Uso Ubuntu 14.04 y hasta ahora no tenía problemas con el LightDM, cambiaba el fondo de escritorio por una foto cualquiera, aunque no fuera un wallpaper instalado como tal, y sin problema, LightDM lo mostraba también para mi usuario. El caso es que he hecho unos arreglos en los archivos por unos problemas que tenía con los permisos y ahora LightDM sólo usa los wallpapers instalados, pero no cambia automáticamente cuando con fotos o imágenes no instaladas como wallpapers.
+
+He leído sobre quien dice haberlo arreglado usando fotos con las resoluciones exactas del monitor, cambiando las extensiones de las fotos a png, etc. Pero no parece ser eso. Primero porque antes de no haber tocado nada funcionaba bien, segundo porque a mí no me ha funcionado ninguna de esas soluciones.
+
+Además, el problema surgió después de haber eliminado el archivo que estaba utilizando de fondo y cambiando la localización del escritorio. Es decir. El home está en un SSD, al igual que la raíz, y para no escribir en el más de lo debido las carpetas de usuario, escritorio incluido, están en una partición de un HDD que monto en el arranque, y el sistema cree que están en el home porque cambié las originales por enlaces simbólicos con el mismo nombre. En rigor, lo que hice fue eliminar la partición entera porque había heredado permisos especiales de mi usuario y no podía utilizarla con ninguno más.
+
+Todo esto lo hice sin haber modificado el fondo porque no se me pasó por la cabeza modificarlo antes y lo que hizo Ubuntu fue mostrar el fondo por defecto y no le di mayor importancia.
+
+Responder
+Señor Paquito
+dice:
+6 agosto, 2014 a las 0:34
+Saludos de nuevo.
+
+Escribo para responderme e mi mismo. Finalmente, volví a probar cambiando la resolución de la imagen a 1680×1050, que es la resolución nativa de mi monitor, y el LightDm si adoptó la imagen de fondo de escritorio.
+
+En otras ocasiones que probé esto no me funcionó, así que no sé si el problema se arregló debido a la modificación de la resolución o a alguna otra cosa, pero el caso es que se ha arreglado.
+
+No dejaba de ser una tontería, pero que me resultaba bastante molesta, la verdad.
+Saludos.
+
+Responder
+Fernando
+dice:
+8 agosto, 2014 a las 6:18
+Muy buen tutorial! ya lo instale y lo estoy configurando. Quiero hacerte una pregunta sobre el recuadro de usuario y contraseña. ¿Cómo has echo para que quede de color negro? cambie el tema pero sigue quedando igual, como la de tu primer captura. Me imagino que habrá que modificar algún archivo .xml no?
+
+Agradecería una respuesta
+
+Saludos y muy buena pagina
+
+Responder
+Joan Carles
+dice:
+8 agosto, 2014 a las 7:30
+No hace falta cambiar nombre. Es cuestión de cambiar el tema. Actualmente estoy usando el tema Numix y te puedo asegurar que con Numix sale el fondo negro. Ten en cuenta que el tema Numix no viene de serie y por lo tanto si lo quieres usar deberás instalarlo. Actualmente el tema Greybird no te pone el color negro que tu quieres.
+
+Saludos
+
+Responder
+Fernando
+dice:
+8 agosto, 2014 a las 17:55
+Hola Joan Carles
+
+Así que es por el tema . Ya me pondré a buscar a Numix, la verdad que no me había puesto a probar temas, solo puse el tema que tengo en mi pc, que por cierto es negro, pero no había cambiado.
+
+Muchísimas gracias, saludos
+
+Responder
+Alberto
+dice:
+21 agosto, 2014 a las 12:06
+Hola a todos.
+
+Como veo que todavía hay movimiento, voy a soltar una pregunta a ver si alguien me puede ayudar.
+
+¿Como puedo poner un botón nuevo en lightdm?. Es decir igual que tengo uno para cambiar el lenguaje o cerrar sesion, me gustaría poner otro para configurar la red antes de iniciar sesión.
+
+Gracias de antemano
+
+Responder
+D.Pratti
+dice:
+6 noviembre, 2014 a las 21:34
+Eso sería la leche. Pero quizá no es posible como lo dices al menos para lo que yo se. ¿Y si llamas al proceso del gestor de redes igual que se llama al reloj? Te sale en la barra y tu seleccionas etc.
+
+Responder
+Matias aguero
+dice:
+24 agosto, 2014 a las 11:37
+La verdad que sólo algunas cosas me sirvieron, no se que versión de lightdm usarás. Yo estoy con debian wheezy
+
+Responder
+Joan Carles
+dice:
+24 agosto, 2014 a las 15:46
+Buenas te deberían servir todas las cosas y no solo unas cuantas. En el momento que redacté el post diría que usaba debian testing – Whezzy y todo funcionaba.
+
+Actualmente tengo instalada la versión 1.10.1-3 y todo funciona.
+
+Saludos
+
+Responder
+Matias aguero
+dice:
+24 agosto, 2014 a las 20:29
+Me acabo de dar cuenta, tienes razón tu posteo puede servir para jessie testing, pero no para wheezy, en wheezy hay que modificar el otro texto que indique.
+
+Responder
+Joan Carles
+dice:
+24 agosto, 2014 a las 21:54
+Como no uso whezzy confiare en que tengas razon, aunque cuando hice el post estaba en testing whezzy. Tu ultima entrada no esta publicada porque tu respuesta no es precisa. Quien la lea tu respuesta no le servira para solucionar el problema. Rogaria que comentaras como se realiza en whezzy.
+
+Saludos
+
+Responder
+tomaquina
+dice:
+22 septiembre, 2014 a las 23:10
+He probado en Xubuntu 14.04 lo de poner una figura en .face y no funciona (con .face.icon tampoco). Al final lo he solucionado utilizando mugshot. Se arranca y se pone el icono. Más fácil imposible. Buen post!
+
+Responder
+Joan Carles
+dice:
+24 septiembre, 2014 a las 22:50
+Perfecto… A mi en Debian me funciona. En arch Linux también funciona, En xubuntu 12.04 también me funciona pero mugshot imagino que es otra opción buena… no la conocía.
+
+Responder
+Miguel Angel
+dice:
+30 enero, 2015 a las 16:46
+Tengo instalados xfce, icewm y openbox.
+
+Pero me gustaría que en la lista de disponibles sólo quede openbox.
+
+¿se puede conseguier en lightdm?
+
+Gracias
+
+Responder
+Joan Carles
+dice:
+2 febrero, 2015 a las 16:39
+Que yo sepa no se puede ni con lightdm ni con ningún otro. Pero lo que si se puede hacer, y además se explica en el post, es poner que la sesión por defecto sea Openbox.
+
+Además aunque tu sesión por defecto sea otra, Lightdm siempre guarda como predeterminado el último escritorio que has abierto. Por lo tanto si seleccionas Openbox siempre te arrancará Openbox.
+
+Si quieres que no te salga xfce ni icewm tendrás que desinstalar estos entornos de escritorio.
+
+Saludos
+
+Responder
+JP
+dice:
+20 agosto, 2015 a las 20:11
+¿Como hago para que la imagen del login screen sea elegida de una carpeta en específico al azar?
+
+Responder
+Joan Carles
+dice:
+21 agosto, 2015 a las 10:37
+Hola, Entiendo que lo que quieres hacer es que cada vez que arranque el ordenador te aparezca una imagen aleatoria de un montón de archivos de imagen ubicados dentro de una carpeta específica.
+
+Si es esto lo que quieres hacer, diría que no es posible, o al menos yo no se como hacerlo ya que las opciones de configuración no permiten lo que quieres hacer.
+
+Saludos
+
+Responder
+Anto
+dice:
+16 enero, 2016 a las 14:44
+Excelente explicación
+Ahora estoy investigando como aumentar el borde de las ventanas
+
+Responder
+joaquín
+dice:
+5 abril, 2016 a las 21:21
+Hola.
+
+Estoy usando Debian 8.
+
+¿Sabes cómo se configura lightdm para poder iniciar sesiones remotas?
+
+Creo que se consigue activando xdmcp pero no sé en que fichero de configuración de lightdm se encuentra.
+
+saludos
+
+Responder
+Joan Carles
+dice:
+5 abril, 2016 a las 23:07
+Hola
+
+No es algo que haya probado nunca, pero me apetece probarlo. Así que durante los próximos meses escribiré un post en el que detallaré como realizar lo que preguntas.
+
+Saludos
+
+Responder
+Skintigth
+dice:
+19 septiembre, 2016 a las 1:47
+¿Alguna forma de cambiar la distribución del teclado? logro hacer que aparezca el selector pero solo aparece una opción y no es la que yo quiero.
+
+Responder
+Joan Carles
+dice:
+19 septiembre, 2016 a las 8:18
+Hola
+
+Si solo te aparece una opción de distribución de teclado es porque tienes que instalar los otras opciones de distribución de teclado.
+
+Vete al apartado de configuración de tu entorno de escritorio y allí buscas el apartado teclado. Entras y allí podrás añadir los teclados que quieras.
+
+Una vez añadidos los podrás elegir en lightdm o en el gestor de arranque que uses.
+
+Saludos
+
+Responder
+Edgar Ilasaca Aquima
+dice:
+22 enero, 2019 a las 15:06
+Hola, tengo una duda,
+
+Actualmente tengo instalado Q4OS basado en Debian 9 y con escritorio TDE, le instale KDE pero me dio problemas, lo desinstale pero me malogro el gestor de sesiones y lo arregle instalando Lightdm, el problema esta en que después de desinstalar KDE, aun me figura plasma en el menu de selección de escritorios, quisiera que me indiques la manera de eliminar ese item del listado de escritorios.
+
+Responder
+Maurix
+dice:
+18 abril, 2020 a las 18:19
+Hola Saludos,
+
+Les comento que hace muy poquito estoy probando diversas distro de linux para ir instalándolas en mi empresa. Básicamente estoy probando Elementary os y Ubuntu 18.04 LTS. En ambas distros me doy con que no se encuentra el archivo lightdm.conf en /etc/lightdm y hay un archivo del mismo nombre en /etc/X11 …. pero solo tiene un script muy pequeño…. me podrías ayudar
+
+Saludos
+
+Responder
+Joan Carles
+dice:
+25 abril, 2020 a las 11:24
+Hola
+
+Ni Ubuntu ni Elementary OS usan Lightdm, Usan GDM
+
+Saludos
+
+Responder
+Dejar un comentario
+Tu dirección de correo electrónico no será publicada. Los campos obligatorios están marcados con *
+
+Comentario *
+
+Nombre *
+Correo electrónico *
+Web
+
+ Guarda mi nombre, correo electrónico y web en este navegador para la próxima vez que comente.
+
+
+Donaciones
+Si es un lector habitual de este blog y le gusta su contenido quizá quiera contribuir a su mantenimiento. Cualquier cantidad por pequeña que sea será bien recibida.
+
+Donate with PayPal button 
+Buscar
+Buscar:
+Buscar …
+Etiquetas
+Aplicaciones apt atajos de teclado Audio Bash buscar archivos Chrome Cifrado Configuración Debian Disco Duro DNS email firefox Gnome Hardware Internet Libreoffice linux Memória navegadores Nextcloud Ofimática Openvpn opinión privacidad Publicidad Raspbian repositorios Seguridad Servicios en la nube servidor Software Software Libre SSH terminal Thunar thunderbird tips Tor Traefik Ubuntu Vpn Windows 10 xfce
+ , 
