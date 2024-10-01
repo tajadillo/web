@@ -104,6 +104,9 @@ https://sonic.streamingchilenos.com/8240/stream
 #EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
 https://publiradio.tk:9000/live
 
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio mradio.cl Arica
+https://sonic.portalfoxmix.club/8058/;
+
 #EXTINF:-1 tvg-id="Region XV Radio" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Region XV Radio Arica
 http://149.56.241.149:8134/;
 
