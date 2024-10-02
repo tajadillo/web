@@ -1,0 +1,64 @@
+# Nmap 7.93 scan initiated Tue Oct  1 22:38:29 2024 as: nmap -p- -sCV --open -sS --min-rate 5000 -n -Pn -oN escaneo 192.168.1.220
+Nmap scan report for 192.168.1.220
+Host is up (0.99s latency).
+Not shown: 33255 closed tcp ports (reset), 32273 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE          VERSION
+53/tcp    open  domain           Unbound
+8080/tcp  open  ssl/http         FRITZ!Box TR-069 service
+|_http-title: Site doesn't have a title.
+|_http-cors: GET POST PUT DELETE OPTIONS
+| ssl-cert: Subject: commonName=localhost/organizationName=TID/stateOrProvinceName=Madrid/countryName=ES
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2022-11-07T11:02:36
+|_Not valid after:  2024-11-06T11:02:36
+|_ssl-date: TLS randomness does not represent time
+8081/tcp  open  http             FRITZ!Box TR-069 service
+|_http-title: Site doesn't have a title.
+|_http-cors: GET POST PUT DELETE OPTIONS
+8082/tcp  open  blackice-alerts?
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Server: WebsocketServer
+|     Date: Wed, 02 Oct 2024 01:41:31 GMT
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Server: WebsocketServer
+|     Date: Wed, 02 Oct 2024 01:41:37 GMT
+|     Content-Length: 0
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: WebsocketServer
+|_    Content-Length: 0
+8083/tcp  open  ssl/us-srv?
+|_ssl-date: 2024-10-02T01:46:13+00:00; +2m08s from scanner time.
+| ssl-cert: Subject: commonName=localhost/organizationName=TID/stateOrProvinceName=Madrid/countryName=ES
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2022-11-07T11:02:36
+|_Not valid after:  2024-11-06T11:02:36
+9080/tcp  open  http             Mongoose httpd
+|_http-title: Site doesn't have a title (application/json).
+56789/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8082-TCP:V=7.93%I=7%D=10/1%Time=66FCA4CD%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,6B,"HTTP/1\.0\x20404\x20Not\x20Found\r\nServer:\x20WebsocketSe
+SF:rver\r\nDate:\x20Wed,\x2002\x20Oct\x202024\x2001:41:31\x20GMT\r\nConten
+SF:t-Length:\x200\r\n\r\n")%r(FourOhFourRequest,6B,"HTTP/1\.0\x20404\x20No
+SF:t\x20Found\r\nServer:\x20WebsocketServer\r\nDate:\x20Wed,\x2002\x20Oct\
+SF:x202024\x2001:41:31\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOpti
+SF:ons,6B,"HTTP/1\.0\x20404\x20Not\x20Found\r\nServer:\x20WebsocketServer\
+SF:r\nDate:\x20Wed,\x2002\x20Oct\x202024\x2001:41:37\x20GMT\r\nContent-Len
+SF:gth:\x200\r\n\r\n")%r(RTSPRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nServer:\x20WebsocketServer\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20WebsocketS
+SF:erver\r\nContent-Length:\x200\r\n\r\n");
+MAC Address: D4:3F:CB:BC:89:EF (Arris Group)
+Service Info: Device: broadband router
+
+Host script results:
+|_clock-skew: 2m07s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct  1 22:44:13 2024 -- 1 IP address (1 host up) scanned in 344.00 seconds
