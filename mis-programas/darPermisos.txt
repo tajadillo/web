@@ -1,0 +1,25 @@
+sudo chmod -R +x ./mis-programas/
+
+
+
+Cómo cambiar el chmod a varios archivos/subdirectorios al mismo tiempo
+Publicado por icebite @ 8:58 p. m.
+Estas indicaciones están enfocadas a Linux.
+
+Estás intentando instalar mambo o joomla en tu servidor local (localhost), y en el proceso de instalación te pide que le cambies los permisos a varios archivos y/o directorios, tarea laboriosa que te puede llevar varios minutos, ¿Como cambiarlos todos de un plumazo?
+
+Existe una forma de cambiar el chmod de todo lo que contenga un directorio (archivos, subdirectorios, archivos de subdirectorios...) con una sola orden en el terminal. Para ello basta con usar la opción -R (recursivo) después de la palabra chmod. Un ejemplo en ubuntu:
+
+ sudo chmod -R 777 ./www
+
+Con esto estamos cambiando los permisos a todo lo que haya dentro de la carpeta www que se encuentra en el directorio /home/usuario/.
+
+Existe otra forma de cambiar los permisos de forma masiva, pero no se comporta igual. Consiste en añadir un asterisco (*) al final del directorio que queremos cambiar los permisos. Un ejemplo:
+ sudo chmod 777 ./www/*
+
+Esto nos cambiariá los permisos de los archivos y subdirectorios que contiene el directorio www, pero no los archivos que contienen los subdirectorios.
+
+Obviamente al dar un chmod 777 a un archivo, estamos permitiendo que cualquiera pueda acceder a él para leerlo, ejecutarlo o modificarlo. Para elegir el chmod adecuado a tus necesidades echa un vistazo a esta página:
+http://www.guia-ubuntu.org/ind...
+
+Para más información pon en tu terminal: man chmod
