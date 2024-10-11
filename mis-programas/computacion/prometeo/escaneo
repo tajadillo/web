@@ -1,0 +1,3 @@
+# Nmap 7.93 scan initiated Thu Oct 10 02:53:01 2024 as: nmap -p- -sCV --open -sS --min-rate 5000 -n -Pn -oN escaneo 192.168.1.140
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct 10 02:54:01 2024 -- 1 IP address (1 host up) scanned in 60.42 seconds
