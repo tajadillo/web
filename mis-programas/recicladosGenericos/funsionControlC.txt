@@ -1,0 +1,14 @@
+#/bin/bash
+
+
+#############################
+function ctrl_c(){
+    echo -e "\n Saliendo..."
+    tput cnorm
+    exit 1
+}
+
+trap ctrl_c SIGINT
+
+##############################
+
