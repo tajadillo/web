@@ -95,8 +95,8 @@ function varDatos(){
     echo -e "\n ${greenColour}Escribe la dirección: ${endColour}"
     read varDir
     clear
-    echo -e "\n\n $varNombre \n\t Teléfono: $varTel \n\t E-mail: $varMail \n\t Dirección: $varDir" >> /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda.txt
-    cat /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda.txt
+    echo -e "\n\n $varNombre \n\t Teléfono: $varTel \n\t E-mail: $varMail \n\t Dirección: $varDir" >> /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda/agenda.txt
+    cat /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda/agenda.txt
 }
 
 function varBuscar(){
@@ -104,7 +104,7 @@ function varBuscar(){
     tput cnorm
     read varUsuario
     clear
-    cat /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda.txt|grep -i $varUsuario -A 4
+    cat /media/tajadillo/TAJADILLO/web/mis-programas/recicladosGenericos/agenda/agenda.txt|grep -i $varUsuario -A 4
 }
 
 clear
