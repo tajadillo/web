@@ -1,0 +1,261 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="Radiomar Plus" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radiomar Plus
+https://playerservices.streamtheworld.com/api/livestream-redirect/CRP_MARAAC.aac?csegid=1010&dist=1010&_=218732 
+#https://25083.live.streamtheworld.com/CRP_MARAAC.aac?csegid=1010&dist=1010&_=519125
+#https://24073.live.streamtheworld.com/CRP_MAR_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTk2NiwiZXhwIjoxNjQ4MjQwMDI2fQ.hHTxmZXUY02CjH3sjoYgbgIU2yYR1XjZzRCs4WQVTO8&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=bb3e6e11-5058-4f2c-963c-8e012568fe46
+#https://14933.live.streamtheworld.com/CRP_MAR.mp3?csegid=1010&dist=1010&_=300960
+
+#EXTINF:-1 tvg-id="Radio Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Moda
+https://23093.live.streamtheworld.com/CRP_MOD_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTYzNSwiZXhwIjoxNjQ4MjM5Njk1fQ.MRoE4rNaKajFi7OknN8FYeNDtKp89wXJykjtsEEhxAk&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=253254d3-c2ce-4274-808c-e46165a5b2b5
+
+#EXTINF:-1 tvg-id="La Kalle" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , La Kalle
+https://7.innovatestream.pe:2020/stream/lakalleoficial/stream/;
+
+#EXTINF:-1 tvg-id="Nueva Q" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Nueva Q
+https://18813.live.streamtheworld.com/CRP_NQ_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODI0MDA2MCwiZXhwIjoxNjQ4MjQwMTIwfQ.-TsHOghU39w9q61FXmC95tisxzciD2HdAVfx56lDx7Q&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=c57a0629-a3c2-4fce-cce8-e2b66798fa62
+
+#EXTINF:-1 tvg-id="La Karibeña" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , La Karibeña
+https://7.innovatestream.pe:2020/stream/karibenaoficial/stream/1/
+
+#EXTINF:-1 tvg-id="Radiomar Moda" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Moda
+https://23093.live.streamtheworld.com/CRP_MOD_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODIzOTYzNSwiZXhwIjoxNjQ4MjM5Njk1fQ.MRoE4rNaKajFi7OknN8FYeNDtKp89wXJykjtsEEhxAk&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=253254d3-c2ce-4274-808c-e46165a5b2b5
+
+#EXTINF:-1 tvg-id="Nueva Q" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Nueva Q
+https://18813.live.streamtheworld.com/CRP_NQ_ADP.aac?autoplay=1&tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJzdWIiOiJPcGVuU3RyZWFtaW5nQXBwIiwiaXNzIjoicGxheWVyIiwiYXVkIjoidGQiLCJ0ZC1yZWciOnRydWUsImlhdCI6MTY0ODI0MDA2MCwiZXhwIjoxNjQ4MjQwMTIwfQ.-TsHOghU39w9q61FXmC95tisxzciD2HdAVfx56lDx7Q&csegid=40001&dist=40001&ttag=40001&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=c57a0629-a3c2-4fce-cce8-e2b66798fa62
+
+#EXTINF:-1 tvg-id="Radio Exitosa" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio Exitosa Noticias
+https://7.innovatestream.pe:2020/stream/exitosaoficial/stream
+
+#EXTINF:-1 tvg-id="Radio Exitosa" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Radio La Inolvidable
+https://22973.live.streamtheworld.com/CRP_LIAAC_TOKEN.aac?tdtok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRHODNKIn0.eyJ0ZC1yZWciOnRydWUsImlhdCI6MTY4MDg1NjI1MiwiZXhwIjoxNjgwODU2MjY3LCJhdWQiOiJ0ZCIsImlzcyI6InBsYXllciIsInN1YiI6Ik9wZW5TdHJlYW1pbmcifQ.1AlZaBpAqxS1JPDRkO96R7XjtWYIHNy27wpN96KZcpI&csegid=1010&dist=1010&ttag=crp%3Ap1crp&tdsdk=js-%40td&pname=TDSdk&pversion=%40td&banners=300x250%2C728x90&sbmid=f0998d78-9081-424f-fa58-dec452286e26
+
+#EXTINF:-1 tvg-id="Radio Exitosa" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , Jazz Contempo -Lima-
+https://cast4.asurahosting.com/proxy/fernand4/stream
+
+#EXTINF:-1 tvg-id="La Karibeña" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://radiomar.pe/assets/images/logo-radiomar.png" group-title="General" , La Karibeña
+https://7.innovatestream.pe:2020/stream/karibenaoficial/stream/1/
+
+#EXTINF:-1 tvg-id="Nacional Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/radionacionaldelperu/picture?width=200&height=200" group-title="General" , Radio Nacional Perú
+https://cdnh4.iblups.com/hls/OisZOgZAOB.m3u8
+
+#EXTINF:-1 tvg-id="La Zona" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Radiolazona/picture?width=200&height=200" group-title="General" , Radio La Zona
+https://mdstrm.com/audio/5fada54116646e098d97e6a5/icecast.audio
+
+#EXTINF:-1 tvg-id="Radio Uno Tacna" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Radiolazona/picture?width=200&height=200" group-title="General" , Radio Uno Tacna
+https://stream2.eistreaming.com:10986/stream/1/
+
+#EXTINF:-1 tvg-id="RPP Noticias Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rppnoticias/picture?width=200&height=200" group-title="General" , RPP Noticias Perú
+
+#EXTINF:-1 tvg-id="Radio Uno Tacna" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/Radiolazona/picture?width=200&height=200" group-title="General" , Radio Uno Tacna
+https://stream2.eistreaming.com:10985/;
+
+#EXTINF:-1 tvg-id="RPP Noticias Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rppnoticias/picture?width=200&height=200" group-title="General" , RPP Noticias Perú
+https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/icecast.audio
+
+#EXTINF:-1 tvg-id="Radio Z Rock & Pop Perú" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ZRocknPop/picture?width=200&height=200" group-title="General" , Radio Z Rock & Pop Perú
+http://167.114.118.120:7440/;.mp3
+
+#EXTINF:-1 tvg-id="FM Rock & Pop Argentina" tvg-country="AR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/FmRockandPop/picture?width=200&height=200" group-title="General" , FM Rock & Pop Argentina
+https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOP.mp3
+
+#EXTINF:-1 tvg-id="Jazz Radio Francia" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/jazzradio.fr/picture?width=200&height=200" group-title="General" , Jazz Radio Francia
+https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3
+
+#EXTINF:-1 tvg-id="Radio Francia Internacional" tvg-country="FR" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/rfienespanol/picture?width=200&height=200" group-title="General" , Radio Francia Internacional
+https://rfienespagnol64k.ice.infomaniak.ch/rfienespagnol-64.mp3
+
+#EXTINF:-1 tvg-id="Total Rock UK" tvg-country="UK" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Total Rock UK
+https://s04.whooshclouds.net:8220/live
+
+#EXTINF:-1 tvg-id="Universidad de Tarapaca" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Universidad de Tarapaca
+http://stream5.eltelon.com:8000/universidad-de-tarapaca.aac
+
+#EXTINF:-1 tvg-id="Radio Puerta Norte" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Puerta Norte
+http://192.99.18.164:9654/;
+#https://video.mediawebchile.com:8230/stream
+
+#EXTINF:-1 tvg-id="Radio visual.cl santiago de chile" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Visual.cl Santiago de Chile
+https://audio0.tustreaming.cl/7260/stream
+
+#EXTINF:-1 tvg-id="Radio Andina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Andina
+https://sonic.globalstream.pro/8124/stream/1/
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
+https://publiradio.tk:9000/live
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Info Arica
+https://cast.radioservicios.cl/radio/8040/web
+
+
+#EXTINF:-1 tvg-id="Radio Neura" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Neura Arica
+https://node-02.zeno.fm/dtuqf5qha8zuv?zs=XQ1kUmS0QkGRbLit4GWX1w&rj-tok=AAABf8h_6h0AY1KyLbAXucpb0g&rj-ttl=5
+
+#EXTINF:-1 tvg-id="Radio Primavera" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Primavera Arica
+https://streaming.prositel.cl:7009/stream
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
+https://publiradio.tk:9000/live
+#http://stream.zeno.fm/sg1ck0dchenvv
+
+#EXTINF:-1 tvg-id="Radio Primavera" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Primavera Arica
+https://sonic.streamingchilenos.com/8240/stream
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pukara Arica
+https://publiradio.tk:9000/live
+
+#EXTINF:-1 tvg-id="Radio Pukara" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio mradio.cl Arica
+https://sonic.portalfoxmix.club/8058/;
+
+#EXTINF:-1 tvg-id="Region XV Radio" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Region XV Radio Arica
+http://149.56.241.149:8134/;
+
+#EXTINF:-1 tvg-id="Radio Bio Bio" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Bio Bio
+https://unlimited11-cl.dps.live/biobiosantiago/aac/icecast.audio
+
+#EXTINF:-1 tvg-id="Radio ADN" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio ADN
+https://26513.live.streamtheworld.com/ADN_SC
+
+#EXTINF:-1 tvg-id="Radio EL Conquistador" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio EL Conquistador
+https://stream10.usastreams.com/9314/stream/;
+
+#EXTINF:-1 tvg-id="Radio Carolina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Carolina
+https://unlimited1-eu.dps.live/carolina/gotardis/audio/now/livestream1.m3u8
+
+#EXTINF:-1 tvg-id="RadioActiva" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RadioActiva
+https://26513.live.streamtheworld.com/ACTIVAAAC.aac?csegid=12000&dist=radioactiva_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=e448f3d2-b64b-4d30-e454-209f1d63b6a3
+
+#EXTINF:-1 tvg-id="Radio Corazon" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Corazon
+https://24253.live.streamtheworld.com/CORAZONAAC.aac
+
+#EXTINF:-1 tvg-id="RadioActiva" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RadioActiva
+https://26513.live.streamtheworld.com/ACTIVAAAC.aac?csegid=12000&dist=radioactiva_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=e448f3d2-b64b-4d30-e454-209f1d63b6a3
+
+#EXTINF:-1 tvg-id="FM Dos" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , FM Dos
+https://26293.live.streamtheworld.com/FMDOSAAC.aac?csegid=12000&dist=fmdos_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=d1677c77-b8fb-4953-e054-2dccecbb9b5a
+
+#EXTINF:-1 tvg-id="Radio Pudahuel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pudahuel
+https://24383.live.streamtheworld.com/PUDAHUELAAC.aac?csegid=12000&dist=pudahuel_cl-web-live_streaming_play&tdsdk=js-2.9&pname=TDSdk&pversion=2.9&banners=300x250&gdpr=0&burst-time=15&sbmid=26e77291-92aa-4af9-cc52-c07aeba534e3
+
+#EXTINF:-1 tvg-id="Radio Corazon" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Corazon
+https://24253.live.streamtheworld.com/CORAZONAAC.aac
+
+#EXTINF:-1 tvg-id="Radio Pudahuel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Pudahuel
+https://24253.live.streamtheworld.com/CORAZONAAC.aac
+
+
+#EXTINF:-1 tvg-id="Radio Corazon" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Corazon
+https://24253.live.streamtheworld.com/CORAZONAAC.aac
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , CNN CHILE
+https://unlimited11-cl.dps.live/cnnradio/aac/icecast.audio
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Carabineros de Chile
+https://sonic01.instainternet.com/8374/stream?_=0.31235030866665725
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Progreso cuba
+https://icecast.teveo.cu/XjfW7qWN
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Rebelde cuba
+https://icecast.teveo.cu/kHKL7tWd
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Campesina Cubana
+https://radiocampesinacubana.stream.laut.fm/radiocampesinacubana?t302=2024-04-24_22-00-51&uuid=820fcec0-102c-4d24-a1b4-3a250dc096d4
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , WBQN Borinquen Radio
+https://livestreamcdn.net:2000/stream/WBQNBorinquenRadio
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , La Voz De Mayaguez puerto rico
+https://vip.livecastnet.com:4343/lavozdemayaguez.mp3
+
+#EXTINF:-1 tvg-id="CNN CHILE" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Salseo Radio
+https://listen.radioking.com/radio/399811/stream/451903
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Luna de miel
+https://usa14.fastcast4u.com/proxy/radiolunademiel?mp=/1
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio DIABLO canal BDSM
+https://stream-148.zeno.fm/cgwpkxrkw98uv?zs=aIXWjOv7R2edFb8hi_IqzQ
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Lider Galicia
+http://server9.emitironline.com:8200/
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Lider Asturias
+http://server8.emitironline.com:18462/
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Lider Cantabria
+http://server10.emitironline.com:10855/
+
+#EXTINF:-1 tvg-id="Radio Luna de miel" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Lider Pais Vasco
+http://server9.emitironline.com:8200/
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Sayhueque Neuquén Argentina
+https://server.laradio.online/proxy/sayhueque887?mp=/stream
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Radio Rebelde Cuba
+https://icecast.teveo.cu/zrXXWK9F
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , COPE
+http://195.10.10.46/cope/net1.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RNE
+http://195.10.10.221/rtve/rne.mp3
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RNE5
+http://195.10.10.45/rtve/radio5.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , RE
+http://195.10.10.45/rtve/radioexterior.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Clásica
+http://radiolive-mp3-rtve.flumotion.com/rtve/radioclasica.mp3.m3u
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" , Euskadi
+http://hdstreamflash-lh.akamaihd.net/i/Radio_Euskadi_1@109208/master.m3u8
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,RACC1
+https://streaming.rac1.cat/;stream.nsv
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,RAC105
+https://streaming.rac105.cat/;stream.nsv
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,CADENASER
+http://19983.live.streamtheworld.com/CADENASER.mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,40PRINCIPALES
+http://19993.live.streamtheworld.com/LOS40.mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,KISS FM
+https://kissfm.kissfmradio.cires21.com/kissfm.mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,RADIOFLAIXBAC
+https://nodo02-cloud01.streaming-pro.com:8005/flaixbac.mp3
+
+   
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,CADENA 100|
+https://cadena100-cope-rrcast.flumotion.com/cope/cadena100-low.mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,ROCKFM
+http://rockfm.cope.stream.flumotion.com/cope/rockfm.mp3.m3u
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,ABSOLUTE CHILLOUT
+https://edge3.peta.live365.net/b05055_128mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,CATALUNYA RADIO
+https://shoutcast.ccma.cat/ccma/catalunyaradioHD.mp3
+
+   
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,CATALUNYA INFORMACIO
+https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,FLAIX FM
+https://flaixfm.streaming-pro.com:8003/flaixfm.aacp
+
+   #EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,SER
+https://20853.live.streamtheworld.com/CADENASERAAC.aac    
+
+#EXTINF:-1 tvg-id="Radio Sayhueque Neuquén Argentina" tvg-country="CL" tvg-language="Spanish" tvg-logo="https://pbs.twimg.com/profile_images/1409510362744037383/scyjUQkn_200x200.jpg" group-title="General" ,BESAME MEDELLIN
+https://14543.live.streamtheworld.com/BESAME_MEDELLINAAC.aac?csegid=2000&dist=besameco-web-tod-player&tdsdk=js-2.9&swm=false&pname=TDSdk&pversion=2.9&banners=none&burst-time=15&sbmid=ad0dbe3f-b081-476d-9f08-df36a18139ac
+
+########## RECOMENDACIONES DE RADIOS #################
+#https://onlineradiobox.com/South-America/?cs=cl.carabineros&played=1
