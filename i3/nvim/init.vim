@@ -202,7 +202,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 "AUTOCOMPLETADO"
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-""Plug 'matt/emmet-vim'
+Plug 'matt/emmet-vim'
 
 call plug#end()
 """"""""""""
