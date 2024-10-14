@@ -1,0 +1,70 @@
+Aquí te proporciono una codificación similar con todos los colores posibles, incluyendo la combinación de texto y fondo para cada color estándar y brillante.
+
+Codificación ANSI de colores (Texto y Fondo)
+Código de formato general:
+
+    ######php#######
+                    Copiar código
+
+\033[<formato opcional>;<código de color de texto>;<código de color de fondo>m
+
+    ####Colores estándar y brillantes (Texto y Fondo)####
+
+Color	Código Texto Normal	:  Código Texto Brillante :	Código Fondo Normal	 :   Código Fondo Brillante
+Negro	    30  	        :     90                  : 	40 	             :          100
+Rojo	    31	            :     91                  :	    41	             :          101
+Verde	    32	            :     92                  :    	42	             :          102
+Amarillo	33	            :     93                  : 	43               :      	103
+Azul	    34	            :     94	              :     44	             :          104
+Magenta	    35	            :     95	              :     45	             :          105
+Cian	    36	            :     96	              :     46	             :          106
+Blanco	    37	            :     97	              :     47	             :          107
+
+Ejemplos de uso
+Texto rojo normal sobre fondo negro:
+
+Copiar código
+\033[31;40mTexto en rojo con fondo negro\033[0m
+Texto verde brillante sobre fondo blanco:
+
+Copiar código
+\033[92;47mTexto en verde brillante con fondo blanco\033[0m
+Texto amarillo normal con fondo cian brillante:
+
+Copiar código
+\033[33;106mTexto en amarillo con fondo cian brillante\033[0m
+Texto azul brillante con fondo magenta brillante:
+
+Copiar código
+\033[94;105mTexto en azul brillante con fondo magenta brillante\033[0m
+
+Formatos adicionales:
+\033[0m: Restablece el estilo (termina el color).
+\033[1m: Negrita o brillo (algunos terminales lo manejan como color brillante).
+\033[4m: Subrayado.
+\033[7m: Inversión de colores (intercambia texto y fondo).
+
+Con estas combinaciones puedes generar cualquier combinación de texto y fondo posible en colores ANSI. ¡Espero que te sea útil!
+
+
+
+
+
+#Colours
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+HEADER    = '\033[96m'
+OKBLUE    = '\033[94m'
+OKCYAN    = '\033[95m'
+OKGREEN   = '\033[92m'
+WARNING   = '\033[93m'
+FAIL      = '\033[91m'
+ENDC      = '\033[0m'
+BOLD      = '\033[1m'
+UNDERLINE = '\033[4m'
