@@ -211,6 +211,20 @@ set statusline+=\ [Total_Lineas=%L]
 
 
 
+call plug#begin()
+
+"ADMINISTRADOR DE ARCHIVOS
+"NERDTREE
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
+
+call plug#end()
+
+
+
+
+
 """"""""""""""""""""""""
 "MAPEO GENEREAL
 """"""""""""""""""""""""
@@ -322,7 +336,9 @@ nnoremap <silent> <down> :resize -5<CR>
 """"""""""""""""""""""""""
 """"Configuración Explore""""
 "Abrir explorador a la derecha
-nmap <F3> :Vexplore!<CR>
+"nmap <F3> :Vexplore!<CR>
+nmap <F3> :NERDTreeToggle<CR>
+let g:NERDTreeWinPos = "right"
 "Cerrar explorador
 nmap <F4> :q<CR>
 "Sincronizar el directorio actual y el directorio que está mostrando Netrw. Esto ayuda con el error cuando se intenta mover archivos.
@@ -534,3 +550,11 @@ hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 """"""""""""""
 "FIN COLORES
 """"""""
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
