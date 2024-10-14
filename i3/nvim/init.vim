@@ -178,7 +178,7 @@ set statusline+=\ [Total_Lineas=%L]
 """""""""""""""""""""""""""
 
 "--------------------------------------Inicio Plugins
-"call plug#begin('.config/nvim/plugged')
+call plug#begin()
 
 "TEMAS
 "GRUVBOX
@@ -195,35 +195,19 @@ set statusline+=\ [Total_Lineas=%L]
 
 "ADMINISTRADOR DE ARCHIVOS
 "NERDTREE
-"Plug 'scrooloose/nerdtree'
-""Plug 'ryanoasis/vim-devicons'
-""Plug 'nvim-tree/nvim-web-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 
 "AUTOCOMPLETADO"
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 ""Plug 'matt/emmet-vim'
 
-""call plug#end()
+call plug#end()
 """"""""""""
 "FIN PUGINS
 """"""""""""
-
-
-
-call plug#begin()
-
-"ADMINISTRADOR DE ARCHIVOS
-"NERDTREE
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'nvim-tree/nvim-web-devicons'
-
-call plug#end()
-
-
-
-
 
 """"""""""""""""""""""""
 "MAPEO GENEREAL
