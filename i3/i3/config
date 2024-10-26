@@ -403,5 +403,5 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # instalar pdflatex para compilar pdf
     #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
 
-#sudo apt-get install duf / comando moderno para visualizar espacio en disco
+    #sudo apt-get install duf / comando moderno para visualizar espacio en disco / editar el alias de "ficheros" en .bashrc
 
