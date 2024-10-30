@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: #edf2f7;*/
+    background-image: url(../img/wallpaperWhatsapp.jpg);
+}
+
+button {
+    width: 100%;
+}
