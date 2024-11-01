@@ -1,0 +1,246 @@
+https://wiki.archlinux.org/title/Irssi_(Espa%C3%B1ol)
+HomePackagesForumsWikiGitLabSecurityAURDownload
+
+Main menu
+Search
+Create account
+Log in
+
+Personal tools
+
+Toggle the table of contents
+Irssi (Español)
+
+Page
+Discussion
+Read
+View source
+View history
+
+Tools
+Esta traducción de Irssi fue revisada el 2024-06-02. Si existen cambios puede actualizarla o avisar al equipo de traducción.
+Artículos relacionados
+
+IRC channels (Español)
+IRC (Español)
+WeeChat
+HexChat
+/irssi-otr
+irssi es un cliente IRC (Español) (Internet Relay Chat) modular basado en la biblioteca ncurses. También soporta los protocolos SILC e ICB mediante plugins.
+
+Instalación
+Instale el paquete irssi.
+
+Múltiples scripts están disponibles en el AUR con el nombre irssi-script así como en repositorio de scripts de Irssi.
+
+Uso
+Para una introducción detallada consulte la documentación oficial.
+
+Nota: Esta sección asume que tiene conocimiento acerca de los fundamentos de IRC y que ha usado otros clientes en el pasado
+Se recomienda ejecutar irssi desde un multiplexor de terminal como Tmux (Español) o GNU Screen. Estos permiten al usuario desconectarse y reconectarse fácilmente a una sesión, además scripts como nicklist.pl dependen de una ventana secundaria. Para iniciar irssi, ejecute
+
+$ irssi
+Consulte también irssi(1).
+
+Comandos
+Los comandos de irssi comienzan con una barra diagonal y no distinguen entre mayúsculas y minúsculas. El autocompletado está soportado. Puede encontrar información sobre ellos usando el comando /help, la cual también está disponible en línea.
+
+Comando	Descripción
+/help	Mostrar todos los comandos o describir un comando determinado.
+/network	Gestiona tus redes de IRC.
+/server	Gestiona tus servidores de IRC.
+/connect	Conectarse a un servidor o red.
+/disconnect	Cierra la conexión actual con un servidor.
+ALT+(1-0,q-p,etc)	Cambia la ventana activa. Ctrl+n pasa a la siguiente ventana, Ctrl+p a la ventana anterior.
+/window	Gestiona las ventanas de irssi.
+/layout	Guardar o eliminar la disposición de sus ventanas.
+/statusbar	Gestiona la barra de estado.
+/set	Ver o cambiar la configuración de irssi.
+/alias	Gestiona tus alias.
+Configuración
+Irssi instala su configuración de defecto en /etc/irssi.conf, si al invocar irssi no se encuentra un archivo de configuración entonces el archivo de defecto es copiado a ~/.irssi/config. La configuración de defecto incluye acceso a múltiples servidores, chatnets y canales. Puedes iniciar irssi con un archivo de configuración alterno usando la bandera --config.
+
+La orden /save guardará la configuración actual al archivo de configuración de irssi.
+La orden /save layout guardará la localización de las ventanas abiertas actualmente.
+Autenticación mediante SASL
+Irssi soporta autenticación mediante el framework SASL (Español) (Simple Authentication and Security Layer).
+
+Puede agregar una red (network) con SASL siguiendo estas órdenes:
+
+/SERVER ADD -ssl -ssl_verify -ssl_capath /etc/ssl/certs -network liberachat -port 6697 irc.libera.chat
+/NETWORK ADD -sasl_mechanism plain -sasl_username usuario -sasl_password contraseña liberachat
+Nota:
+Asegúrese de emplear mayúsculas y minúsculas correctamente para el nombre de la red.
+El primer comando se encarga de agregar un servidor con #Conexión mediante TLS.
+Sólo ejecute el segundo comando si la red ya existe.
+Si la contraseña contiene el carácter $ asegúrate de anteponer otro $ para que irssi logre asignarla correctamente.
+Reinicie irssi, conecte a la red y busque por el mensaje SASL authentication succeeded.
+
+Conectar automáticamente a #archlinux al iniciar
+Inicie irssi y escriba la siguiente orden:
+
+/server add -auto -network liberachat irc.libera.chat
+liberachat puede ser sustituido por cualquier palabra, por ejemplo la abreviación lc.
+
+Es importante asegurarse que la autenticación mediante SASL esté configurada correctamente. Es posible usar NickServ manualmente con autosendcmd en lugar SASL, sin embargo, esto causa una condición de carrera al unirse automáticamente a canales. Si se desea, también es posible autenticarse usando certificados SSL reemplazando el uso de contraseñas con NickServ.
+
+/channel add -auto #archlinux liberachat
+/channes add -auto #archlinux-offtopic liberachat
+Conexión mediante TLS
+Libera.Chat dispone de los puertos 6697, 7000 y 7070 para conexiones SSL/TLS (no 6667). Para conectarse a Libera.Chat mediante TLS es necesario configurar una nueva conexión. Inicie irssi y escriba la orden:
+
+/server add -auto -tls -tls_verify -network liberachat -port 6697 irc.libera.chat
+Guarde los cambios realizados con:
+
+/save
+Si todo resultó exitoso se ajustará a "Z" el mode set. Aparecerá un mensaje similar a: Mode change (+Zi) for user su-nick
+
+Certificados de cliente
+Redes como Libera.Chat y OFTC permiten autenticación mediante certificados SSL, la cual es una alternativa a la autenticación mediante contraseñas en texto plano. Consulte autenticando mediante CertFP (en Inglés) para conocer a fondo los detalles.
+
+Para crear un certificado válido durante 730 días que no requiera contraseña ejecute los siguientes comandos (cuando se solicite proveer detalles de Common Name o state puede colocar información cualquiera):
+
+$ openssl req -newkey rsa:4096 -days 730 -x509 -keyout irssi.key -out irssi.crt -nodes 
+$ cat irssi.crt irssi.key > ~/.irssi/irssi.pem
+$ chmod 600 ~/.irssi/irssi.pem
+$ rm irssi.crt irssi.key
+Seguido, procedemos a obtener el fingerprint del certificado:
+
+$ openssl x509 -sha512 -fingerprint -noout -in ~/.irssi/irssi.pem | sed -e 's/^.*=//;s/://g;y/ABCDEF/abcdef/'
+Esta orden hará que el fingerprint SHA512 sea mostrado en pantalla. El comando sed se encarga de dar un formato correcto al fingerprint al eliminar caracteres innecesarios.
+
+Copie la salida del comando anterior, pues ésta será empleada para realizar el registro del certificado en irssi.
+
+Una vez iniciado irssi desconecte de la red y agregue el certificado de cliente junto con las llaves correspondientes. Omita la opción -ssl_pass si el certificado de cliente fue creado sin una contraseña:
+
+/disconnect liberachat
+/server add -ssl_cert ~/.irssi/irssi.pem -ssl_pass contraseña_de_irssi.pem -network liberachat irc.libera.chat 6697
+Ahora conecte de nuevo a la red (evite usar la orden /reconnect) y registre su fingerprint:
+
+/connect liberachat
+/msg NickServ identify SU_CONTRASEÑA
+/msg NickServ cert add SU_FINGERPRINT
+Hasta este punto puede eliminar su contraseña del archivo de configuración (en caso de que haberse configurado de esta forma) y guardar la configuración actual con la orden:
+
+/save
+Registro automático
+/set autolog on
+/save
+Ocultar joins, parts y quits
+Con el fin de ignorar los mensajes automáticos mostrados cuando un usuario ingresa (joins), deja (leaves) y cierra su conexión (quits) a un canal podemos ingresar la siguiente orden, la cual evitará estos mensajes en todos los canales en los que hayamos ingresado:
+
+/ignore * joins parts quits
+Véase smartfilter para restringir mensajes join únicamente a usuarios activos.
+
+Desplazamiento con el ratón
+Para habilitar el desplazamiento con el ratón escriba la siguiente orden:
+
+/run scriptassist
+/script install mouse.pl
+Puede que sea necesario instalar perl-lwp-protocol-https para que los comandos anteriores funcionen correctamente.
+
+Para habilitar automáticamente este script cuando irssi inicia ejecute la orden:
+
+/script autorun mouse.pl
+Si existe un error, usted puede incluir manualmente scripts del directorio ~/.irssi/scripts o ~/.irssi/scripts/autorun con la siguiente orden:
+
+/script load mouse.pl
+Trucos y consejos
+Proxy HTTP
+Para ejecutar irssi detrás de un servidor proxy HTTP es necesario ejecutar las siguientes instrucciones:
+
+/SET use_proxy ON
+/SET proxy_address <Dirección IP del proxy>
+/SET proxy_port <Puerto del proxy>
+/SET -clear proxy_string
+/SET proxy_string_after conn %s %d
+/EVAL set proxy_string connect %s:%d HTTP/1.0\n\n
+Irssi alterará su archivo de configuración correspondiente; si el proxy no es necesario configure nuevamente use_proxy a OFF.
+
+Si el proxy requiere una contraseña ejecute la orden:
+
+/SET proxy_password <contraseña>
+En caso de que la contraseña ya no sea necesaria escriba:
+
+/SET -clear proxy_password
+Nota: Configurar SSL detrás de un proxy hará que la conexión falle si se utilizan estos ajustes
+Lista de usuarios con tmux
+El plugin nicklist agrega un panel que lista los nicks de los usuarios conectados al canal actual. Existen dos formas de usarlo:
+
+screen, el cual simplemente agrega la lista a la derecha de irssi, sin embargo toda la ventana se redibuja cada vez que irssi imprime una linea.
+fifo, como su nombre lo sugiere escribe la lista en un archivo fifo (first in first out), el cual puede leerse de forma continua con alguna orden como cat ~/.irssi/nicklistfifo.
+La lista de usuarios con fifo será más eficiente con con el comando:
+
+/NICKLIST FIFO
+Este archivo fifo se puede utilizar en un panel de tmux dividido verticalmente, con irssi en un panel izquierdo y la salida de la orden cat anterior en un panel pequeño a su derecha. Dado que el panel depende de la dimensión de la sesión tmux que lo crea, una sesión posterior con una diferente geometría necesita recrearlo (lo que también implica un cambio en las dimensiones de la ventana de irssi).
+
+Por ejemplo, el siguiente script primero comprueba si irssi está en ejecución, si no se encuentra se crea una nueva sesión de tmux, una ventana con el nombre irssi y posteriormente ejecuta la orden irssi, finalmente crea un panel derecho con la salida de la orden cat. Sin embargo, si irssi está en ejecución, simplemente se adjunta a la sesión y recrea el panel con cat.
+
+#!/bin/sh
+
+T3=$(pgrep -u "$USER" -x irssi)
+
+irssi_nickpane() {
+    tmux setw main-pane-width $(( $(tput cols) - 21));
+    tmux splitw -v "cat ~/.irssi/nicklistfifo";
+    tmux selectl main-vertical;
+    tmux selectw -t irssi;
+    tmux selectp -t 0;
+}
+
+irssi_repair() {
+    tmux selectw -t irssi
+    [ "$(tmux lsp | wc -l)" -gt 1 ] && tmux killp -a -t 0
+    irssi_nickpane
+}
+
+if [ -z "$T3" ]; then
+    tmux new-session -d -s main;
+    tmux new-window -t main -n irssi irssi;
+    irssi_nickpane ;
+fi
+    tmux attach-session -d -t main;
+    irssi_repair ;
+exit 0
+Sugerencia: En lugar de realizar los pasos anteriores use este plugin, el cual se encarga de crear un panel con la lista de usuarios dentro de tmux.
+Hostname virtual (vhost)
+Un vhost puede ser usado para cambiar el hostname cuando irssi está conectado a un servidor de IRC, el hostname es visto cuando se une/parte o algun otro usuario ejecuta la orden whois. Asignar un vhost se hace con frecuencia en los servidores que tienen una dirección IP estática. Sin un hostname virtual la salida de la orden whois se vería así:
+
+nick@123.456.78.90.isp.com
+Por otra parte, el resultado de un vhost configurado sería el siguiente, siempre y cuando se tenga el dominio ejemplo.com disponible:
+
+nick@ejemplo.com
+Tome en cuenta que no todos los servidores de IRC soportan el uso de vhost. Esto puede ser configurado individualmente entre los servidores y no la red, así que si estás experimentando problemas con un servidor prueba con otro en la misma red.
+
+Preconfiguraciones necesarias
+Irssi soporta el uso de un hostname virtual siempre y cuando se hayan establecido las configuraciones requeridas. Esto incluye que su host soporte Búsqueda DNS inversa (rDNS) usando Registro de puntero (PTR). Además, debe añadir la línea apropiada a su archivo /etc/hosts.
+
+Para ver si esto funciona, pruebe con la utilidad de búsqueda de DNS host(1) incluida en bind de la siguiente forma (donde ip es una dirección IPv4 normal):
+
+$ host ip
+Si esta orden devuelve algo similar a la siguiente linea entonces su rDNS está trabajando.
+
+ip.in-addr.arpa nombre de dominio puntero ejemplo.com
+Habilitar el vhost
+Hay un par de maneras de conectarse a un servidor con un hostname determinado. Una de ellas es utilizar el comando server con un argumento -host como el siguiente:
+
+/SERVER -host ejemplo.com irc.libera.chat
+Otra forma sería establecer el hostname (vhost) con la orden set que guardará tu hostname en ~/.irssi/config:
+
+/SET hostname ejemplo.com
+/SAVE
+/SERVER irc.libera.chat
+Véase también
+Sitio oficial de Irssi (en inglés)
+Repositorio oficial de scripts de Irssi (en inglés)
+Configurando Irssi (en inglés)
+Guía para usar eficientemente Irssi y Screen (en inglés) por Matt Sparks
+Notificaciones de IRC con dzen2 (en inglés) por Jason Ryan
+¿Qué significan /channel, /network, /server y /connect en Irssi? (en inglés) por Aaron Toponce
+Consejos para Irssi (en inglés) (Wayback Machine)
+Unidad de systemd para irssi (en inglés) (Gist en Github)
+Categories: Internet Relay Chat (Español)Console applications (Español)
+This page was last edited on 2 July 2024, at 15:43.
+Content is available under GNU Free Documentation License 1.3 or later unless otherwise noted.
+Privacy policyAbout ArchWikiDisclaimersCode of conductTerms of service
+  
