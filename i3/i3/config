@@ -394,3 +394,5 @@ font pango:Mononoki Nerd Font 10
     #Screenshot / Captura de pantalla
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
+
+    #instalar desde https://www.metasploit.com/ para acceder a camara y microfono de windows y android 
