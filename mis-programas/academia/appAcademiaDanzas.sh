@@ -74,14 +74,10 @@ sleep 2
 clear
 sleep 2
 tput civis
-
+touch $usuario.txt
 tput civis
 clear
 sleep 2
-
-
-
-
 
 ######### VARIABLES ############
 fecha=$(date "+%A %d de %B del %Y a las %T")
@@ -99,36 +95,75 @@ echo -e "\n ${redColour}########################################################
 saludar
 #########
 echo
-echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******"
-echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
+echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******" > $usuario.txt
+echo -e "\n ${blueColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
 sleep 6
 clear
 
+################## cual es tu edad ##########################
+    clear
+echo
+echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
+tput cnorm
+sleep 2
+clear
 
+read -p "Introduce tu año de nacimiento: " ano
+read -p "Introduce tu mes de nacimiento: " mes
+read -p "Introduce tu día de nacimiento: " dia
 
+edad=$(($(date +%Y) - ano))
 
+if [ $(date +%m) -lt $mes ]; then
+    edad=$(($edad-1))
+elif [ $(date +%m) -eq $mes -a $(date +%d) -lt $dia ]; then
+    edad=$(($edad-1))
+fi
+
+############ fin cual es tu edad #####################
+
+clear
+echo
+echo -e "\n\tTienes $edad años $usuario" >> $usuario.txt
+
+############ categoriaPorEdad ######################
 echo
 # Declaración de variables
-edad=0
-
-# Mensaje de bienvenida
-read -p "Ingrese la edad del alumno: " edad
+#edad=0
 
 # Verificación de la edad y horarios
 if [ $edad -ge 6 ] && [ $edad -le 10 ]; then
-    echo "La categoria es 'Menores A'"
+    echo "Perteneces a categoria 'Menores A'" >> $usuario.txt
 elif [ $edad -ge 11 ] && [ $edad -le 17 ]; then
-    echo "La categoria es 'Menores B'"
+    echo "Perteneces a categoria 'Menores Juveniles'" >> $usuario.txt
 elif [ $edad -ge 18 ] && [ $edad -le 30 ]; then
-    echo "La categoria es 'Juveniles'"
-elif [ $edad -ge 31 ] && [ $edad -le 50 ]; then
-    echo "La categoria es 'Adultos'"
+    echo "Perteneces a categoria 'Mayores Juveniles'" >> $usuario.txt
+elif [ $edad -ge 30 ] && [ $edad -le 50 ]; then
+    echo "Perteneces a categoria 'Adultos'" >> $usuario.txt
 elif [ $edad -ge 51 ]; then
-    echo "La categoria es 'Mayores'"
+    echo "Perteneces a categoria 'Master'" >> $usuario.txt
 else
-    echo "Ingresó una edad que no corresponde"
+    echo "Ingresaste una edad que no corresponde"
+    exit 1
 fi
+########## fin categoria por edad #######################
 
+echo
 
+############ Horarios#############
+if [ $edad -ge 6 ] && [ $edad -le 10 ]; then
+    echo "El horario es Lunes y Miércoles de 16:00 a 17:00" >> $usuario.txt
+elif [ $edad -ge 11 ] && [ $edad -le 13 ]; then
+    echo "El horario es Martes y Jueves de 16:30 a 17:30" >> $usuario.txt
+elif [ $edad -ge 14 ] && [ $edad -le 17 ]; then
+    echo "El horario es Miercoles y Viernes de 17:00 a 19:00" >> $usuario.txt
+elif [ $edad -ge 18 ] && [ $edad -le 29 ]; then
+    echo "El horario es Martes y Jueves de 17:30 a 19:00" >> $usuario.txt
+elif [ $edad -ge 30 ] && [ $edad -le 50 ]; then
+    echo "El horario es Lunes y Miércoles de 17:00 a 18:30" >> $usuario.txt
+else
+    echo -e "El horario es Martes y Sabado de 17:00 a 19:00" >> $usuario.txt
+fi
+########### fin horarios ##########################
 

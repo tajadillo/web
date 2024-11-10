@@ -108,25 +108,31 @@ function help_panel(){
 
 #calculadora de promedio
 echo -e "${redColour}CALIFICACIONES DE LA ACADEMIA${endColour} \n\n${blueColour}ASIGNATURAS:${endColour}"
-echo -e "${greenColour}1) Coreografía \n2) Expresión Corporal \n3) Condición Física \n4) Compañerismo \n5) Disciplina${endColour}\n\n"
-read -p "Elige solo uno: " s1
+#echo -e "${greenColour}1) Coreografía \n2) Expresión Corporal \n3) Condición Física \n4) Compañerismo \n5) Disciplina${endColour}\n\n"
+echo -e "${greenColour}1) Matemáticas \n2) Historia y Geografia \n3) Ciencias Naturales \n4) Lenguaje y Comunicación \n5) Ingles${endColour}\n\n"
+read -p "Elige una de las asignaturas: " s1
 
 clear
 
 if [ $s1 == 1 ]; then
-    asignatura="Coreografía"
+    #asignatura="Coreografía"
+    asignatura="Matemáticas"
     echo -e "\n ${yellowColour}Tú elegiste${endColour} ${redColour}$asignatura${endColour}\n"
 elif [ $s1 == 2 ]; then
-    asignatura="Expresión Corporal"
+    #asignatura="Expresión Corporal"
+    asignatura="Historia y Geografia"
     echo -e "\n ${yellowColour}Tú elegiste${endColour} ${redColour}$asignatura${endColour}\n"
 elif [ $s1 == 3 ]; then
-    asignatura="Condición Física"
+    #asignatura="Condición Física"
+    asignatura="Ciencias Naturales"
     echo -e "\n ${yellowColour}Tú elegiste${endColour} ${redColour}$asignatura${endColour}\n"
 elif [ $s1 == 4 ]; then
-    asignatura="Compañerismo"
+    #asignatura="Compañerismo"
+    asignatura="Lenguaje y Comunicación"
     echo -e "\n ${yellowColour}Tú elegiste${endColour} ${redColour}$asignatura${endColour}\n"
 elif [ $s1 == 5 ]; then
-    asignatura="Disciplina"
+    #asignatura="Disciplina"
+    asignatura="Ingles"
     echo -e "\n ${yellowColour}Tú elegiste${endColour} ${redColour}$asignatura${endColour}\n"
 else
     sleep 2
@@ -142,17 +148,17 @@ read -p "La calificación del segundo bloque para $asignatura será: " s4
 read -p "La calificación del tercer bloque para $asignatura será: " t4
 read -p "La calificación del cuarto bloque para $asignatura será: " f4
 
-clear
+#clear
 
-echo -e "\n${redColour}CALIFICACIONES${endColour}\n"
+echo -e "\n${redColour}CALIFICACIONES${endColour}\n" >> $usuario.txt
 p1=$(( f4 + s4 ))
 let p1/=2
-echo -e "\n ${greenColour}Primer partial:${endColour} ${yellowColour}$p1${endColour}"
+echo -e "\n ${greenColour}Primer partial:${endColour} ${yellowColour}$p1${endColour}" >> $usuario.txt
 p2=$(( t4 + f4 ))
 let p2/=2
-echo -e "\n ${greenColour}Segundo partial:${endColour} ${yellowColour}$p2${endColour}"
+echo -e "\n ${greenColour}Segundo partial:${endColour} ${yellowColour}$p2${endColour}" >> $usuario.txt
 promedio=$(( p1 +p2 ))
 let promedio/=2
-echo -e "\n ${greenColour}Promedio del semestre en $asignatura:${endColour} ${yellowColour}$promedio${endColour}"
+echo -e "\n ${greenColour}Promedio del semestre en $asignatura:${endColour} ${yellowColour}$promedio${endColour}" >> $usuario.txt
 #fin calculadora
 tput cnorm

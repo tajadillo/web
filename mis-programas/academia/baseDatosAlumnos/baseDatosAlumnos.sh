@@ -74,14 +74,10 @@ sleep 2
 clear
 sleep 2
 tput civis
-
+#touch $usuario.txt
 tput civis
 clear
 sleep 2
-
-
-
-
 
 ######### VARIABLES ############
 fecha=$(date "+%A %d de %B del %Y a las %T")
@@ -99,36 +95,35 @@ echo -e "\n ${redColour}########################################################
 saludar
 #########
 echo
-echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******"
-echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
+echo -e "${redColour}******${endColour} ${greenColour}BIENVENIDO A LA ACADEMIA MIEL Y CANELA${endColour} ${redColour}******${endColour}"
+echo -e "\n${blueColour}Ingresaras a los nuevos alumnos para poder verlos despues en un documento de texto${endColour}"
+echo -e "\n ${greenColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
 sleep 6
 clear
 
+tput cnorm
 
+    echo
+    read -p "¿Cual es el nombre de quien estudia? " nombreAlumno
 
+function ingresarDatos(){
+    echo
+    read -p "Ingresa la edad de $nombreAlumno " edadAlumno
+    echo
+    read -p "Ingresa su correo electronico " mailAlumno
+    echo
+    read -p "¿Cual es el Whatsapp de $nombreAlumno? " whatsappAlumno
+}
 
-echo
-# Declaración de variables
-edad=0
+function creador(){
+    echo -e "\n\t$fecha\n\n\t****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ****** \n\t\t\t ****** Estos datos fueron agregados por ''$usuario'' ******\n" >> $nombreAlumno.txt
+}
 
-# Mensaje de bienvenida
-read -p "Ingrese la edad del alumno: " edad
+creador
 
-# Verificación de la edad y horarios
-if [ $edad -ge 6 ] && [ $edad -le 10 ]; then
-    echo "La categoria es 'Menores A'"
-elif [ $edad -ge 11 ] && [ $edad -le 17 ]; then
-    echo "La categoria es 'Menores B'"
-elif [ $edad -ge 18 ] && [ $edad -le 30 ]; then
-    echo "La categoria es 'Juveniles'"
-elif [ $edad -ge 31 ] && [ $edad -le 50 ]; then
-    echo "La categoria es 'Adultos'"
-elif [ $edad -ge 51 ]; then
-    echo "La categoria es 'Mayores'"
-else
-    echo "Ingresó una edad que no corresponde"
-fi
+ingresarDatos
+touch $nombreAlumno.txt
+echo -e "\n Nombre: $nombreAlumno \n Edad: $edadAlumno \n Correo Electronico: $mailAlumno \n Whatsapp: $whatsappAlumno" >> $nombreAlumno.txt
 
-
-
+echo -e "\n\n\t\t${blueColour}Los datos fueron ingresados en${endColour} ${greenColour}$nombreAlumno${endColour} ${yellowColour}.txt${endColour}\n\n"

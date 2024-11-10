@@ -19,8 +19,6 @@
 #junto con este programa.  En caso contrario, consulte <http://www.gnu.org/licenses/>.
 ########################################################################################
 
-
-
 #Colours
 greenColour="\e[0;32m\033[1m"
 endColour="\033[0m\e[0m"
@@ -42,6 +40,7 @@ clear
 # Verificar si el directorio existe y contiene archivos o carpetas
 if [ -d "$ruta" ] && [ "$(ls -A "$ruta")" ]; then
     clear
+    echo -e "\n\n ${greenColour}Esto se pudo encontrar en la ruta seleccionada:endColour}"
     # Listar primero las carpetas
     echo -e "\n\n\n ${redColour}Carpetas:${endColour}"
     for archivo in "$ruta"/*

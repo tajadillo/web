@@ -96,13 +96,11 @@ echo -e "\n ${redColour}########################################################
 ###############################
 saludar
 #########
-echo
 
 echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
-sleep 15
+sleep 6
 clear
-echo
 echo -e "\n ${blueColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
 tput cnorm
 sleep 2
@@ -120,7 +118,7 @@ elif [ $(date +%m) -eq $mes -a $(date +%d) -lt $dia ]; then
     edad=$(($edad-1))
 fi
 
-echo -e "Tienes $edad anos "
+echo -e "\n${greenColour}Tienes${endColour} ${yellowColour}$edad${endColour} ${greenColour}años${endColour} ${redColour}$usuario${endColour}"
 
 
 #                             _   _

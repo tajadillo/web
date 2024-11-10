@@ -60,6 +60,9 @@ function banner(){
     sleep 0.15 && echo -e "\t${redColour}          \|                              ${endColour}"
     echo
     echo
+    echo -e "\n${greenColour}GEOLOCALIZADOR IP${endColour}"
+    echo -e "\n\t${yellowColour}¡¡¡${endColour}${greenColour}AVERIGUA DONDE ESTAS${endColour}${yellowColour}!!!${endColour}\n"
+    sleep 6
     tput civis
 }
 
@@ -81,7 +84,7 @@ function tracker(){
     sleep 2
     clear
 
-    echo -e "\n ${purpleColour}Los datos de la IP${endColour} ${turquoiseColour}'$ip${endColour}' ${purpleColour}son:"
+    echo -e "\n\n\n ${purpleColour}Los datos de la IP${endColour} ${turquoiseColour}'$ip${endColour}' ${purpleColour}son:"
     echo -e "\n ${yellowColour}$HOSTNAME${endColour}"
     echo -e "\n ${greenColour}$CITY${endColour}"
     echo -e "\n ${blueColour}$REGION${endColour}"
@@ -102,3 +105,4 @@ echo
 
 tracker
 tput cnorm
+rm /media/tajadillo/TAJADILLO/web/mis-programas/computacion/prometeo/ipGeo/ipGeo.log

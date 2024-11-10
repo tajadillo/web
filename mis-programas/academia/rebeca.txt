@@ -1,0 +1,36 @@
+
+[0;31m[1mCALIFICACIONES[0m[0m
+
+
+ [0;32m[1mPrimer partial:[0m[0m [0;33m[1m0[0m[0m
+
+ [0;32m[1mSegundo partial:[0m[0m [0;33m[1m0[0m[0m
+
+ [0;32m[1mPromedio del semestre en Matemáticas:[0m[0m [0;33m[1m0[0m[0m
+
+[0;31m[1mCALIFICACIONES[0m[0m
+
+
+ [0;32m[1mPrimer partial:[0m[0m [0;33m[1m1[0m[0m
+
+ [0;32m[1mSegundo partial:[0m[0m [0;33m[1m0[0m[0m
+
+ [0;32m[1mPromedio del semestre en Matemáticas:[0m[0m [0;33m[1m0[0m[0m
+
+[0;31m[1mCALIFICACIONES[0m[0m
+
+
+ [0;32m[1mPrimer partial:[0m[0m [0;33m[1m1[0m[0m
+
+ [0;32m[1mSegundo partial:[0m[0m [0;33m[1m0[0m[0m
+
+ [0;32m[1mPromedio del semestre en Matemáticas:[0m[0m [0;33m[1m0[0m[0m
+
+[0;31m[1mCALIFICACIONES[0m[0m
+
+
+ [0;32m[1mPrimer partial:[0m[0m [0;33m[1m5[0m[0m
+
+ [0;32m[1mSegundo partial:[0m[0m [0;33m[1m7[0m[0m
+
+ [0;32m[1mPromedio del semestre en Matemáticas:[0m[0m [0;33m[1m6[0m[0m

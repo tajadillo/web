@@ -1,0 +1,11 @@
+Receta para: picarones_limeños
+--------------------------------------
+Ingrediente: camote morado, Costo por kilo: 1200, Cantidad: .50 kg
+Ingrediente: zapallo dulce, Costo por kilo: 1300, Cantidad: .50 kg
+Ingrediente: harina, Costo por kilo: 700, Cantidad: 1 kg
+Ingredientes y costos:
+zapallo dulce: Costo total = 650.00
+harina: Costo total = 700
+camote morado: Costo total = 600.00
+Precio de venta al público por plato: 325.00
+--------------------------------------
