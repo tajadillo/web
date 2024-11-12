@@ -405,3 +405,4 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     #sudo apt-get install duf / comando moderno para visualizar espacio en disco / editar el alias de "ficheros" en .bashrc
 
+    #sudo apt-get install translate-shell para instalar traductor desde la terminal y para ver lista de idiomas disponibles escribir el comando "trans -list-all"
