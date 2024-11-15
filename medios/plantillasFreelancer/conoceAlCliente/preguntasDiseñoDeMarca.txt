@@ -1,0 +1,19 @@
+# Preguntas Diseño de Marca
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Proyecto de Branding**:
+    - Naturaleza y valores de la empresa.
+    - Objetivos y visión del proyecto de marca.
+    - Público objetivo de la marca.
+    - Competidores y diferenciadores clave.
+3. **Preferencias de Diseño**:
+    - Estilos visuales preferidos.
+    - Paleta de colores y tipografías de interés.
+    - Ejemplos de marcas cuyo diseño admira.
+4. **Competencia y mercado**
+    - ¿Quienes son los principales competidores?
+    - ¿Qué otras marcas que no compiten directamente existen en el rubro?

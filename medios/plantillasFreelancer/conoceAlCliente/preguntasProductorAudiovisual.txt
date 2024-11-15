@@ -1,0 +1,19 @@
+# Preguntas Productor Audiovisual
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Proyecto Audiovisual**:
+    - Tipo de proyecto (comercial, documental, video corporativo, etc.).
+    - Objetivos y mensaje clave del video.
+    - Audiencia objetivo.
+3. **Elementos Creativos y Técnicos**:
+    - Estilo visual y tono.
+    - Música y elementos gráficos.
+    - Requerimientos específicos de filmación y edición.
+4. **Logística y Producción**:
+    - Fechas clave (filmación, edición, entrega final).
+    - Ubicaciones de rodaje.
+    - Necesidades de talento y equipo.

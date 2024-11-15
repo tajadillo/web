@@ -1,0 +1,18 @@
+# Preguntas Recruiters
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Reclutamiento**:
+    - Descripción de los puestos a cubrir.
+    - Habilidades y calificaciones requeridas.
+    - Industria o sector específico.
+3. **Proceso y Políticas de Contratación**:
+    - Proceso de entrevista y selección deseado.
+    - Políticas de contratación y diversidad.
+    - Plazos para la contratación.
+4. **Cultura y Ambiente Laboral**:
+    - Cultura empresarial y valores.
+    - Expectativas del ambiente laboral y dinámica de equipo.

@@ -1,0 +1,20 @@
+# Preguntas Back.end
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Proyecto de Desarrollo Back-End**:
+    - Descripción general del proyecto (APIs, bases de datos, servidores, etc.).
+    - Objetivos específicos y funcionalidades requeridas.
+    - Integraciones con otros sistemas o servicios.
+3. **Tecnologías y Herramientas**:
+    - Lenguajes de programación preferidos (Python, Java, Node.js, etc.).
+    - Requerimientos de bases de datos y servidores.
+4. **Seguridad y Rendimiento**:
+    - Preocupaciones específicas de seguridad.
+    - Expectativas de rendimiento y escalabilidad.
+5. **Colaboración y Procesos**:
+    - Expectativas de comunicación y actualizaciones.
+    - Procesos de prueba y despliegue.

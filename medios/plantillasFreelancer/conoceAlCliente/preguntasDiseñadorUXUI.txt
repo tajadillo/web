@@ -1,0 +1,47 @@
+# Preguntas Diseñador UX/UI
+
+<aside>
+💡 Este material fue aportado por **Comunidad UX/UI**. Puedes sumarte a su [comunidad](https://discord.gg/aB4S7aTa8U) o seguirlos en [Instagram](https://www.instagram.com/comunidaduxui/) y en [LinkedIn](https://www.linkedin.com/company/comunidaduxui/) para estar al tanto de todas las novedades.
+
+</aside>
+
+### Información básica del cliente
+
+- Nombre y apellido
+- Empresa/organización
+- Cargo o función
+- Información de contacto (email, teléfono)
+
+### Información del proyecto:
+
+- ¿Cuál es la descripción general y los objetivos del proyecto?
+- ¿Cuál es la fecha de finalización estimada?
+- ¿Qué tipo de proyecto es? ¿Puede proporcionar más detalles sobre su naturaleza y propósito?
+
+### Equipo y colaboración:
+
+- ¿Quiénes son los miembros del equipo con los que estaré en contacto?
+- ¿Hay desarrolladores con los que pueda colaborar directamente?
+- ¿Cómo es el flujo de comunicación con el equipo?
+
+### Materiales y referencias:
+
+- ¿Qué tipo de información y materiales proporcionarán para el proyecto (análisis,
+ideas, bocetos, briefs)?
+- ¿Hay alguna guía de estilo o branding existente que deba seguir (colores,
+tipografías, etc.)?
+
+### Uso de los resultados:
+
+- Una vez finalizado, ¿puedo incluir el proyecto en mi portafolio?
+
+### Audiencia y propósito:
+
+- ¿A qué público está dirigida la aplicación o el producto?
+- ¿Cuál es el fin principal de la aplicación (información, venta, comercial, etc.)?
+
+### Preferencias de diseño:
+
+- ¿Tienen preferencias específicas en cuanto al diseño y la experiencia de usuario?
+- ¿Hay alguna tecnología o herramienta específica que deba utilizar o considerar?
+- ¿Existen requisitos de accesibilidad o responsabilidad que deba cumplir el diseño?

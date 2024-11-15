@@ -1,0 +1,19 @@
+# Preguntas Asistente Virtual
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Naturaleza del Soporte Requerido**:
+    - Descripción general de las tareas (gestión de emails, programación de reuniones, etc.).
+    - Especificaciones de tareas particulares y habilidades requeridas (manejo de software específico, conocimientos en determinada área, etc.).
+3. **Horarios y Disponibilidad**:
+    - Horas estimadas por semana.
+    - Horarios preferidos para la comunicación o realización de tareas.
+4. **Expectativas y Objetivos**:
+    - Objetivos clave del rol del asistente virtual.
+    - Indicadores de éxito o desempeño esperado.
+5. **Herramientas y Recursos**:
+    - Herramientas o plataformas a utilizar (CRM, herramientas de gestión de proyectos, etc.).
+    - Acceso a recursos o información necesaria para realizar las tareas.

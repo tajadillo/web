@@ -1,0 +1,18 @@
+# Preguntas Básicas
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa (si aplica).
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Proyecto**:
+    - Descripción general del proyecto.
+    - Objetivos específicos.
+    - Plazos estimados.
+    - Presupuesto disponible.
+3. **Expectativas del Cliente**:
+    - Expectativas específicas del trabajo a realizar.
+    - Criterios de éxito del proyecto.
+4. **Información Adicional**:
+    - Cualquier requerimiento o preferencia especial.
+    - Preguntas o preocupaciones que el cliente pueda tener.

@@ -1,0 +1,21 @@
+# Preguntas Front.end
+
+1. **Información Básica del Cliente**:
+    - Nombre y apellido.
+    - Empresa/organización.
+    - Cargo o función.
+    - Información de contacto (email, teléfono).
+2. **Detalles del Proyecto de Desarrollo Web**:
+    - Descripción general del proyecto (sitio web, aplicación web, etc.).
+    - Objetivos específicos del sitio web o aplicación.
+    - Audiencia objetivo y comportamiento de usuario esperado.
+    - Plazos estimados y fechas de entrega.
+3. **Tecnologías y Herramientas**:
+    - Preferencias o requisitos de tecnologías específicas (React, Angular, etc.).
+    - Necesidades de integración con sistemas existentes o APIs.
+4. **Diseño y Estilo Visual**:
+    - Preferencias de diseño y estilo visual.
+    - Ejemplos de sitios web o aplicaciones que le gusten.
+5. **Funcionalidades Específicas**:
+    - Funcionalidades específicas requeridas (animaciones, formularios, etc.).
+    - Requerimientos de responsividad y compatibilidad con diferentes dispositivos.
