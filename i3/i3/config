@@ -396,6 +396,8 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Screenshot / Captura de pantalla
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
+    #También se tiene q instalar kazam para la captura de imagen y video
+    # sudo apt-get install kazam
 
 
 
@@ -407,5 +409,8 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     #sudo apt-get install translate-shell para instalar traductor desde la terminal y para ver lista de idiomas disponibles escribir el comando "trans -list-all"
 
+    #sudo apt-get install audacious
     # instalar reproductor de audio "audacious" con apariencia de "winamp" https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html
+
+    
     # https://salsa-son-timba.blogspot.com
