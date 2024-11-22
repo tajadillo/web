@@ -412,6 +412,9 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #sudo apt-get install audacious
     # instalar reproductor de audio "audacious" con apariencia de "winamp" https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html
 
+    #editor Editor de texto de partituras LilyPond para KDE4
+    #sudo apt-get install frescobaldi 
+
     
     # https://salsa-son-timba.blogspot.com
     # juego de solitario para linux 'sudo apt-get install aisleriot'
