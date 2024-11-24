@@ -86,7 +86,7 @@ echo -e "                 "
 function info () {
 echo -e " 							"
 echo -e " 							"
-echo -e " ${negroColour}Máquina: $(hostname), Usuario: $(whoami)"
+#echo -e " ${negroColour}Máquina: $(hostname), Usuario: $(whoami)"
     #printf "$GREY DATE: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
 echo -e "$GREY EMAIL: richard.tajadillo@gmail.com"
 echo -e "$GREY YOUTUBE: richard tajadillo"
