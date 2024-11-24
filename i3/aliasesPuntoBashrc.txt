@@ -1,0 +1,189 @@
+
+#aliases del youtuber tuxer76
+
+
+
+
+#Aliases
+
+#redirection
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+alias ..="cd .. && ls -l"
+alias ...="cd ../.. && ls -l"
+alias ....="cd ../../.. && ls -l"
+alias .....="cd ../../../.. && ls -l"
+alias ......="cd ../../../../.. && ls -l"
+alias .......="cd ../../../../../.. && ls -l"
+
+#Common Commands
+alias d="pwd"
+alias cm="sudo chmod"
+alias cmm="sudo chmod 777"
+alias cmx="sudo chmod +x"
+alias co="sudo chown"
+alias ncm="ncmpcpp"
+alias v="$EDITOR"
+alias t="sudo touch"
+alias w="wget"
+alias u="uname"
+alias s="sudo"
+alias su="sudo -s"
+alias mkd="sudo mkdir -pv"
+alias rm="sudo rm -rf"
+alias SS="sudo systemctl"
+alias pff="sudo poweroff"
+alias xb="xrdb -merge ~/.Xresources"
+
+#Grep
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+#Readable output
+alias df="df -h"
+
+#unlocks
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
+
+#Show all unused memory
+alias free="free -mt"
+
+#use all cores
+alias uac="sh ~/.bin/main/000*"
+
+#wget
+wget="wget -c"
+
+#userlist
+alias userlist="cut -d: -f1 /etc/passwd"
+
+#Alias for software managerment
+alias pacman="sudo pacman --color=auto"
+
+#ps
+alias psa="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+#update grub
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#add new fonts
+alias update-fc="sudo fc-cache -fv"
+
+#switch between bash and zsh
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+#hardware info
+alias hw="hwinfo --short"
+
+#skip integrity check with yay
+yayskip="yay -S --mflags --skipinteg"
+
+#microcode check
+alias microcode="grep . /sys/devices/system/cpu/vulnerabilities/*"
+
+#ripgrep
+alias rg="rg --sort path"
+
+#journalctl
+alias jctl="journalctl -p 3 -xb"
+
+#get the fastest mirrors 
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 30 --number 10 --sort score --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 30 --number 10 --sort age --verbose --save /etc/pacman.d/mirrorlist"
+#Experimental but best option
+alias mirrorx="sudo reflector --age 6 --latest 20 --fastest 20 --threades 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+alias mirrorxx="sudo reflector --age 6 --latest 20 --fastest 20 --threades 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
+
+#Pacman And AUR
+alias sp="sudo pacman -S"
+alias sy="sudo pacman -Sy"
+alias syu="sudo pacman -Syu"
+alias syy="sudo pacman -Syy"
+alias syyu="sudo pacman -Syyu"
+alias ss="sudo pacman -Ss"
+alias spr="sudo pacman -R"
+alias rs="sudo pacman -Rs"
+alias rsn="sudo pacman -Rsn"
+alias rdd="sudo pacman -Rdd"
+alias sc="sudo pacman -Scn"
+alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+alias U="sudo pacman -U"
+alias yts="yay -S"
+alias yup="yay -Syu --noconfirm"
+
+#Directories
+alias home="cd $HOME && ls -lah"
+alias desk="cd ~/Desktop && ls -l"
+alias doc="cd ~/Documents && ls -l"
+alias down="cd ~/Downloads && ls -l"
+alias tunes="cd ~/Music && ls -l"
+alias vid="cd ~/Videos && ls -l"
+
+# ~/.config directories
+alias conf="cd ~/.config && ls -l"
+
+# ~/.local directories
+alias loc="cd ~/.local/bin"
+alias scr="cd ~/.local/bin/scripts && ls -l" 
+alias de="cd ~/.local/bin/scripts/dmenu && ls -l" 
+alias deb="cd ~/.local/bin/scripts/dmenu/bash && ls -l" 
+alias debm="cd ~/.local/bin/scripts/dmenu/bash/menu && ls -l"
+
+#Programming
+alias pro="cd ~/programming && ls -l"
+alias propy="cd ~/programming/python && ls -l"
+
+#Dotfile scripts
+alias brc="vim ~/.bashrc" 
+alias bpr="vim ~/.bash_profile" 
+alias ne="vim ~/.config/neofetch/config.conf" 
+alias zrc="vim ~/.zshrc" 
+alias xre="vim ~/.Xresources" 
+alias news="vim ~/.config/newsboat/config" 
+alias spe="vim $HOME/.spectrwm.conf"
+alias dwmm="vim $HOME/.config/arco-dwm/config.def.h"
+alias xmd="vim $HOME/.xmonad/xmonad.hs"
+alias xmr="cd $HOME/.config/xmobar && ls -l"
+alias dwm-auto="vim $HOME/.config/arco-dwm/autostart.sh"
+alias dwm-sdk="vim $HOME/.config/arco-dwm/sxhkd/sxhkdrc"
+alias dwm-conf="cd $HOME/.config/arco-dwm/ && ls -l"
+#git
+alias gi="git init"
+alias gbr="git branch"
+alias gcheck="git checkout"
+alias gclone="git clone"
+alias gfk="git fork"
+alias gr="git remote"
+alias gra="git remote add" 
+alias grm="git remote rm"
+alias gpush="git push"
+alias gpushu="git push -u"
+alias gpull="git pull"
+alias gpullu="git pull -u"
+alias gstatus="git status"
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME/'
+
+#MISC
+alias yt="ytfzf -D"
+
+#Youtube-dl
+alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
