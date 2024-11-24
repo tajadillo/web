@@ -91,7 +91,7 @@ else
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
  #    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
 
- PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0)  $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
+ PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
 
 
 fi
@@ -187,7 +187,8 @@ alias vi=nvim
 alias bateria=acpi
 alias ifconfig=/sbin/ifconfig
 alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
-alias neofetch="neofetch --size none"
+#alias neofetch="neofetch --size none"
+alias neofetch="tajafetch"
 alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls='lsd -lah'
@@ -245,7 +246,7 @@ echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
 echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
 echo "                                                               "
 
-#neofetch
+neofetch
 
 #tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
 #~/geek_ephemeris/dayValidator.sh
