@@ -1,6 +1,7 @@
 
 #!/bin/bash
 #instalar en /usr/local/bin
+#quitarle la extención y el punto para dejarlos "tajafetch" unicamente
 
 #Colours
 greenColour="\e[0;32m\033[1m"
