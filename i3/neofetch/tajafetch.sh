@@ -107,6 +107,7 @@ printf "$GREY RAM: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | 
     printf "$GREY FREE: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemAvailable:' | awk '{print $2}'
     printf "$GREY USED: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'Active:' | awk '{print $2}'
 printf "$GREY WM: " && echo -e "$GDMSESSION"
+echo "$GREY TEMA GTK: $(grep 'gtk-theme-name' $config_file | awk -F'=' '{print $2}')"
 printf "$GREY SHELL: " && echo -e $SHELL
 echo "$GREY ICONOS:" $(gsettings get org.gnome.desktop.interface icon-theme)
 echo "$GREY CURSOR:" $(gsettings get org.gnome.desktop.interface cursor-theme)
