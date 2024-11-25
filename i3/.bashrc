@@ -192,8 +192,9 @@ alias neofetch="tajafetch"
 alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls='lsd -lah'
-#descargar é instalar con sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
-#alias cat='/bin/bat'
+#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
+alias cat='highlight -O ansi -n'
+# instalar sudo apt-get install highlight para complementar al comando 'cat'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
