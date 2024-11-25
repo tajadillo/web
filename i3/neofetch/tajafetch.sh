@@ -1,7 +1,4 @@
-
 #!/bin/bash
-#instalar en /usr/local/bin
-#quitarle la extención y el punto para dejarlos "tajafetch" unicamente
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -28,26 +25,26 @@ GREY='\033[1;90m'
 
     #function tux () {
 #echo -e	"							"
-#echo -e	"    $RED			  ##			"
-#echo -e "    $RED 			 ####			"
-#echo -e "    $RED		 	######			"
-#echo -e "    $RED		       ########			"
-#echo -e "    $RED		      ##########		"
-#echo -e "    $RED		     #####  #####		"
-#echo -e "    $RED		    #####    #####		"
-#echo -e "    $RED 		   ######    ######		"
-#echo -e "    $RED 		  ########  ########		"
-#echo -e "    $RED		 ####################		"
+#echo -e	"    $RED			 ##			"
+#echo -e "    $RED 			####			"
+#echo -e "    $RED			######			"
+#echo -e "    $RED		      ########			"
+#echo -e "    $RED		     ##########		"
+#echo -e "    $RED		    #####  #####		"
+#echo -e "    $RED		   #####    #####		"
+#echo -e "    $RED 		  ######    ######		"
+#echo -e "    $RED 		 ########  ########		"
+#echo -e "    $RED		####################		"
 #echo -e "    $RED		######################		"
-#echo -e "    $RED 	       #########      #########		"
-#echo -e "    $RED 	      ########          ########	"
-#echo -e "    $RED 	     #######              #######	"
-#echo -e "    $RED 	    ######	            ######	"
-#echo -e "    $RED	   #####      	              #####	"
-#echo -e "    $RED	  ####                          ####	"
-#echo -e "    $RED	 ###                              ###	"
-#echo -e "    $RED	##				    ##	"
-#echo -e "    $RED    #  				      #	"
+#echo -e "    $RED 	      #########      #########		"
+#echo -e "    $RED 	     ########          ########	"
+#echo -e "    $RED 	    #######              #######	"
+#echo -e "    $RED 	   ######	           ######	"
+#echo -e "    $RED	  #####      	             #####	"
+#echo -e "    $RED	 ####                          ####	"
+#echo -e "    $RED	###                              ###	"
+#echo -e "    $RED	##				   ##	"
+#echo -e "    $RED    #  				     #	"
     #}
 
 
@@ -74,6 +71,11 @@ echo -e "                 "
 echo -e "                 "
 echo -e "                 "
 echo -e "                 "
+echo -e "                 "
+echo -e "                 "
+echo -e "                 "
+echo -e "                 "
+echo -e "                 "
 }
 
 
@@ -87,11 +89,10 @@ echo -e "                 "
 function info () {
 echo -e " 							"
 echo -e " 							"
-#echo -e " ${negroColour}Máquina: $(hostname), Usuario: $(whoami)"
-    #printf "$GREY DATE: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
+    #echo -e " ${negroColour}Máquina: $(hostname), Usuario: $(whoami)"
+    printf "$GREY DATE: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
 echo -e "$GREY EMAIL: richard.tajadillo@gmail.com"
 echo -e "$GREY YOUTUBE: richard tajadillo"
-    #echo -e "$GREY FACEBOOK: shastenm"
 echo -e "$GREY INSTAGRAM: richard_alexander_tajadillo"
 echo -e "$GREY WEB-SITE: https://tajadillo.github.io/web/"
     #echo -e "$GREY IRC-freenode: #archgeek"
@@ -103,13 +104,18 @@ printf "$GREY CPU: " && lscpu | grep 'Model name' | awk '{print $3 " "$4}'
 printf "$GREY GPU: " && lspci | grep VGA | awk '{print $9}' | sed 's:^.\(.*\).$:\1:'
 printf "$GREY GPU: " && lspci | grep VGA | awk '{print $12 ',' $13 ',' $14}' | sed 's:^.\(.*\).$:\1:'
 printf "$GREY RAM: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemTotal:' | awk '{print $2}'
-    #printf "$GREY FREE: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemAvailable:' | awk '{print $2}'
-    #printf "$GREY USED: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'Active:' | awk '{print $2}'
+    printf "$GREY FREE: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemAvailable:' | awk '{print $2}'
+    printf "$GREY USED: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'Active:' | awk '{print $2}'
 printf "$GREY WM: " && echo -e "$GDMSESSION"
 printf "$GREY SHELL: " && echo -e $SHELL
+echo "$GREY ICONOS:" $(gsettings get org.gnome.desktop.interface icon-theme)
+echo "$GREY CURSOR:" $(gsettings get org.gnome.desktop.interface cursor-theme)
+    echo "$GREY SWAP:" $(free -h | grep Swap)
+echo "$GREY IP L ocal:" $(ip addr show | grep "inet " | awk '{print $2}')
+echo "$GREY Interfaz de red activa:" $(ip route | grep default | awk '{print $5}')
+    echo "$GREY Porcentaje de batería:" $(upower -i $(upower -e | grep BAT) | grep percentage)
+echo "$GREY Idioma del sistema:" $(echo $LANG)
 echo -e " 							"
-
-
 
 
 
@@ -121,5 +127,3 @@ echo -e " 							"
 }
 
 paste <( echo -e "$(tux)" ) <( echo -e "$(info)" )
-
-
