@@ -43,5 +43,6 @@ if [ $1 ]; then
 else
     clear
     echo -e "${redColour}Modo de uso:${endColour}\n ${greenColour}El comando para conocer cual es mi ip publica es${endColour} ${yellowColour}curl ifconfig.io${endColour}\n ${greenColour}Luego escribes el siguiente comando${endColour}\n  ${yellowColour}bash puertoScaner.sh${endColour} ${blueColour}[la dirección 'IP' conseguida]${endColour}"
+
 fi
 

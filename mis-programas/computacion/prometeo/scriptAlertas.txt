@@ -1,0 +1,74 @@
+Scripts de ejemplo para tipos de alerta definidos por el usuario
+Última actualización: 2021-03-17
+Los ejemplos siguientes muestran cómo crear scripts de tipos de alertas definidos por el usuario en Linux para manejar distintos escenarios de alertas.
+Generar una alerta si la utilización del sistema de archivos es alta
+El siguiente script de shell genera una alerta de aviso si cualquier sistema de archivos del servidor de bases de datos excede el 90 por ciento de uso y una alerta crítica si cualquier sistema de archivos del servidor de bases de datos excede el 95 por ciento de uso.
+#!/bin/sh
+
+# Percent usage thresholds that will flag a problem -- change as needed
+myCriticalLimit=95
+myWarningLimit=90
+
+cumulativeSeverity=0
+
+checkThresholdBreach()
+{
+    fsUsage=$1
+    limit=$2
+    severity=$3
+    percentValue=`echo ${fsUsage} | cut -d% -f1`
+    if [ ${percentValue} -ge ${limit} ]; then
+        if [ ${cumulativeSeverity}  -gt ${severity} ]; then
+            cumulativeSeverity=${severity}
+        fi
+        echo "Threshold  ${limit}% reached for ${fsUsage}. Severity: ${severity}"
+    fi
+}
+
+checkFileSystemUsage()
+{
+    capacityOutput=`df -kP | grep -vE '^Filesystem|tmpfs|cdrom|/proc' | awk '{ print $5 "," $1 }' `
+    for output in ${capacityOutput}
+    do
+        checkThresholdBreach ${output} ${myCriticalLimit} -2
+        checkThresholdBreach ${output} ${myWarningLimit} -1
+    done
+}
+
+checkFileSystemUsage
+echo cumulativeSeverity = ${cumulativeSeverity}
+exit $cumulativeSeverity
+
+Generar una alerta si la cantidad de espacio libre en memoria es baja
+El siguiente script de shell genera una alerta de aviso si la cantidad de espacio de memoria libre es inferior a 10 megabytes y una alerta crítica si el espacio de memoria libre es inferior a 5 megabytes.
+freemem=$(cat /proc/meminfo | grep SwapFree  | cut -d ":" -f 2 | awk '{print $1}')
+echo freemem is $freemem
+if [ $freemem -ge 2000000 ]; then
+  returnValue=0
+else
+  returnValue=-1
+fi
+exit $returnValue
+
+Generar una alerta para copia de seguridad de base de datos
+En este ejemplo, el script de SQL exclusivamente genera una alerta crítica si la última operación de copia de seguridad para una base de datos de producción se ha producido en una fecha y hora específica.
+SELECT CASE last_backup
+WHEN
+	(SELECT TIMESTAMP(CURRENT DATE - 7 DAYS, CURRENT TIME) FROM sysibm.sysdummy1)
+THEN
+	-2
+ELSE
+	0
+END AS returnvalue
+FROM sysibmadm.snapdb
+
+Generar una alerta para registros de diagnóstico
+En este ejemplo, el script de SQL exclusivamente genera una alerta de aviso si se registra el nivel de 'W' (Aviso) en los registros de diagnósticos generales de DB2, y un error crítico si el nivel registrado es 'E' (Error), 'C' (Crítico) o 'S' (Grave).
+SELECT CASE level
+  WHEN 'W' THEN -1
+  WHEN 'E' THEN -2
+  WHEN 'C' THEN -2
+  WHEN 'S' THEN -2
+  ELSE 0
+END AS RETURNVALUE
+FROM TABLE (PD_GET_DIAG_HIST('MAIN','E', '', CAST (NULL AS TIMESTAMP), CAST (NULL AS TIMESTAMP))) AS T

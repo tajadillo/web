@@ -1,0 +1,12 @@
+Ingredientes y costos:
+harina: Costo total = 175.00
+pimienta: Costo total = 0
+muslos de pollo: Costo total = 4000
+cebolla: Costo total = 250.00
+ajo: Costo total = 120.00
+aceite: Costo total = 51000
+vinagre: Costo total = 60000
+aji amarillo molido: Costo total = 700.00
+aji escabeche: Costo total = 350.00
+Precio de venta al público por plato: 38865.00
+--------------------------------------
