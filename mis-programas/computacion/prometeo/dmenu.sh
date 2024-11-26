@@ -15,6 +15,7 @@ select_file() {
   find "$folder" -type f \( \
     -iname "*.txt" -o \
     -iname "*.md" -o \
+    -iname "*.js" -o \
     -iname "*.log" -o \
     -iname "*.css" -o \
     -iname "*.conf" -o \
