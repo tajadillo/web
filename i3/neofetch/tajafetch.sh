@@ -54,6 +54,9 @@ GREY='\033[1;90m'
 function tux () {
 echo -e " 							"
 echo -e " 							"
+echo -e "                 "
+echo -e "                 "
+echo -e "                 "
 echo -e "${negroColour}       #####      ${endColour}"
 echo -e "${negroColour}      #######         ${endColour}"
 echo -e "${negroColour}      ##${blancoColour}O${endColour}${negroColour}#${endColour}${blancoColour}O${endColour}${negroColour}##         ${endColour}"
@@ -68,16 +71,15 @@ echo -e "${yellowColour}#######${endColour}${negroColour}#${endColour}${blancoCo
 echo -e "${yellowColour}  #####${endColour}${negroColour}#######${endColour}${yellowColour}#####    ${endColour}"
 echo -e "                 "
 echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -91,42 +93,35 @@ echo -e "                 "
 function info () {
 echo -e " 							"
 echo -e " 							"
-    #echo -e " ${negroColour}Máquina: $(hostname), Usuario: $(whoami)"
-    printf "$GREY DATE: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
+    #echo -e " ${greenColour}Máquina: $(hostname), Usuario: $(whoami)"
 echo -e " 							"
-echo -e "$GREY   EMAIL: richard.tajadillo@gmail.com"
-echo -e "$GREY   YOUTUBE: richard tajadillo"
-echo -e "$GREY   INSTAGRAM: richard_alexander_tajadillo"
-echo -e "$GREY   WEB-SITE: https://tajadillo.github.io/web/"
+echo -e "${greenColour}  ${endColour}  ${greenColour}EMAIL:${endColour} ${grayColour}richard.tajadillo@gmail.com${endColour}"
+echo -e "${greenColour}  ${endColour} ${greenColour}YOUTUBE:${endColour} ${grayColour}richard tajadillo${endColour}"
+echo -e "${greenColour}  ${endColour} ${greenColour}INSTAGRAM:${endColour} richard_alexander_tajadillo"
+echo -e "${greenColour}  ${endColour} ${greenColour}WEB-SITE:${endColour} https://tajadillo.github.io/web/"
     #echo -e "$GREY IRC-freenode: #archgeek"
-echo -e "${negroColour}   Sistema: $(lsb_release -d | cut -f2-)${endColour}"
-printf "$GREY   DISTRO: " && cat /proc/version | awk '{print $8 ',' $9 " "}' | sed 's/.//'
-printf "$GREY   KERNEL: " && uname -r
-echo -e "$GREY   PAQUETES: APT: $(dpkg --get-selections | wc -l), Snap: $(snap list | wc -l), Flatpak: $(flatpak list | wc -l)"
+echo -e "${greenColour}  ${endColour} ${greenColour}Sistema:${endColour} $(lsb_release -d | cut -f2-)${endColour}"
+printf "${greenColour}   ${endColour}${greenColour}DISTRO:${endColour} " && cat /proc/version | awk '{print $8 ',' $9 " "}' | sed 's/.//'
+printf "${greenColour}   ${endColour}${greenColour}KERNEL:${endColour} " && uname -r
+echo -e "${greenColour}   ${endColour}${greenColour}PAQUETES:${endColour} APT: $(dpkg --get-selections | wc -l), Snap: $(snap list | wc -l), Flatpak: $(flatpak list | wc -l)"
     #printf "$GREY CPU: " && lscpu | grep 'Model name' | awk '{print $3 " "$4}'
     #printf "$GREY GPU: " && lspci | grep VGA | awk '{print $9}' | sed 's:^.\(.*\).$:\1:'
     #printf "$GREY GPU: " && lspci | grep VGA | awk '{print $12 ',' $13 ',' $14}' | sed 's:^.\(.*\).$:\1:'
-printf "$GREY   RAM: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemTotal:' | awk '{print $2}'
+printf "${greenColour}   ${endColour}${greenColour}RAM:${endColour} " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemTotal:' | awk '{print $2}'
     #printf "$GREY FREE: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'MemAvailable:' | awk '{print $2}'
     #printf "$GREY USED: " && awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t | grep 'Active:' | awk '{print $2}'
-printf "$GREY   WM: " && echo -e "$GDMSESSION"
+printf "${greenColour}   ${endColour}${greenColour}WM:${endColour} " && echo -e "$GDMSESSION"
     #printf "$GREY SHELL: " && echo -e $SHELL
-echo -e "${negroColour}   TEMA GTK: $(cat .config/gtk-3.0/settings.ini | grep 'gtk-theme-name' $config_file | awk -F'=' '{print $2}')${endColour}"
-echo "$GREY   ICONOS:" $(gsettings get org.gnome.desktop.interface icon-theme)
-echo "$GREY   CURSOR:" $(gsettings get org.gnome.desktop.interface cursor-theme)
+    #echo -e "${yellowColour}   ${endColour}${greenColour}TEMA GTK:${endColour} $(cat .config/gtk-3.0/settings.ini | grep 'gtk-theme-name' $config_file | awk -F'=' '{print $2}')${endColour}"
+echo "${greenColour}   ${endColour}${greenColour}ICONOS:${endColour}" $(gsettings get org.gnome.desktop.interface icon-theme)
+echo "${greenColour}   ${endColour}${greenColour}CURSOR:${endColour}" $(gsettings get org.gnome.desktop.interface cursor-theme)
     #echo "$GREY SWAP:" $(free -h | grep Swap)
-echo "$GREY   IP Local:" $(ip addr show | grep "inet " | awk '{print $2}')
-echo "$GREY   Interfaz de red activa:" $(ip route | grep default | awk '{print $5}')
-    #echo "$GREY Porcentaje de batería:" $(upower -i $(upower -e | grep BAT) | grep percentage)
+echo "${greenColour}   ${endColour}${greenColour}IP Local:${endColour}" $(ip addr show | grep "inet " | awk '{print $2}')
+echo "${greenColour}   ${endColour}${greenColour}Red activa:${endColour}" $(ip route | grep default | awk '{print $5}')
+    #echo "$GREY   Porcentaje de batería:" $(upower -i $(upower -e | grep BAT) | grep percentage)
     #echo "$GREY Idioma del sistema:" $(echo $LANG)
 echo -e " 							"
-
-
-
-
-
-
-
+    printf " ${negroColour}FECHA: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
 
 }
 
