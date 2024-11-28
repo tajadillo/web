@@ -1,54 +1,45 @@
 #!/bin/bash
 
-# Instalar el archivo en /usr/local/bin y renombrarlo como "actualiceNotify"
 # Comando para actualizar la polyban
 # polybar-msg cmd restart
-
-# Colores
-COLOR_GREEN="#00FF00"  # Verde para el texto
-COLOR_RED="#FF0000"    # Rojo brillante para el texto
-COLOR_BG="#1E1E2E"     # Color de fondo (oscuro)
-COLOR_GRAY="#808080"   # Color de texto para la alerta
 
 
 # Archivo temporal para controlar notificaciones
 NOTIFY_FILE="/tmp/debian_updates_notified"
-ICON_UPDATE_AVAILABLE="/ruta/al/icono/actualizacion.png"  # Ruta al ícono cuando hay actualizaciones
-ICON_NO_UPDATES="/ruta/al/icono/sin_actualizaciones.png"  # Ruta al ícono cuando no hay actualizaciones
+
+# Colores para Polybar
+COLOR_GREEN="#00FF00"  # Verde para texto cuando no hay actualizaciones
+COLOR_RED="#FF0000"    # Rojo para texto cuando hay actualizaciones
+COLOR_BG="#1E1E2E"     # Fondo oscuro
+COLOR_GRAY="#808080"   # Texto gris para mensajes de sistema actualizado
+
+# Íconos (verifica rutas o usa texto como alternativa)
+ICON_UPDATE_AVAILABLE=""  # Ícono para actualizaciones
+ICON_NO_UPDATES=""        # Ícono cuando no hay actualizaciones
 
 # Comprobar actualizaciones
 UPDATES=$(apt list --upgradable 2>/dev/null | grep -c "upgradable")
 
 if [ "$UPDATES" -gt 0 ]; then
     # Hay actualizaciones disponibles
-    echo "%{F$COLOR_GRAY}%{B$COLOR_RED} $UPDATES actualizaciones disponibles%{F-}%{B-}"
+    echo "%{F$COLOR_BG}%{B$COLOR_RED}$ICON_UPDATE_AVAILABLE $UPDATES actualizaciones disponibles%{F-}%{B-}"
 
-    # Enviar notificación si no se ha enviado antes
+    # Enviar notificación de Dunst si no se ha enviado antes
     if [ ! -f "$NOTIFY_FILE" ]; then
-        notify-send -i "$ICON_UPDATE_AVAILABLE" "Actualizaciones disponibles" "Hay $UPDATES paquetes para actualizar"
+        # Notificación con Dunst
+        notify-send -u critical -i "$ICON_UPDATE_AVAILABLE" "Actualizaciones disponibles" "Hay $UPDATES paquetes para actualizar"
         touch "$NOTIFY_FILE"
     fi
 else
     # No hay actualizaciones
-    echo "%{F$COLOR_GRAY}%{B$COLOR_BG} Sistema actualizado%{F-}%{B-}"
+    echo "%{F$COLOR_GRAY}%{B$COLOR_BG}$ICON_NO_UPDATES Sistema actualizado%{F-}%{B-}"
 
     # Eliminar el archivo temporal si no hay actualizaciones
     [ -f "$NOTIFY_FILE" ] && rm "$NOTIFY_FILE"
+
+    # Enviar notificación de Dunst para sistema actualizado
+    if [ ! -f "$NOTIFY_FILE" ]; then
+        # Notificación con Dunst
+        notify-send -u low -i "$ICON_NO_UPDATES" "Sistema actualizado" "No hay actualizaciones pendientes."
+    fi
 fi
-
-
-
-
-
-# Alternativa numero dos al codigo
-# Comprobar actualizaciones
-#UPDATES=$(apt list --upgradable 2>/dev/null | grep -c "upgradable")
-
-#if [ "$UPDATES" -gt 0 ]; then
-    # Hay actualizaciones disponibles
-    #echo "%{F$COLOR_GRAY}%{B$COLOR_RED} $UPDATES actualizaciones disponibles%{F-}%{B-}"
-#else
-    # No hay actualizaciones
-    #echo "%{F$COLOR_GRAY}%{B$COLOR_BG} Sistema actualizado%{F-}%{B-}"
-#fi
-
