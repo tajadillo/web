@@ -22,17 +22,17 @@ UPDATES=$(apt list --upgradable 2>/dev/null | grep -c "upgradable")
 
 if [ "$UPDATES" -gt 0 ]; then
     # Hay actualizaciones disponibles
-    echo "%{F$COLOR_BG}%{B$COLOR_RED}$ICON_UPDATE_AVAILABLE $UPDATES actualizaciones disponibles%{F-}%{B-}"
+    echo "%{F$COLOR_BG}%{B$COLOR_RED} $ICON_UPDATE_AVAILABLE $UPDATES actualizaciones disponibles%{F-}%{B-}"
 
     # Enviar notificación de Dunst si no se ha enviado antes
     if [ ! -f "$NOTIFY_FILE" ]; then
         # Notificación con Dunst
-        notify-send -u critical -i "$ICON_UPDATE_AVAILABLE" "Actualizaciones disponibles" "Hay $UPDATES paquetes para actualizar"
+        notify-send -u critical -i " $ICON_UPDATE_AVAILABLE" "Actualizaciones disponibles" "Hay $UPDATES paquetes para actualizar"
         touch "$NOTIFY_FILE"
     fi
 else
     # No hay actualizaciones
-    echo "%{F$COLOR_GRAY}%{B$COLOR_BG}$ICON_NO_UPDATES Sistema actualizado%{F-}%{B-}"
+    echo "%{F$COLOR_GRAY}%{B$COLOR_BG} $ICON_NO_UPDATES Sistema actualizado%{F-}%{B-}"
 
     # Eliminar el archivo temporal si no hay actualizaciones
     [ -f "$NOTIFY_FILE" ] && rm "$NOTIFY_FILE"
@@ -40,6 +40,6 @@ else
     # Enviar notificación de Dunst para sistema actualizado
     if [ ! -f "$NOTIFY_FILE" ]; then
         # Notificación con Dunst
-        notify-send -u low -i "$ICON_NO_UPDATES" "Sistema actualizado" "No hay actualizaciones pendientes."
+        notify-send -u low -i " $ICON_NO_UPDATES" "Sistema actualizado" "No hay actualizaciones pendientes."
     fi
 fi
