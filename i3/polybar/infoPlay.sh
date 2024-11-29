@@ -28,5 +28,5 @@ if echo "$MOC_STATE" | grep -q "State: PLAY"; then
     echo "$ICON_PLAY $INFO"
 else
     # Si MOC no está reproduciendo
-    echo "$ICON_STOP No hay reproducción"
+    echo "$ICON_PLAY MOC"
 fi
