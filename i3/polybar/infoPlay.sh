@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Opciones personalizables
-MAX_LENGTH=40            # Longitud máxima del texto mostrado
+MAX_LENGTH=25            # Longitud máxima del texto mostrado
 ICON_PLAY=""            # Icono para estado "Reproduciendo"
 ICON_STOP=""            # Icono para estado "No hay reproducción"
 
