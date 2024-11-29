@@ -111,7 +111,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     #Iniciar/ rofi/ en una ventana pequeña con iconos
     #bindsym $mod+CTRL+space exec --no-startup-id rofi -modi run -show drun -show-icons -font "Noto Sans 14"
-    bindsym $mod+d exec --no-startup-id rofi -modi run -show drun -show-icons -font "Noto Sans 14"
+    bindsym $mod+d exec --no-startup-id rofi -modi run -show drun -show-icons -font "Mononoki Nerd Font Bold Italic 11"
 
     # Utilizar la combinación de teclas TAB + q para abrir rofi en una ventana con las aplicaciones que se están ejecutando
     #bindsym $mod+q exec rofi -show window -show-icons
@@ -323,7 +323,6 @@ font pango: Mononoki Nerd Font Bold Italic 11
         }
 
     #Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana" con control+h y control+v (horizontal y vertical)
-
     client.focused #444445 #bf7500 #444444 #ffff70
 
 
@@ -396,8 +395,6 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Screenshot / Captura de pantalla
     #para eso tengo que instalar scrot
     bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
-    #También se tiene q instalar kazam para la captura de imagen y video
-    # sudo apt-get install kazam
 
 
 
@@ -405,17 +402,5 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # instalar pdflatex para compilar pdf
     #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
 
-    #sudo apt-get install duf / comando moderno para visualizar espacio en disco / editar el alias de "ficheros" en .bashrc
-
-    #sudo apt-get install translate-shell para instalar traductor desde la terminal y para ver lista de idiomas disponibles escribir el comando "trans -list-all"
-
-    #sudo apt-get install audacious
-    # instalar reproductor de audio "audacious" con apariencia de "winamp" https://ugeek.github.io/blog/post/2021-10-02-winamp-vuelve-a-mi-escritorio-cambiando-el-tema-de-audacious.html
-
-    #editor Editor de texto de partituras LilyPond para KDE4
-    #Frescobaldi – Editor de textos para partituras de LilyPond
-    #sudo apt-get install frescobaldi 
-
-    
-    # https://salsa-son-timba.blogspot.com
-    # juego de solitario para linux 'sudo apt-get install aisleriot'
+#notificacon de alerta bateria baja
+exec --no-startup-id ~/.config/polybar/battery_notify.sh
