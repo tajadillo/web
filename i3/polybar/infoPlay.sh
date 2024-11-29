@@ -4,6 +4,7 @@
 MAX_LENGTH=25            # Longitud máxima del texto mostrado
 ICON_PLAY=""            # Icono para estado "Reproduciendo"
 ICON_STOP=""            # Icono para estado "No hay reproducción"
+ICON_HEADPHONES=""      # Icono de audifonos "Reproduciendo"
 
 # Obtener la salida completa de mocp
 MOC_STATE=$(mocp -i 2>/dev/null)
@@ -25,7 +26,7 @@ if echo "$MOC_STATE" | grep -q "State: PLAY"; then
     fi
 
     # Muestra el resultado con el icono
-    echo "$ICON_PLAY $INFO"
+    echo "$ICON_HEADPHONES $INFO"
 else
     # Si MOC no está reproduciendo
     echo "$ICON_PLAY MOC"
