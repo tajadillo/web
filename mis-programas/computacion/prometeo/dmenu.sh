@@ -1,6 +1,7 @@
 #!/bin/sh
 #https://www.youtube.com/watch?v=J6D1nTQCJGE
 #https://gitlab.com/shastenm76
+https://gitlab.com/users/shastenm76/projects
 
 # Función para mostrar un menú para seleccionar una carpeta dentro de ~/documentos, excluyendo ocultos
 select_folder() {
