@@ -402,5 +402,16 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # instalar pdflatex para compilar pdf
     #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
 
-#notificacon de alerta bateria baja
-exec --no-startup-id ~/.config/polybar/battery_notify.sh
+    #notificacon de alerta bateria baja
+    exec --no-startup-id ~/.config/polybar/battery_notify.sh
+
+    #Confirma la configuración en lightdm-gtk-greeter.conf
+#Edita el archivo de configuración:
+#Copiar código
+#sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+#Asegúrate de que la línea background esté correctamente definida:
+
+#Copiar código
+#[greeter]
+#background=/ruta/a/tu/imagen.jpg
+#Revisa que la ruta sea válida y accesible. Por ejemplo, prueba abrir la imagen con un visor como feh o xdg-open:
