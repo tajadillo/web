@@ -413,5 +413,5 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
 #Copiar código
 #[greeter]
-#background=/ruta/a/tu/imagen.jpg
+#background=/usr/share/backgrounds/michelangelo.png
 #Revisa que la ruta sea válida y accesible. Por ejemplo, prueba abrir la imagen con un visor como feh o xdg-open:
