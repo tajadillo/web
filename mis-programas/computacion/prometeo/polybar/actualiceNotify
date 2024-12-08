@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Comando para actualizar la polyban
+# polybar-msg cmd restart
+
+
+# Archivo temporal para controlar notificaciones
+NOTIFY_FILE="/tmp/debian_updates_notified"
+
+# Colores para Polybar
+COLOR_GREEN="#00FF00"  # Verde para texto cuando no hay actualizaciones
+COLOR_RED="#FF0000"    # Rojo para texto cuando hay actualizaciones
+COLOR_BG="#1E1E2E"     # Fondo oscuro
+COLOR_GRAY="#808080"   # Texto gris para mensajes de sistema actualizado
+
+# Íconos (verifica rutas o usa texto como alternativa)
+ICON_UPDATE_AVAILABLE=""  # Ícono para actualizaciones
+ICON_NO_UPDATES=""        # Ícono cuando no hay actualizaciones
+
+# Comprobar actualizaciones
+UPDATES=$(apt list --upgradable 2>/dev/null | grep -c "upgradable")
+
+if [ "$UPDATES" -gt 0 ]; then
+    # Hay actualizaciones disponibles
+    echo "%{F$COLOR_BG}%{B$COLOR_RED} $ICON_UPDATE_AVAILABLE $UPDATES actualizaciones disponibles%{F-}%{B-}"
+
+    # Enviar notificación de Dunst si no se ha enviado antes
+    if [ ! -f "$NOTIFY_FILE" ]; then
+        # Notificación con Dunst
+        notify-send -u critical -i " $ICON_UPDATE_AVAILABLE" "Actualizaciones disponibles" "Hay $UPDATES paquetes para actualizar"
+        touch "$NOTIFY_FILE"
+    fi
+else
+    # No hay actualizaciones
+    echo "%{F$COLOR_GRAY}%{B$COLOR_BG} $ICON_NO_UPDATES Actualizado%{F-}%{B-}"
+
+    # Eliminar el archivo temporal si no hay actualizaciones
+    [ -f "$NOTIFY_FILE" ] && rm "$NOTIFY_FILE"
+
+    # Enviar notificación de Dunst para sistema actualizado
+    if [ ! -f "$NOTIFY_FILE" ]; then
+        # Notificación con Dunst
+        notify-send -u low -i " $ICON_NO_UPDATES" "Sistema actualizado" "No hay actualizaciones pendientes."
+    fi
+fi
