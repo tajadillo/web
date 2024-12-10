@@ -113,7 +113,7 @@ printf "${greenColour}   ${endColour}${greenColour}RAM:${endColour} " && awk 
 printf "${greenColour}   ${endColour}${greenColour}WM:${endColour} " && echo -e "$GDMSESSION"
     #printf "$GREY SHELL: " && echo -e $SHELL
     #echo -e "${yellowColour}   ${endColour}${greenColour}TEMA GTK:${endColour} $(cat .config/gtk-3.0/settings.ini | grep 'gtk-theme-name' $config_file | awk -F'=' '{print $2}')${endColour}"
-echo "${greenColour}   ${endColour}${greenColour}ICONOS:${endColour}" $(gsettings get org.gnome.desktop.interface icon-theme)
+echo "${greenColour}   ${endColour}${greenColour}ICONOS:${endColour}" $(gsettings get org.gnome.desktop.interface icon-theme)
 echo "${greenColour}   ${endColour}${greenColour}CURSOR:${endColour}" $(gsettings get org.gnome.desktop.interface cursor-theme)
     #echo "$GREY SWAP:" $(free -h | grep Swap)
 echo "${greenColour}   ${endColour}${greenColour}IP Local:${endColour}" $(ip addr show | grep "inet " | awk '{print $2}')
