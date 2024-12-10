@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Colours
-rosa="\e[0;41m\101[1m"
+rosaColour="\e[0;41m\101[1m"
 greenColour="\e[0;32m\033[1m"
 endColour="\033[0m\e[0m"
 redColour="\e[0;31m\033[1m"
@@ -20,57 +20,64 @@ naranjaColour="\033[38;2;243;134;0m"
 trap ctrl_c INT
 
 function ctrl_c(){
-	echo -e "\n${yellowColour}[*]${endColour}${grayColour}Saliendo${endColour}"
-	tput cnorm; airmon-ng stop ${networkCard}mon > /dev/null 2>&1
-	rm Captura* 2>/dev/null
-	exit 0
+    echo
+    echo -e "\n${yellowColour}[*]${endColour}${grayColour}Saliendo${endColour}"
+    tput cnorm;
+    exit 0
 }
 
 function helpPanel(){
-	echo -e "\n${yellowColour}[*]${endColour}${grayColour} Uso: ${endColour}"
-	echo -e "\n\t${purpleColour}h)${endColour}${yellowColour} Horas${endColour}"
-	echo -e "\t${purpleColour}m)${endColour}${yellowColour} Minutos${endColour}"
-	echo -e "\t${purpleColour}s)${endColour}${yellowColour} Segundos${endColour}\n"
-	exit 0
+    echo
+    echo -e "${redColour}#####################${endColour}"
+    echo -e "${redColour}#                   #${endColour}"
+    echo -e "${redColour}#  ${yellowColour}[*]${endColour}${grayColour} Uso:    ${endColour}     ${redColour}#${endColour}"
+    echo -e "${redColour}#\t${purpleColour}h)${endColour}${yellowColour} Horas${endColour}    ${redColour}#${endColour}"
+    echo -e "${redColour}#\t${purpleColour}m)${endColour}${yellowColour} Minutos${endColour}  ${redColour}#${endColour}"
+    echo -e "${redColour}#\t${purpleColour}s)${endColour}${yellowColour} Segundos${endColour} ${redColour}#${endColour}"
+    echo -e "${redColour}#                   #${endColour}"
+    echo -e "${redColour}#####################${endColour}"
+
+
+    echo
 }
 
 function dependencies(){
-	tput civis
-	clear;
+    tput civis
+    clear;
     dependencies=(audacious)
 
-	echo -e "${yellowColour}[*]${endColour}${grayColour} Comprobando programas necesarios...${endColour}"
-	sleep 2
+    echo -e "${yellowColour}[*]${endColour}${grayColour} Comprobando programas necesarios...${endColour}"
+    sleep 2
 
-	for program in "${dependencies[@]}"; do
-		echo -ne "\n${yellowColour}[*]${endColour}${blueColour} Herramienta${endColour}${purpleColour} $program${endColour}${blueColour}...${endColour}"
+    for program in "${dependencies[@]}"; do
+        echo -ne "\n${yellowColour}[*]${endColour}${blueColour} Herramienta${endColour}${purpleColour} $program${endColour}${blueColour}...${endColour}"
 
-		test -f /usr/bin/$program
+        test -f /usr/bin/$program
 
-		if [ "$(echo $?)" == "0" ]; then
-			echo -e " ${greenColour}(V)${endColour}"
-		else
-			echo -e " ${redColour}(X)${endColour}\n"
-			echo -e "${yellowColour}[*]${endColour}${grayColour} Instalando herramienta ${endColour}${blueColour}$program${endColour}${yellowColour}...${endColour}"
-			apt-get install $program -y > /dev/null 2>&1
-		fi; sleep 1
-	done
-}
+        if [ "$(echo $?)" == "0" ]; then
+            echo -e " ${greenColour}(V)${endColour}"
+        else
+            echo -e " ${redColour}(X)${endColour}\n"
+            echo -e "${yellowColour}[*]${endColour}${grayColour} Instalando herramienta ${endColour}${blueColour}$program${endColour}${yellowColour}...${endColour}"
+            apt-get install $program -y > /dev/null 2>&1
+            fi; sleep 1
+        done
+    }
 
-function banner(){
-echo -e "     _    _             _____ __  __    _     "
-echo -e "    / \  | |      / \  |  _ \|  \/  |  / \    "
-echo -e "   / _ \ | |     / _ \ | |_) | |\/| | / _ \   "
-echo -e "  / ___ \| |___ / ___ \|  _ <| |  | |/ ___ \  "
-echo -e " /_/   \_\_____/_/   \_\_| \_\_|  |_/_/   \_\ "
+    function banner(){
+        echo -e "${redColour}     _    _             _____ __  __    _     ${endcolour}"
+        echo -e "${greenColour}    / \  | |      / \  |  _ \|  \/  |  / \    ${endColour}"
+        echo -e "${redColour}   / _ \ | |     / _ \ | |_) | |\/| | / _ \   ${endColour}"
+        echo -e "${blueColour}  / ___ \| |___ / ___ \|  _ <| |  | |/ ___ \  ${endColour}"
+        echo -e "${yellowColour} /_/   \_\_____/_/   \_\_| \_\_|  |_/_/   \_\ ${endColour}"
 
-}
+    }
 
-function saludo(){
+    function saludo(){
 
-function saludar(){
-    # Obtener la hora actual
-    hora_actual=$(date +'%H')
+        function saludar(){
+            # Obtener la hora actual
+            hora_actual=$(date +'%H')
 
 # Determinar el saludo basado en la hora
 if [ $hora_actual -ge 5 ] && [ $hora_actual -lt 12 ]; then
@@ -137,5 +144,23 @@ clear
 }
 
 saludo
-
 banner
+echo
+read -p "Escribe la cantidad de tiempo para que suene la alarma " cantidad
+sleep 2
+echo
+helpPanel
+echo
+read -p "Escribe si seran horas, minutos o segundos " tipo
+sleep 2
+if [ $tipo = "h" ]; then
+    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad horas${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+elif [ $tipo = "m" ]; then
+    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad minutos${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+elif [ $tipo = "s" ]; then
+    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad segundos${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+else
+    echo -e "${redColour}¡¡¡Comando incorrcto!!!${endColour}"
+fi
+sleep $cantidad$tipo && audacious /media/tajadillo/RICHARD/Music/salsa/timbon/varios/timba-cubana.mp3
+exit 0
