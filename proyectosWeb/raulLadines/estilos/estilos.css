@@ -55,6 +55,10 @@ background: linear-gradient(152deg, rgba(246,7,7,0.90) 10%, rgba(255,255,255,0.5
     z-index: -1;
 }
 
+.box marquee {
+    color: #3399ff;
+}
+
 .box-img{
     border-radius: 50%;
 }
