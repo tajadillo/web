@@ -17,6 +17,13 @@ naranjaColour="\033[38;2;243;134;0m"
 #Esto cubre una amplia gama de colores ANSI que puedes usar para formatear texto en la terminal. ¡Espero que te sea útil!
 
 
+function docActualizado(){
+    actualizado=$( date -r ./alarma.sh  )
+    echo
+    echo -e "${redColour}este archivo se actualizo por ultima vez el${endColour} ${naranjaColour}$actualizado${endColour}"
+    echo
+}
+
 trap ctrl_c INT
 
 function ctrl_c(){
@@ -78,6 +85,7 @@ function dependencies(){
         function saludar(){
             # Obtener la hora actual
             hora_actual=$(date +'%H')
+            hora_segundos=$(date +'%R')
 
 # Determinar el saludo basado en la hora
 if [ $hora_actual -ge 5 ] && [ $hora_actual -lt 12 ]; then
@@ -153,14 +161,23 @@ helpPanel
 echo
 read -p "Escribe si seran horas, minutos o segundos " tipo
 sleep 2
+clear
+banner
+echo
 if [ $tipo = "h" ]; then
-    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad horas${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+    echo -e "${greenColour}Son las${endColour} ${naranjaColour}$hora_segundos${endColour} ${blackColour}$usuario${endColour} ${greenColour}Comenzamos en${endColour} ${blueColour}$cantidad horas${endColour}  ${redColour}presiona ctrl + c para detener${endColour}"
+
 elif [ $tipo = "m" ]; then
-    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad minutos${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+
+    echo -e "${greenColour}Son las${endColour} ${naranjaColour}$hora_segundos${endColour} ${blackColour}$usuario${endColour} ${greenColour}Comenzamos en${endColour} ${blueColour}$cantidad minutos${endColour}  ${redColour}presiona ctrl + c para detener${endColour}"
+
 elif [ $tipo = "s" ]; then
-    echo -e "${greenColour}Comenzamos en${endColour} ${yellowColour}$cantidad segundos${endColour} ${greenColour}$usuario${endColour} ${redColour}presiona ctrl + c para detener${endColour}"
+    echo -e "${greenColour}Son las${endColour} ${naranjaColour}$hora_segundos${endColour} ${blackColour}$usuario${endColour} ${greenColour}Comenzamos en${endColour} ${blueColour}$cantidad segundos${endColour}  ${redColour}presiona ctrl + c para detener${endColour}"
 else
     echo -e "${redColour}¡¡¡Comando incorrcto!!!${endColour}"
 fi
-sleep $cantidad$tipo && audacious /media/tajadillo/RICHARD/Music/salsa/timbon/varios/timba-cubana.mp3
+
+docActualizado
+
+sleep $cantidad$tipo && audacious /media/tajadillo/RICHARD/Music/salsa/salsitas-forever/willy\ chirino/los-campeones-de-la-salsa.mp3
 exit 0
