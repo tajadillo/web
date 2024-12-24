@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Actual - Perú</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #clock {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: "America/Lima", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+            const timeString = now.toLocaleTimeString("es-PE", options);
+            document.getElementById("clock").textContent = timeString;
+        }
+
+        // Actualizar cada segundo
+        setInterval(updateClock, 1000);
+        updateClock(); // Llamada inicial para evitar el retraso del primer segundo
+    </script>
+</body>
+</html>
