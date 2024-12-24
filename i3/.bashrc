@@ -176,7 +176,7 @@ alias reiniciar='sudo shutdown -r now'
 alias radio='bash /home/tajadillo/radio/radio.sh'
 alias tv='bash /home/tajadillo/radio/tv.sh'
 alias reloj='tty-clock -s -c -D'
-alias alarma='bash alarma.sh'
+alias alarma='bash alarma'
 alias mecano='typespeed'
 alias instalar='sudo apt-get install'
 alias temperatura='sensors | lolcat -a'
@@ -193,7 +193,7 @@ alias donde='pwd | lolcat -a'
 #instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
 alias ls='lsd -lah'
 #atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
-alias cat='cat -n | highlight -O ansi -n'
+#alias cat='cat -n | highlight -O ansi -n'
 # instalar sudo apt-get install highlight para complementar al comando 'cat'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
@@ -208,6 +208,7 @@ alias descargas="cd /home/tajadillo/Descargas && ls"
 alias musica="cd /home/tajadillo/Música && ls"
 alias videos="cd /home/tajadillo/Vídeos && ls"
 alias pesca='bash /usr/bin/pesca.sh'
+alias horaPeru='bash reloj'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
