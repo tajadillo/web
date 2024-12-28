@@ -6,6 +6,9 @@ https://dai.ly/x7x4dgx
 #EXTINF:-1 tvg-id="Nativa tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal Nativa tv
 https://servilive.com:3449/live/mlecaroslive.m3u8
 
+#EXTINF:-1 tvg-id="Nativa tv" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , radio programas del Perú
+https://www.youtube.com/watch?v=LGMWl1657u4
+
 #EXTINF:-1 tvg-id="ATV-PERU" tvg-country="PE" tvg-language="Spanish" tvg-logo="https://graph.facebook.com/ATV.pe/picture?width=320&height=320" group-title="General" , canal atv peru
 https://d2tr4gdfol9ja.cloudfront.net/atv/smil:atv.smil/playlist.m3u8
 
