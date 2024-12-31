@@ -1,0 +1,74 @@
+    /*========== Colores ==========*/
+    /*Color mode HSL(hue, saturation, lightness) (matiz, saturacion, intensidad)*/
+    --first-color: hsl(12, 32%, 22%);
+    --first-color-alt: hsl(12, 42%, 12%);
+    --first-color-light: hsl(12, 24%, 32%);
+    --second-color: hsl(39, 62%, 65%);
+    --title-color: hsl(12, 12%, 16%);
+    --text-color: hsl(12, 12%, 32%);
+    --text-color-light: hsl(12, 8%, 48%);
+    --white-color: #fff;
+    --morado: #fe04fc;
+    --turquesa: #04fcea;
+    --aqua: #00ffff;
+    --negro: #000000;
+    --amarillo: #ffff00;
+
+    /*========== Font and typography / Fuente y Tipografia ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Pacifico", cursive;
+    --biggest-font-size: 2.75rem;
+    --big-font-size: 1.75rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight / Peso de Fuente ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography / Tipografia Responsiva==========*/
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 4.5rem;
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+header {
+    width: 100%;
+    /*background: #4e94ab;*/
+    background: #ff0;
+    }
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3)
+}

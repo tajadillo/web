@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Author" content="Richard Alexander Tajadillo Pérez">
+        <meta name="Description" content="plantilla html">
+        <meta name="Keywords" content="">
+
+        <title>Plantilla html</title>
+
+        <link rel="shortcut icon" href="img/logo-richard-tajadillo.ico">
+        <link rel="stylesheet" href="estilos/normalize.css">
+        <link rel="stylesheet" href="estilos/main.css">
+        <link rel="stylesheet" href="estilos/nav.css">
+
+        <!--script para evitar dar clic derecho en la pagina web-->
+        <script type="text/javascript">
+            document.oncontextmenu = function() {
+                            return false;
+                        }
+            function right(e) {
+                            var msg = "Clic derecho no avilitado!";
+                            if (navigator.appName == 'Netscape' && e.which == 3) {
+                                            alert(msg);
+                                        }
+                            else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) {
+                                            alert(msg);
+                                            return false;
+                                        }
+                            return true;
+                        }
+            document.onmousedown = right;
+        </script>
+        <!--fin scriop-->
+
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="img/icono-menu.png" alt="icono de menú"></label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quien Soy</a></li>
+                    <li><a href="#">Servisios</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </nav>
+        </header>
+            <!--
+        <main class="main">
+                <div class="container">
+                <h1>
+                HOLA, SOY RICHARD ALEXANDER TAJADILLO PÉREZ
+                </h1>
+                <p>
+                Ayudo a trabajadores del mundo de la danza ( a través de cursos y mentorias ), a montar la infrestructura de un negocio rentable y escalable, vivir de su pasión y mejorar su calidad de vida.
+                <br>
+                Instructor de percusión y danzas afroperuanas con mi Método "RENATA".
+                </p>
+                <h2>
+                CREA, ORGANIZA y ESTRUCTURA
+                </h2>
+                <p>
+                Una metodología con sistemas, que te permitirá aumentar la productividad y efectividad en tu negocio.
+                </p>
+                </div>
+                <div class="redondorichard">
+                <img src="img/richard-transparente-redondo.png"  width="180" height="180" alt="imagen de richard tajadillo">
+                </div>
+        </main>
+            -->
+        <footer class="footer">
+        </footer>
+    </body>
+</html>
+
+
+
+
+
