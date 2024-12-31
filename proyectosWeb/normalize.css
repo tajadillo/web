@@ -1,0 +1,153 @@
+
+/*importar fuentes desde fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*
+ * herramienta
+ * Un generador visual para crear formas de apariencia orgánica con la ayuda de la propiedad border-radius de CSS3
+ * Fancy-Border-Radius
+ * https://9elements.github.io/fancy-border-radius/
+ */
+
+:root{
+    --header-height: 3.5rem;
+    --border-section: 56px 56px 0 0;
+
+    /*========== Colores ==========*/
+    /*Color mode HSL(hue, saturation, lightness) (matiz, saturacion, intensidad)*/
+    --first-color: hsl(12, 32%, 22%);
+    --first-color-alt: hsl(12, 42%, 12%);
+    --first-color-light: hsl(12, 24%, 32%);
+    --second-color: hsl(39, 62%, 65%);
+    --title-color: hsl(12, 12%, 16%);
+    --text-color: hsl(12, 12%, 32%);
+    --text-color-light: hsl(12, 8%, 48%);
+    --white-color: #fff;
+    /*
+     * --white-color:  (0, 0%, 100%)
+     */
+    --black-gray: #202020;
+    /*
+     * --black-gray: hsl(0, 0%, 12.5%)
+     */
+    --morado: #fe04fc;
+    /*
+     * --morado: (300°, 99%, 50%)
+     */
+    --turquesa: #04fcea;
+    /*
+     * --turquesa: (174°, 97%, 50%)
+     */
+    --aqua: #00ffff;
+    /*
+     * --aqua: (180°, 100%, 50%)
+     */
+
+    /*========== Font and typography / Fuente y Tipografia ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Pacifico", cursive;
+    --biggest-font-size: 2.75rem;
+    --big-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight / Peso de Fuente ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography / Tipografia Responsiva==========*/
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 4.5rem;
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    background-image: url("../medios/img/bg2.jpg");
+    background-size: 100vw 100vH;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    font-size: 62.5%;
+
+}
+
+body {
+
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--negro);
+    color: var(--text-color);
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== Reusable CSS Classes / Clases de CSS Reutilizables ===============*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem; /* margin right and left */
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding-block: 4.5rem 3.5rem; /* padding top and bottom */
+}
+
+.section__title {
+    color: var(--title-color);
+    font-size: var(--big-font-size);
+    font-family: var(--second-font);
+    font-weight: var(--font-regular);
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.main {
+    overflow: hidden; /* For animation ScrollReveal */
+    display: block;
+}
+  /*configuracion css desde https://youtu.be/4bbK13MCg9k?si=BUVPnnoWczcD7MHc*/
