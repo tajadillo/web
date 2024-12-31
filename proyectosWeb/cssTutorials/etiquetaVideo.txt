@@ -1,0 +1,9 @@
+Src     ruta del archivo
+Controls   Muestra los controles de reproduccion
+Width   ancho del video en la pagina
+Height    alto del video en la pagina
+Poster    Permite mostrar imagen de vista preveía
+Autoplay        Indica si se reproducirá automáticamente
+Loop    Reinicia la reproducción del video
+Muted    El video se reproducirá silenciado
+Preload   Como se va a cargar el video
