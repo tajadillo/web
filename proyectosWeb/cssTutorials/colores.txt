@@ -1,0 +1,120 @@
+      /*========== Colores ==========*/
+    /*Color mode HSL(hue, saturation, lightness) (matiz, saturacion, intensidad)*/
+    --first-color: hsl(12, 32%, 22%); /* Rojo oscuro desaturado */
+    --first-color-alt: hsl(12, 42%, 12%); /* Granate muy oscuro */
+    --first-color-light: hsl(12, 24%, 32%); /* Marrón rojizo suave */
+    --second-color: hsl(39, 62%, 65%); /* Amarillo dorado claro */
+    --title-color: hsl(12, 12%, 16%); /* Gris oscuro con tinte rojizo */
+    --text-color: hsl(12, 12%, 32%); /* Gris medio con tinte rojizo */
+    --text-color-light: hsl(12, 8%, 48%); /* Gris claro cálido */
+    --white-color: hsl(0, 0%, 100%);
+    --Amarillo: hsl(60, 100%, 50%);
+    --Gris-oscuro: hsl(0, 0%, 20%);
+    --Gris-claro: hsl(0, 0%, 80%);
+    --Naranja: hsl(30, 100%, 50%);
+    --Negro: hsl(0, 0%, 0%);
+    --Red: hsl(0, 100%, 50%);
+    --Green: hsl(120, 100%, 50%);
+    --Blue: hsl(240, 100%, 50%);
+    --Purple: hsl(300, 100%, 50%);
+
+    --Teal: hsl(180, 100%, 50%); /* Aqua/Calypso */
+
+    --Pink: hsl(340, 100%, 75%);
+    --Cyan: hsl(190, 100%, 50%);
+    --Lime: hsl(75, 100%, 50%);
+    --Orange-dark: hsl(20, 100%, 50%);
+    --Brown: hsl(25, 50%, 30%);
+    --Beige: hsl(40, 60%, 80%);
+    --Gold: hsl(50, 100%, 50%);
+    --Silver: hsl(0, 0%, 75%);
+    --Olive: hsl(60, 50%, 40%);
+    --Magenta: hsl(300, 100%, 50%);
+
+    /*
+     * --white-color:  (0, 0%, 100%);
+     */
+    --black-gray: #202020;
+    /*
+     * --black-gray: hsl(0, 0%, 12.5%);
+     */
+    --morado: #fe04fc;
+    /*
+     * --morado: (300°, 99%, 50%);
+     */
+    --turquesa: #04fcea;
+    /*
+     * --turquesa: (174°, 97%, 50%);
+     */
+    --aqua: #00ffff;
+    /*
+     * --aqua: (180°, 100%, 50%);
+     */
+
+
+--primary-color: hsl(30, 45%, 25%); /* Dark Wood madera oscuro #5c3f23 */
+--secondary-color: hsl(30, 35%, 65%); /* Light Wood madera claro */
+--accent-color: hsl(45, 60%, 50%); /* Golden Yellow amarillo dorado */
+--neutral-dark: hsl(30, 10%, 40%); /* Stone Gray gris piedra */
+--neutral-light: hsl(30, 20%, 85%); /* Sand Beige #e0d8d1 beige arena */
+--highlight-color: hsl(75, 30%, 40%); /* Olive Green verde oliva */
+
+
+/*========== Transparencia ==========*/
+    En el modelo HSL (Hue, Saturation, Lightness) no se incluye la transparencia directamente, ya que esta se maneja en el modelo HSLA (Hue, Saturation, Lightness, Alpha). El canal alfa (A) define el nivel de transparencia de un color y se representa como un valor entre 0 (completamente transparente) y 1 (completamente opaco).
+--contrast-accent-color: hsl(190, 70%, 40%); /* Turquoise Blue (Contrasting Accent) */
+Para lograr un color transparente utilizando HSLA, puedes usar este formato:
+
+css
+--transparent-color: hsla(0, 0, 0, 0.5);
+color: hsla(240, 100%, 50%, 0.5);
+
+Aquí:
+240 es el tono (Hue), que representa el color.
+100% es la saturación (Saturation), que indica qué tan vivo es el color.
+50% es la luminosidad (Lightness), que define qué tan claro u oscuro es el color.
+0.5 es el nivel de opacidad (Alpha), donde 0 es completamente transparente y 1 es completamente opaco.
+Si necesitas transparencia en un color HSL, simplemente agrégale el componente alfa utilizando hsla en lugar de hsl.
+
+
+
+
+
+
+¿cual es el nombre de este color? hsl(180, 100%, 50%);
+ChatGPT dijo:
+ChatGPT
+El color hsl(180, 100%, 50%) es un cian puro.
+
+Descripción:
+Tono (Hue): 180° - Se encuentra exactamente entre verde y azul en la rueda de colores, lo que lo hace un cian equilibrado.
+Saturación (Saturation): 100% - Máxima intensidad, lo que da un color muy vivo.
+Luminosidad (Lightness): 50% - Ni demasiado claro ni demasiado oscuro, en el punto medio, lo que lo hace vibrante.
+Este color es similar al cian eléctrico, que es uno de los colores principales en el modelo de color RGB (rojo, verde, azul).
+
+
+
+
+
+
+Dijiste:
+¿no tiene nada que ver con aqua, teal o calypso?
+ChatGPT dijo:
+ChatGPT
+El color hsl(180, 100%, 50%) está muy relacionado con términos como aqua, teal o incluso otros tonos cercanos, pero hay diferencias sutiles entre ellos. Aquí te explico:
+
+Relación con otros colores:
+Aqua:
+
+Similitud: Es prácticamente el mismo color que hsl(180, 100%, 50%), ya que en el modelo RGB, aqua tiene los valores (0, 255, 255), que corresponde al mismo tono HSL.
+Veredicto: Este color es equivalente a aqua.
+Teal:
+
+Diferencia: Teal es más oscuro y menos saturado. En HSL, teal suele estar cerca de hsl(180, 100%, 25%) o hsl(180, 50%, 40%), con una luminosidad más baja.
+Veredicto: Este color no es teal, pero es un pariente más brillante y saturado.
+Calypso:
+
+Diferencia: Calypso es un término menos definido que varía dependiendo del contexto, pero generalmente refiere a tonos más oscuros y apagados de verde-azulados, más cercanos a teal o incluso con un toque de gris.
+Veredicto: Este color no es calypso, ya que calypso es más apagado.
+Conclusión:
+El color hsl(180, 100%, 50%) es mejor identificado como aqua o cian puro, pero no como teal o calypso, ya que estos son más oscuros y menos saturados.
