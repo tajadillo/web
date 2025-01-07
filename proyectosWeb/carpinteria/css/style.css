@@ -57,9 +57,9 @@ footer {
     background-color: var(--transparent-color);
     color: var(--neutral-light);
     height: 80px;
-    position: absolute;
+    position: relative;
+    top: 100%;
     bottom: 0;
-    width: 100%;
 }
 /*
  *footer {
