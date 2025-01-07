@@ -54,30 +54,13 @@ section {
 }
 
 footer {
-    background-color: var(--transparent-color);
+    background-color: var(--primary-color);
     color: var(--neutral-light);
     height: 80px;
     position: relative;
     top: 100%;
     bottom: 0;
 }
-/*
- *footer {
-    background-color: var(--primary-color);
-    color: var(--neutral-light);
-    padding: 15px 50px;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    min-height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
- */
-
 
 /*
  * iconos sociales
