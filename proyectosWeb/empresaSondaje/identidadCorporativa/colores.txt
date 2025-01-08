@@ -1,0 +1,2 @@
+Colores
+Amarillo, Blanco, Gris oscuro, Naranja, Negro.

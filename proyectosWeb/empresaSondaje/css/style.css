@@ -1,0 +1,245 @@
+:root {
+
+     /*========== Colores ==========*/
+    /*Color mode HSL(hue, saturation, lightness) (matiz, saturacion, intensidad)*/
+    --first-color: hsl(12, 32%, 22%); /* Rojo oscuro desaturado */
+    --first-color-alt: hsl(12, 42%, 12%); /* Granate muy oscuro */
+    --first-color-light: hsl(12, 24%, 32%); /* Marrón rojizo suave */
+    --second-color: hsl(39, 62%, 65%); /* Amarillo dorado claro */
+    --title-color: hsl(12, 12%, 16%); /* Gris oscuro con tinte rojizo */
+    --text-color: hsl(12, 12%, 32%); /* Gris medio con tinte rojizo */
+    --text-color-light: hsl(12, 8%, 48%); /* Gris claro cálido */
+    --white-color: hsl(0, 0%, 100%);
+    --Amarillo: hsl(60, 100%, 50%);
+    --Gris-oscuro: hsl(0, 0%, 20%);
+    --Gris-claro: hsl(0, 0%, 80%);
+    --Naranja: hsl(30, 100%, 50%);
+    --Negro: hsl(0, 0%, 0%);
+    --Red: hsl(0, 100%, 50%);
+    --Green: hsl(120, 100%, 50%);
+    --Blue: hsl(240, 100%, 50%);
+    --Purple: hsl(300, 100%, 50%);
+
+    --Teal: hsl(180, 100%, 50%); /* Aqua/Calypso */
+
+    --Pink: hsl(340, 100%, 75%);
+    --Cyan: hsl(190, 100%, 50%);
+    --Lime: hsl(75, 100%, 50%);
+    --Orange-dark: hsl(20, 100%, 50%);
+    --Brown: hsl(25, 50%, 30%);
+    --Beige: hsl(40, 60%, 80%);
+    --Gold: hsl(50, 100%, 50%);
+    --Silver: hsl(0, 0%, 75%);
+    --Olive: hsl(60, 50%, 40%);
+    --Magenta: hsl(300, 100%, 50%);
+    --primary-color: hsl(30, 45%, 25%); /* Dark Wood madera oscuro #5c3f23 */
+    --secondary-color: hsl(30, 35%, 65%); /* Light Wood madera claro */
+    --accent-color: hsl(45, 60%, 50%); /* Golden Yellow amarillo dorado */
+    --neutral-dark: hsl(30, 10%, 40%); /* Stone Gray gris piedra */
+    --neutral-light: hsl(30, 20%, 85%); /* Sand Beige #e0d8d1 beige arena */
+    --highlight-color: hsl(75, 30%, 40%); /* Olive Green verde oliva */
+    --transparent-color: hsla(0, 0, 0, 0.5);
+    /*
+     * --white-color:  (0, 0%, 100%);
+     */
+    --black-gray: #202020;
+    /*
+     * --black-gray: hsl(0, 0%, 12.5%);
+     */
+    --morado: #fe04fc;
+    /*
+     * --morado: (300°, 99%, 50%);
+     */
+    --turquesa: #04fcea;
+    /*
+     * --turquesa: (174°, 97%, 50%);
+     */
+    --aqua: #00ffff;
+    /*
+     * --aqua: (180°, 100%, 50%);
+     */
+}
+
+body {
+    background: url(../img/archi-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: var(--neutral-dark);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+div {
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.h1Video {
+    background: var(--Negro);
+    font-size: 220px;
+    text-align: center;
+    font-weight: 400;
+    mix-blend-mode: multiply;
+}
+
+.tituloCabecera {
+    color: var(--neutral-light);
+    padding: 20px;
+    text-align: center;
+
+}
+h1 {
+    font-size: 2.5em;
+    color: var(--contrast-accent-color);
+}
+
+h2 {
+    color: var(--contrast-accent-color);
+}
+
+p {
+    font-size: 1.2em;
+    color: var(--neutral-dark);
+    text-align: justify;
+}
+
+section {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/*
+ *
+ */
+
+footer {
+    /*background-color: var(--transparent-color);*/
+    background-color: var(--primary-color);
+    color: var(--neutral-light);
+    height: 100px;
+    position: relative;
+    top: 100vh;
+}
+
+/*
+ * iconos sociales
+ */
+
+    /* Estilo del ícono */
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 5px;
+        flex-wrap: wrap;
+    }
+
+    .icon-elem {
+        list-style: none;
+    }
+
+    .icon {
+        color: var(--neutral-light); /* Color base: Sand Beige */
+        display: inline-block;
+        margin: 10px 10px 0px 5px;
+        transition: color 0.5s ease, transform 0.5s ease; /* Transición de color y movimiento */
+    }
+
+    /* Si el ícono es un SVG, cambiamos el color usando fill */
+    .icon svg {
+        fill: var(--neutral-light); /* Usamos el color neutral-light para SVG */
+        transition: fill 0.5s ease, transform 0.5s ease; /* Transición de fill para SVG */
+    }
+
+    /* Si el ícono es una imagen */
+    .icon img {
+        width: 42px;
+        height: auto;
+        transition: transform 0.5s ease; /* Transición de movimiento para la imagen */
+        filter: brightness(0) invert(1); /* Convertir imágenes a blanco */
+    }
+
+    /* Hover effect */
+    .icon:hover {
+        transform: translateY(-10px); /* Movimiento hacia arriba */
+        color: var(--secondary-color); /* Cambio de color en hover: Stone Gray */
+    }
+
+    /* Si el ícono es un SVG, cambiamos el color usando fill en hover */
+    .icon:hover svg {
+        fill: var(--secondary-color); /* Cambio de color en hover para SVG */
+        /*
+         * fill: var(--neutral-dark); /* Cambio de color en hover para SVG */
+              */
+}
+
+/* Si el ícono es una imagen, cambiamos el filtro de la imagen */
+.icon:hover img {
+    transform: translateY(-10px); /* Desplazamiento de la imagen */
+    filter: brightness(1) invert(0); /* Regresa la imagen a su color original */
+}
+/*
+ * fin iconos sociales
+ */
+
+    .button {
+        background-color: var(--highlight-color);
+        color: var(--neutral-light);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .button:hover {
+        background-color: var(--accent-color);
+    }
+
+    /* Styles for the product gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery-item {
+        background-color: var(--neutral-light);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .gallery-item p {
+        padding: 15px;
+        text-align: center;
+        background-color: var(--secondary-color);
+        margin: 0;
+    }
+
+
+    @media (max-width:768px) {
