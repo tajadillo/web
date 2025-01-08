@@ -54,9 +54,10 @@ section {
 }
 
 footer {
+    /*background-color: var(--transparent-color);*/
     background-color: var(--primary-color);
     color: var(--neutral-light);
-    height: 80px;
+    height: 100px;
     position: relative;
     top: 100%;
     bottom: 0;
@@ -66,53 +67,54 @@ footer {
  * iconos sociales
  */
 
-/* Estilo del ícono */
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0px 5px;
-    flex-wrap: wrap;
-}
+    /* Estilo del ícono */
 
-.icon-elem {
-    list-style: none;
-}
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 5px;
+        flex-wrap: wrap;
+    }
 
-.icon {
-    color: var(--neutral-light); /* Color base: Sand Beige */
-    display: inline-block;
-    margin: 10px 10px 0px 5px;
-    transition: color 0.5s ease, transform 0.5s ease; /* Transición de color y movimiento */
-}
+    .icon-elem {
+        list-style: none;
+    }
 
-/* Si el ícono es un SVG, cambiamos el color usando fill */
-.icon svg {
-    fill: var(--neutral-light); /* Usamos el color neutral-light para SVG */
-    transition: fill 0.5s ease, transform 0.5s ease; /* Transición de fill para SVG */
-}
+    .icon {
+        color: var(--neutral-light); /* Color base: Sand Beige */
+        display: inline-block;
+        margin: 10px 10px 0px 5px;
+        transition: color 0.5s ease, transform 0.5s ease; /* Transición de color y movimiento */
+    }
 
-/* Si el ícono es una imagen */
-.icon img {
-    width: 42px;
-    height: auto;
-    transition: transform 0.5s ease; /* Transición de movimiento para la imagen */
-    filter: brightness(0) invert(1); /* Convertir imágenes a blanco */
-}
+    /* Si el ícono es un SVG, cambiamos el color usando fill */
+    .icon svg {
+        fill: var(--neutral-light); /* Usamos el color neutral-light para SVG */
+        transition: fill 0.5s ease, transform 0.5s ease; /* Transición de fill para SVG */
+    }
 
-/* Hover effect */
-.icon:hover {
-    transform: translateY(-10px); /* Movimiento hacia arriba */
-    color: var(--secondary-color); /* Cambio de color en hover: Stone Gray */
-}
+    /* Si el ícono es una imagen */
+    .icon img {
+        width: 42px;
+        height: auto;
+        transition: transform 0.5s ease; /* Transición de movimiento para la imagen */
+        filter: brightness(0) invert(1); /* Convertir imágenes a blanco */
+    }
 
-/* Si el ícono es un SVG, cambiamos el color usando fill en hover */
-.icon:hover svg {
-    fill: var(--secondary-color); /* Cambio de color en hover para SVG */
-/*
- * fill: var(--neutral-dark); /* Cambio de color en hover para SVG */
- */
+    /* Hover effect */
+    .icon:hover {
+        transform: translateY(-10px); /* Movimiento hacia arriba */
+        color: var(--secondary-color); /* Cambio de color en hover: Stone Gray */
+    }
+
+    /* Si el ícono es un SVG, cambiamos el color usando fill en hover */
+    .icon:hover svg {
+        fill: var(--secondary-color); /* Cambio de color en hover para SVG */
+        /*
+         * fill: var(--neutral-dark); /* Cambio de color en hover para SVG */
+              */
 }
 
 /* Si el ícono es una imagen, cambiamos el filtro de la imagen */
@@ -124,47 +126,47 @@ footer {
  * fin iconos sociales
  */
 
-.button {
-    background-color: var(--highlight-color);
-    color: var(--neutral-light);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
+    .button {
+        background-color: var(--highlight-color);
+        color: var(--neutral-light);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
 
-.button:hover {
-    background-color: var(--accent-color);
-}
+    .button:hover {
+        background-color: var(--accent-color);
+    }
 
-/* Styles for the product gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+    /* Styles for the product gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
 
-.gallery-item {
-    background-color: var(--neutral-light);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .gallery-item {
+        background-color: var(--neutral-light);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-.gallery-item p {
-    padding: 15px;
-    text-align: center;
-    background-color: var(--secondary-color);
-    margin: 0;
-}
+    .gallery-item p {
+        padding: 15px;
+        text-align: center;
+        background-color: var(--secondary-color);
+        margin: 0;
+    }
 
 
-@media (max-width:768px) {
+    @media (max-width:768px) {
