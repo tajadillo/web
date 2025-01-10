@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# https://github.com/ray-pH/polybar-cava
 # Configura el nivel de batería bajo
 LOW_BATTERY_LEVEL=25
 
