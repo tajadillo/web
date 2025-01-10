@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#https://youtu.be/_KTwv019t2g?si=45lRuH-aXN3IrmDe
+#https://github.com/ray-pH/polybar-cava
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
