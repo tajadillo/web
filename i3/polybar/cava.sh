@@ -1,8 +1,6 @@
 #! /bin/bash
 
-#bar="▁▂▃▄▅▆▇█"
-bar="▁▂▃▄▅▆▇"
-
+bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
 # creating "dictionary" to replace char with bar
