@@ -17,6 +17,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
+    /*color: var(--neutral-dark);*/
     color: var(--neutral-dark);
     margin: 0;
     padding: 0;
@@ -26,7 +27,7 @@ body {
 
 
 .tituloCabecera {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px;
     text-align: center;
 
