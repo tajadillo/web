@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url(../img/archi-1.jpg);
+    background: url(../img/wallpaper.jpeg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -26,18 +26,18 @@ body {
 
 
 .tituloCabecera {
-    color: var(--neutral-light);
+    color: var(--secondary-color);
     padding: 20px;
     text-align: center;
 
 }
 h1 {
     font-size: 2.5em;
-    color: var(--contrast-accent-color);
+    color: var(--secondary-color);
 }
 
 h2 {
-    color: var(--contrast-accent-color);
+    color: var(--secondary-color);
 }
 
 p {
@@ -53,22 +53,34 @@ section {
     border-radius: 8px;
 }
 
-/*
- *
- */
-
-footer {
-    /*background-color: var(--transparent-color);*/
-    background-color: var(--primary-color);
-    color: var(--neutral-light);
-    height: 100px;
-    position: relative;
-    top: 100vh;
+section li a {
+    text-decoration: none
 }
 
 /*
- * iconos sociales
+ *footer {
+ * background-color: var(--primary-color);
+ * color: var(--neutral-light);
+ * height: 100px;
+ * position: relative;
+ * top: 100vh;
+ }
  */
+
+    .footer {
+        background-color: var(--transparent-color);
+        /*background-color: var(--primary-color);*/
+        color: var(--neutral-light);
+        height: 100px;
+        position: relative;
+        top: 100vh;
+    }
+
+
+
+    /*
+     * iconos sociales
+     */
 
     /* Estilo del ícono */
 
@@ -86,7 +98,7 @@ footer {
     }
 
     .icon {
-        color: var(--neutral-light); /* Color base: Sand Beige */
+        color: var(--secondary-color); /* Color base: Sand Beige */
         display: inline-block;
         margin: 10px 10px 0px 5px;
         transition: color 0.5s ease, transform 0.5s ease; /* Transición de color y movimiento */
@@ -94,7 +106,7 @@ footer {
 
     /* Si el ícono es un SVG, cambiamos el color usando fill */
     .icon svg {
-        fill: var(--neutral-light); /* Usamos el color neutral-light para SVG */
+        fill: var(--secondary-color); /* Usamos el color neutral-light para SVG */
         transition: fill 0.5s ease, transform 0.5s ease; /* Transición de fill para SVG */
     }
 
@@ -109,7 +121,7 @@ footer {
     /* Hover effect */
     .icon:hover {
         transform: translateY(-10px); /* Movimiento hacia arriba */
-        color: var(--secondary-color); /* Cambio de color en hover: Stone Gray */
+        color: var(--primary-color); /* Cambio de color en hover: Stone Gray */
     }
 
     /* Si el ícono es un SVG, cambiamos el color usando fill en hover */
@@ -130,8 +142,8 @@ footer {
  */
 
     .button {
-        background-color: var(--highlight-color);
-        color: var(--neutral-light);
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -140,36 +152,48 @@ footer {
     }
 
     .button:hover {
-        background-color: var(--accent-color);
+        background-color: var(--neutral-dark);
     }
 
-    /* Styles for the product gallery */
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
+    .btn-menu {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 15px 25px;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
     }
+}
 
-    .gallery-item {
-        background-color: var(--neutral-light);
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+/* Styles for the product gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.gallery-item {
+    background-color: var(--neutral-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .gallery-item p {
-        padding: 15px;
-        text-align: center;
-        background-color: var(--secondary-color);
-        margin: 0;
-    }
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    margin: 0;
+}
 
 
-    @media (max-width:768px) {
+@media (max-width:768px) {
+
+}

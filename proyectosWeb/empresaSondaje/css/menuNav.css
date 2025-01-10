@@ -33,12 +33,12 @@ header label:hover {
     justify-content: flex-end;
 }
 
-/*
- * .menu li {
+
+ .menu li {
     text-align: center;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
 }
-*/
+
 .menu li:hover {
     background: rgba(0,0,0,0.3)
 }
