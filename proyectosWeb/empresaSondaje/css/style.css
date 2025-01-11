@@ -1,6 +1,7 @@
 :root {
     --primary-color: hsl(30, 45%, 25%); /* Dark Wood #5c3f23 */
     --secondary-color: hsl(30, 35%, 65%); /* Light Wood */
+    --transparent-secondary-color: hsla(30, 35%, 65%, 0.9); /* Light Wood */
     --accent-color: hsl(45, 60%, 50%); /* Golden Yellow */
     --neutral-dark: hsl(30, 10%, 40%); /* Stone Gray */
     --neutral-light: hsl(30, 20%, 85%); /* Sand Beige #e0d8d1 */
@@ -17,7 +18,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
-    /*color: var(--neutral-dark);*/
     color: var(--neutral-dark);
     margin: 0;
     padding: 0;
@@ -48,14 +48,15 @@ p {
 }
 
 section {
-    background-color: var(--secondary-color);
+    background-color: var(--transparent-secondary-color);
+    color: var(--primary-color);
     padding: 30px;
     margin: 20px;
     border-radius: 8px;
 }
 
 section li a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 /*
@@ -163,6 +164,7 @@ section li a {
         text-decoration: none;
         cursor: pointer;
         border: none;
+        border-radius: 8px;
     }
 }
 
