@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/menuNav.css">
+        <link rel="stylesheet" href="../css/galeria.css">
+        <link rel="shortcut icon" href="../img/logo.png">
+
+        <title>Rodriguez y Pizarro</title>
+    </head>
+    <body>
+        <header class="header">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="../img/barra-de-menus.png" width="50px" height="50px" alt=""></label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="diseños.html">Furniture</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+        </header>
+        <main>
+            <div class="tituloCabecera">
+                <h1> Sondaje "RODRIGUEZ y PIZARRO" <a class="logo"><img src="../img/logo.png" alt="" width="100" height="100"></a></h1>
+                <h2>" Eficiente para lograr tus objetivos."</h2>
+                <div class="container">
+                    <ul class="social-icon">
+                        <li class="icon-elem">
+                            <a class="icon" href="#"><img src="../img/svg/facebook-circle-line.svg" alt=""></a>
+                        </li>
+                        <li class="icon-elem">
+                            <a class="icon" href="#"><img src="../img/svg/instagram-line.svg" alt="" width="80" height="80"></a>
+                        </li>
+                        <li class="icon-elem">
+                            <a class="icon" href="#"><img src="../img/svg/linkedin-box-line.svg" alt="" width="80" height="80"></a>
+                        </li>
+                        <li class="icon-elem">
+                            <a class="icon" href="mailto:carpintero_afroperuano@outlook.com?Subject=Escribe%20desde%20la%20pagina%20web" target="_blank"><img src="../img/svg/mail-line.svg" alt="" width="80" height="80"></a>
+                        </li>
+                        <li class="icon-elem">
+                            <a class="icon" href="https://wa.me/56995736479/?text=Quiero%20información%20sobre%20su%20servicio%20de%20carpinteria%20visto%20en%20la%20web" target="_blank"><img src="../img/svg/whatsapp-line.svg" alt="" width="80" height="80"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<section>
+    <ul class="slider">
+        <li id="slide1" style="display: block;">
+            <video width="430" height="240" controls poster="fondoVideoJiesly.jpeg">
+                <source src="../video/6pulgadas.mp4" type="video/mp4">
+            </video>
+        </li>
+        <li id="slide2" style="display: none;">
+            <video width="430" height="240" controls poster="fondoVideoJiesly.jpeg">
+                <source src="../video/8pulgadasPvc.mp4" type="video/mp4">
+            </video>
+        </li>
+        <li id="slide3" style="display: none;">
+            <video width="430" height="240" controls poster="fondoVideoJiesly.jpeg">
+                <source src="../video/8pulgadasSimultaneo.mp4" type="video/mp4">
+            </video>
+        </li>
+        <li id="slide4" style="display: none;">
+            <video width="430" height="240" controls poster="fondoVideoJiesly.jpeg">
+                <source src="../video/pozo.mp4" type="video/mp4">
+            </video>
+        </li>
+    </ul>
+
+    <ul class="menu-galeria">
+        <li><a href="#slide1">1</a></li>
+        <li><a href="#slide2">2</a></li>
+        <li><a href="#slide3">3</a></li>
+        <li><a href="#slide4">4</a></li>
+    </ul>
+</section>
+
+        </main>
+        <!--
+            <footer class="footer">
+            <p>&copy; 2025 - Todos los derechos reservados</p>
+            </div>
+            </footer>
+        -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Recorremos todos los enlaces de la galería
+        document.querySelectorAll('.menu-galeria li a').forEach((link) => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Evita que el enlace recargue la página
+
+                // Obtén el ID del video que debe mostrarse
+                const targetId = link.getAttribute('href').substring(1); // Obtén el ID del video (sin #)
+
+                // Pausar todos los videos
+                document.querySelectorAll('.slider li video').forEach((video) => {
+                    video.pause(); // Pausa todos los videos
+                });
+
+                // Ocultar todos los videos
+                document.querySelectorAll('.slider li').forEach((video) => {
+                    video.style.display = 'none';
+                });
+
+                // Mostrar solo el video correspondiente al enlace
+                const targetVideo = document.getElementById(targetId);
+                if (targetVideo) {
+                    targetVideo.style.display = 'block'; // Muestra el video seleccionado
+                    targetVideo.querySelector('video').play(); // Reproduce el video al hacer clic
+                }
+            });
+        });
+    });
+</script>
+
+    </body>
+</html>
