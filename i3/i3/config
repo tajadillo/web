@@ -112,6 +112,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Iniciar/ rofi/ en una ventana pequeña con iconos
     #bindsym $mod+CTRL+space exec --no-startup-id rofi -modi run -show drun -show-icons -font "Noto Sans 14"
     bindsym $mod+d exec --no-startup-id rofi -modi run -show drun -show-icons -font "Mononoki Nerd Font Bold Italic 11"
+    #rofi-theme-selector
 
     # Utilizar la combinación de teclas TAB + q para abrir rofi en una ventana con las aplicaciones que se están ejecutando
     #bindsym $mod+q exec rofi -show window -show-icons
