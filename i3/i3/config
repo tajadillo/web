@@ -85,6 +85,8 @@ font pango:Mononoki Nerd Font 10
     # start a terminal
     #Abrir terminal
     #bindsym $mod+Return exec i3-sensible-terminal
+    #Con este comando ( workspace 1;) se abrira la aplicación en el espacio de trabajo indicado
+    #bindsym $mod+i workspace 1; exec kitty
     bindsym $mod+i exec kitty
 
     # start a navegador web
