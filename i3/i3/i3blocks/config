@@ -1,0 +1,97 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+#separator=false
+#separator_symbol="/"
+separator_block_width=45
+#opacity-rule = ["95:class_g = 'i3bar'"];
+align=center
+markup=pango
+#color=#eeeeee
+# i3blocks config file
+# See: https://github.com/vivien/i3blocks
+
+
+
+[capslock]
+label=LOCK MAYUS
+command=xset q | grep "Caps Lock" | awk '{ if ($4 == "on") print "  "; else print "  "; }'
+interval=1
+#color=#ffcc00
+color=#ebb24a
+
+
+#[moc]
+#label=MOC
+#command=mocp -Q %song || echo "No music"
+#interval=1
+#colocalt=#91E78B
+
+[volume]
+label= _
+command=pamixer --get-volume-human | sed 's/muted/0%/g'
+interval=1
+color=#51a34fcolor=#51a34f
+
+[ip]
+#command=hostname -i | awk '{ print "IP:" $1 }'
+label=  .
+command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
+interval=60
+color=#ee3333
+#border=#91E78B
+
+# Block for battery status (if applicable)
+[battery]
+label=  .
+command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
+interval=60
+#color=#91E78B
+color=#3333ee
+
+# Block for CPU usage
+[cpu]
+label=   CPU
+command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'
+interval=1
+color=#91E78B
+
+# Block for memory usage (commented out in your config)
+[memory]
+label=   RAM
+command=free -h | grep Mem | awk '{print $3 "/" $2}'
+interval=1
+color=#ffcc00
+
+[temperature]
+label= TEMP
+command= bash -c 'temp=$(sensors | grep -oP "(temp1|Core [0-9]):\s*\+([0-9.]+)" | head -n 1 | sed -E "s/[^0-9.]//g"); if [ -z "$temp" ]; then echo "N/A"; else echo "$temp°C"; fi'
+interval=5
+color=#ff00ff
+
+# Block for the time
+[time]
+label= 
+#command=date '+%Y-%m-%d %H:%M:%S'
+#command=date '+%H:%M:%S %d-%m-%Y'
+command=date +%T
+interval=1
+color=#808080
+
+
+
+
+
+
+
+
+
+
+
