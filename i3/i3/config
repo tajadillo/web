@@ -301,25 +301,19 @@ font pango: Mononoki Nerd Font Bold Italic 11
     position bottom
     #i4bar_command /home/tajadillo/.config/i3/i3blocks
     #i4bar_command i3bar -t
-    status_command i4blocks
+    status_command i3blocks -c ~/.config/i3/i3blocks/config
     status_command polybar
+    separator_symbol ")("
     height 21
         colors {
-    #    # background #222223ff
+   
         background #222223
         statusline #eeeeee
         separator #666667
-    #    #                   border  backgr. text
-        #focused_workspace  #444445 #444444 #ffb52a
-    #     focused_workspace  #444445 #444444 #00b7eb
-         focused_workspace  #444445 #444444 #ffe570
-    #    #active_workspace   #333334 #5f676a #ffffff
-         active_workspace   #333334 #5f676a #ffffff
-    #    #inactive_workspace #333334 #222222 #888888
-    #     inactive_workspace #333334 #222222 #ffe570
-         inactive_workspace #333334 #222222 #00b7eb
-    #    #urgent_workspace   #3f343a #900000 #ffffff
-         urgent_workspace   #3f343a #900000 #ffffff
+        focused_workspace  #444445 #444444 #ffe570
+        active_workspace   #333334 #5f676a #ffffff
+        inactive_workspace #333334 #222222 #00b7eb
+        urgent_workspace   #3f343a #900000 #ffffff
             }
         }
 
