@@ -1,0 +1,11 @@
+    #! /bin/sh
+    #insertar en /usr/local/bin/
+
+
+chosen=$(printf " Encender\n Apagar" | rofi -dmenu -i)
+
+case "$chosen" in
+    " Encender") nmcli radio wifi on ;;
+    " Apagar" ) nmcli radio wifi off ;;
+    *) exit 1 ;;
+esac
