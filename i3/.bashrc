@@ -209,6 +209,7 @@ alias musica="cd /home/tajadillo/Música && ls"
 alias videos="cd /home/tajadillo/Vídeos && ls"
 alias pesca='bash /usr/bin/pesca.sh'
 alias horaPeru='bash reloj'
+alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
