@@ -71,12 +71,17 @@ color=#3333ee
 #interval=2
 #color=#000000
 
+
+
+
+
+
 [cpu_usage]
 label= 
-command=sh -c 'read cpu user nice system idle rest < /proc/stat; usage=$((100 * (user + system) / (user + system + idle))); echo "CPU: $usage%"'
-interval=2
-#color=#FFD700
+command=sh -c 'prev_idle=$(awk "/^cpu / {print \$5}" /proc/stat); prev_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); sleep 1; next_idle=$(awk "/^cpu / {print \$5}" /proc/stat); next_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); idle_diff=$((next_idle - prev_idle)); total_diff=$((next_total - prev_total)); usage=$((100 * (total_diff - idle_diff) / total_diff)); echo "CPU: $usage%"'
+interval=1
 color=#000000
+
 
 # Block for memory usage (commented out in your config)
 [memory]
