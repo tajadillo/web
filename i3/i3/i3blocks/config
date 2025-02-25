@@ -11,7 +11,7 @@
 separator=true
 #separator=false
 #separator_symbol="/"
-separator_block_width=45
+separator_block_width=17
 #opacity-rule = ["95:class_g = 'i3bar'"];
 align=center
 markup=pango
@@ -95,6 +95,13 @@ label= TEMP
 command= bash -c 'temp=$(sensors | grep -oP "(temp1:|Core [0-9]):\s*\+([0-9.]+)" | head -n 1 | sed -E "s/[^0-9.]//g"); if [ -z "$temp" ]; then echo "N/A"; else echo "$temp°C"; fi'
 interval=1
 color=#ff00ff
+
+
+[weather]
+command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
 
 # Block for the time
 [time]
