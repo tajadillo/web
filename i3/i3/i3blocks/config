@@ -1,3 +1,4 @@
+
 # i3blocks configuration file
 #
 # The i3blocks man page describes the usage of the binary,
@@ -21,7 +22,7 @@ markup=pango
 
 
 [capslock]
-label=LOCK MAYUS
+label=😊 LOCK MAYUS
 command=xset q | grep "Caps Lock" | awk '{ if ($4 == "on") print "  "; else print "  "; }'
 interval=1
 #color=#ffcc00
@@ -35,10 +36,10 @@ color=#ebb24a
 #colocalt=#91E78B
 
 [volume]
-label= _
+label=  )
 command=pamixer --get-volume-human | sed 's/muted/0%/g'
 interval=1
-color=#51a34fcolor=#51a34f
+color=#51a34f
 
 [ip]
 #command=hostname -i | awk '{ print "IP:" $1 }'
@@ -57,11 +58,25 @@ interval=60
 color=#3333ee
 
 # Block for CPU usage
-[cpu]
-label=   CPU
-command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'
-interval=1
-color=#91E78B
+#[cpu]
+#labe#l=   CPU
+#command=top -bn1 | grep '%Cpu' | sed 's/,/./g' | awk '{print 100 - $8}'
+#interval=1
+#color=#91E78B
+
+
+#[cpu_temp]
+#label= 
+#command=sh -c 'CPU_USAGE=$(mpstat 1 1 | awk "/Average:/ {printf(\"%s\", 100 - \$NF)}"); TEMP=$(sensors | grep "Package id 0:\|Tdie" | grep -o ":[ ]*+[0-9]*.[0-9]*°C" | grep -o "+[0-9]*.[0-9]*°C"); echo "CPU: $CPU_USAGE% $TEMP"'
+#interval=2
+#color=#000000
+
+[cpu_usage]
+label= 
+command=sh -c 'read cpu user nice system idle rest < /proc/stat; usage=$((100 * (user + system) / (user + system + idle))); echo "CPU: $usage%"'
+interval=2
+#color=#FFD700
+color=#000000
 
 # Block for memory usage (commented out in your config)
 [memory]
@@ -72,8 +87,8 @@ color=#ffcc00
 
 [temperature]
 label= TEMP
-command= bash -c 'temp=$(sensors | grep -oP "(temp1|Core [0-9]):\s*\+([0-9.]+)" | head -n 1 | sed -E "s/[^0-9.]//g"); if [ -z "$temp" ]; then echo "N/A"; else echo "$temp°C"; fi'
-interval=5
+command= bash -c 'temp=$(sensors | grep -oP "(temp1:|Core [0-9]):\s*\+([0-9.]+)" | head -n 1 | sed -E "s/[^0-9.]//g"); if [ -z "$temp" ]; then echo "N/A"; else echo "$temp°C"; fi'
+interval=1
 color=#ff00ff
 
 # Block for the time
@@ -85,13 +100,9 @@ command=date +%T
 interval=1
 color=#808080
 
-
-
-
-
-
-
-
-
-
+[wifi]
+label= 
+command=bash -c 'iface=$(ip link | awk -F: "/wlp|wlan/{print \$2}" | tr -d " "); if [ -n "$iface" ]; then ssid=$(iw dev "$iface" info | grep ssid | awk "{print \$2}"); if [ -n "$ssid" ]; then echo "$ssid"; else echo " Desconectado"; fi; else echo "No WiFi Interface"; fi'
+interval=1
+color=#51a3a3
 
