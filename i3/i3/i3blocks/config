@@ -20,7 +20,6 @@ markup=pango
 # See: https://github.com/vivien/i3blocks
 
 
-
 [capslock]
 label=😊 LOCK MAYUS
 command=xset q | grep "Caps Lock" | awk '{ if ($4 == "on") print "  "; else print "  "; }'
@@ -110,11 +109,11 @@ label= 
 #command=date '+%H:%M:%S %d-%m-%Y'
 command=date +%T
 interval=1
-color=#808080
+color=#000000
 
 [wifi]
-label= 
-command=bash -c 'iface=$(ip link | awk -F: "/wlp|wlan/{print \$2}" | tr -d " "); if [ -n "$iface" ]; then ssid=$(iw dev "$iface" info | grep ssid | awk "{print \$2}"); if [ -n "$ssid" ]; then echo "$ssid"; else echo " Desconectado"; fi; else echo "No WiFi Interface"; fi'
+label= .
+command=bash -c 'ssid=$(nmcli -t -f NAME connection show --active); echo "${ssid:-Desconectado}"'
 interval=1
 color=#51a3a3
 
