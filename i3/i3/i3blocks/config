@@ -34,12 +34,6 @@ color=#ebb24a
 #interval=1
 #colocalt=#91E78B
 
-[volume]
-label=  )
-command=pamixer --get-volume-human | sed 's/muted/0%/g'
-interval=1
-color=#51a34f
-
 [ip]
 #command=hostname -i | awk '{ print "IP:" $1 }'
 label=  .
@@ -101,6 +95,11 @@ command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs 
 interval=3600
 color=#81b9ca
 
+[volume]
+label=  )
+command=pamixer --get-volume-human | sed 's/muted/0%/g'
+interval=1
+color=#51a34f
 
 # Block for the time
 [time]
