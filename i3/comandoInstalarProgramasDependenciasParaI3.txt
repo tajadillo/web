@@ -1,0 +1,1 @@
+sudo apt-get install scrot arc-theme pulseaudio pavucontrol lxappearance arandr feh nitrogen vlc mpv gnome-calculator gap
