@@ -1,0 +1,5 @@
+instalar w3m 
+
+copiar todos los archivos a la carpeta .config/ranger
+
+dar permisos de ejecución a todos los ejecutables
