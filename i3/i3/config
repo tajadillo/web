@@ -407,3 +407,15 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Confirma la configuración en lightdm-gtk-greeter.conf
     #sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
     #background=/usr/share/backgrounds/michelangelo.png
+
+    #######################################################################
+    #                  Problemas conección wifi                           #
+    #3. Si sigue sin funcionar, fuerza a NetworkManager a tomar el control#
+    #                                                                     #
+    #Ejecuta:                                                             #
+    #sudo nmcli device set wlp9s0 managed yes                             #
+    #sudo systemctl restart NetworkManager                                #
+    #                                                                     #
+    #Y revisa de nuevo con:                                               #
+    #nmcli device                                                         #
+    #######################################################################
