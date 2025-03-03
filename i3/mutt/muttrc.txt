@@ -14,7 +14,7 @@ set ssl_force_tls = yes
 
 # Credenciales
 set imap_user = "richard_tajadillo@outlook.com"
-set imap_pass = "Afroperuan0"  # Reemplaza con tu contraseña real
+set imap_pass = "******************"  # Reemplaza con tu contraseña real
 set smtp_pass = $imap_pass
 
 # Servidor IMAP
