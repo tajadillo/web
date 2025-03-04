@@ -77,41 +77,42 @@ function ctrl_c(){
 ### Banner
 function banner(){
     echo -e "${BYellow}"
-    sleep 0.15 && echo -e "\t                             _   _        "
-    sleep 0.15 && echo -e "\t           o          |  o  | | | |       "
-    sleep 0.15 && echo -e "\t _|_  __,     __,   __|     | | | |  __   "
-    sleep 0.15 && echo -e "\t  |  /  |  | /  |  /  |  |  |/  |/  /  \_ "
-    sleep 0.15 && echo -e "\t  |_/\_/|_/|/\_/|_/\_/|_/|_/|__/|__/\__/  "
-    sleep 0.15 && echo -e "\t          /|                              "
-    sleep 0.15 && echo -e "\t          \|                              "
+    echo
+    echo
+    echo
+    echo
+    sleep 0.15 && echo -e "\t                                  XXX                            "
+    sleep 0.15 && echo -e "\t                                 (o o)                           "
+    sleep 0.15 && echo -e "\t            ESTOY            ooO--(_)--Ooo           LISTO       "
+    sleep 0.15 && echo -e "\t _______           _         _____ _____ _      _      ____      "
+    sleep 0.15 && echo -e "\t|__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \     "
+    sleep 0.15 && echo -e "\t   | |  /  \      | | /  \  | |  | || | | |    | |   | |  | |    "
+    sleep 0.15 && echo -e "\t   | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | |    "
+    sleep 0.15 && echo -e "\t   | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| |    "
+    sleep 0.15 && echo -e "\t   |_/_/    \_\____/_/    \_\_____/_____|______|______\____/     "
+sleep 0.15 && echo -e ${BRed}'    .o oOOOOOOOo                                            OOOo'
+sleep 0.15 && echo -e '    Ob.OOOOOOOo  OOOo.      oOOo.                      .adOOOOOOO'
+sleep 0.15 && echo -e '    OboO"""""""""""".OOo. .oOOOOOo.    OOOo.oOOOOOo..""""""""" OO'
+sleep 0.15 && echo -e '    OOP..OOOOOOOOOOO "POOOOOOOOOOOo.    "OOOOOOOOOP.OOOOOOOOOOOB '
+sleep 0.15 && echo -e '     O OOOO       OOOOo OOOOOOOOOOO  .adOOOOOOOOO"oOOO      OOOOo'
+sleep 0.15 && echo -e '    .OOOO              OOOOOOOOOOOOOOOOOOOOOOOOOO              OO'
+sleep 0.15 && echo -e '    OOOOO                  "OOOOOOOOOOOOOOOO"                 oOO'
+sleep 0.15 && echo -e '   oOOOOOba.                .adOOOOOOOOOOba               .adOOOOo.'
+sleep 0.15 && echo -e '  oOOOOOOOOOOOOOba.    .adOOOOOOOOOO@^OOOOOOOba.     .adOOOOOOOOOOOO'
+sleep 0.15 && echo -e ' OOOOOOOOOOOOOOOOO.OOOOOOOOOOOOOO"    "OOOOOOOOOOOOO.OOOOOOOOOOOOOO'
+sleep 0.15 && echo -e ' "OOOO"       "YOoOOOOMOIONODOO"   .   "OOROAOPOEOOOoOY"     "OOO"'
+sleep 0.15 && echo -e '    Y            OOOOOOOOOOOOOO  .oOOo.  OOOOOOOOOOO?            '
+sleep 0.15 && echo -e '                 .oOOOOOOOOOOOOo.OOOOOO.oOOOOOOOOOOOO?         ..'
+sleep 0.15 && echo -e '                 oOOP"%OOOOOOOOoOOOOOOO?oOOOOO?OOOO"OOo'
+sleep 0.15 && echo -e '                  %o  OOOO"%OOOO%"%OOOOO"OOOOOO"OOO :'
+sleep 0.15 && echo -e '                      `$"   OOOO   O"Y    OOOO   o             .'
+sleep 0.15 && echo -e '    .                  .     OP"          : o     .'
+sleep 0.15 && echo -e '                              :'
+sleep 0.15 && echo -e ' .'$nc
+echo
         echo -e "${Off_Color}"
-        echo
-        echo
     tput civis
 }
-
-echo -e $Red'    .o oOOOOOOOo                                            OOOo'
-echo -e '    Ob.OOOOOOOo  OOOo.      oOOo.                      .adOOOOOOO'
-echo -e '    OboO"""""""""""".OOo. .oOOOOOo.    OOOo.oOOOOOo..""""""""" OO'
-echo -e '    OOP..OOOOOOOOOOO "POOOOOOOOOOOo.    "OOOOOOOOOP.OOOOOOOOOOOB '
-echo -e '     O OOOO       OOOOo OOOOOOOOOOO  .adOOOOOOOOO"oOOO      OOOOo'
-echo -e '    .OOOO              OOOOOOOOOOOOOOOOOOOOOOOOOO              OO'
-echo -e '    OOOOO                  "OOOOOOOOOOOOOOOO"                 oOO'
-echo -e '   oOOOOOba.                .adOOOOOOOOOOba               .adOOOOo.'
-echo -e '  oOOOOOOOOOOOOOba.    .adOOOOOOOOOO@^OOOOOOOba.     .adOOOOOOOOOOOO'
-echo -e ' OOOOOOOOOOOOOOOOO.OOOOOOOOOOOOOO"    "OOOOOOOOOOOOO.OOOOOOOOOOOOOO'
-echo -e ' "OOOO"       "YOoOOOOMOIONODOO"   .   "OOROAOPOEOOOoOY"     "OOO"'
-echo -e '    Y            OOOOOOOOOOOOOO  .oOOo.  OOOOOOOOOOO?            '
-echo -e '                 .oOOOOOOOOOOOOo.OOOOOO.oOOOOOOOOOOOO?         ..'
-echo -e '                 oOOP"%OOOOOOOOoOOOOOOO?oOOOOO?OOOO"OOo'
-echo -e '                  %o  OOOO"%OOOO%"%OOOOO"OOOOOO"OOO :'
-echo -e '                      `$"   OOOO   O"Y    OOOO   o             .'
-echo -e '    .                  .     OP"          : o     .'
-echo -e '                              :'
-echo -e ' .'$nc
-
-
-
 
 function helpPanel(){
     clear; banner
