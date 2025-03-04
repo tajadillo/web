@@ -90,6 +90,29 @@ function banner(){
     tput civis
 }
 
+echo -e $yellow'    .o oOOOOOOOo                                            OOOo'
+echo -e '    Ob.OOOOOOOo  OOOo.      oOOo.                      .adOOOOOOO'
+echo -e '    OboO"""""""""""".OOo. .oOOOOOo.    OOOo.oOOOOOo..""""""""" OO'
+echo -e '    OOP..OOOOOOOOOOO "POOOOOOOOOOOo.    "OOOOOOOOOP.OOOOOOOOOOOB '
+echo -e '     O OOOO       OOOOo OOOOOOOOOOO  .adOOOOOOOOO"oOOO      OOOOo'
+echo -e '    .OOOO              OOOOOOOOOOOOOOOOOOOOOOOOOO              OO'
+echo -e '    OOOOO                  "OOOOOOOOOOOOOOOO"                 oOO'
+echo -e '   oOOOOOba.                .adOOOOOOOOOOba               .adOOOOo.'
+echo -e '  oOOOOOOOOOOOOOba.    .adOOOOOOOOOO@^OOOOOOOba.     .adOOOOOOOOOOOO'
+echo -e ' OOOOOOOOOOOOOOOOO.OOOOOOOOOOOOOO"    "OOOOOOOOOOOOO.OOOOOOOOOOOOOO'
+echo -e ' "OOOO"       "YOoOOOOMOIONODOO"   .   "OOROAOPOEOOOoOY"     "OOO"'
+echo -e '    Y            OOOOOOOOOOOOOO  .oOOo.  OOOOOOOOOOO?            '
+echo -e '                 .oOOOOOOOOOOOOo.OOOOOO.oOOOOOOOOOOOO?         ..'
+echo -e '                 oOOP"%OOOOOOOOoOOOOOOO?oOOOOO?OOOO"OOo'
+echo -e '                  %o  OOOO"%OOOO%"%OOOOO"OOOOOO"OOO :'
+echo -e '                      `$"   OOOO   O"Y    OOOO   o             .'
+echo -e '    .                  .     OP"          : o     .'
+echo -e '                              :'
+echo -e ' .'$nc
+
+
+
+
 function helpPanel(){
     clear; banner
     echo -e "\t${BGray}Herramienta para rastrear una IP pública, puede ser su IP o alguna otra IP.${Color_Off}"
