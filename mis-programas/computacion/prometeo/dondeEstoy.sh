@@ -90,7 +90,7 @@ function banner(){
     tput civis
 }
 
-echo -e $yellow'    .o oOOOOOOOo                                            OOOo'
+echo -e $Red'    .o oOOOOOOOo                                            OOOo'
 echo -e '    Ob.OOOOOOOo  OOOo.      oOOo.                      .adOOOOOOO'
 echo -e '    OboO"""""""""""".OOo. .oOOOOOo.    OOOo.oOOOOOo..""""""""" OO'
 echo -e '    OOP..OOOOOOOOOOO "POOOOOOOOOOOo.    "OOOOOOOOOP.OOOOOOOOOOOB '
