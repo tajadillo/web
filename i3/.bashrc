@@ -207,9 +207,12 @@ alias escritorio="cd /home/tajadillo/Escritorio && ls"
 alias descargas="cd /home/tajadillo/Descargas && ls"
 alias musica="cd /home/tajadillo/Música && ls"
 alias videos="cd /home/tajadillo/Vídeos && ls"
-alias pesca='bash /usr/bin/pesca.sh'
+alias pesca='bash /usr/local/bin/pesca.sh'
 alias horaPeru='bash reloj'
 alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+alias horaMundo='bash /usr/local/bin/reloj.sh'
+#borrar de forma interactiva, recursiva y preservando los archivos de la carpeta root
+alias rm='rm -iv --preserve-root'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
