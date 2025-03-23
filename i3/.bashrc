@@ -170,14 +170,27 @@ alias l='ls -CF'
 
 #mis aliasses
 
+# -> Administrar ficheros y carpetas
+#instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
+#ver lista de ficheros y carpetas
+alias ll='lsd -lah --group-dirs=first'
+alias la='lsd -a --color=auto --group-dirs=first'
+alias ls='lsd --color=auto --group-dirs=first'
+alias l='lsd --group-dirs=first'
+#crear carpetas
+alias mkdir='mkdir -pv'
+#ir a determinadas carpetas
+alias documentos="cd /home/tajadillo/Documentos && ls"
+alias escritorio="cd /home/tajadillo/Escritorio && ls"
+alias descargas="cd /home/tajadillo/Descargas && ls"
+alias musica="cd /home/tajadillo/Música && ls"
+alias videos="cd /home/tajadillo/Vídeos && ls"
+
 # -> Consulta metereologiga
 #clima
 alias clima="curl wttr.in/arica?lang=es"
 #consulta de pesca
 alias pesca='bash /usr/local/bin/pesca.sh'
-
-
-
 
 alias ver-imagen="kitty +kitten icat"
 alias apagar='sudo shutdown -h now'
@@ -205,24 +218,6 @@ alias donde='pwd | lolcat -a'
 #atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
 #alias cat='cat -n | highlight -O ansi -n'
 # instalar sudo apt-get install highlight para complementar al comando 'cat'
-
-# -> Administrar ficheros y carpetas
-#instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
-#ver lista de ficheros y carpetas
-alias ll='lsd -lh --group-dirs=first'
-alias la='lsd -a --color=auto --group-dirs=first'
-alias l='lsd --group-dirs=first'
-alias lla='lsd -lah --group-dirs=first'
-alias ls='lsd --group-dirs=first'
-alias ls='lsd -lah --color=auto'
-#crear carpetas
-alias mkdir='mkdir -pv'
-#ir a determinadas carpetas
-alias documentos="cd /home/tajadillo/Documentos && ls"
-alias escritorio="cd /home/tajadillo/Escritorio && ls"
-alias descargas="cd /home/tajadillo/Descargas && ls"
-alias musica="cd /home/tajadillo/Música && ls"
-alias videos="cd /home/tajadillo/Vídeos && ls"
 
 # -> Prevenir borrar o mover ficheros accidentalmente
 #borrar de forma interactiva, recursiva
