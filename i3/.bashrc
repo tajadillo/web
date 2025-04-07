@@ -225,7 +225,7 @@ alias rm='rm -iv --preserve-root'
 #mover de forma interactiva, recursiva y preservando los archivos de la carpeta root
 alias mv='mv -iv'
 #copiar de forma interactiva, recursiva
-alias cp='cp -iv'
+alias cp='cp -rfiuv'
 
 # -> Actualizar todo el sistema
 alias full-update='sudo snap refresh && flatpak update -y && sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
