@@ -41,22 +41,7 @@ function ctrl_c(){
     exit 0
 }
 
-function saludar(){
-    # Obtener la hora actual
-    hora_actual=$(date +'%H')
-# Determinar el saludo basado en la hora
-if [ $hora_actual -ge 5 ] && [ $hora_actual -lt 12 ]; then
-    saludo="¡Buenos días $usuario!"
-elif [ $hora_actual -ge 12 ] && [ $hora_actual -lt 20 ]; then
-    saludo="¡Buenas tardes $usuario!"
-else
-    saludo="¡Buenas noches $usuario!"
-fi
 
-# Mostrar el saludo
-echo $saludo
-
-}
 #saludo
 tput civis
 
@@ -79,6 +64,25 @@ tput civis
 clear
 sleep 2
 
+
+function saludar(){
+    # Obtener la hora actual
+    hora_actual=$(date +'%H')
+# Determinar el saludo basado en la hora
+if [ $hora_actual -ge 5 ] && [ $hora_actual -lt 12 ]; then
+    saludo="¡Buenos días $usuario!"
+elif [ $hora_actual -ge 12 ] && [ $hora_actual -lt 20 ]; then
+    saludo="¡Buenas tardes $usuario!"
+else
+    saludo="¡Buenas noches $usuario!"
+fi
+
+# Mostrar el saludo
+echo $saludo
+
+}
+
+
 ######### VARIABLES ############
 fecha=$(date "+%A %d de %B del %Y a las %T")
 ######### FIN VARIABLES ############
@@ -92,22 +96,25 @@ echo -e "\n ${redColour}########################################################
 ###############################
 # llamar a la funcion saludar #
 ###############################
-saludar
+$saludar
 #########
-echo
-echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******" > $usuario.txt
-echo -e "\n ${blueColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
+echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******" > $usuario
+echo -e "\t ${blueColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
 sleep 6
+echo -e "\n ${redColour}##############################################################################${endColour}"
 clear
 
-################## cual es tu edad ##########################
-    clear
+echo "****** BIENVENIDO A LA ACADEMIA MIEL Y CANELA ******" > $usuario
+echo -e "\n ${redColour}##############################################################################${endColour}"
 echo
-echo -e "\n ${blueColour}Correcto ${yellowColour}$usuario${endColour}. \n${blueColour}Vamos a calcular cual es la edad que tienes .${endColour}"
+echo -e "${blueColour}\tVamos generar un pequeño informe, \n\tdonde mostraremos a que categoria perteneces dependiendo de tu edad \n\ty los horarios de tu categoria.${endColour}"
 tput cnorm
-sleep 2
+echo -e "\n ${redColour}##############################################################################${endColour}"
+sleep 8
 clear
+################## cual es tu edad ##########################
+
 
 read -p "Introduce tu año de nacimiento: " ano
 read -p "Introduce tu mes de nacimiento: " mes
@@ -134,15 +141,15 @@ echo
 
 # Verificación de la edad y horarios
 if [ $edad -ge 6 ] && [ $edad -le 10 ]; then
-    echo "Perteneces a categoria 'Menores A'" >> $usuario.txt
+    echo "Perteneces a la categoria 'Menores A'" >> $usuario.txt
 elif [ $edad -ge 11 ] && [ $edad -le 17 ]; then
-    echo "Perteneces a categoria 'Menores Juveniles'" >> $usuario.txt
+    echo "Perteneces a la categoria 'Menores Juveniles'" >> $usuario.txt
 elif [ $edad -ge 18 ] && [ $edad -le 30 ]; then
-    echo "Perteneces a categoria 'Mayores Juveniles'" >> $usuario.txt
+    echo "Perteneces a la categoria 'Mayores Juveniles'" >> $usuario.txt
 elif [ $edad -ge 30 ] && [ $edad -le 50 ]; then
-    echo "Perteneces a categoria 'Adultos'" >> $usuario.txt
+    echo "Perteneces a la categoria 'Adultos'" >> $usuario.txt
 elif [ $edad -ge 51 ]; then
-    echo "Perteneces a categoria 'Master'" >> $usuario.txt
+    echo "Perteneces a la categoria 'Master'" >> $usuario.txt
 else
     echo "Ingresaste una edad que no corresponde"
     exit 1
@@ -167,3 +174,4 @@ else
 fi
 ########### fin horarios ##########################
 
+nvim $usuario.txt

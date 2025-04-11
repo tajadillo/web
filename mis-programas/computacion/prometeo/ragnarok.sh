@@ -19,6 +19,22 @@ export DEBIAN_FRONTEND=noninteractive
 
 trap ctrl_c INT
 
+#function banner(){
+#echo -e "${redColour}                                                          ##${endColour}"
+#echo -e "${redColour}                                        ##################  ${endColour}"
+#echo -e "${redColour}                               #########################    ${endColour}"
+#echo -e "${redColour}                        #####################               ${endColour}"
+#echo -e "${redColour}                  ########################                  ${endColour}"
+#echo -e "${redColour}                 ###################                        ${endColour}"
+#echo -e "${redColour}#################################                           ${endColour}"
+#echo -e "${redColour}###################### # ########                           ${endColour}"
+#echo -e "${redColour}###############  #####   #  ######                          ${endColour}"
+#echo -e "${redColour} ############    #########   ######                         ${endColour}"
+#echo -e "${redColour}  #########      #####       #######                        ${endColour}"
+#echo -e "${redColour}   ######        #####         #######                      ${endColour}"
+#echo -e "${redColour}    ####         #####          ########                    ${endColour}"
+#}
+
 function ctrl_c(){
 	echo -e "\n${yellowColour}[*]${endColour}${grayColour}Saliendo${endColour}"
 	tput cnorm; airmon-ng stop ${networkCard}mon > /dev/null 2>&1

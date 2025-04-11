@@ -99,7 +99,7 @@ echo -e "${redColour}******${endColour} ${greenColour}BIENVENIDO A LA ACADEMIA M
 echo -e "\n${blueColour}Ingresaras a los nuevos alumnos para poder verlos despues en un documento de texto${endColour}"
 echo -e "\n ${greenColour}COMENCEMOS!!!${endColour} ${yellowColour}$usuario${endColour}"
 echo -e "\n ${redColour}##############################################################################${endColour}"
-sleep 6
+sleep 13
 clear
 
 tput cnorm

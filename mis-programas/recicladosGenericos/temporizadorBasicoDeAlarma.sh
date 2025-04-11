@@ -2,35 +2,31 @@
 ######################################################################
 #Copyright (C) 2018  Kris Occhipinti
 #https://filmsbykris.com
-
 #TEMPORIZADOR BÁSICO con ALARMA
-
 #Este programa es software libre: puedes redistribuirlo y/o modificarlo
 #bajo los términos de la Licencia Pública General GNU publicada por
 #la Free Software Foundation, ya sea la versión 3 de la Licencia, o
 #(a su elección) cualquier versión posterior.
-
 #Este programa se distribuye con la esperanza de que sea útil.
 #pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
 #COMERCIABILIDAD o IDONEIDAD PARA UN FIN DETERMINADO.  Ver el
 #Licencia pública general #GNU para más detalles.
-
 #Deberías haber recibido una copia de la Licencia Pública General GNU
 #junto con este programa.  En caso contrario, consulte <http://www.gnu.org/licenses/>.
 ######################################################################
 
-if [ $# -lt 1 ]
-then
+if [ $# -lt 1 ]; then
   echo "Time needed"
   echo "Useage: $0 <seconds>"
   echo "Example: $0 60"
   exit 0
+else
 fi
 
 alarm="$HOME/.alarm.wav"
 time="$1"
 start=$SECONDS
-s=1
+second=1
 
 function main(){
   echo "Welcome..."
@@ -38,7 +34,7 @@ function main(){
   do
     s="$((time - (SECONDS - start)))"
     echo -ne "\n                   \n"
-    echo -ne "\n$s seconds left"
+    echo -ne "\n$second seconds left"
     sleep 1
   done
 

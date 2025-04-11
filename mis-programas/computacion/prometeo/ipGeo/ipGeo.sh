@@ -32,6 +32,7 @@ yellowColour="\e[0;33m\033[1m"
 purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
+naranjaColour="\033[38;2;243;134;0m"
 
 #############################
 function ctrl_c(){
@@ -51,18 +52,41 @@ function banner(){
     clear
     echo
     echo
-    sleep 0.15 && echo -e "\t${redColour}                             _   _        ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour}           o          |  o  | | | |       ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour} _|_  __,     __,   __|     | | | |  __   ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour}  |  /  |  | /  |  /  |  |  |/  |/  /  \_ ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour}  |_/\_/|_/|/\_/|_/\_/|_/|_/|__/|__/\__/  ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour}          /|                              ${endColour}"
-    sleep 0.15 && echo -e "\t${redColour}          \|                              ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}                             _   _        ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}           o          |  o  | | | |       ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour} _|_  __,     __,   __|     | | | |  __   ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}  |  /  |  | /  |  /  |  |  |/  |/  /  \_ ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}  |_/\_/|_/|/\_/|_/\_/|_/|_/|__/|__/\__/  ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}          /|                              ${endColour}"
+    sleep 0.15 && echo -e "\t${naranjaColour}          \|                              ${endColour}"
     echo
     echo
     echo -e "\n${greenColour}GEOLOCALIZADOR IP${endColour}"
     echo -e "\n\t${yellowColour}¡¡¡${endColour}${greenColour}AVERIGUA DONDE ESTAS${endColour}${yellowColour}!!!${endColour}\n"
-    sleep 6
+    sleep 2
+
+    sleep 0.15 && echo -e "\t${redColour}                  ........    .....                                                  ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}           .... ......     .........                   .  .   ..... .     ...        ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}  ....... . .... .. . ...   . ...            .....     ...... ................... ...${endColour}"
+    sleep 0.15 && echo -e "\t${redColour} ... .  ...........     .     .            .. ..... ....... .... ......... . .  .    ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}          .........   .. .                    . . ....... ...  ........        .     ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}          .................              ....................... .........           ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}           ........ . ..                .. .  ..  ...  .. ..............             ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}            ....... ..                  .       . ..  ................   .           ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}             . .... .                   ....  . . ..  ... ......... ..               ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}               ..                     ...... ....  .      . ....... .                ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                 . .                .............. ....   ...   . .                  ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                   ..  .              .. .........              . .   .              ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       . ...                ... ....            .   .                ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                     ... ....               ......                   ..  ..          ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                      ... . ....            . ....                     .  .          ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       ........             ......                     .. .          ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                        ... ..               ....                   .........        ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       .....                  ...                   .... .. .        ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       .. .                                                          ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       ..                                                        .   ${endColour}"
+    sleep 0.15 && echo -e "\t${redColour}                       .                                                             ${endColour}"
+
     tput civis
 }
 

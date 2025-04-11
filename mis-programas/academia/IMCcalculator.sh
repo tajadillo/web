@@ -38,6 +38,6 @@ else
     echo "Clasificación: Obesidad"
 fi
 
-read -p "presiona la tecla enter para continuar y llamar al script para conocer tu edad" P
+read -p "presiona la tecla enter para continuar y llamar al script donde veremos tu edad" P
 
 source edad.sh

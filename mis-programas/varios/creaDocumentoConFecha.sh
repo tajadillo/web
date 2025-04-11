@@ -18,6 +18,15 @@ naranjaColour="\033[38;2;243;134;0m"
 
 # Al crear un documento automáticamente se le adicionará la fecha
 
+
+
+function docActualizado(){
+    actualizado=$( date -r ./alarma.sh  )
+    echo
+    echo -e "${greenColour}este archivo se actualizo por ultima vez el${endColour} ${naranjaColour}$actualizado${endColour}"
+    echo
+}
+
 clear
 
 echo -e "\t\t${naranjaColour}¿cual será el nombre del documento?${endColour}"
@@ -61,3 +70,4 @@ touch "$documento"
 clear
 echo -e "\n\t ${greenColour}En esta dirección${endColour} \n\t\t${redColour}$(pwd)${endColour}\n \t${greenColour}se creó el documento:${endColour}\n \t\t\t${yellowColour}$documento${endColour} "
 
+docActualizado

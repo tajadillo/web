@@ -1,4 +1,7 @@
 {
-  "ip": "127.0.0.1",
-  "bogon": true
+  "status": 400,
+  "error": {
+    "title": "Wrong module or field type",
+    "message": "No module or field of type '24' exists. Please check our documentation https://ipinfo.io/developers."
+  }
 }

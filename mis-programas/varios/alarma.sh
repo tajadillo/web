@@ -16,6 +16,28 @@ darkGrayColour="\e[0;90m\033[1m"
 naranjaColour="\033[38;2;243;134;0m"
 #Esto cubre una amplia gama de colores ANSI que puedes usar para formatear texto en la terminal. ¡Espero que te sea útil!
 
+function calabera(){
+sleep 0.15 && echo -e "${naranjaColour}    .o oOOOOOOOo                                            OOOo       ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    Ob.OOOOOOOo  OOOo.      oOOo.                      .adOOOOOOO      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    OboO°°°°°°°°°°°°.OOo. .oOOOOOo.    OOOo.oOOOOOo..°°°°°°°°° OO      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    OOP..OOOOOOOOOOO °POOOOOOOOOOOo.    °OOOOOOOOOP.OOOOOOOOOOOB       ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}     O OOOO       OOOOo OOOOOOOOOOO  .adOOOOOOOOO°oOOO      OOOOo      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    .OOOO              OOOOOOOOOOOOOOOOOOOOOOOOOO              OO      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    OOOOO                  °OOOOOOOOOOOOOOOO°                 oOO      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}   oOOOOOba.                .adOOOOOOOOOOba               .adOOOOo.    ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}  oOOOOOOOOOOOOOba.    .adOOOOOOOOOO@^OOOOOOOba.     .adOOOOOOOOOOOO   ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour} OOOOOOOOOOOOOOOOO.OOOOOOOOOOOOOO°    °OOOOOOOOOOOOO.OOOOOOOOOOOOOO    ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour} °OOOO°       °YOoOOOOMOIONODOO°   .   °OOROAOPOEOOOoOY°     °OOO°     ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    Y            OOOOOOOOOOOOOO  .oOOo.  OOOOOOOOOOO?                  ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}                 .oOOOOOOOOOOOOo.OOOOOO.oOOOOOOOOOOOO?         ..      ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}                 oOOP°%OOOOOOOOoOOOOOOO?oOOOOO?OOOO°OOo                ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}                  %o  OOOO°%OOOO%°%OOOOO°OOOOOO°OOO :                  ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}                      °$°   OOOO   O°Y    OOOO   o             .       ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}    .                  .     OP°          : o     .                    ${endColour}"
+sleep 0.15 && echo -e "${naranjaColour}                              :                                        ${endColour}"
+sleep 0.15 && echo -e " .'
+echo
+}
 
 function docActualizado(){
     actualizado=$( date -r ./alarma.sh  )
@@ -43,8 +65,6 @@ function helpPanel(){
     echo -e "${redColour}#\t${purpleColour}s)${endColour}${yellowColour} Segundos${endColour} ${redColour}#${endColour}"
     echo -e "${redColour}#                   #${endColour}"
     echo -e "${redColour}#####################${endColour}"
-
-
     echo
 }
 
@@ -153,11 +173,11 @@ clear
 
 saludo
 banner
+helpPanel
 echo
 read -p "Escribe la cantidad de tiempo para que suene la alarma " cantidad
 sleep 2
 echo
-helpPanel
 echo
 read -p "Escribe si seran horas, minutos o segundos " tipo
 sleep 2
@@ -178,6 +198,7 @@ else
 fi
 
 docActualizado
+calabera
 
 sleep $cantidad$tipo && audacious /media/tajadillo/RICHARD/Music/salsa/salsitas-forever/willy\ chirino/los-campeones-de-la-salsa.mp3
 exit 0
