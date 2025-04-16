@@ -300,6 +300,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Apariencia de la barra#
     #Podemos personalizar la barra cambiando fuentes, colores, posicion, etc.
     bar {
+    #sudo apt-get install i3blocks
     #position top
     position bottom
     #i3bar_command /home/tajadillo/.config/i3/i3blocks
