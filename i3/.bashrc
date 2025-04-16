@@ -187,7 +187,7 @@ alias musica="cd /home/tajadillo/Música && ls"
 alias videos="cd /home/tajadillo/Vídeos && ls"
 
 #descomprimir archivos
-alias tar='tar -xvf'
+#alias tar='tar -xvf'
 
 # -> Consulta metereologiga
 #clima
