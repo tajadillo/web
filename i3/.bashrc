@@ -186,6 +186,9 @@ alias descargas="cd /home/tajadillo/Descargas && ls"
 alias musica="cd /home/tajadillo/Música && ls"
 alias videos="cd /home/tajadillo/Vídeos && ls"
 
+#descomprimir archivos
+alias tar='tar -xvf'
+
 # -> Consulta metereologiga
 #clima
 alias clima="curl wttr.in/arica?lang=es"
