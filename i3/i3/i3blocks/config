@@ -94,13 +94,14 @@ interval=1
 color=#51a34f
 
 # Block for the time
+#hora/reloj
 [time]
 label= 
 #command=date '+%Y-%m-%d %H:%M:%S'
 #command=date '+%H:%M:%S %d-%m-%Y'
 command=date +%T
 interval=1
-color=#000000
+color=#5555ff
 
 # Block for battery status (if applicable)
 [battery]
