@@ -72,12 +72,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+# We have color support; assume it's compliant with Ecma-48
+# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+# a case would tend to support setf rather than setaf.)
+color_prompt=yes
     else
-	color_prompt=
+color_prompt=
     fi
 fi
 
@@ -189,9 +189,10 @@ alias videos="cd /home/tajadillo/Vídeos && ls"
 #descomprimir archivos
 #alias tar='tar -xvf'
 
+
 # -> Consulta metereologiga
 #clima
-alias clima="curl wttr.in/?lang=es"
+alias clima="curl wttr.in/arica?lang=es"
 #consulta de pesca
 alias pesca='bash /usr/local/bin/pesca.sh'
 
@@ -290,3 +291,5 @@ neofetch
 #export C_INCLUDE_PATH=/usr/lib/avr/include
 
 #cmatrix -a
+
+
