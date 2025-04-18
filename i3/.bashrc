@@ -191,7 +191,7 @@ alias videos="cd /home/tajadillo/Vídeos && ls"
 
 # -> Consulta metereologiga
 #clima
-alias clima="curl wttr.in/arica?lang=es"
+alias clima="curl wttr.in/?lang=es"
 #consulta de pesca
 alias pesca='bash /usr/local/bin/pesca.sh'
 
