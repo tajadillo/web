@@ -62,7 +62,7 @@ color=#A4C2F4
 
 # Block for memory usage (commented out in your config)
 [memory]
-label=   RAM
+label=   RAM
 command=free -h | grep Mem | awk '{print $3 "/" $2}'
 interval=1
 color=#ffcc00
