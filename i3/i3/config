@@ -426,3 +426,5 @@ font pango: Mononoki Nerd Font Bold Italic 11
 #  position=12% 10%
 #  #screensaver-timeout=
 ###################################
+
+#sudo apt-get install --no-install-recommends xfce4
