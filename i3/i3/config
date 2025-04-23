@@ -95,9 +95,12 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     # start a navegador
     # Abrir a navegador de archivos
-    # antes ocupaba nautilus pero ahora tengo que instalar nemo
     # mentira pk antes ocupaba nautilus pero ahora tengo que instalar nemo
-    bindsym $mod+n exec caja
+    #bindsym $mod+n exec caja
+    #bindsym $mod+n exec nautilus
+    #bindsym $mod+n exec nemo
+    #pcmanfm es el q menos dependencias requiere y por tanto es el mejor y mas lijejro
+    bindsym $mod+n exec pcmanfm
 
     # kill focused window
     #Quitar una aplicación
