@@ -244,6 +244,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Poner programas especificos en workspace especificas
     #assign [class="kitty"] $ws1
     #assign [class="brave-browser"] $ws2
+    assign [class="thunderbird"] $ws3 
     assign [class="Gimp"] $ws4
     assign [class="Shotcut"] $ws5
     assign [class="Audacity"] $ws6
