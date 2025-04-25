@@ -91,16 +91,19 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     # start a navegador web
     # Abrir a navegador web
-    bindsym $mod+b exec brave-browser
+    bindsym $mod+b exec brave-browser-stable
 
     # start a navegador
     # Abrir a navegador de archivos
+    # antes ocupaba nautilus pero ahora tengo que instalar nemo
     # mentira pk antes ocupaba nautilus pero ahora tengo que instalar nemo
-    #bindsym $mod+n exec caja
-    #bindsym $mod+n exec nautilus
-    #bindsym $mod+n exec nemo
-    #pcmanfm es el q menos dependencias requiere y por tanto es el mejor y mas lijejro
     bindsym $mod+n exec pcmanfm
+
+
+    # start a navegador web
+    # Abrir a navegador web
+    bindsym $mod+c exec qalculate
+
 
     # kill focused window
     #Quitar una aplicación
@@ -192,10 +195,10 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     set $ws1 "1"
     set $ws2 "2"
-    set $ws3 "3"
-    set $ws4 "4"
-    set $ws5 "5"
-    set $ws6 "6"
+    set $ws3 "3:    e-mail"
+    set $ws4 "4:  imagen"
+    set $ws5 "5:  video"
+    set $ws6 "6:  audio"
     set $ws7 "7"
     set $ws8 "8"
     set $ws9 "9"
@@ -220,15 +223,14 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # Mover ventanas a otro escritorio (campo de trabajo)
     bindsym $mod+Shift+1 move container to workspace number $ws1
     bindsym $mod+Shift+2 move container to workspace number $ws2
-    bindsym $mod+Shift+3 move container to workspace number $ws3
-    bindsym $mod+Shift+4 move container to workspace number $ws4
-    bindsym $mod+Shift+5 move container to workspace number $ws5
-    bindsym $mod+Shift+6 move container to workspace number $ws6
+    bindsym $mod+Shift+3 move container to workspace $ws3
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
     bindsym $mod+Shift+7 move container to workspace number $ws7
     bindsym $mod+Shift+8 move container to workspace number $ws8
     bindsym $mod+Shift+9 move container to workspace number $ws9
     bindsym $mod+Shift+10 move container to workspace number $ws10
-
 
     #Movimiento por los espacios de trabajo#
     #Próximo / previo espacio de trabajo
@@ -244,7 +246,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Poner programas especificos en workspace especificas
     #assign [class="kitty"] $ws1
     #assign [class="brave-browser"] $ws2
-    assign [class="thunderbird"] $ws3 
+    assign [class="thunderbird"] $ws3
     assign [class="Gimp"] $ws4
     assign [class="Shotcut"] $ws5
     assign [class="Audacity"] $ws6
@@ -355,11 +357,8 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Ventana flotante video
     for_window [class="mpv"] floating enable
     for_window [class="vlc"] floating enable
-
-
-    #Ventana flotante calculadora
-    for_window [class="gnome-calculator"] floating enable
     #for_window [title="video1 - vlc"] sticky enable
+
 
     #Idioma de teclado
     #exec "setxkbmap -layout us,de"
