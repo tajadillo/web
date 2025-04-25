@@ -95,13 +95,12 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     # start a navegador
     # Abrir a navegador de archivos
-    # antes ocupaba nautilus pero ahora tengo que instalar nemo
-    # mentira pk antes ocupaba nautilus pero ahora tengo que instalar nemo
+    # antes ocupaba nautilus, nemo, caja, thunar pero ahora tengo que instalar pcmanfm
     bindsym $mod+n exec pcmanfm
 
 
-    # start a navegador web
-    # Abrir a navegador web
+    # start a navegador calculadora
+    # Abrir a navegador calculadora
     bindsym $mod+c exec qalculate
 
 
