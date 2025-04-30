@@ -104,6 +104,7 @@ interval=1
 color=#5555ff
 
 # Block for battery status (if applicable)
+#monitor de bateria sudo apt-get install xfce4-power-manager
 [battery]
 label=  .
 command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
