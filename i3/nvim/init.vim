@@ -26,6 +26,9 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 ""source ~/.vimrc
 
+"multicursor para cambiar palabras
+" :%s/palabraParaBuscar/cambiarPorOtraPalabra/g(signigica "cambiar a todo lo encontrado")
+
 """""""""""""""""""
 "SETEADO NATIVO
 """""""""""""""""""
