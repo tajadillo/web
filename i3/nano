@@ -1,4 +1,8 @@
+###########################################
+##primero ejecutar este comando desde la carpeta home del usuario
 ##cp /etc/nanorc ~/.nanorc
+##luego reemplazar el .nanorc y colocar este en su lugar con la misma nomenclatura ".nanorc"
+###########################################
 
 ## Sample initialization file for GNU nano.
 ##
