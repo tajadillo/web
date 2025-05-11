@@ -194,13 +194,13 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     set $ws1 "1"
     set $ws2 "2"
-    set $ws3 "3:    e-mail"
-    set $ws4 "4:  imagen"
-    set $ws5 "5:  video"
-    set $ws6 "6:  audio"
-    set $ws7 "7"
-    set $ws8 "8"
-    set $ws9 "9"
+    set $ws3 "3"
+    set $ws4 "4"
+    set $ws5 "5"
+    set $ws6 "6:   "
+    set $ws7 "7:  "
+    set $ws8 "8:  "
+    set $ws9 "9:  "
     set $ws10 "10"
     #
 
@@ -222,13 +222,13 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # Mover ventanas a otro escritorio (campo de trabajo)
     bindsym $mod+Shift+1 move container to workspace number $ws1
     bindsym $mod+Shift+2 move container to workspace number $ws2
-    bindsym $mod+Shift+3 move container to workspace $ws3
-    bindsym $mod+Shift+4 move container to workspace $ws4
-    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+3 move container to workspace number $ws3
+    bindsym $mod+Shift+4 move container to workspace number $ws4
+    bindsym $mod+Shift+5 move container to workspace number $ws5
     bindsym $mod+Shift+6 move container to workspace $ws6
-    bindsym $mod+Shift+7 move container to workspace number $ws7
-    bindsym $mod+Shift+8 move container to workspace number $ws8
-    bindsym $mod+Shift+9 move container to workspace number $ws9
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+10 move container to workspace number $ws10
 
     #Movimiento por los espacios de trabajo#
@@ -245,10 +245,11 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Poner programas especificos en workspace especificas
     #assign [class="kitty"] $ws1
     #assign [class="brave-browser"] $ws2
-    assign [class="thunderbird"] $ws3
-    assign [class="Gimp"] $ws4
-    assign [class="Shotcut"] $ws5
-    assign [class="Audacity"] $ws6
+    assign [class="thunderbird"] $ws6
+    assign [class="Gimp"] $ws7
+    assign [class="Shotcut"] $ws8
+    assign [class="Audacity"] $ws9
+
 
     #Reiniciar la configuración
     # reload the configuration file
