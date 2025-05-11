@@ -19,6 +19,12 @@ markup=pango
 # i3blocks config file
 # See: https://github.com/vivien/i3blocks
 
+#clima
+# Weather
+[weather]
+command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
 
 [capslock]
 label=😊 LOCK MAYUS
@@ -26,6 +32,18 @@ command=xset q | grep "Caps Lock" | awk '{ if ($4 == "on") print "  "; else p
 interval=1
 #color=#ffcc00
 color=#ebb24a
+
+# Muestra el dia y la hora actual. también puede mostrar un calendario
+[rofi-calendar]
+#interval=3600
+#DATEFTM=+%a %d %b %Y
+#SHORTFMT=+%d/%m/%Y
+#LABEL=
+#FONT=Monospace 10
+#LEFTCLICK_PREV_MONTH=false
+#PREV_MONTH_TEXT=« previous month «
+#NEXT_MONTH_TEXT=» next month »
+#ROFI_CONFIG_FILE=/dev/null
 
 
 #[moc]
@@ -55,14 +73,14 @@ color=#ebb24a
 
 
 [cpu_usage]
-label= 
+label= 
 command=sh -c 'prev_idle=$(awk "/^cpu / {print \$5}" /proc/stat); prev_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); sleep 1; next_idle=$(awk "/^cpu / {print \$5}" /proc/stat); next_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); idle_diff=$((next_idle - prev_idle)); total_diff=$((next_total - prev_total)); usage=$((100 * (total_diff - idle_diff) / total_diff)); echo "CPU: $usage%"'
 interval=1
 color=#A4C2F4
 
 # Block for memory usage (commented out in your config)
 [memory]
-label=   RAM
+label=   RAM
 command=free -h | grep Mem | awk '{print $3 "/" $2}'
 interval=1
 color=#ffcc00
@@ -73,19 +91,12 @@ command= bash -c 'temp=$(cat /sys/class/thermal/thermal_zone0/temp 2>/dev/null);
 interval=1
 color=#ff00ff
 
-[ip]
-#command=hostname -i | awk '{ print "IP:" $1 }'
-label=  .
-command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
-interval=60
-color=#ee3333
-
-
-#clima
-[weather]
-command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
-color=#81b9ca
+#[ip]
+##command=hostname -i | awk '{ print "IP:" $1 }'
+#label=  .
+#command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
+#interval=60
+#color=#ee3333
 
 [volume]
 label=  )
@@ -104,7 +115,6 @@ interval=1
 color=#5555ff
 
 # Block for battery status (if applicable)
-#monitor de bateria sudo apt-get install xfce4-power-manager
 [battery]
 label=  .
 command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
@@ -112,7 +122,6 @@ interval=60
 color=#ff00ff
 #color=#91E78B
 #color=#3333ee
-
 
 # Restart on click
 [restart]
@@ -134,4 +143,5 @@ label= .
 command=bash -c 'ssid=$(nmcli -t -f NAME connection show --active); echo "${ssid:-Desconectado}"'
 interval=1
 color=#51a3a3
+
 
