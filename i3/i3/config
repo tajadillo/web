@@ -67,6 +67,17 @@ font pango: Mononoki Nerd Font Bold Italic 11
     bindsym Mod1+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
     bindsym XF87AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# mocp
+# run mocp
+##bindsym $mod+m exec $term -e mocp
+
+# Control Songs
+##bindsym XF86AudioPlay  exec --no-startup-id mocp -G
+##bindsym XF86AudioPause exec --no-startup-id mocp -G
+#bindsym XF86AudioNext  exec --no-startup-id mocp -f
+##bindsym XF86AudioPrev  exec --no-startup-id mocp -r
+##bindsym XF86AudioStop  exec --no-startup-id mocp -s
+
 
     #brillo de pantalla
     #se debe instalar proviamente "brightnessctl"
