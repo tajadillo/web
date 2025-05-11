@@ -447,4 +447,8 @@ font pango: Mononoki Nerd Font Bold Italic 11
 #https://h4ckseed.wordpress.com/2020/09/19/i3wm-en-mi-vida-iv/
 
 
+# Autostart
+#exec --no-startup-id kitty &
+
+
 
