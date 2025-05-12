@@ -89,7 +89,7 @@ color=#ffcc00
 label= TEMP
 command= bash -c 'temp=$(cat /sys/class/thermal/thermal_zone0/temp 2>/dev/null); if [ -z "$temp" ]; then echo "N/A"; else echo "$((temp / 1000))°C"; fi'
 interval=1
-color=#ff00ff
+color=#ff006a
 
 #[ip]
 ##command=hostname -i | awk '{ print "IP:" $1 }'
@@ -97,6 +97,15 @@ color=#ff00ff
 #command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
 #interval=60
 #color=#ee3333
+
+# Block for battery status (if applicable)
+[battery]
+label=  .
+command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
+interval=60
+color=#ff0000
+#color=#91E78B
+#color=#3333ee
 
 [volume]
 label=  )
@@ -113,15 +122,6 @@ label= 
 command=date +%T
 interval=1
 color=#5555ff
-
-# Block for battery status (if applicable)
-[battery]
-label=  .
-command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
-interval=60
-color=#ff00ff
-#color=#91E78B
-#color=#3333ee
 
 # Restart on click
 [restart]
