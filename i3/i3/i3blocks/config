@@ -24,7 +24,8 @@ markup=pango
 [weather]
 command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs echo
 interval=3600
-color=#A4C2F4
+#color=#A4C2F4
+color=#388888
 
 [capslock]
 label=😊 LOCK MAYUS
