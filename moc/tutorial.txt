@@ -1,0 +1,202 @@
+https://sniferl4bs.com/2011/12/configuracion-y-enchulamiento-a-moc/mocpel-reproductor-mas-barato-en-recursos-desde-la-consola/
+
+
+Home
+Snifer@L4b's
+
+Snifer@L4b's
+Posts
+Configuracion y Enchulamiento a [Moc/Mocp]EL reproductor mas barato en recursos desde la Consola
+Configuracion y Enchulamiento a [Moc/Mocp]EL reproductor mas barato en recursos desde la Consola
+✍🏽  Dec 18, 2011
+ · 
+ Mar 31, 2021
+ · 
+ 5 min read
+🏷️
+#Tip's
+#Conky
+#Software
+#Consola
+#Pymp My Linux
+#Geek
+#Programas
+Buenas esta entrada va para la configuración de moc un reproductor monstruo desde la consola,@enriquegmv me dijo que le explicara ¬¬ como hace mas de 2 a 3 semanas xD jajaja recien hace un momento me levante de mi letargo sueño asi que me pongo a terminar, puesto que los tengo ya los paquetitos para configurarlo =) a nuestra manera.
+
+
+
+( Aqui mi MOC - CLick para ver mas grande)
+
+Ahora que veremos:
+
+Quien es y origen de Moc
+Instalación
+Como usarlo
+Configuración
+Enchulando Moc
+Bueno comenzemos…. va para ti Comandante =)
+
+Quien es y Origen de Moc
+
+Música en la consola (MOC) que traduccion mas rayada la mia xD lo correcto Music on Console  como su nombre lo dice un potente reproductor desde la consola escrito por Damian Pietras lanzado el 2002 escrito en C,  de uso y manejo facil ligero con un consumo bajo de recursos, parecido a Midnight Commander diria inspirado en el.
+
+MOC ofrece soporte para los siguientes formatos: mp3, Ogg Vorbis, FLAC, Musepack (mpc), Speex, WAVE, WMA, RealAudio, AAC, MP4, AIFF, AU, SVX, Sphere Nist WAV, IRCAM SF y Creative VOC.
+
+Entre todos los reproductores que use este es el mas ligero rapido configurable y potente =).
+
+**Instalación **
+
+Lo primero que hacemos es dirigirirnos a nuestra consola e instalar.
+
+
+
+snifer@snifer:~$ sudo apt-get install moc
+
+Tambien para reproducir formatos o WMA, RealAudio, MP4 y AAC, debemos de instalar su plugin.
+
+snifer@snifer:~$ sudo apt-get install moc-ffmpeg-plugin
+
+** Como Usarlo**
+
+Para poder ejecutarlo lo lanzamos con mocp.
+
+snifer@snifer:~$ mocp
+
+¿Momento como se lanza mocp y no moc si instalamos moc?
+
+Lo mismo me pregunte la primera vez que comenze a usarlo XD sucede esto por que MOC pertenece a QT lo cual es Meta Object Compiler asi que para evitar confuciones se lanza con mocp.
+
+Formas de activar  a nuestro reproducto
+
+1.- Desde la consola lo lanzamos con mocp
+
+snifer@snifer:~$ mocp
+
+
+
+** 2.** La otra forma es para reproduccion en segundo plano directamente para eso hay que realizar una configuracion para que al ser lanzado reprodusca de manera automatica.
+
+
+
+ Con esto tendremos reproduciendolo en segundo plano ¬¬ no se si estoy diciendo bien jejeej.
+
+Para matarlo killall mocp ya sea desde la consola o desde el lanzador de aplicaciones.
+
+Configuraciones
+
+Para poder ver las configuraciones simplemente precionamo h y tendremos los siguientes comandos :
+
+
+
+h - Ayuda
+p - Pausar/Reproducir
+n - Siguiente
+b - Anterior
+T - Cambiar el tema
+, - Bajar 5% el Volumen
+. - Subir 5% el volumen
+< - Bajar 1% el volumen
+> - Subir 1% el volumen
+R - Modo Repetir
+S - Modo Aleatorio
+Tab - Pasar de la lista de reproducción a la lista de archivos
+a - Añadir un archivo a la lista de reproducción
+C - Limpiar la lista de reproducción
+A - Añadir un directorio a la lista de reproduccion
+
+NOTA: Cabe destacar que moc distingue entre mayusculas y minusculas asi que  con cuidado.
+
+Enchulando MOC
+
+Lo primero para que nuestro reproductor minimalista este acorde con nuestra pc tenemos que enchularla haciendo uso de los temas que tiene por defecto o cargar uno, creado por la comunidad, al lanzar moc viene con su tema por defecto si lo cambiamos, luego vuelve a lo mismo  ¬¬ asi que para esto hacemos lo siguiente
+
+Hay que generar el archivo config en nuestro home
+
+Copiar y pegar linea por linea en la consola mas facil imposible.. lo que hacemos es hacer uso de su config y copiarlo en moc.
+
+mkdir ~/.moc
+cp /usr/share/doc/moc/examples/config.example.gz ~/.moc/
+cd ~/.moc/
+gzip -d config.example.gz
+mv config.example config
+
+Luego de terminar los pasos usamos gedit en mi caso que lo adoro
+
+snifer@snifer:~$ ~/.moc/config
+
+En la linea 134 sacar el caracter # que esta adelante de Theme en mi caso queda asi que es el theme que elegi:
+
+
+
+# Theme file. This can be absolute path or relative to
+# /usr/share/moc/themes/ (depends on installation prefix) or ~/.moc/themes/
+Theme            = darkdot_theme
+
+
+
+Ahora viene lo bonito xD para no entrar siempre como Root asi que creamos el directorio themes dentro de nuestro home, y cuando deseemos usar seria asi.
+
+/home/usuario/.moc/.themes
+
+Aqui algunos temas para los que quieran usar fuera de los que ya tiene por defecto. es solo copiar en dicha carpeta nada mas.
+
+**House music **
+
+
+
+Trancemusic
+
+
+Configuraciones Extras
+
+Bueno lo que hago es lo siguiente me gusta que la reproduccion sea aleatoria por lo cual modifico la siguiente linea cambiandola a yes la linea 30.
+
+
+
+CONKY MOC
+
+Bueno .. yo soy un fanatico de Conky y esas entradas lo demuestran aqui les explico como hacer para ver lo que escuchamos en el lo que hacemos es guardar este codigo 
+
+Lo que hacemos es incorporar en nuestro conky esta linea de codigo.
+
+${exec /home/snifer/.conkyrc/scripts/mocconky.sh}
+
+Y listo este es el resultado:
+
+
+
+Sincronizando un apagado automatico con moc
+De echo alguna vez nos vamos a dormir escuchando algun tema ¬¬ aveces me duermo asi jejeje ultimamente aunque no ando durmiendo pero lo hago mayormente escuchando algun Postcast de Mundo Hacker.
+
+snifer@snifer: sudo shutdown -h 60
+
+
+
+Y listo .. se apagara la maquina.. en el tiempo esperado
+
+Bueno eso es todo este es el post que mas tiempo me costo armarlo jajaja la veradad espero les agrade y bueno, a disfrutarlo.
+
+Saludos :P
+
+Share on
+Support the author with
+Avatar
+WRITTEN BY
+See Also
+Reproduciendo videos en formato ASCII desde la consola
+Instalando Linux desde el USB
+Arreglar conexion de emesene1.6 modificando algunas lineas
+Solucion al problema de conexion Emesene
+Mi Conky configuración Sept-Octubre
+Acceso a Cuentas de Facebook
+Gracias a todos por el apoyo.. [Disque Ingeniero]
+Related Issues not found
+
+Please contact @Snifer to initialize the comment
+
+Login with GitHub
+ CC BY-NC-SA 4.0
+©2023, All Rights Reserved CC BY-NC-SA 4.0
+
+Powered by Hugo and the Zzo theme
+
