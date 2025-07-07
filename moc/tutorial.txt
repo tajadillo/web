@@ -130,8 +130,8 @@ En la linea 134 sacar el caracter # que esta adelante de Theme en mi caso queda 
 
 # Theme file. This can be absolute path or relative to
 # /usr/share/moc/themes/ (depends on installation prefix) or ~/.moc/themes/
-Theme            = darkdot_theme
-
+#Theme            = darkdot_theme
+Theme            = green_theme
 
 
 Ahora viene lo bonito xD para no entrar siempre como Root asi que creamos el directorio themes dentro de nuestro home, y cuando deseemos usar seria asi.
@@ -150,6 +150,7 @@ Trancemusic
 Configuraciones Extras
 
 Bueno lo que hago es lo siguiente me gusta que la reproduccion sea aleatoria por lo cual modifico la siguiente linea cambiandola a yes la linea 30.
+linea 108 Shuffle = yes
 
 
 
