@@ -1,0 +1,149 @@
+
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+#separator=false
+#separator_symbol="/"
+separator_block_width=17
+#opacity-rule = ["95:class_g = 'i3bar'"];
+align=center
+markup=pango
+#color=#eeeeee
+# i3blocks config file
+# See: https://github.com/vivien/i3blocks
+
+#clima
+# Weather
+[weather]
+command=curl -Ss 'https://wttr.in?lang=es&0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+#color=#A4C2F4
+color=#388888
+
+[capslock]
+label=😊 LOCK MAYUS
+command=xset q | grep "Caps Lock" | awk '{ if ($4 == "on") print "  "; else print "  "; }'
+interval=1
+#color=#ffcc00
+color=#ebb24a
+
+# Muestra el dia y la hora actual. también puede mostrar un calendario
+[rofi-calendar]
+#interval=3600
+#DATEFTM=+%a %d %b %Y
+#SHORTFMT=+%d/%m/%Y
+#LABEL=
+#FONT=Monospace 10
+#LEFTCLICK_PREV_MONTH=false
+#PREV_MONTH_TEXT=« previous month «
+#NEXT_MONTH_TEXT=» next month »
+#ROFI_CONFIG_FILE=/dev/null
+
+
+#[moc]
+#label=MOC
+#command=mocp -Q %song || echo "No music"
+#interval=1
+#colocalt=#91E78B
+#rizontal
+
+# Block for CPU usage
+#[cpu]
+#labe#l=   CPU
+#command=top -bn1 | grep '%Cpu' | sed 's/,/./g' | awk '{print 100 - $8}'
+#interval=1
+#color=#91E78B
+
+
+#[cpu_temp]
+#label= 
+#command=sh -c 'CPU_USAGE=$(mpstat 1 1 | awk "/Average:/ {printf(\"%s\", 100 - \$NF)}"); TEMP=$(sensors | grep "Package id 0:\|Tdie" | grep -o ":[ ]*+[0-9]*.[0-9]*°C" | grep -o "+[0-9]*.[0-9]*°C"); echo "CPU: $CPU_USAGE% $TEMP"'
+#interval=2
+#color=#000000
+
+
+
+
+
+
+[cpu_usage]
+label= 
+command=sh -c 'prev_idle=$(awk "/^cpu / {print \$5}" /proc/stat); prev_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); sleep 1; next_idle=$(awk "/^cpu / {print \$5}" /proc/stat); next_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); idle_diff=$((next_idle - prev_idle)); total_diff=$((next_total - prev_total)); usage=$((100 * (total_diff - idle_diff) / total_diff)); echo "CPU: $usage%"'
+interval=1
+color=#A4C2F4
+
+# Block for memory usage (commented out in your config)
+[memory]
+label=   RAM
+command=free -h | grep Mem | awk '{print $3 "/" $2}'
+interval=1
+color=#ffcc00
+
+[temperature]
+label= TEMP
+command= bash -c 'temp=$(cat /sys/class/thermal/thermal_zone0/temp 2>/dev/null); if [ -z "$temp" ]; then echo "N/A"; else echo "$((temp / 1000))°C"; fi'
+interval=1
+color=#ff006a
+
+#[ip]
+##command=hostname -i | awk '{ print "IP:" $1 }'
+#label=  .
+#command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
+#interval=60
+#color=#ee3333
+
+# Block for battery status (if applicable)
+[battery]
+label=  .
+command=acpi -b | grep -oP '\d+(?=%)' | awk '{print $1 "%"}' ''
+interval=60
+color=#ff0000
+#color=#91E78B
+#color=#3333ee
+
+[volume]
+label=  )
+#instalar sudo apt-get install pamixer
+command=pamixer --get-volume-human | sed 's/muted/0%/g'
+interval=1
+color=#51a34f
+
+# Block for the time
+#hora/reloj
+[time]
+label= 
+#command=date '+%Y-%m-%d %H:%M:%S'
+#command=date '+%H:%M:%S %d-%m-%Y'
+command=date +%T
+interval=1
+color=#5555ff
+
+# Restart on click
+[restart]
+full_text=󰑓
+command=i3-msg restart
+color=#FF0000
+#interval=repeat
+separator=true
+
+# Exit on click
+[exit]
+full_text=
+command=i3-msg exit
+color=#FF7F00
+separator=true
+
+[wifi]
+label= .
+command=bash -c 'ssid=$(nmcli -t -f NAME connection show --active); echo "${ssid:-Desconectado}"'
+interval=1
+color=#51a3a3
+
+
