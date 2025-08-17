@@ -65,6 +65,64 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+#########################################################
+### BLOQUE DE GIT PARA MOSTRAR EN EL PROMPT #############
+#####Código parse_git_block estilo Powerline############
+
+# --- Bloque Git corregido (con colores seguros y contadores) ---
+
+
+parse_git_block() {
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+    if [ -n "$branch" ]; then
+        status=$(git status --porcelain 2>/dev/null)
+        ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)
+        behind=$(git rev-list --count HEAD..@{u} 2>/dev/null || echo 0)
+
+        # Normalizamos si están actualizados
+        [ -z "$ahead" ] && ahead=0
+        [ -z "$behind" ] && behind=0
+
+        emoji=""
+        color="$verde"   # verde limpio por defecto
+        count=""
+
+        if [ -n "$status" ]; then
+            new=$(echo "$status" | grep "^??" | wc -l)
+            modified=$(echo "$status" | grep "^[ M]" | wc -l)
+            conflicts=$(echo "$status" | grep "^UU" | wc -l)
+
+            total=$((new + modified + conflicts))
+            count="$total"
+
+            if [ "$conflicts" -gt 0 ]; then
+                color="$rojo"   # rojo → conflictos
+                emoji="❗"
+            elif [ "$new" -gt 0 ]; then
+                color="$rojo"   # rojo → archivos sin trackear
+                emoji="❗"
+            else
+                color="$amarillo"   # amarillo → modificados
+                emoji=""
+            fi
+        fi
+
+        # Estado remoto
+        [ "$ahead" -gt 0 ] && emoji="$emoji  󰦘  $ahead"
+        [ "$behind" -gt 0 ] && emoji="$emoji  󰦗  $behind"
+
+        # Imprime bloque con colores desde tus variables
+        if [ -n "$count" ]; then
+            echo "   ${branch}   $emoji "
+        else
+            echo "   ${branch}   $emoji"
+        fi
+    fi
+}
+
+############### FIN BLOQUE GIT ########################
+#######################################################
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -84,8 +142,19 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='\nUsuario: \u @ \uHostname: \h: \nDirectorio actual: \w \$: \n'
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 2)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 1)<<<<<$(tput sgr0) \n$(parse_git_block) \n\n'
+
+
+
+
+# prompt malo de chatgpt para intentar corregir PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2)\u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)  $(tput setaf 2)\W$(tput sgr0)\n$(parse_git_block) $(tput setaf 3)\$$(tput sgr0) $<<<<<\n'
+
+
+
 else
+
     PS1=' \nUsuario: \u @ Hostname: \h: \nDirectorio actual: \w \$:  \n'
 
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -184,7 +253,7 @@ alias documentos="cd /home/tajadillo/Documentos && ls"
 alias escritorio="cd /home/tajadillo/Escritorio && ls"
 alias descargas="cd /home/tajadillo/Descargas && ls"
 alias musica="cd /home/tajadillo/Música && ls"
-alias videos="cd /home/tajadillo/Vídeos && ls"
+#alias videos="cd /home/tajadillo/Vídeos && ls"
 
 #descomprimir archivos
 #alias tar='tar -xvf'
@@ -203,6 +272,7 @@ alias reiniciar='sudo shutdown -r now'
 # -> Reproducción multimedia online
 alias radio='bash /home/tajadillo/radio/radio.sh'
 alias tv='bash /home/tajadillo/radio/tv.sh'
+alias video=mpv
 alias reloj='tty-clock -s -c -D'
 alias alarma='bash alarma'
 alias mecano='typespeed'
