@@ -46,42 +46,22 @@ color=#ebb24a
 #NEXT_MONTH_TEXT=» next month »
 #ROFI_CONFIG_FILE=/dev/null
 
-
-#[moc]
+[moc]
 #label=MOC
-#command=mocp -Q %song || echo "No music"
-#interval=1
-#colocalt=#91E78B
-#rizontal
-
-# Block for CPU usage
-#[cpu]
-#labe#l=   CPU
-#command=top -bn1 | grep '%Cpu' | sed 's/,/./g' | awk '{print 100 - $8}'
-#interval=1
-#color=#91E78B
-
-
-#[cpu_temp]
-#label= 
-#command=sh -c 'CPU_USAGE=$(mpstat 1 1 | awk "/Average:/ {printf(\"%s\", 100 - \$NF)}"); TEMP=$(sensors | grep "Package id 0:\|Tdie" | grep -o ":[ ]*+[0-9]*.[0-9]*°C" | grep -o "+[0-9]*.[0-9]*°C"); echo "CPU: $CPU_USAGE% $TEMP"'
-#interval=2
-#color=#000000
-
-
-
-
-
+label=󰽰
+command=mocp -Q %song || echo "No music"
+interval=1
+color=#91E78B
 
 [cpu_usage]
 label= 
-command=sh -c 'prev_idle=$(awk "/^cpu / {print \$5}" /proc/stat); prev_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); sleep 1; next_idle=$(awk "/^cpu / {print \$5}" /proc/stat); next_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); idle_diff=$((next_idle - prev_idle)); total_diff=$((next_total - prev_total)); usage=$((100 * (total_diff - idle_diff) / total_diff)); echo "CPU: $usage%"'
+command=sh -c 'prev_idle=$(awk "/^cpu / {print \$5}" /proc/stat); prev_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$10}" /proc/stat); sleep 1; next_idle=$(awk "/^cpu / {print \$5}" /proc/stat); next_total=$(awk "/^cpu / {print \$2+\$3+\$4+\$5+\$6+\$7+\$8+\$9}" /proc/stat); idle_diff=$((next_idle - prev_idle)); total_diff=$((next_total - prev_total)); usage=$((100 * (total_diff - idle_diff) / total_diff)); echo "CPU: $usage%"'
 interval=1
 color=#A4C2F4
 
 # Block for memory usage (commented out in your config)
 [memory]
-label=   RAM
+label=   RAM
 command=free -h | grep Mem | awk '{print $3 "/" $2}'
 interval=1
 color=#ffcc00
@@ -110,6 +90,7 @@ color=#ff0000
 
 [volume]
 label=  )
+#instalar sudo apt-get install pamixer
 command=pamixer --get-volume-human | sed 's/muted/0%/g'
 interval=1
 color=#51a34f
