@@ -48,8 +48,10 @@ color=#ebb24a
 
 [moc]
 #label=MOC
-label=󰽰
-command=mocp -Q %song || echo "No music"
+
+label=  󰽰
+#label=  󰽰
+command=mocp -Q %song || echo "Sin música 󰽰 "
 interval=1
 color=#91E78B
 
@@ -106,19 +108,19 @@ interval=1
 color=#5555ff
 
 # Restart on click
-[restart]
-full_text=󰑓
-command=i3-msg restart
-color=#FF0000
-#interval=repeat
-separator=true
+#[restart]
+#full_text=󰑓
+#command=i3-msg restart
+#color=#FF0000
+##interval=repeat
+#separator=true
 
 # Exit on click
-[exit]
-full_text=
-command=i3-msg exit
-color=#FF7F00
-separator=true
+#[exit]
+#full_text=
+#command=i3-msg exit
+#color=#FF7F00
+#separator=true
 
 [wifi]
 label= .
