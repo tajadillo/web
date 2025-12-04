@@ -321,6 +321,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #sudo apt-get install i3blocks
     #position top
     position bottom
+    mode hide
     #i3bar_command /home/tajadillo/.config/i3/i3blocks
     #i4bar_command i3bar -t
     status_command i3blocks -c ~/.config/i3/i3blocks/config
