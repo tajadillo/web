@@ -424,7 +424,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #Confirma la configuración en lightdm-gtk-greeter.conf
     #sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
 ###################################
-    [greeter]
+#    [greeter]
 #  background=/usr/share/backgrounds/michelangelo.png
 #  #user-background=
 #  theme-name=Arc-Dark
