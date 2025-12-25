@@ -19,7 +19,7 @@
     # is used in the bar {} block below.
     # se utiliza en el bloque bar {} a continuación.
     #font -misc-fixed-medium-r-normal--12-120-75-75-C-70-iso10646-1
-font pango: Mononoki Nerd Font Bold Italic 11
+font pango: Mononoki Nerd Font Bold Italic 14
 
     # This font is widely installed, provides lots of unicode glyphs, right-to-left
     # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -108,6 +108,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     # Abrir a navegador de archivos
     # antes ocupaba nautilus, nemo, caja, thunar pero ahora tengo que instalar pcmanfm
     bindsym $mod+n exec pcmanfm
+    #bindsym $mod+n exec thunar
 
 
     # start a navegador calculadora
@@ -255,7 +256,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
 
     #Poner programas especificos en workspace especificas
     #assign [class="kitty"] $ws1
-    #assign [class="brave-browser"] $ws2
+    #assign [class="brave-browser-stable"] $ws2
     assign [class="Spotify"] $ws5
     assign [class="thunderbird"] $ws6
     assign [class="Gimp"] $ws7
@@ -322,21 +323,29 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #position top
     position bottom
     mode hide
+    status_command i3status -c ~/.config/i3/i3status.conf
     #i3bar_command /home/tajadillo/.config/i3/i3blocks
-    #i4bar_command i3bar -t
-    status_command i3blocks -c ~/.config/i3/i3blocks/config
+    #i3bar_command i3bar -t
+    #status_command i3blocks -c ~/.config/i3/i3blocks/config
     #status_command polybar
     #separator_symbol ")("
     height 21
         colors {
 
         background #222223
+        #background #ff22ff
         statusline #eeeeee
         separator #666667
         focused_workspace  #444445 #00aae4 #ffe570
-        active_workspace   #333334 #5f676a #ffffff
+        active_workspace   #333334 #5f676a #eeffee
         inactive_workspace #333334 #222222 #00b7eb
-        urgent_workspace   #3f343a #900000 #ffffff
+        #urgent_workspace   #3f343a #900000 #ffffff
+
+        # batería normal
+        #focused_workspace  #373b41 #373b41 #81a2be
+
+        # batería baja (LOW)
+        urgent_workspace   #cc6666 #cc6666 #ffffff
             }
         }
 
@@ -420,12 +429,12 @@ font pango: Mononoki Nerd Font Bold Italic 11
     #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
 
     #notificacon de alerta bateria baja
-    exec --no-startup-id ~/.config/polybar/battery_notify.sh
+    #exec --no-startup-id ~/.config/polybar/battery_notify.sh
 
     #Confirma la configuración en lightdm-gtk-greeter.conf
     #sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
 ###################################
-#    [greeter]
+    #[greeter]
 #  background=/usr/share/backgrounds/michelangelo.png
 #  #user-background=
 #  theme-name=Arc-Dark
