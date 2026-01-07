@@ -270,7 +270,9 @@ alias apagar='sudo shutdown -h now'
 alias reiniciar='sudo shutdown -r now'
 
 # Información archivos multimedia .mp3 y .mp4
-# mediainfo archivo.mp3 ó archivo.mp4
+# mediainfo normbre_del_archivo.formato_del_archivo
+#ejemplo
+# mediainfo archivo.mp3 ó archivo.mp4 ó archivo.acc
 
 # -> Reproducción multimedia online
 alias radio='bash /home/tajadillo/radio/radio.sh'
@@ -298,7 +300,7 @@ alias pacman=pacman4console
 alias bicicleta=moon-buggy
 alias naves=ninvaders
 
-#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
+d#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
 #alias cat='cat -n | highlight -O ansi -n'
 # instalar sudo apt-get install highlight para complementar al comando 'cat'
 
