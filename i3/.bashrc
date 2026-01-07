@@ -269,6 +269,9 @@ alias ver-imagen="kitty +kitten icat"
 alias apagar='sudo shutdown -h now'
 alias reiniciar='sudo shutdown -r now'
 
+# Información archivos multimedia .mp3 y .mp4
+# mediainfo archivo.mp3 ó archivo.mp4
+
 # -> Reproducción multimedia online
 alias radio='bash /home/tajadillo/radio/radio.sh'
 alias tv='bash /home/tajadillo/radio/tv.sh'
@@ -288,6 +291,12 @@ alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
 #alias neofetch="neofetch --size none"
 alias neofetch="tajafetch"
 alias donde='pwd | lolcat -a'
+
+#juegos
+alias tetris=bastet
+alias pacman=pacman4console
+alias bicicleta=moon-buggy
+alias naves=ninvaders
 
 #atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
 #alias cat='cat -n | highlight -O ansi -n'
@@ -361,5 +370,4 @@ neofetch
 #export C_INCLUDE_PATH=/usr/lib/avr/include
 
 #cmatrix -a
-
 
