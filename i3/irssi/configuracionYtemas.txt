@@ -1,0 +1,17 @@
+Cómo instalar un tema
+
+Descarga el archivo .theme buscando "irssi theme"
+
+Muévelo a:
+
+~/.irssi/themes/
+(carpeta que debes crear previamente)
+
+Actívalo dentro de Irssi:
+
+/set theme nombre
+/save
+
+
+
+Cambia el archivo de configuración en ~/.irssi/config por el que descargaste desde aca
