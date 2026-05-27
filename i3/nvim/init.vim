@@ -185,15 +185,15 @@ call plug#begin()
 
 "TEMAS
 "GRUVBOX
-"Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/gruvbox-material'
 "DRACULA
-"Plug 'dracula/vim' , { 'as': 'dracula' }
+Plug 'dracula/vim' , { 'as': 'dracula' }
 "MONOKAI
-"Plug 'crusoexia/vim-monokai'
+Plug 'crusoexia/vim-monokai'
 "PAPAYA
-"Plug 'henrynewcomer/vim-theme-papaya'
+Plug 'henrynewcomer/vim-theme-papaya'
 "CI DARK
-"Plug 'yunlingz/ci_dark'
+Plug 'yunlingz/ci_dark'
 "FIN TEMAS
 
 "ADMINISTRADOR DE ARCHIVOS
@@ -205,7 +205,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 "AUTOCOMPLETADO"
 ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'matt/emmet-vim'
+"Plug 'matt/emmet-vim'
 
 call plug#end()
 """"""""""""
@@ -220,6 +220,10 @@ call plug#end()
 """"""""""""""""
 "Temas de color
 """""""""""
+
+colorscheme vim
+
+
 ""GRUVBOX configuracion
 ""set background=dark
 ""let g:gruvbox_material_background='medium'
@@ -228,11 +232,11 @@ call plug#end()
 ""colorscheme gruvbox-material
 
 "DRACULA configuracion
-"let g:airline_theme='dracula'
-"if (has("termguicolors"))
-"	set termguicolors
-"endif
-colorscheme dracula
+   ""let g:airline_theme='dracula'
+   ""if (has("termguicolors"))
+   ""    set termguicolors
+   ""endif
+   ""colorscheme dracula
 
 "MONOKAI configuracion
 "let g:monokai_term_italic = 1
@@ -475,59 +479,60 @@ noremap <kj> <Esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "COLORES Y TEMAS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-highlight TabLine      guifg=#202328 ctermfg=4  guibg=#5b6268 ctermbg=8    cterm=none
-highlight TabLineSel   guifg=#202328 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm=none
-highlight TabLineFill  guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=none cterm=none
-highlight Normal       guifg=#dfdfdf ctermfg=15 guibg=#282c34 ctermbg=none cterm=none
-""numero de lineas
-highlight LineNr       guifg=#5b6268 ctermfg=8  guibg=#282c34 ctermbg=none cterm=none
-highlight CursorLineNr guifg=#202328 ctermfg=7  guibg=#5b6268 ctermbg=8    cterm=none
-highlight VertSplit    guifg=#1c1f24 ctermfg=7  guibg=#5b6268 ctermbg=none cterm=none
-highlight Statement    guifg=#98be65 ctermfg=2  guibg=none    ctermbg=none cterm=none
-highlight Directory    guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
-"barra de estatus activa"
-highlight StatusLine   guifg=#202328 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm=none
-"barra de estatus inactiva"
-highlight StatusLineNC guifg=#202328 ctermfg=4  guibg=#5b6268 ctermbg=none cterm=none
-highlight Constant     guifg=#3071db ctermfg=12 guibg=none    ctermbg=none cterm=none
-"comentarios con fuente italica"
-highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm=bold
-"highlight Comment      guifg=#57afef ctermfg=7  guibg=none   ctermbg=none cterm=italic
-highlight Special      guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
-highlight Identifier   guifg=#5699af ctermfg=6  guibg=none    ctermbg=none cterm=none
-highlight PreProc      guifg=#c678dd ctermfg=3  guibg=none    ctermbg=none cterm=italic
-highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=italic
-highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=italic
-highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
-highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none
-"highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8    cterm=none
-highlight ColorColumn                                         ctermbg=8
-highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
+   highlight TabLine      guifg=#202328 ctermfg=4  guibg=none ctermbg=8    cterm=italic
+   highlight TabLineSel   guifg=#202382 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm=none
+   highlight TabLineFill  guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=none cterm=none
+   highlight Normal       guifg=#dfdfdf ctermfg=15 guibg=none ctermbg=none cterm=none
+   ""numero de lineas
+   highlight LineNr       guifg=#5b6268 ctermfg=8  guibg=none ctermbg=none cterm=none
+   ""highlight LineNr       guifg=#5b6268 ctermfg=8  guibg=#282c34 ctermbg=none cterm=none
+   highlight CursorLineNr guifg=#202328 ctermfg=7  guibg=#5b6268 ctermbg=8    cterm=none
+   highlight VertSplit    guifg=#1c1f24 ctermfg=7  guibg=#5b6268 ctermbg=none cterm=none
+   highlight Statement    guifg=#98be65 ctermfg=2  guibg=none    ctermbg=none cterm=none
+   highlight Directory    guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
+   "barra de estatus activa"
+   highlight StatusLine   guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=2    cterm=none
+   "barra de estatus inactiva"
+   highlight StatusLineNC guifg=#202328 ctermfg=4  guibg=#5b6268 ctermbg=none cterm=none
+   highlight Constant     guifg=#3071db ctermfg=12 guibg=none    ctermbg=none cterm=none
+   "comentarios con fuente italica"
+   highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm=bold
+   "highlight Comment      guifg=#57afef ctermfg=7  guibg=none   ctermbg=none cterm=italic
+   highlight Special      guifg=#51afef ctermfg=4  guibg=none    ctermbg=none cterm=none
+   highlight Identifier   guifg=#5699af ctermfg=6  guibg=none    ctermbg=none cterm=none
+   highlight PreProc      guifg=#c678dd ctermfg=3  guibg=none    ctermbg=none cterm=italic
+   highlight String       guifg=#dfdfdf ctermfg=12 guibg=none    ctermbg=none cterm=italic
+   highlight Number       guifg=#ff6c6b ctermfg=3  guibg=none    ctermbg=none cterm=italic
+   highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
+   highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none
+   "highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8    cterm=none
+   highlight ColorColumn                                         ctermbg=8
+   highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
 
-highlight markup   guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
-""highlight markup     {'dark': "#F07178",  'light': "#F07178",  'mirage': "#F07178"}
+   highlight markup   guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
+   ""highlight markup     {'dark': "#F07178",  'light': "#F07178",  'mirage': "#F07178"}
 
-"algunas configuraciones de monokai"
-highlight Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-highlight Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
-hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
-hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
-hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
-hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
-hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
-hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
-hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
-hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+   "algunas configuraciones de monokai"
+   highlight Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+   highlight Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+   hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+   hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+   hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+   hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
+   hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
+   hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
+   hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
+   hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+   hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+   hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+   hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+   hi DiffAdd ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#46830c gui=bold
+   hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8b0807 guibg=NONE gui=NONE
+   hi DiffChange ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=#243955 gui=NONE
+   hi DiffText ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
+   hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+   hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
+   hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 
 
 
