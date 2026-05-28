@@ -479,9 +479,9 @@ noremap <kj> <Esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "COLORES Y TEMAS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   highlight TabLine      guifg=#202328 ctermfg=4  guibg=none ctermbg=8    cterm=italic
-   highlight TabLineSel   guifg=#202382 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm=none
-   highlight TabLineFill  guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=none cterm=none
+   highlight TabLine      guifg=#5b6268 ctermfg=4  guibg=none ctermbg=8    cterm=italic
+   highlight TabLineSel   guifg=#000000 ctermfg=3  guibg=#5b6268 ctermbg=8    cterm=italic
+   highlight TabLineFill  guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=none cterm=italic
    highlight Normal       guifg=#dfdfdf ctermfg=15 guibg=none ctermbg=none cterm=none
    ""numero de lineas
    highlight LineNr       guifg=#5b6268 ctermfg=8  guibg=none ctermbg=none cterm=none
@@ -493,7 +493,7 @@ noremap <kj> <Esc>
    "barra de estatus activa"
    highlight StatusLine   guifg=#202328 ctermfg=8  guibg=#5b6268 ctermbg=2    cterm=none
    "barra de estatus inactiva"
-   highlight StatusLineNC guifg=#202328 ctermfg=4  guibg=#5b6268 ctermbg=none cterm=none
+   highlight StatusLineNC guifg=#202328 ctermfg=4  guibg=none ctermbg=none cterm=none
    highlight Constant     guifg=#3071db ctermfg=12 guibg=none    ctermbg=none cterm=none
    "comentarios con fuente italica"
    highlight Comment      guifg=#6272a4 ctermfg=6  guibg=none    ctermbg=none cterm=bold
@@ -506,7 +506,7 @@ noremap <kj> <Esc>
    highlight Function     guifg=#ff6c6b ctermfg=1  guibg=none    ctermbg=none cterm=italic
    highlight Visual       guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none
    "highlight Visual      guifg=#dfdfdf ctermfg=7  guibg=#1c1f24 ctermbg=8    cterm=none
-   highlight ColorColumn                                         ctermbg=8
+   highlight ColorColumn  guifg=#3e4452 ctermfg=3  guibg=#1c1f24 ctermbg=8    cterm=none   ctermbg=2
    highlight CursorColumn guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
 
    highlight markup   guifg=#5b6268 ctermfg=7  guibg=#282c34 ctermbg=none cterm=none
