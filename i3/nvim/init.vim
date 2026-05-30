@@ -537,8 +537,6 @@ noremap <kj> <Esc>
 
 
 
-
-
 """"""""""""""
 "FIN COLORES
 """"""""
