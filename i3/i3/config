@@ -229,7 +229,7 @@ font pango: Mononoki Nerd Font Bold Italic 11
     bindsym $mod+7 workspace  $ws7
     bindsym $mod+8 workspace  $ws8
     bindsym $mod+9 workspace  $ws9
-    bindsym $mod+10 workspace  $ws10
+    bindsym $mod+0 workspace  $ws10
 
     # move focused container to workspace
     # Mover ventanas a otro escritorio (campo de trabajo)
