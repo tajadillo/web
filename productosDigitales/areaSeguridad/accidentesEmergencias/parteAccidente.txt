@@ -1,0 +1,58 @@
+PARTE DE ACCIDENTE - ACADEMIA DE DANZAS
+=========================================
+
+1. FECHA DEL ACCIDENTE: ____/____/________
+   HORA: ________
+
+2. DATOS DEL ACCIDENTADO
+   Nombre: ________________________________________
+   Edad: ______
+   DNI/NIE: ________________
+   Teléfono de contacto: ________________
+   Domicilio: ______________________________________
+   Alumno / Profesor / Personal
+
+3. DATOS DEL ACCIDENTE
+   Lugar del accidente (aula/sala/escaleras/baño/otro): ______________________________________
+   Actividad que realizaba: ______________________________________
+   Descripción del accidente:
+   _________________________________________________________________
+   _________________________________________________________________
+   _________________________________________________________________
+
+4. TIPO DE LESIÓN
+   [ ] Golpe / Contusión
+   [ ] Corte / Herida
+   [ ] Torcedura / Esguince
+   [ ] Caída / Fractura
+   [ ] Quemadura
+   [ ] Otro: ________________
+   Parte del cuerpo afectada: ______________________________________
+
+5. PRIMEROS AUXILIOS APLICADOS EN EL LUGAR
+   [ ] Hielo / Frío local
+   [ ] Limpieza de herida
+   [ ] Venda / Apósito
+   [ ] Inmovilización
+   [ ] No se aplicaron
+   [ ] Otro: ________________
+   Persona que atendió: ______________________________________
+
+6. ASISTENCIA MÉDICA
+   [ ] No fue necesaria
+   [ ] Acudió al centro de salud / hospital
+   Centro: ______________________________________
+   [ ] Se llamó a emergencias (112)
+
+7. TESTIGOS
+   Nombre: ________________________________  Tfno: ________________
+   Nombre: ________________________________  Tfno: ________________
+
+8. OBSERVACIONES
+   _________________________________________________________________
+   _________________________________________________________________
+   _________________________________________________________________
+
+9. FIRMAS
+   Firma del accidentado o tutor: ________________  Fecha: ________
+   Firma del responsable: _________________________  Fecha: ________
