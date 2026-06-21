@@ -1,0 +1,354 @@
+genera un sistema para documentar, proteger y monetizar coreografías.
+
+Esta es una excelente idea y, de hecho, puede convertirse en un producto independiente dentro de ACADEMIA EN CAJA®.
+
+No lo llamaría simplemente "documentar coreografías". Lo convertiría en un Sistema Integral de Gestión Coreográfica (SIGC), porque además de documentar, te permitirá proteger la propiedad intelectual, licenciar obras y generar nuevas fuentes de ingresos.
+
+SISTEMA INTEGRAL DE GESTIÓN COREOGRÁFICA (SIGC)
+Objetivo
+
+Crear un sistema profesional para:
+
+Documentar.
+Catalogar.
+Estandarizar.
+Proteger.
+Comercializar.
+Licenciar.
+Enseñar.
+Preservar.
+
+las coreografías afroperuanas.
+
+ESTRUCTURA DEL SISTEMA
+MÓDULO 1: CÓDIGO ÚNICO DE COREOGRAFÍA
+
+Cada obra tendrá un código institucional.
+
+Ejemplo:
+
+RT-FES-2026-001
+
+RT = Richard Tajadillo
+FES = Festejo
+2026 = año de creación
+001 = número correlativo
+
+Otros ejemplos:
+
+RT-LAN-2026-002
+RT-ZAM-2026-003
+RT-ING-2026-004
+MÓDULO 2: FICHA MAESTRA DE COREOGRAFÍA
+
+Código:
+
+RT-FES-2026-001
+
+Título:
+
+Raíces del Tambor
+
+Autor:
+
+Richard Tajadillo
+
+Fecha de creación:
+
+12/06/2026
+
+Duración:
+
+6 minutos
+
+Nivel:
+
+□ Inicial
+
+□ Intermedio
+
+□ Avanzado
+
+□ Profesional
+
+Categoría:
+
+□ Festejo
+
+□ Landó
+
+□ Zamacueca
+
+□ Ingá
+
+□ Creación contemporánea
+
+Cantidad de intérpretes:
+
+12
+
+Formato:
+
+□ Solista
+
+□ Dúo
+
+□ Trío
+
+□ Grupo
+
+□ Elenco
+
+MÓDULO 3: MAPA COREOGRÁFICO
+
+Dividir la obra en bloques.
+
+Bloque	Tiempo	Descripción
+A	0:00 - 1:00	Introducción
+B	1:00 - 2:30	Desarrollo
+C	2:30 - 4:30	Intensificación
+D	4:30 - 6:00	Cierre
+MÓDULO 4: NOTACIÓN DE MOVIMIENTO
+
+Crear una nomenclatura propia.
+
+Ejemplo:
+
+PD = paso derecho
+PI = paso izquierdo
+
+GT = giro total
+
+GM = giro medio
+
+AC = acento corporal
+
+PC = percusión corporal
+
+SL = salto lateral
+
+EX = expresión facial
+
+Ejemplo de secuencia:
+
+PD + PI + GT + AC + EX
+
+8 tiempos
+
+repetir x2
+MÓDULO 5: DIAGRAMA ESCÉNICO
+
+Representación del escenario.
+
+        Público
+
+1     2     3
+
+4     5     6
+
+7     8     9
+
+10   11   12
+
+Registrar:
+
+Entradas.
+Salidas.
+Cruces.
+Transiciones.
+MÓDULO 6: REGISTRO AUDIOVISUAL
+
+Crear un estándar.
+
+Grabar siempre:
+
+Video 1
+
+Vista frontal.
+
+Video 2
+
+Vista aérea 45°.
+
+Video 3
+
+Vista lateral.
+
+Video 4
+
+Versión pedagógica.
+
+Video 5
+
+Versión lenta.
+
+Video 6
+
+Desglose técnico.
+
+MÓDULO 7: BIBLIOTECA DIGITAL
+
+Crear carpetas.
+
+COREOGRAFIAS/
+
+FESTEJO/
+
+RT-FES-2026-001/
+
+01_Ficha_Maestra
+
+02_Musica
+
+03_Video_Frontal
+
+04_Video_Aereo
+
+05_Video_Lateral
+
+06_Version_Lenta
+
+07_Diagrama
+
+08_Partitura
+
+09_Licencias
+
+10_Fotografias
+MÓDULO 8: PROTECCIÓN LEGAL
+
+Crear un expediente de autoría.
+
+Documentos:
+
+Ficha maestra.
+Videos.
+Fotografías.
+Diagramas.
+Música.
+Fecha de creación.
+Firma digital.
+
+Registrar la obra en la oficina de propiedad intelectual correspondiente a tu país.
+
+También generar:
+
+Certificado de autenticidad
+CERTIFICADO DE AUTORÍA
+
+Richard Tajadillo
+
+Coreografía:
+
+Raíces del Tambor
+
+Código:
+
+RT-FES-2026-001
+
+Fecha:
+
+12/06/2026
+MÓDULO 9: LICENCIAMIENTO
+
+Crear tres niveles.
+
+Licencia Educativa
+
+Uso en clases.
+
+Licencia Institucional
+
+Uso en academias.
+
+Licencia Comercial
+
+Uso en espectáculos remunerados.
+
+MÓDULO 10: MONETIZACIÓN
+Producto 1
+
+Biblioteca Digital de Coreografías.
+
+Venta individual.
+
+USD 15 - 50.
+
+Producto 2
+
+Colección anual.
+
+10 coreografías.
+
+USD 99 - 299.
+
+Producto 3
+
+Suscripción mensual.
+
+Biblioteca viva.
+
+USD 20 - 40 mensuales.
+
+Producto 4
+
+Licencia institucional.
+
+Academias.
+
+USD 300 - 1000 anuales.
+
+Producto 5
+
+Certificación oficial.
+
+Instructor autorizado.
+
+USD 200 - 600.
+
+NUEVA COLECCIÓN EDITORIAL
+
+Podrías crear un nuevo tomo:
+
+VOLUMEN 21
+
+SISTEMA PROFESIONAL DE GESTIÓN COREOGRÁFICA
+
+Subtítulo:
+
+Documentación, Protección y Monetización de Coreografías Afroperuanas
+
+NUEVOS FORMATOS OPERATIVOS (FO)
+FO-065
+
+Ficha Maestra de Coreografía.
+
+FO-066
+
+Mapa Coreográfico.
+
+FO-067
+
+Diagrama Escénico.
+
+FO-068
+
+Registro Audiovisual.
+
+FO-069
+
+Licencia de Uso Coreográfico.
+
+FO-070
+
+Certificado de Autenticidad.
+
+FO-071
+
+Registro de Comercialización.
+
+FO-072
+
+Registro Histórico Patrimonial.
+
+Además, pensando estratégicamente en todo lo que has construido, este sistema puede convertirse en una segunda propiedad intelectual independiente de ACADEMIA EN CAJA®, porque ya no estarías vendiendo únicamente enseñanza, sino también un catálogo profesional de obras coreográficas licenciables y escalables internacionalmente.

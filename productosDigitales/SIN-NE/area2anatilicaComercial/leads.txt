@@ -1,0 +1,11 @@
+CONTROL DE LEADS
+
+Nombre
+
+Canal
+
+Interés
+
+Estado
+
+Seguimiento
