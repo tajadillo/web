@@ -1,0 +1,46 @@
+
+# FORMATO FO-064
+
+# AUDITORÍA DE SEDES ASOCIADAS
+
+Sede:
+
+---
+
+Ciudad:
+
+---
+
+Fecha:
+
+---
+
+---
+
+Aspectos Evaluados
+
+| Aspecto              | Cumple | No Cumple |
+| -------------------- | ------ | --------- |
+| Metodología          | □      | □         |
+| Infraestructura      | □      | □         |
+| Seguridad            | □      | □         |
+| Gestión Académica    | □      | □         |
+| Imagen Institucional | □      | □         |
+
+---
+
+Observaciones
+
+---
+
+---
+
+Plan de Mejoras
+
+---
+
+---
+
+Auditor Responsable
+
+---

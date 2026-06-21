@@ -1,0 +1,32 @@
+
+# FORMATO FO-045
+
+# EXPEDIENTE ACADÉMICO DEL ESTUDIANTE
+
+Código:
+
+---
+
+Nombre:
+
+---
+
+---
+
+Programas Cursados
+
+| Programa | Nivel | Año | Resultado |
+| -------- | ----- | --- | --------- |
+|          |       |     |           |
+
+---
+
+Observaciones Académicas
+
+---
+
+---
+
+Certificaciones Obtenidas
+
+---

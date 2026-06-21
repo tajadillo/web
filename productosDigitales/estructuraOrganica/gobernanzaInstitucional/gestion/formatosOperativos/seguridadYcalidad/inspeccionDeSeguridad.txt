@@ -1,0 +1,28 @@
+
+# FORMATO FO-037
+
+# INSPECCIÓN DE SEGURIDAD
+
+Fecha:
+
+---
+
+Inspector:
+
+---
+
+---
+
+| Aspecto               | Conforme | No Conforme |
+| --------------------- | -------- | ----------- |
+| Salidas de emergencia | □        | □           |
+| Extintores            | □        | □           |
+| Instalación eléctrica | □        | □           |
+| Pisos                 | □        | □           |
+| Señalización          | □        | □           |
+
+---
+
+Observaciones
+
+---

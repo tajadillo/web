@@ -1,0 +1,37 @@
+
+# FORMATO FO-022
+
+# PLANIFICACIÓN MENSUAL
+
+Mes:
+
+---
+
+Programa:
+
+---
+
+Nivel:
+
+---
+
+Docente:
+
+---
+
+---
+
+| Semana | Objetivo | Contenido | Evaluación |
+| ------ | -------- | --------- | ---------- |
+| 1      |          |           |            |
+| 2      |          |           |            |
+| 3      |          |           |            |
+| 4      |          |           |            |
+
+---
+
+Observaciones
+
+---
+
+---

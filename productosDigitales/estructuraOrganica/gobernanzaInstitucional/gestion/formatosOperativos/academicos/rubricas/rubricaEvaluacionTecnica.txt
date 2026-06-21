@@ -1,0 +1,28 @@
+
+# FORMATO FO-024
+
+# RÚBRICA DE EVALUACIÓN TÉCNICA
+
+Nombre:
+
+---
+
+Nivel:
+
+---
+
+---
+
+| Criterio             | 1 | 2 | 3 | 4 | 5 |
+| -------------------- | - | - | - | - | - |
+| Coordinación         | □ | □ | □ | □ | □ |
+| Técnica corporal     | □ | □ | □ | □ | □ |
+| Musicalidad          | □ | □ | □ | □ | □ |
+| Precisión            | □ | □ | □ | □ | □ |
+| Memoria coreográfica | □ | □ | □ | □ | □ |
+
+---
+
+Puntaje Total
+
+---

@@ -1,0 +1,12 @@
+
+# FORMATO FO-036
+
+# CONTROL DE UTILERÍA
+
+| Código | Elemento | Cantidad | Estado |
+| ------ | -------- | -------- | ------ |
+|        |          |          |        |
+
+Responsable
+
+---

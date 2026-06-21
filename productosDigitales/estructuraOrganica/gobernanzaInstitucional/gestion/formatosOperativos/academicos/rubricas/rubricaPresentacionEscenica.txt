@@ -1,0 +1,28 @@
+
+# FORMATO FO-025
+
+# RÚBRICA DE PRESENTACIÓN ESCÉNICA
+
+Evento:
+
+---
+
+Fecha:
+
+---
+
+---
+
+| Indicador           | 1 | 2 | 3 | 4 | 5 |
+| ------------------- | - | - | - | - | - |
+| Presencia escénica  | □ | □ | □ | □ | □ |
+| Expresión artística | □ | □ | □ | □ | □ |
+| Dominio técnico     | □ | □ | □ | □ | □ |
+| Vestuario           | □ | □ | □ | □ | □ |
+| Trabajo grupal      | □ | □ | □ | □ | □ |
+
+---
+
+Observaciones
+
+---

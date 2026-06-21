@@ -1,0 +1,12 @@
+
+# FORMATO FO-035
+
+# CONTROL DE VESTUARIO
+
+| Código | Prenda | Cantidad | Estado |
+| ------ | ------ | -------- | ------ |
+|        |        |          |        |
+
+Responsable
+
+---

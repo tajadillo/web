@@ -1,0 +1,73 @@
+
+# SISTEMA DE GESTIÓN DE CALIDAD EDUCATIVA
+
+## POLÍTICA DE CALIDAD
+
+La academia se compromete a ofrecer servicios educativos de excelencia mediante procesos de mejora continua.
+
+---
+
+# OBJETIVOS DE CALIDAD
+
+## Académicos
+
+* Mantener altos niveles de satisfacción estudiantil.
+* Actualizar permanentemente los contenidos.
+
+## Administrativos
+
+* Responder solicitudes oportunamente.
+* Mantener registros precisos.
+
+## Institucionales
+
+* Incrementar alianzas estratégicas.
+* Fortalecer la reputación institucional.
+
+---
+
+# INDICADORES
+
+### Académicos
+
+* Tasa de aprobación.
+* Tasa de permanencia.
+* Tasa de certificación.
+
+### Administrativos
+
+* Tiempo de respuesta.
+* Reclamos resueltos.
+
+### Financieros
+
+* Crecimiento de ingresos.
+* Diversificación de fuentes de financiamiento.
+
+### Sociales
+
+* Beneficiarios.
+* Becas otorgadas.
+* Actividades comunitarias.
+
+---
+
+# CICLO DE MEJORA CONTINUA
+
+Planificar
+
+↓
+
+Ejecutar
+
+↓
+
+Evaluar
+
+↓
+
+Mejorar
+
+↓
+
+Planificar nuevamente

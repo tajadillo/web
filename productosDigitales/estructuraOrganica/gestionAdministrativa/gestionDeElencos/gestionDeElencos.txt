@@ -1,0 +1,226 @@
+
+# SISTEMA DE GESTIÓN DE ELENCOS ARTÍSTICOS
+
+# ACADEMIA EN CAJA DE RICHARD TAJADILLO
+
+---
+
+# CAPÍTULO 1
+
+# ESTRUCTURA DEL ELENCO
+
+## Director Artístico
+
+Responsable de:
+
+* Dirección general.
+* Repertorio.
+* Selección artística.
+
+---
+
+## Asistente de Dirección
+
+Responsable de:
+
+* Coordinación de ensayos.
+* Seguimiento de integrantes.
+
+---
+
+## Integrantes
+
+Responsables de:
+
+* Participación activa.
+* Asistencia.
+* Representación institucional.
+
+---
+
+# CAPÍTULO 2
+
+# REQUISITOS DE INGRESO
+
+✓ Aprobar audición.
+
+✓ Cumplir asistencia mínima.
+
+✓ Conocer repertorio básico.
+
+✓ Mantener disciplina institucional.
+
+---
+
+# CAPÍTULO 3
+
+# AUDICIONES
+
+Evaluación:
+
+Técnica 40%
+
+Musicalidad 20%
+
+Interpretación 20%
+
+Actitud 20%
+
+---
+
+# CAPÍTULO 4
+
+# REGLAMENTO DEL ELENCO
+
+Los integrantes deberán:
+
+✓ Asistir puntualmente.
+
+✓ Mantener vestuario en buen estado.
+
+✓ Participar en ensayos.
+
+✓ Representar adecuadamente a la institución.
+
+---
+
+# CAPÍTULO 5
+
+# SISTEMA DE ENSAYOS
+
+Ensayos Técnicos
+
+Ensayos Escénicos
+
+Ensayos Generales
+
+Ensayos de Producción
+
+---
+
+# CAPÍTULO 6
+
+# CONTROL DE ASISTENCIA
+
+Nombre
+
+Fecha
+
+Hora
+
+Firma
+
+Observaciones
+
+---
+
+# CAPÍTULO 7
+
+# REPERTORIO INSTITUCIONAL
+
+Festejo
+
+Landó
+
+Zamacueca
+
+Alcatraz
+
+Son de los Diablos
+
+Panalivio
+
+Toro Mata
+
+---
+
+# CAPÍTULO 8
+
+# CATEGORÍAS DE PRESENTACIONES
+
+Institucionales
+
+Corporativas
+
+Festivales
+
+Educativas
+
+Internacionales
+
+---
+
+# CAPÍTULO 9
+
+# TARIFARIO REFERENCIAL
+
+Presentación corta
+
+30 minutos
+
+---
+
+---
+
+Presentación estándar
+
+45 minutos
+
+---
+
+---
+
+Presentación especial
+
+60 minutos
+
+---
+
+---
+
+# CAPÍTULO 10
+
+# PLAN ANUAL DEL ELENCO
+
+Primer Semestre
+
+* Formación.
+* Creación de repertorio.
+
+---
+
+Segundo Semestre
+
+* Producción.
+* Presentaciones.
+* Giras.
+
+---
+
+# ANEXO
+
+FICHA DEL INTEGRANTE
+
+Nombre
+
+---
+
+Teléfono
+
+---
+
+Correo
+
+---
+
+Nivel
+
+---
+
+Fecha de Ingreso
+
+---
+
+---
+
+FIN DEL SISTEMA DE GESTIÓN DE ELENCOS

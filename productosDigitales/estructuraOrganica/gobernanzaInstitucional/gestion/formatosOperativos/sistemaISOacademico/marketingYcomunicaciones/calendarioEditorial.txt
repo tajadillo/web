@@ -1,0 +1,16 @@
+
+# FORMATO FO-049
+
+# CALENDARIO EDITORIAL
+
+Mes:
+
+---
+
+| Fecha | Plataforma | Tema | Responsable |
+| ----- | ---------- | ---- | ----------- |
+|       |            |      |             |
+
+Observaciones
+
+---

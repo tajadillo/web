@@ -1,0 +1,24 @@
+
+# FORMATO FO-054
+
+# PRESUPUESTO DE PRODUCCIÓN
+
+Evento:
+
+---
+
+---
+
+| Concepto    | Presupuesto |
+| ----------- | ----------- |
+| Sonido      |             |
+| Iluminación |             |
+| Vestuario   |             |
+| Publicidad  |             |
+| Transporte  |             |
+
+---
+
+Total
+
+---

@@ -1,0 +1,38 @@
+
+# FORMATO FO-026
+
+# EVALUACIÓN DE DESEMPEÑO DOCENTE
+
+Docente:
+
+---
+
+Evaluador:
+
+---
+
+Periodo:
+
+---
+
+---
+
+| Aspecto         | 1 | 2 | 3 | 4 | 5 |
+| --------------- | - | - | - | - | - |
+| Puntualidad     | □ | □ | □ | □ | □ |
+| Planificación   | □ | □ | □ | □ | □ |
+| Metodología     | □ | □ | □ | □ | □ |
+| Manejo de grupo | □ | □ | □ | □ | □ |
+| Profesionalismo | □ | □ | □ | □ | □ |
+
+---
+
+Resultado
+
+□ Excelente
+
+□ Bueno
+
+□ Regular
+
+□ Requiere Mejora

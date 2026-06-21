@@ -1,0 +1,130 @@
+
+# FORMATO FO-001
+
+# FICHA DE MATRÍCULA DEL ESTUDIANTE
+
+## ACADEMIA DE DANZAS Y PERCUSIÓN AFROPERUANA
+
+### DATOS DEL ESTUDIANTE
+
+Nombre Completo:
+
+---
+
+Fecha de Nacimiento:
+
+---
+
+Edad:
+
+---
+
+Documento de Identidad:
+
+---
+
+Nacionalidad:
+
+---
+
+Dirección:
+
+---
+
+Teléfono:
+
+---
+
+Correo Electrónico:
+
+---
+
+---
+
+### DATOS DEL APODERADO
+
+(Solo para menores de edad)
+
+Nombre Completo:
+
+---
+
+Parentesco:
+
+---
+
+Teléfono:
+
+---
+
+Correo Electrónico:
+
+---
+
+---
+
+### INFORMACIÓN ACADÉMICA
+
+Programa:
+
+---
+
+Nivel:
+
+---
+
+Fecha de Ingreso:
+
+---
+
+Instructor Responsable:
+
+---
+
+---
+
+### INFORMACIÓN MÉDICA
+
+¿Posee alguna condición médica relevante?
+
+□ Sí
+□ No
+
+Especifique:
+
+---
+
+¿Presenta alergias?
+
+□ Sí
+□ No
+
+Detalle:
+
+---
+
+Contacto de Emergencia:
+
+---
+
+Teléfono:
+
+---
+
+---
+
+### DECLARACIÓN
+
+Declaro que la información proporcionada es verídica.
+
+Firma del Estudiante:
+
+---
+
+Firma del Apoderado:
+
+---
+
+Fecha:
+
+---

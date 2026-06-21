@@ -1,0 +1,36 @@
+
+# FORMATO FO-030
+
+# RENDICIÓN DE GASTOS
+
+Fecha:
+
+---
+
+Responsable:
+
+---
+
+---
+
+| Concepto | Monto |
+| -------- | ----- |
+|          |       |
+|          |       |
+|          |       |
+
+---
+
+Total
+
+---
+
+---
+
+Documentos Adjuntos
+
+□ Boletas
+
+□ Facturas
+
+□ Recibos

@@ -1,0 +1,38 @@
+
+# FORMATO FO-047
+
+# SEGUIMIENTO DE EGRESADOS
+
+Nombre:
+
+---
+
+Año de Egreso:
+
+---
+
+---
+
+Situación Actual
+
+□ Estudiante
+
+□ Instructor
+
+□ Artista Profesional
+
+□ Gestor Cultural
+
+□ Otro
+
+---
+
+Lugar de Trabajo
+
+---
+
+---
+
+Comentarios
+
+---

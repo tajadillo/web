@@ -1,0 +1,36 @@
+
+# FORMATO FO-056
+
+# INFORME POST EVENTO
+
+Evento:
+
+---
+
+Fecha:
+
+---
+
+---
+
+Asistencia:
+
+---
+
+---
+
+Resultados
+
+---
+
+---
+
+Aspectos Positivos
+
+---
+
+---
+
+Aspectos a Mejorar
+
+---

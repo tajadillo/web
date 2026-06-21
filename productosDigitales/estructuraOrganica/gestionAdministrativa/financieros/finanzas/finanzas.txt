@@ -1,0 +1,678 @@
+
+# MANUAL PROFESIONAL DE FINANZAS
+
+# ACADEMIA EN CAJA DE RICHARD TAJADILLO
+
+## SISTEMA DE GESTIÓN FINANCIERA PARA ACADEMIAS DE DANZA Y PERCUSIÓN
+
+---
+
+# INTRODUCCIÓN
+
+La sostenibilidad de una academia depende de su capacidad para controlar ingresos, gastos y crecimiento.
+
+Este manual proporciona herramientas prácticas para administrar una academia artística de manera profesional.
+
+---
+
+# CAPÍTULO 1
+
+# FUNDAMENTOS FINANCIEROS
+
+## Objetivos Financieros
+
+Toda academia debe:
+
+✓ Cubrir costos operativos.
+
+✓ Generar utilidad.
+
+✓ Reinvertir en crecimiento.
+
+✓ Mantener liquidez.
+
+✓ Crear reservas.
+
+---
+
+# CAPÍTULO 2
+
+# FUENTES DE INGRESO
+
+## Ingresos Principales
+
+### Matrículas
+
+Pago único de inscripción.
+
+---
+
+### Mensualidades
+
+Principal fuente de ingresos.
+
+---
+
+### Talleres Especializados
+
+Cursos cortos.
+
+---
+
+### Eventos
+
+Presentaciones y espectáculos.
+
+---
+
+### Cursos Virtuales
+
+Programas online.
+
+---
+
+### Venta de Productos
+
+* camisetas,
+* instrumentos,
+* merchandising,
+* materiales educativos.
+
+---
+
+# CAPÍTULO 3
+
+# ESTRUCTURA DE COSTOS
+
+## Costos Fijos
+
+Son aquellos que existen todos los meses.
+
+Ejemplos:
+
+* alquiler,
+* internet,
+* electricidad,
+* agua,
+* personal administrativo,
+* software.
+
+---
+
+## Costos Variables
+
+Cambian según la actividad.
+
+Ejemplos:
+
+* publicidad,
+* transporte,
+* vestuario,
+* producción de eventos.
+
+---
+
+# CAPÍTULO 4
+
+# PRESUPUESTO ANUAL
+
+## Ejemplo
+
+Ingresos proyectados:
+
+Mensualidades:
+$12,000
+
+Talleres:
+$3,000
+
+Eventos:
+$4,000
+
+Cursos Virtuales:
+$2,000
+
+Total:
+$21,000
+
+---
+
+Gastos proyectados:
+
+Alquiler:
+$6,000
+
+Personal:
+$4,800
+
+Marketing:
+$1,200
+
+Servicios:
+$1,000
+
+Eventos:
+$2,000
+
+Otros:
+$1,000
+
+Total:
+$16,000
+
+---
+
+Utilidad proyectada:
+$5,000
+
+---
+
+# CAPÍTULO 5
+
+# FLUJO DE CAJA
+
+## Objetivo
+
+Controlar entradas y salidas de dinero.
+
+---
+
+# FORMATO
+
+MES
+
+Ingresos
+
+Gastos
+
+Saldo
+
+---
+
+ENERO
+
+$1,500
+
+$1,000
+
+$500
+
+---
+
+FEBRERO
+
+$1,700
+
+$1,100
+
+$600
+
+---
+
+Y así sucesivamente.
+
+---
+
+# CAPÍTULO 6
+
+# PUNTO DE EQUILIBRIO
+
+## Fórmula
+
+Punto de Equilibrio
+
+=
+
+Costos Fijos
+
+÷
+
+Margen por Alumno
+
+---
+
+Ejemplo
+
+Costos mensuales:
+$1,000
+
+Ingreso promedio por alumno:
+$50
+
+Punto de equilibrio:
+
+20 alumnos
+
+---
+
+Conclusión:
+
+Con menos de 20 alumnos la academia pierde dinero.
+
+Con más de 20 alumnos genera utilidad.
+
+---
+
+# CAPÍTULO 7
+
+# CÁLCULO DE MENSUALIDADES
+
+## Método
+
+Paso 1
+
+Calcular costos mensuales.
+
+---
+
+Paso 2
+
+Definir cantidad mínima de alumnos.
+
+---
+
+Paso 3
+
+Agregar utilidad deseada.
+
+---
+
+Ejemplo
+
+Costos:
+$1,200
+
+Utilidad:
+$300
+
+Total:
+$1,500
+
+Alumnos:
+30
+
+Mensualidad:
+
+$50
+
+---
+
+# CAPÍTULO 8
+
+# CONTROL DE PAGOS
+
+## Ficha Individual
+
+Alumno:
+
+---
+
+Programa:
+
+---
+
+Mensualidad:
+
+---
+
+---
+
+ENERO
+
+□ Pagó
+
+□ Pendiente
+
+---
+
+FEBRERO
+
+□ Pagó
+
+□ Pendiente
+
+---
+
+MARZO
+
+□ Pagó
+
+□ Pendiente
+
+---
+
+(Continuar hasta diciembre)
+
+---
+
+# CAPÍTULO 9
+
+# CONTROL DE MOROSIDAD
+
+## Clasificación
+
+Al día
+
+0 días
+
+---
+
+Retraso leve
+
+1 a 7 días
+
+---
+
+Retraso moderado
+
+8 a 15 días
+
+---
+
+Retraso crítico
+
+Más de 15 días
+
+---
+
+# Protocolo
+
+1. Recordatorio.
+
+2. Seguimiento.
+
+3. Acuerdo de pago.
+
+4. Suspensión temporal.
+
+---
+
+# CAPÍTULO 10
+
+# FONDO DE EMERGENCIA
+
+Toda academia deberá construir un fondo equivalente a:
+
+3 meses de gastos operativos.
+
+---
+
+Ejemplo
+
+Gastos mensuales:
+$1,500
+
+Fondo recomendado:
+$4,500
+
+---
+
+# CAPÍTULO 11
+
+# INVERSIÓN EN MARKETING
+
+Distribución recomendada
+
+Marketing Digital:
+50%
+
+---
+
+Producción de Contenido:
+20%
+
+---
+
+Eventos:
+20%
+
+---
+
+Material Impreso:
+10%
+
+---
+
+# CAPÍTULO 12
+
+# RENTABILIDAD POR PROGRAMA
+
+Evaluar:
+
+Ingresos
+
+menos
+
+Costos
+
+igual
+
+Rentabilidad
+
+---
+
+Programas:
+
+✓ Danza
+
+✓ Percusión
+
+✓ Talleres
+
+✓ Cursos Online
+
+---
+
+# CAPÍTULO 13
+
+# PRESUPUESTO DE EVENTOS
+
+## Gastos
+
+Sonido
+
+Iluminación
+
+Vestuario
+
+Transporte
+
+Publicidad
+
+Fotografía
+
+Video
+
+---
+
+## Ingresos
+
+Entradas
+
+Patrocinios
+
+Auspicios
+
+Ventas
+
+---
+
+# CAPÍTULO 14
+
+# PROYECCIÓN A 1 AÑO
+
+Meta sugerida
+
+30 alumnos activos
+
+Ingresos mensuales:
+
+$1,500
+
+---
+
+# CAPÍTULO 15
+
+# PROYECCIÓN A 3 AÑOS
+
+Meta sugerida
+
+80 alumnos activos
+
+Ingresos mensuales:
+
+$4,000
+
+---
+
+# CAPÍTULO 16
+
+# PROYECCIÓN A 5 AÑOS
+
+Meta sugerida
+
+150 alumnos activos
+
+Ingresos mensuales:
+
+$7,500
+
+---
+
+# CAPÍTULO 17
+
+# INDICADORES FINANCIEROS
+
+## Margen de Utilidad
+
+Meta:
+
+20%
+
+---
+
+## Morosidad
+
+Meta:
+
+Menos del 10%
+
+---
+
+## Crecimiento
+
+Meta:
+
+15% anual
+
+---
+
+## Liquidez
+
+Meta:
+
+Fondo para 3 meses
+
+---
+
+# CAPÍTULO 18
+
+# DASHBOARD MENSUAL
+
+Indicadores:
+
+✓ Alumnos activos
+
+✓ Nuevas matrículas
+
+✓ Ingresos
+
+✓ Gastos
+
+✓ Utilidad
+
+✓ Morosidad
+
+✓ Retención
+
+---
+
+# CAPÍTULO 19
+
+# CHECKLIST FINANCIERO MENSUAL
+
+□ Revisar pagos
+
+□ Revisar gastos
+
+□ Actualizar flujo de caja
+
+□ Revisar presupuesto
+
+□ Evaluar rentabilidad
+
+□ Elaborar informe
+
+---
+
+# CAPÍTULO 20
+
+# PLAN DE CRECIMIENTO
+
+Fase 1
+
+Academia local
+
+---
+
+Fase 2
+
+Academia regional
+
+---
+
+Fase 3
+
+Academia nacional
+
+---
+
+Fase 4
+
+Academia internacional
+
+---
+
+# ANEXOS
+
+## Formatos recomendados en Excel
+
+1. Control de alumnos.
+
+2. Control de pagos.
+
+3. Flujo de caja.
+
+4. Presupuesto anual.
+
+5. Control de eventos.
+
+6. Inventario.
+
+7. Nómina de personal.
+
+8. Dashboard financiero.
+
+---
+
+# CONCLUSIÓN
+
+Una academia cultural sostenible combina excelencia artística con gestión financiera profesional.
+
+El control financiero permite crecer sin perder estabilidad operativa y garantiza la continuidad del proyecto cultural.
+
+---
+
+FIN DEL MANUAL PROFESIONAL DE FINANZAS
+
+ACADEMIA EN CAJA DE RICHARD TAJADILLO

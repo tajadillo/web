@@ -1,0 +1,22 @@
+
+# FORMATO FO-012
+
+# INVENTARIO DE INSTRUMENTOS Y EQUIPAMIENTO
+
+| Código | Descripción | Cantidad | Estado | Ubicación |
+| ------ | ----------- | -------- | ------ | --------- |
+|        |             |          |        |           |
+|        |             |          |        |           |
+|        |             |          |        |           |
+
+---
+
+Observaciones
+
+---
+
+---
+
+Responsable
+
+---

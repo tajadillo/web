@@ -1,0 +1,40 @@
+
+# FORMATO FO-033
+
+# FICHA TÉCNICA DE ESPECTÁCULO
+
+Nombre del Evento
+
+---
+
+---
+
+Director Artístico
+
+---
+
+---
+
+Duración
+
+---
+
+---
+
+Participantes
+
+---
+
+---
+
+Requerimientos Técnicos
+
+□ Sonido
+
+□ Luces
+
+□ Escenario
+
+□ Proyección
+
+□ Camerinos

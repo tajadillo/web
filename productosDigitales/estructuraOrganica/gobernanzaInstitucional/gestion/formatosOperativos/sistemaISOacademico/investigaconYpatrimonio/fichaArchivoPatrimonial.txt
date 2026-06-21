@@ -1,0 +1,38 @@
+
+# FORMATO FO-059
+
+# FICHA DE ARCHIVO PATRIMONIAL
+
+Código:
+
+---
+
+Nombre del Material:
+
+---
+
+---
+
+Tipo
+
+□ Documento
+
+□ Audio
+
+□ Video
+
+□ Fotografía
+
+□ Objeto
+
+---
+
+Descripción
+
+---
+
+---
+
+Estado de Conservación
+
+---
