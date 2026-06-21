@@ -1,0 +1,29 @@
+
+# FORMATO FO-041
+
+# CUADRO DE MANDO INTEGRAL (KPI)
+
+Periodo:
+
+---
+
+Responsable:
+
+---
+
+| Indicador                | Meta | Resultado | Cumplimiento % |
+| ------------------------ | ---- | --------- | -------------- |
+| Matrículas               |      |           |                |
+| Retención de estudiantes |      |           |                |
+| Certificaciones emitidas |      |           |                |
+| Ingresos                 |      |           |                |
+| Becas otorgadas          |      |           |                |
+| Eventos realizados       |      |           |                |
+
+Observaciones:
+
+---
+
+Acciones Correctivas:
+
+---

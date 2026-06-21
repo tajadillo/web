@@ -1,0 +1,38 @@
+
+# FORMATO FO-044
+
+# SEGUIMIENTO DE OBJETIVOS
+
+Objetivo:
+
+---
+
+Periodo:
+
+---
+
+---
+
+Estado
+
+□ No iniciado
+
+□ En ejecución
+
+□ Completado
+
+□ Reprogramado
+
+---
+
+Avance %
+
+---
+
+---
+
+Comentarios
+
+---
+
+---

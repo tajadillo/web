@@ -1,0 +1,18 @@
+
+# FORMATO FO-042
+
+# MATRIZ DE RIESGOS INSTITUCIONALES
+
+| Riesgo | Probabilidad | Impacto | Nivel | Medidas Preventivas |
+| ------ | ------------ | ------- | ----- | ------------------- |
+|        |              |         |       |                     |
+|        |              |         |       |                     |
+|        |              |         |       |                     |
+
+Responsable:
+
+---
+
+Fecha de Revisión:
+
+---

@@ -1,0 +1,32 @@
+
+# FORMATO FO-043
+
+# PLAN ESTRATÉGICO ANUAL
+
+Año:
+
+---
+
+---
+
+Objetivo Estratégico:
+
+---
+
+---
+
+Actividades
+
+| Actividad | Responsable | Fecha Inicio | Fecha Término |
+| --------- | ----------- | ------------ | ------------- |
+|           |             |              |               |
+
+---
+
+Indicadores
+
+---
+
+Presupuesto
+
+---
