@@ -1,0 +1,143 @@
+WHATSAPP BUSINESS PARA ACADEMIAS
+CONFIGURACIÓN DEL PERFIL
+
+Nombre:
+
+Academia Richard Tajadillo
+
+Descripción:
+
+Danzas y Percusión Afroperuana
+
+Formación Cultural y Artística
+
+MENSAJE DE BIENVENIDA
+
+Hola 👋
+
+Gracias por comunicarte con la Academia Richard Tajadillo.
+
+Cuéntanos:
+
+✓ Nombre
+
+✓ Edad
+
+✓ Programa de interés
+
+Te responderemos lo antes posible.
+
+MENSAJE DE AUSENCIA
+
+Gracias por escribirnos.
+
+En este momento estamos fuera del horario de atención.
+
+Responderemos a la brevedad.
+
+ETIQUETAS RECOMENDADAS
+
+🟢 Nuevo Prospecto
+
+🔵 Información Enviada
+
+🟡 Clase Muestra
+
+🟠 Seguimiento
+
+🔴 Pendiente de Pago
+
+⭐ Alumno Activo
+
+RESPUESTAS RÁPIDAS
+
+/horarios
+
+Nuestros horarios disponibles son:
+
+/precios
+
+Nuestros programas tienen los siguientes valores:
+
+/ubicacion
+
+Nos encontramos en:
+
+CATÁLOGO DE SERVICIOS
+Danzas Afroperuanas
+
+Descripción
+
+Fotografía
+
+Valor
+
+Percusión Afroperuana
+
+Descripción
+
+Fotografía
+
+Valor
+
+Talleres Especializados
+
+Descripción
+
+Fotografía
+
+Valor
+
+LISTAS DE DIFUSIÓN
+
+Segmentar:
+
+Prospectos
+Alumnos activos
+Ex alumnos
+Docentes
+Elenco
+AUTOMATIZACIÓN
+
+Secuencia sugerida:
+
+Día 1:
+Bienvenida
+
+Día 2:
+Video institucional
+
+Día 4:
+Testimonio
+
+Día 6:
+Invitación a clase muestra
+
+Día 8:
+Cierre de inscripción
+
+CONTROL DE SEGUIMIENTO
+
+Nombre
+
+Fecha
+
+Estado
+
+Próximo contacto
+
+Observaciones
+
+MÉTRICAS
+
+Consultas diarias
+
+Tiempo de respuesta
+
+Clases muestra
+
+Inscripciones
+
+Conversión
+
+FIN DEL MÓDULO 13
