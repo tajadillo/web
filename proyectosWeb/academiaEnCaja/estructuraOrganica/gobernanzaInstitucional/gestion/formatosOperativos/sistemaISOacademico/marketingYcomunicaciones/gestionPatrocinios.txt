@@ -1,0 +1,42 @@
+
+# FORMATO FO-052
+
+# GESTIÓN DE PATROCINIOS
+
+Empresa/Institución:
+
+---
+
+Contacto:
+
+---
+
+---
+
+Tipo de Apoyo
+
+□ Financiero
+
+□ Logístico
+
+□ Difusión
+
+□ Equipamiento
+
+---
+
+Monto o Valor Estimado
+
+---
+
+---
+
+Estado
+
+□ Prospecto
+
+□ En negociación
+
+□ Confirmado
+
+□ Finalizado

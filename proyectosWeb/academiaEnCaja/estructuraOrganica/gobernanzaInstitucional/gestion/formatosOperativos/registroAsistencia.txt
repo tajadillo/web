@@ -1,0 +1,28 @@
+
+# FORMATO FO-002
+
+# REGISTRO DE ASISTENCIA
+
+## CURSO: _____________________
+
+## NIVEL: _____________________
+
+## DOCENTE: ___________________
+
+| N° | Nombre del Estudiante | Semana 1 | Semana 2 | Semana 3 | Semana 4 |
+| -- | --------------------- | -------- | -------- | -------- | -------- |
+| 1  |                       |          |          |          |          |
+| 2  |                       |          |          |          |          |
+| 3  |                       |          |          |          |          |
+| 4  |                       |          |          |          |          |
+| 5  |                       |          |          |          |          |
+
+Observaciones:
+
+---
+
+---
+
+Firma del Docente:
+
+---

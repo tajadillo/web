@@ -1,0 +1,227 @@
+PROYECCIÓN FINANCIERA A 5 AÑOS
+ACADEMIA RICHARD TAJADILLO
+Supuestos Utilizados
+Crecimiento promedio anual: 35%
+Matrícula anual por alumno.
+Ingresos por mensualidades.
+Talleres especializados.
+Eventos.
+Cursos virtuales.
+Servicios institucionales.
+AÑO 1
+Estudiantes
+
+50
+
+Ingresos
+
+Mensualidades:
+USD 18.000
+
+Matrículas:
+USD 2.500
+
+Talleres:
+USD 3.000
+
+Eventos:
+USD 2.500
+
+Cursos Online:
+USD 1.000
+
+Total:
+USD 27.000
+
+Gastos
+
+Arriendo:
+USD 7.200
+
+Personal:
+USD 8.400
+
+Marketing:
+USD 1.800
+
+Servicios:
+USD 1.200
+
+Operación:
+USD 2.000
+
+Total:
+USD 20.600
+
+Utilidad Neta
+
+USD 6.400
+
+AÑO 2
+Estudiantes
+
+90
+
+Ingresos
+
+Mensualidades:
+USD 32.400
+
+Matrículas:
+USD 4.500
+
+Talleres:
+USD 5.000
+
+Eventos:
+USD 5.000
+
+Cursos Online:
+USD 3.000
+
+Total:
+USD 49.900
+
+Gastos
+
+USD 32.000
+
+Utilidad
+
+USD 17.900
+
+AÑO 3
+Estudiantes
+
+130
+
+Ingresos
+
+Mensualidades:
+USD 46.800
+
+Matrículas:
+USD 6.500
+
+Talleres:
+USD 8.000
+
+Eventos:
+USD 8.000
+
+Cursos Online:
+USD 6.000
+
+Consultorías:
+USD 4.000
+
+Total:
+USD 79.300
+
+Gastos
+
+USD 48.000
+
+Utilidad
+
+USD 31.300
+
+AÑO 4
+Estudiantes
+
+180
+
+Ingresos
+
+Mensualidades:
+USD 64.800
+
+Matrículas:
+USD 9.000
+
+Talleres:
+USD 10.000
+
+Eventos:
+USD 12.000
+
+Cursos Online:
+USD 10.000
+
+Consultorías:
+USD 8.000
+
+Total:
+USD 113.800
+
+Gastos
+
+USD 66.000
+
+Utilidad
+
+USD 47.800
+
+AÑO 5
+Estudiantes
+
+250
+
+Ingresos
+
+Mensualidades:
+USD 90.000
+
+Matrículas:
+USD 12.500
+
+Talleres:
+USD 15.000
+
+Eventos:
+USD 18.000
+
+Cursos Online:
+USD 18.000
+
+Consultorías:
+USD 12.000
+
+Licenciamiento Academia en Caja:
+USD 10.000
+
+Total:
+USD 175.500
+
+Gastos
+
+USD 95.000
+
+Utilidad Neta
+
+USD 80.500
+
+RESUMEN EJECUTIVO FINANCIERO
+Año	Estudiantes	Ingresos	Gastos	Utilidad
+1	50	USD 27.000	USD 20.600	USD 6.400
+2	90	USD 49.900	USD 32.000	USD 17.900
+3	130	USD 79.300	USD 48.000	USD 31.300
+4	180	USD 113.800	USD 66.000	USD 47.800
+5	250	USD 175.500	USD 95.000	USD 80.500
+IMPACTO PROYECTADO A 5 AÑOS
+Formación
+Más de 700 estudiantes formados.
+Comunidad
+Más de 5.000 beneficiarios indirectos.
+Empleo Cultural
+5 a 10 docentes permanentes.
+2 administrativos.
+1 coordinador académico.
+1 productor cultural.
+Producción Artística
+Más de 50 presentaciones públicas.
+Festivales anuales.
+Elenco profesional estable.
+Sostenibilidad
+
+Al finalizar el quinto año, la Academia Richard Tajadillo podría operar con autonomía financiera, manteniendo programas formativos, actividades comunitarias y expansión mediante cursos online, consultorías y el modelo "Academia en Caja".

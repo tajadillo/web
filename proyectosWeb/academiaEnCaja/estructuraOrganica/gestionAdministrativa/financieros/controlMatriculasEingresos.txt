@@ -1,0 +1,20 @@
+
+# FORMATO FO-032
+
+# CONTROL DE MATRÍCULAS E INGRESOS
+
+Periodo:
+
+---
+
+---
+
+| Estudiante | Programa | Pago | Fecha |
+| ---------- | -------- | ---- | ----- |
+|            |          |      |       |
+
+---
+
+Total Recaudado
+
+---

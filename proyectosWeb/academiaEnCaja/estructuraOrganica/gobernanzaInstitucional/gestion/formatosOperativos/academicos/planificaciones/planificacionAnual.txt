@@ -1,0 +1,65 @@
+
+# FORMATO FO-023
+
+# PLANIFICACIÓN ANUAL
+
+Año:
+
+---
+
+Programa:
+
+---
+
+Nivel:
+
+---
+
+---
+
+# OBJETIVO GENERAL
+
+---
+
+---
+
+# OBJETIVOS ESPECÍFICOS
+
+1.
+
+---
+
+2.
+
+---
+
+3.
+
+---
+
+---
+
+# UNIDADES
+
+| Unidad | Nombre | Horas |
+| ------ | ------ | ----- |
+| 1      |        |       |
+| 2      |        |       |
+| 3      |        |       |
+| 4      |        |       |
+
+---
+
+# CRONOGRAMA
+
+| Mes     | Unidad |
+| ------- | ------ |
+| Enero   |        |
+| Febrero |        |
+| Marzo   |        |
+
+---
+
+# RESPONSABLE
+
+---

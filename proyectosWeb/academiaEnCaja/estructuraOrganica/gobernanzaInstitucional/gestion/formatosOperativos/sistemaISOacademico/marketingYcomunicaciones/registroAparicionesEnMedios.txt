@@ -1,0 +1,32 @@
+
+# FORMATO FO-051
+
+# REGISTRO DE APARICIONES EN MEDIOS
+
+Fecha:
+
+---
+
+Medio:
+
+---
+
+Tipo:
+
+□ Radio
+
+□ TV
+
+□ Prensa
+
+□ Digital
+
+---
+
+Tema
+
+---
+
+Enlace o Referencia
+
+---

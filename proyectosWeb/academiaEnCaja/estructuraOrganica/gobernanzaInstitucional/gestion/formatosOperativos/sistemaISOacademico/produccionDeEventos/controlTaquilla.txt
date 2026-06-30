@@ -1,0 +1,25 @@
+
+# FORMATO FO-055
+
+# CONTROL DE TAQUILLA
+
+Evento:
+
+---
+
+Fecha:
+
+---
+
+---
+
+| Tipo Entrada | Cantidad | Valor | Total |
+| ------------ | -------- | ----- | ----- |
+| General      |          |       |       |
+| Preferencial |          |       |       |
+
+---
+
+Total Recaudado
+
+---

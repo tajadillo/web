@@ -1,0 +1,64 @@
+
+# FORMATO FO-003
+
+# INFORME DE EVALUACIÓN DEL ESTUDIANTE
+
+Periodo:
+
+---
+
+Nombre:
+
+---
+
+Nivel:
+
+---
+
+Instructor:
+
+---
+
+---
+
+## EVALUACIÓN TÉCNICA
+
+| Criterio     | 1 | 2 | 3 | 4 | 5 |
+| ------------ | - | - | - | - | - |
+| Coordinación | □ | □ | □ | □ | □ |
+| Musicalidad  | □ | □ | □ | □ | □ |
+| Técnica      | □ | □ | □ | □ | □ |
+| Expresión    | □ | □ | □ | □ | □ |
+
+---
+
+## EVALUACIÓN ACTITUDINAL
+
+| Criterio          | 1 | 2 | 3 | 4 | 5 |
+| ----------------- | - | - | - | - | - |
+| Puntualidad       | □ | □ | □ | □ | □ |
+| Participación     | □ | □ | □ | □ | □ |
+| Trabajo en equipo | □ | □ | □ | □ | □ |
+| Respeto           | □ | □ | □ | □ | □ |
+
+---
+
+## OBSERVACIONES
+
+---
+
+---
+
+---
+
+Resultado Final:
+
+□ Aprobado
+
+□ En Proceso
+
+□ Requiere Refuerzo
+
+Firma del Instructor:
+
+---

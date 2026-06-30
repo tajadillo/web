@@ -1,0 +1,32 @@
+
+# FORMATO FO-015
+
+# ENCUESTA DE SATISFACCIÓN DE APODERADOS
+
+Nombre del Estudiante:
+
+---
+
+Programa:
+
+---
+
+---
+
+Califique de 1 a 5:
+
+| Aspecto                    | 1 | 2 | 3 | 4 | 5 |
+| -------------------------- | - | - | - | - | - |
+| Atención administrativa    | □ | □ | □ | □ | □ |
+| Comunicación institucional | □ | □ | □ | □ | □ |
+| Progreso observado         | □ | □ | □ | □ | □ |
+| Seguridad                  | □ | □ | □ | □ | □ |
+| Satisfacción general       | □ | □ | □ | □ | □ |
+
+---
+
+Sugerencias
+
+---
+
+---

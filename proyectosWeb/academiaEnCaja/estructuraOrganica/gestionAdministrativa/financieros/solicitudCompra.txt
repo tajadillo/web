@@ -1,0 +1,42 @@
+
+# FORMATO FO-029
+
+# SOLICITUD DE COMPRA
+
+Solicitante:
+
+---
+
+Fecha:
+
+---
+
+---
+
+Artículo Solicitado
+
+---
+
+---
+
+Cantidad
+
+---
+
+---
+
+Justificación
+
+---
+
+---
+
+Aprobación
+
+□ Sí
+
+□ No
+
+Firma
+
+---

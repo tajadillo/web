@@ -1,0 +1,22 @@
+
+# FORMATO FO-014
+
+# ENCUESTA DE SATISFACCIÓN DEL ESTUDIANTE
+
+Califique de 1 a 5:
+
+| Aspecto             | 1 | 2 | 3 | 4 | 5 |
+| ------------------- | - | - | - | - | - |
+| Calidad docente     | □ | □ | □ | □ | □ |
+| Organización        | □ | □ | □ | □ | □ |
+| Instalaciones       | □ | □ | □ | □ | □ |
+| Comunicación        | □ | □ | □ | □ | □ |
+| Experiencia general | □ | □ | □ | □ | □ |
+
+---
+
+Comentarios
+
+---
+
+---

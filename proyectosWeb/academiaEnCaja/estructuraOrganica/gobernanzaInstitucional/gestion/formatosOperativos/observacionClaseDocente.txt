@@ -1,0 +1,65 @@
+
+# FORMATO FO-006
+
+# OBSERVACIÓN DE CLASE DOCENTE
+
+Instructor Observado:
+
+---
+
+Observador:
+
+---
+
+Fecha:
+
+---
+
+Curso:
+
+---
+
+---
+
+## PLANIFICACIÓN
+
+| Criterio               | Sí | No |
+| ---------------------- | -- | -- |
+| Presenta planificación | □  | □  |
+| Objetivos claros       | □  | □  |
+| Material preparado     | □  | □  |
+
+---
+
+## EJECUCIÓN
+
+| Criterio        | 1 | 2 | 3 | 4 | 5 |
+| --------------- | - | - | - | - | - |
+| Dominio técnico | □ | □ | □ | □ | □ |
+| Comunicación    | □ | □ | □ | □ | □ |
+| Manejo de grupo | □ | □ | □ | □ | □ |
+| Metodología     | □ | □ | □ | □ | □ |
+
+---
+
+## OBSERVACIONES
+
+---
+
+---
+
+---
+
+---
+
+## RECOMENDACIONES
+
+---
+
+---
+
+---
+
+Firma del Evaluador:
+
+---

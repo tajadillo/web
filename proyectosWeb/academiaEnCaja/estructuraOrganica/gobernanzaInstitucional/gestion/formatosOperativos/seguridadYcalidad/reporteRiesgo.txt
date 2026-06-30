@@ -1,0 +1,34 @@
+
+# FORMATO FO-038
+
+# REPORTE DE RIESGO
+
+Fecha:
+
+---
+
+Área:
+
+---
+
+---
+
+Descripción del Riesgo
+
+---
+
+---
+
+Nivel
+
+□ Bajo
+
+□ Medio
+
+□ Alto
+
+---
+
+Acciones Correctivas
+
+---

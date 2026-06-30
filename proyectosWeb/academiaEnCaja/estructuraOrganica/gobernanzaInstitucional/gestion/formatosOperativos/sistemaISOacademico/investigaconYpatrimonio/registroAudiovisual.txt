@@ -1,0 +1,32 @@
+
+# FORMATO FO-058
+
+# REGISTRO AUDIOVISUAL
+
+Código:
+
+---
+
+Título:
+
+---
+
+Fecha:
+
+---
+
+---
+
+Formato
+
+□ Video
+
+□ Audio
+
+□ Fotografía
+
+---
+
+Ubicación del Archivo
+
+---

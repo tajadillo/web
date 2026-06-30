@@ -1,0 +1,18 @@
+
+# FORMATO FO-046
+
+# HISTORIAL DE CERTIFICACIONES
+
+Nombre:
+
+---
+
+---
+
+| Certificación | Fecha | Nivel | Código |
+| ------------- | ----- | ----- | ------ |
+|               |       |       |        |
+
+Responsable Académico
+
+---

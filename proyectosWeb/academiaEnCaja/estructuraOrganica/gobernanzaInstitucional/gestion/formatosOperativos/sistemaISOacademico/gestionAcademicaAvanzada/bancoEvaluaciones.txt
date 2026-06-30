@@ -1,0 +1,40 @@
+
+# FORMATO FO-048
+
+# BANCO DE EVALUACIONES
+
+Curso:
+
+---
+
+Nivel:
+
+---
+
+---
+
+Tipo
+
+□ Diagnóstica
+
+□ Formativa
+
+□ Sumativa
+
+---
+
+Instrumento
+
+□ Prueba
+
+□ Rúbrica
+
+□ Lista de Cotejo
+
+□ Proyecto
+
+---
+
+Archivo Asociado
+
+---

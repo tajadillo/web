@@ -1,0 +1,24 @@
+
+# FORMATO FO-031
+
+# REGISTRO DE CAJA CHICA
+
+Periodo:
+
+---
+
+Responsable:
+
+---
+
+---
+
+| Fecha | Concepto | Ingreso | Egreso | Saldo |
+| ----- | -------- | ------- | ------ | ----- |
+|       |          |         |        |       |
+
+---
+
+Saldo Final
+
+---

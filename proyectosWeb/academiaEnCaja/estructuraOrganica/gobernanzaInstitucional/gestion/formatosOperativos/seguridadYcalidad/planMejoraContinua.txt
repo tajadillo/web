@@ -1,0 +1,36 @@
+
+# FORMATO FO-040
+
+# PLAN DE MEJORA CONTINUA
+
+Área
+
+---
+
+Responsable
+
+---
+
+---
+
+Problema Detectado
+
+---
+
+---
+
+Acción Correctiva
+
+---
+
+---
+
+Fecha de Implementación
+
+---
+
+---
+
+Resultado Esperado
+
+---

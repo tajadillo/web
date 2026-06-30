@@ -1,0 +1,72 @@
+
+# FORMATO FO-011
+
+# REGISTRO DE ACCIDENTE
+
+Fecha:
+
+---
+
+Hora:
+
+---
+
+Lugar:
+
+---
+
+---
+
+# PERSONA AFECTADA
+
+Nombre:
+
+---
+
+Edad:
+
+---
+
+Programa:
+
+---
+
+---
+
+# DESCRIPCIÓN DEL ACCIDENTE
+
+---
+
+---
+
+---
+
+---
+
+# PRIMEROS AUXILIOS APLICADOS
+
+---
+
+---
+
+---
+
+# DERIVACIÓN MÉDICA
+
+□ Sí
+
+□ No
+
+Centro Asistencial:
+
+---
+
+---
+
+Responsable:
+
+---
+
+Firma:
+
+---
