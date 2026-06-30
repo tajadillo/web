@@ -1,0 +1,23 @@
+TABLERO DE INDICADORES INSTITUCIONALES (KPI)
+
+Indicadores:
+
+Académicos
+Número de alumnos activos.
+Tasa de retención.
+Tasa de certificación.
+Tasa de asistencia.
+
+Financieros
+Ingresos mensuales.
+Gastos operativos.
+Margen de rentabilidad.
+
+Marketing
+Nuevos prospectos.
+Conversiones.
+Alcance digital.
+
+Patrimoniales
+Coreografías registradas.
+Investigaciones realizadas.

@@ -1,0 +1,23 @@
+CONTROL DE DIGITALIZACIÓN
+
+Material original:
+
+☐ VHS
+
+☐ Cassette
+
+☐ DVD
+
+☐ Papel
+
+☐ Fotografía
+
+☐ Otro
+
+Estado:
+
+☐ Pendiente
+
+☐ En proceso
+
+☐ Digitalizado

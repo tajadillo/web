@@ -1,0 +1,3 @@
+id,nombre,edad,telefono,email,nivel,direccion,fecha_ingreso,activo
+1,"María Eugenia García",28,"+56923476325","maria@mail.com","Intermedio","Av. Siempre Viva 123 esq. Siempre Muerta",2025-03-01,si
+3,"Elsa Pito",19,"+519 12345678","pito.elsa@elsa.pito","medio","la casa donde vive",2026-06-30,si
