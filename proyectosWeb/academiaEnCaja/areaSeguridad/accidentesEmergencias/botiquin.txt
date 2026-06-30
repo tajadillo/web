@@ -1,0 +1,135 @@
+================================================================================
+                    BOTIQUÍN PARA ACADEMIA DE DANZAS
+================================================================================
+Elaborado desde: Medicina General + Prevención de Riesgos
+Público objetivo: Academias de danza (salas de baile, escenarios, tarimas)
+================================================================================
+
+================================================================================
+1. MATERIAL DE CURACIÓN Y ANTISEPSIA
+================================================================================
+| Ítem                                      | Cantidad      | Uso                              |
+|-------------------------------------------|---------------|----------------------------------|
+| Alcohol gel 70°                           | 500 ml        | Higiene de manos                 |
+| Suero fisiológico (ampollas 10 ml)        | 10 und        | Lavado de heridas y ojos         |
+| Povidona yodada (solución)               | 250 ml        | Desinfección de heridas          |
+| Clorhexidina 0.05% (solución)            | 250 ml        | Alternativa a povidona (niños)   |
+| Agua oxigenada 10 vol.                   | 250 ml        | Limpieza inicial de heridas      |
+| Gasas estériles (7.5 x 7.5 cm)           | 2 paquetes    | Cubrir heridas, limpieza         |
+| Venda elástica (5 cm)                     | 2 und         | Contención esguinces pequeños    |
+| Venda elástica (10 cm)                    | 2 und         | Tobillo, muñeca, rodilla         |
+| Venda de gasa (5 cm)                      | 2 und         | Fijación de apósitos             |
+| Venda de gasa (10 cm)                     | 2 und         | Fijación de apósitos             |
+| Apósitos estériles (10 x 10 cm)          | 10 und        | Cubrir heridas                   |
+| Curitas / apósitos adhesivos             | 20 und        | Heridas pequeñas, ampollas       |
+| Compresas frías instantáneas             | 6 und         | Contusiones, esguinces agudos    |
+| Venda cohesiva (Tensoplast o similar)    | 2 rollos      | Tobilleras funcionales           |
+| Tela adhesiva (esparadrapo)              | 2 rollos      | Fijación de apósitos             |
+| Bajalenguas (depresores de madera)       | 20 und        | Férulas para dedos               |
+| Guantes de látex/nitrilo (sin polvo)     | 50 pares      | Protección del socorrista        |
+| Mascarillas quirúrgicas                  | 10 und        | Protección vía aérea             |
+| Tijeras de punta roma                    | 1 und         | Corte de vendas, ropa            |
+| Pinza de depilar                         | 1 und         | Astillas, vidrios                |
+| Termómetro digital                       | 1 und         | Evaluación de fiebre             |
+| Linterna pequeña                         | 1 und         | Evaluación pupilar, heridas      |
+
+================================================================================
+2. VENDAJE E INMOVILIZACIÓN
+================================================================================
+| Ítem                                      | Cantidad      | Uso                              |
+|-------------------------------------------|---------------|----------------------------------|
+| Venda elástica de 10 cm                   | 2 und         | Tobillo, muñeca, rodilla         |
+| Venda elástica de 15 cm                   | 2 und         | Muslo, pantorrilla               |
+| Vendaje triangular                        | 2 und         | Cabestrillo, inmovilización      |
+| Férula de cartón o SAM Splint             | 2 und         | Inmovilización dedos, muñeca     |
+| Tobillera elástica ajustable              | 1 und         | Esguince de tobillo recurrente   |
+
+================================================================================
+3. MEDICAMENTOS (venta libre - solo tópicos o con autorización)
+================================================================================
+| Ítem                                      | Presentación  | Uso                              |
+|-------------------------------------------|---------------|----------------------------------|
+| Paracetamol 500 mg                        | 10 comp       | Dolor leve, fiebre (*)           |
+| Ibuprofeno 400 mg                         | 10 comp       | Antiinflamatorio, dolor (*)      |
+| Cetirizina 10 mg                          | 5 comp        | Alergia leve (*)                 |
+| Crema hidrocortisona 0.5%                 | 1 tubo        | Dermatitis, picaduras            |
+| Crema antibiótico tópico (mupirocina)     | 1 tubo        | Heridas infectadas               |
+| Gel antiinflamatorio (diclofenaco)        | 1 tubo        | Contusiones, torceduras          |
+| Colirio lubricante / suero oftálmico      | 2 ampollas    | Cuerpo extraño en ojo            |
+
+(*) Administrar solo con autorización del adulto responsable (menores)
+    o del propio alumno (mayores de edad). Dejar registro escrito.
+
+================================================================================
+4. INSUMOS ESPECÍFICOS PARA DANZA
+================================================================================
+| Ítem                                      | Cantidad      | Uso                              |
+|-------------------------------------------|---------------|----------------------------------|
+| Cinta atlética (kinesiológica o tape)     | 2 rollos      | Prevención y tratamiento         |
+| Afterbite / crema para picaduras          | 1 und         | Picaduras de insectos            |
+| Bolsa de hielo reutilizable               | 2 und         | Crioterapia inmediata            |
+| Parches para ampollas (Compeed o similar) | 10 und        | Ampollas en pies                 |
+| Crema antifúngica (clotrimazol)           | 1 tubo        | Hongos en pies (tiña pedis)      |
+| Spray refrigerante / hielo instantáneo    | 1 und         | Dolor agudo post-lesión          |
+
+================================================================================
+5. EQUIPO DE EVALUACIÓN
+================================================================================
+| Ítem                                      | Cantidad      | Uso                              |
+|-------------------------------------------|---------------|----------------------------------|
+| Tensiómetro digital automático            | 1 und         | Signos vitales                   |
+| Oxímetro de pulso                         | 1 und         | Saturación O2, pulso             |
+| Linterna de exploración                   | 1 und         | Evaluación neurológica           |
+
+================================================================================
+6. DOCUMENTACIÓN Y GESTIÓN
+================================================================================
+| Ítem                                      | Uso                              |
+|-------------------------------------------|----------------------------------|
+| Fichas de atención / registro incidentes  | Documentar cada atención         |
+| Lista de contactos de emergencia          | SAMU 131, Bomberos 132,          |
+|                                           | Carabineros 133, Mutualidad      |
+| Fichas de salud de alumnos                | Alergias, enfermedades crónicas  |
+| Autorizaciones de padres (menores)        | Poder administrar primeros       |
+|                                           | auxilios                         |
+| Plan de emergencia y evacuación           | Protocolo ante accidente grave   |
+
+================================================================================
+7. EXTRAS RECOMENDADOS (SEGÚN RIESGO)
+================================================================================
+| Ítem                                      | Cuándo                           |
+|-------------------------------------------|----------------------------------|
+| Camilla rígida / tabla espinal            | Escenarios/tarimas elevados      |
+| Collar cervical (rígido)                  | Saltos, acrobacias               |
+| Desfibrilador externo automático (DEA)    | Más de 100 alumnos o centro      |
+|                                           | comercial grande                 |
+
+================================================================================
+CHECKLIST DE MANTENCIÓN (Prevencionista de Riesgos)
+================================================================================
+[ ] Revisar fechas de vencimiento cada 3 meses
+[ ] Reponer lo utilizado inmediatamente después de cada atención
+[ ] Botiquín en lugar visible, accesible, seco y fresco (no al sol ni baño)
+[ ] Cartel visible con teléfonos de emergencia (131 - 132 - 133 - Mutualidad)
+[ ] Botiquín NO debe tener llave (si la tiene, la llave debe estar al lado)
+[ ] Designar un encargado y un suplente del botiquín
+[ ] Cada inicio de temporada: capacitación en primeros auxilios al staff
+[ ] Llevar registro de incidentes para análisis de tendencias
+
+================================================================================
+OBSERVACIONES IMPORTANTES
+================================================================================
+- Este botiquín está diseñado para atender lesiones agudas y brindar primera
+  respuesta. NO reemplaza la atención médica profesional.
+- Todo accidente que comprometa la integridad física del alumno debe ser
+  derivado a un centro asistencial (SAMU 131 o mutualidad correspondiente).
+- Los medicamentos de venta libre deben administrarse solo con autorización
+  escrita del apoderado (menores) o del alumno (mayores).
+- Se recomienda mantener un registro digital de atenciones para identificar
+  patrones de lesiones y ajustar la prevención.
+- La academia debe contar con un seguro de accidentes vigente (Ley 16.744
+  para trabajadores; seguro escolar para alumnos si corresponde).
+
+================================================================================
+                    FIN DEL DOCUMENTO
+================================================================================
