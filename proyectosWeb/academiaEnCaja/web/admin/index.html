@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es-PE"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Panel Administrativo — Academia en Caja®</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/variables.css"><link rel="stylesheet" href="../assets/css/reset.css"><link rel="stylesheet" href="../assets/css/typography.css"><link rel="stylesheet" href="../assets/css/grid.css"><link rel="stylesheet" href="../assets/css/buttons.css"><link rel="stylesheet" href="../assets/css/cards.css"><link rel="stylesheet" href="../assets/css/tables.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/utilities.css"><link rel="stylesheet" href="../assets/css/responsive.css"><style>.admin-sidebar{width:240px;background:#000;color:#fff;position:fixed;top:0;left:0;height:100vh;padding:2rem}.admin-main{margin-left:240px;padding:2rem}.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:2rem}</style></head>
+<body>
+<aside class="admin-sidebar"><h2 style="font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:2px;color:#FFEA00;margin-bottom:2rem">ADMIN</h2>
+<ul class="list-unstyled"><li style="padding:12px;border-radius:8px;background:rgba(255,234,0,0.15);color:#FFEA00;font-weight:600;margin-bottom:4px">Dashboard</li><li style="padding:12px;border-radius:8px;cursor:pointer">Usuarios</li><li style="padding:12px;border-radius:8px;cursor:pointer">Productos</li><li style="padding:12px;border-radius:8px;cursor:pointer">Cursos</li><li style="padding:12px;border-radius:8px;cursor:pointer">Pedidos</li><li style="padding:12px;border-radius:8px;cursor:pointer">Descargas</li><li style="padding:12px;border-radius:8px;cursor:pointer">Blog</li><li style="padding:12px;border-radius:8px;cursor:pointer">Biblioteca</li><li style="padding:12px;border-radius:8px;cursor:pointer">Certificados</li><li style="padding:12px;border-radius:8px;cursor:pointer">Eventos</li></ul></aside>
+<main class="admin-main"><h1 style="font-family:'Bebas Neue';font-size:2.5rem">Dashboard</h1><p style="color:var(--color-gray-dark);margin-bottom:2rem">Resumen del sistema</p>
+<div class="admin-stats">
+<div class="card card-body"><h3 style="font-family:'Bebas Neue';font-size:2rem;color:#FFEA00">156</h3><p style="font-size:var(--fs-sm);color:var(--color-gray)">Usuarios registrados</p></div>
+<div class="card card-body"><h3 style="font-family:'Bebas Neue';font-size:2rem;color:#FFEA00">47</h3><p style="font-size:var(--fs-sm);color:var(--color-gray)">Pedidos este mes</p></div>
+<div class="card card-body"><h3 style="font-family:'Bebas Neue';font-size:2rem;color:#FFEA00">12</h3><p style="font-size:var(--fs-sm);color:var(--color-gray)">Cursos activos</p></div>
+<div class="card card-body"><h3 style="font-family:'Bebas Neue';font-size:2rem;color:#FFEA00">S/24,580</h3><p style="font-size:var(--fs-sm);color:var(--color-gray)">Ingresos del mes</p></div>
+</div>
+<h3 style="font-family:'Bebas Neue';font-size:1.5rem;margin-bottom:1rem">Pedidos recientes</h3>
+<div class="table-responsive"><table class="table table-striped"><thead><tr><th>Pedido</th><th>Cliente</th><th>Producto</th><th>Monto</th><th>Estado</th></tr></thead><tbody>
+<tr><td>#00124</td><td>María García</td><td>Kit Completo</td><td>S/1,497</td><td><span class="badge badge-success">Completado</span></td></tr>
+<tr><td>#00123</td><td>Carlos Mendoza</td><td>Vol. 01 + Vol. 02</td><td>S/194</td><td><span class="badge badge-accent">En proceso</span></td></tr>
+<tr><td>#00122</td><td>Lucía Huamán</td><td>Curso Profesional</td><td>S/197</td><td><span class="badge badge-accent">En proceso</span></td></tr>
+<tr><td>#00121</td><td>Pedro Sánchez</td><td>Vol. 05 Digital</td><td>S/47</td><td><span class="badge badge-success">Completado</span></td></tr>
+</tbody></table></div></main>
+<script defer src="../assets/js/main.js"></script></body></html>
