@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia en Caja® — Deja de improvisar tu academia. Sistema completo de gestión, enseñanza y patrimonio cultural.</title>
+  <meta name="description" content="El sistema integral premium para academias de danza y percusión afroperuana. 20 volúmenes, SIGC, SIN-NE, SPCA. Deja de trabajar 14h y empieza a escalar.">
+  <meta property="og:title" content="Academia en Caja® — Sistema Integral Premium para tu Academia de Danza">
+  <meta property="og:description" content="El sistema que convierte profesores de danza en empresarios culturales. Planificaciones, coreografías, gestión, propiedad intelectual y expansión internacional.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academiaencaja.com/landing">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/grid.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .landing-lead-form {
+      display: flex; gap: var(--spacing-sm);
+      max-width: 500px; margin: 0 auto;
+    }
+    .landing-lead-form .form-input {
+      flex: 1; padding: 14px 18px; font-size: var(--fs-body);
+    }
+    .landing-lead-form .btn {
+      flex-shrink: 0; padding: 14px 28px;
+    }
+    .pain-points-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+    }
+    .pain-card {
+      background: var(--color-white);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--color-terracota);
+      transition: all var(--transition-base);
+    }
+    .pain-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    .pain-card h4 {
+      font-family: var(--font-primary);
+      font-size: var(--fs-h5);
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .pain-card p {
+      font-size: var(--fs-sm);
+      color: var(--color-gray-dark);
+    }
+    .story-section {
+      background: var(--color-primary);
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .story-section::before {
+      content: '"';
+      position: absolute;
+      top: -50px; left: -20px;
+      font-family: var(--font-primary);
+      font-size: 400px;
+      color: rgba(255, 234, 0, 0.05);
+      line-height: 1;
+    }
+    .story-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .story-content p {
+      font-family: var(--font-secondary);
+      font-size: var(--fs-h6);
+      line-height: var(--lh-relaxed);
+      opacity: 0.9;
+    }
+    .story-content .highlight {
+      color: var(--color-accent);
+      font-weight: var(--fw-semibold);
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+    }
+    .checklist-item {
+      display: flex; align-items: flex-start; gap: var(--spacing-md);
+      padding: var(--spacing-md);
+      background: var(--color-white);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+    }
+    .checklist-icon {
+      width: 36px; height: 36px;
+      background: var(--color-accent);
+      border-radius: var(--radius-full);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-primary);
+      font-weight: var(--fw-bold);
+      color: var(--color-primary);
+    }
+    .checklist-item h4 {
+      font-family: var(--font-primary);
+      font-size: var(--fs-h6);
+      margin-bottom: 2px;
+    }
+    .checklist-item p {
+      font-size: var(--fs-sm);
+      color: var(--color-gray-dark);
+      margin: 0;
+    }
+    .rueda-section {
+      background: var(--color-marfil);
+    }
+    .rueda-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: var(--spacing-sm);
+      counter-reset: step;
+    }
+    .rueda-step {
+      background: var(--color-white);
+      padding: var(--spacing-lg) var(--spacing-md);
+      border-radius: var(--radius-md);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: all var(--transition-base);
+      border-top: 3px solid var(--color-accent);
+    }
+    .rueda-step:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .rueda-step .step-num {
+      font-family: var(--font-primary);
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .rueda-step h5 {
+      font-family: var(--font-primary);
+      font-size: var(--fs-h6);
+      margin: var(--spacing-sm) 0 0;
+      letter-spacing: 1px;
+    }
+    .rueda-step p {
+      font-size: var(--fs-xs);
+      color: var(--color-gray-dark);
+      margin: var(--spacing-xs) 0 0;
+    }
+    .price-badge-original {
+      text-decoration: line-through;
+      color: var(--color-gray);
+      font-size: var(--fs-h5);
+      font-family: var(--font-secondary);
+    }
+    .price-badge-current {
+      font-family: var(--font-primary);
+      font-size: 3.5rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .bonus-tag {
+      display: inline-block;
+      background: var(--color-terracota);
+      color: var(--color-white);
+      padding: 2px 10px;
+      border-radius: var(--radius-full);
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: var(--spacing-xs);
+    }
+    .guarantee-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-lg);
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-sm);
+    }
+    .guarantee-badge svg {
+      flex-shrink: 0;
+    }
+    .guarantee-badge p {
+      font-size: var(--fs-sm);
+      margin: 0;
+    }
+    .hero-mini {
+      min-height: 70vh;
+      padding-top: 0;
+    }
+    .lead-magnet-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-lg);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      top: -80px;
+      z-index: 2;
+      border: 2px solid var(--color-accent);
+      text-align: center;
+    }
+    .lead-magnet-card h3 {
+      font-family: var(--font-primary);
+      font-size: var(--fs-h3);
+      color: var(--color-primary);
+    }
+    .lead-magnet-card .badge {
+      margin-bottom: var(--spacing-md);
+    }
+    @media (max-width: 767px) {
+      .landing-lead-form {
+        flex-direction: column;
+      }
+      .lead-magnet-card {
+        top: -40px;
+        padding: var(--spacing-lg);
+      }
+      .guarantee-badge {
+        flex-direction: column;
+        text-align: center;
+      }
+      .pricing-card.featured {
+        transform: none;
+      }
+      .pricing-card.featured:hover {
+        transform: translateY(-4px);
+      }
+    }
+    .feature-icon-box {
+      width: 56px; height: 56px;
+      background: var(--color-accent);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-icon-box svg {
+      width: 28px; height: 28px;
+      color: var(--color-primary);
+    }
+    .authority-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-lg);
+      justify-content: center;
+      align-items: center;
+    }
+    .authority-item {
+      text-align: center;
+      padding: var(--spacing-md) var(--spacing-lg);
+    }
+    .authority-item .number {
+      font-family: var(--font-primary);
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .authority-item .label {
+      font-size: var(--fs-xs);
+      color: var(--color-gray-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: var(--spacing-xs);
+    }
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-grid details {
+      background: var(--color-white);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--spacing-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+    .faq-grid details summary {
+      font-family: var(--font-secondary);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-body);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-grid details summary::after {
+      content: '+';
+      font-family: var(--font-primary);
+      font-size: var(--fs-h4);
+      color: var(--color-accent);
+      transition: transform var(--transition-base);
+    }
+    .faq-grid details[open] summary::after {
+      content: '−';
+    }
+    .faq-grid details p {
+      font-size: var(--fs-sm);
+      color: var(--color-gray-dark);
+      margin-top: var(--spacing-md);
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--color-gray-light);
+    }
+    .steps-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-md);
+      counter-reset: flow-step;
+    }
+    .steps-flow .step {
+      flex: 1;
+      min-width: 180px;
+      max-width: 220px;
+      text-align: center;
+      padding: var(--spacing-lg) var(--spacing-md);
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .steps-flow .step::before {
+      counter-increment: flow-step;
+      content: counter(flow-step);
+      display: block;
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+    .steps-flow .step h5 {
+      font-family: var(--font-primary);
+      font-size: var(--fs-h6);
+      margin: var(--spacing-sm) 0 var(--spacing-xs);
+    }
+    .steps-flow .step p {
+      font-size: var(--fs-xs);
+      color: var(--color-gray-dark);
+      margin: 0;
+    }
+    .divider-accent {
+      width: 80px; height: 3px;
+      background: var(--color-accent);
+      margin: var(--spacing-xl) auto;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-mini">
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate-fadeIn">
+      <span class="badge badge-accent mb-md" style="font-size:var(--fs-xs);letter-spacing:2px;">SISTEMA INTEGRAL PREMIUM</span>
+      <h1>DEJA DE IMPROVISAR<br>TU ACADEMIA</h1>
+      <p style="max-width:650px;margin:0 auto var(--spacing-xl);">
+        El sistema que convierte profesores de danza afroperuana<br>
+        en <strong style="color:var(--color-accent);">empresarios culturales</strong>. Planifica, gestiona, protege<br>
+        y escala tu academia sin trabajar 14 horas al día.
+      </p>
+      <div class="btn-group" style="justify-content:center">
+        <a href="plantillas-gratis.html" class="btn btn-secondary btn-lg">QUIERO LAS 5 PLANTILLAS GRATIS</a>
+        <a href="#que-incluye" class="btn btn-outline btn-lg">VER QUÉ INCLUYE</a>
+      </div>
+      <div class="authority-row mt-xl" style="gap:var(--spacing-xl);">
+        <div class="authority-item"><div class="number">20+</div><div class="label">Volúmenes</div></div>
+        <div class="authority-item"><div class="number">150+</div><div class="label">Formatos</div></div>
+        <div class="authority-item"><div class="number">12+</div><div class="label">Años</div></div>
+        <div class="authority-item"><div class="number">500+</div><div class="label">Estudiantes</div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== STORYTELLING (Judit Català) ===== -->
+  <section class="section story-section">
+    <div class="container">
+      <div class="story-content text-center">
+        <span class="badge badge-accent mb-lg">MI HISTORIA</span>
+        <h2 class="section-title" style="color:var(--color-accent);">De bailarín a empresario cultural</h2>
+        <p>
+          Durante años fui "el profe de danza" que llegaba temprano, armaba la clase sobre la marcha, 
+          cobraba en efectivo, no tenía contratos, y al final del mes no sabía si había ganado o perdido dinero.
+        </p>
+        <p class="mt-lg">
+          Hasta que entendí algo: <span class="highlight">no puedes escalar lo que no está sistematizado</span>.
+        </p>
+        <p class="mt-lg">
+          Empecé a documentar cada proceso. Cada coreografía, cada plan de clase, cada contrato, 
+          cada estrategia de marketing. Lo que era un cuaderno se convirtió en 20 volúmenes. 
+          Lo que era una academia se convirtió en un <span class="highlight">Centro de Documentación, 
+          Investigación, Preservación y Comercialización del Patrimonio Afroperuano</span>.
+        </p>
+        <p class="mt-lg">
+          Hoy no trabajo <em>para</em> la danza. Vivo <em>de</em> la danza. Y este sistema es el mapa 
+          para que tú también lo logres.
+        </p>
+        <p style="font-family:var(--font-primary);color:var(--color-accent);font-size:var(--fs-h4);letter-spacing:2px;margin-top:var(--spacing-xl);">
+          — Richard Tajadillo
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS (Judit Català) ===== -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">¿TE SUENA?</span>
+        <h2 class="section-title">El día a día de una profe sin sistema</h2>
+        <p class="section-subtitle">Si reconoces más de 3 de estas, necesitas Academia en Caja.</p>
+      </div>
+      <div class="pain-points-grid">
+        <div class="pain-card">
+          <h4>⏰ 14h trabajadas y sin tiempo para ti</h4>
+          <p>Preparas clases, cobras, organizas eventos, contestas WhatsApp... y al final del día no avanzaste.</p>
+        </div>
+        <div class="pain-card">
+          <h4>📄 Sin contratos ni protección legal</h4>
+          <p>Alumnas que se van sin avisar, coreografías que te copian, pagos que nunca llegan.</p>
+        </div>
+        <div class="pain-card">
+          <h4>📉 No sabes si tu academia es rentable</h4>
+          <p>Ingresos y gastos en la cabeza. Sin KPIs, sin reporting, sin visión financiera.</p>
+        </div>
+        <div class="pain-card">
+          <h4>🎭 Tus coreografías no están protegidas</h4>
+          <p>Has creado un patrimonio artístico pero no sabes cómo registrarlo, licenciarlo o monetizarlo.</p>
+        </div>
+        <div class="pain-card">
+          <h4>🚫 Sin plan de crecimiento</h4>
+          <p>Quieres abrir más horarios, más sedes, vender cursos online... pero no tienes la estructura.</p>
+        </div>
+        <div class="pain-card">
+          <h4>💼 No te ven como empresaria</h4>
+          <p>Eres "la profe de danza" para todo el mundo, pero tú sabes que vales más que eso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S INSIDE (Vilma Núñez - Benefits) ===== -->
+  <section id="que-incluye" class="section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">¿QUÉ INCLUYE?</span>
+        <h2 class="section-title">Los 5 Pilares de Academia en Caja</h2>
+        <p class="section-subtitle">Un ecosistema completo para que tu academia funcione sola.</p>
+      </div>
+      <div class="grid grid-gap-lg" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+        <div class="card card-hover feature-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l-9-5v7l9 5 9-5v-7l-9 5z"/></svg>
+          </div>
+          <h3 style="margin-top:var(--spacing-md);">Sistema Académico</h3>
+          <p>Planificaciones anuales, mallas curriculares, estructura de clases, metodología Richard Tajadillo, evaluación y certificación. Todo listo para usar.</p>
+        </div>
+        <div class="card card-hover feature-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="12" y1="9" x2="12" y2="21"/></svg>
+          </div>
+          <h3 style="margin-top:var(--spacing-md);">Sistema Empresarial</h3>
+          <p>Contratos, políticas, gestión financiera, marketing, ventas, KPIs, plan estratégico. Tu academia como negocio rentable.</p>
+        </div>
+        <div class="card card-hover feature-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <h3 style="margin-top:var(--spacing-md);">Sistema Editorial</h3>
+          <p>20 volúmenes con ebooks, manuales, coreografías, planificaciones, investigaciones y kits digitales listos para publicar o vender.</p>
+        </div>
+        <div class="card card-hover feature-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="margin-top:var(--spacing-md);">Sistema Patrimonial</h3>
+          <p>Registro coreográfico (SIGC), banco de movimientos, archivo audiovisual, propiedad intelectual, catalogación de vestuario e instrumentos.</p>
+        </div>
+        <div class="card card-hover feature-card">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 style="margin-top:var(--spacing-md);">Sistema Comercial</h3>
+          <p>Modelo de franquicias, licencias de uso metodológico, productos digitales, membresías, campus virtual y expansión internacional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 SISTEMAS CLAVE ===== -->
+  <section class="section rueda-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">TECNOLOGÍA CULTURAL</span>
+        <h2 class="section-title">Los 3 Sistemas que Diferencian tu Academia</h2>
+        <p class="section-subtitle">Esto es lo que ninguna otra academia tiene.</p>
+      </div>
+      <div class="grid grid-gap-lg" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+        <div class="card card-hover" style="border-top:4px solid var(--color-accent);">
+          <div class="card-body">
+            <span class="badge badge-accent mb-md">SIGC</span>
+            <h3 class="card-title">Sistema Integral de Gestión Coreográfica</h3>
+            <p class="card-text" style="font-size:var(--fs-sm);">Registra, certifica, licencia y comercializa tus coreografías como propiedad intelectual. Cada coreografía protegida y monetizable.</p>
+            <ul class="list-unstyled">
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Ficha maestra coreográfica</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Mapa coreográfico y diagrama escénico</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Certificado de autenticidad y licencia de uso</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Registro audiovisual</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-hover" style="border-top:4px solid var(--color-accent);">
+          <div class="card-body">
+            <span class="badge badge-accent mb-md">SIN-NE</span>
+            <h3 class="card-title">Sistema de Inteligencia y Negocios</h3>
+            <p class="card-text" style="font-size:var(--fs-sm);">Business Intelligence cultural en 11 áreas clave para tomar decisiones estratégicas basadas en datos, no en corazonadas.</p>
+            <ul class="list-unstyled">
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Analítica de productos digitales</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Proyección financiera y de ventas</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Automatización de procesos</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Expansión internacional y licenciatarios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-hover" style="border-top:4px solid var(--color-accent);">
+          <div class="card-body">
+            <span class="badge badge-accent mb-md">SPCA</span>
+            <h3 class="card-title">Sistema de Patrimonio Cultural Afroperuano</h3>
+            <p class="card-text" style="font-size:var(--fs-sm);">Preserva, investiga y difunde el legado afroperuano con 8 áreas especializadas que convierten tu academia en un centro cultural.</p>
+            <ul class="list-unstyled">
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Investigación y memoria histórica</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Archivo audiovisual y banco de movimientos</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Catálogo de instrumentos y vestuario</li>
+              <li style="font-size:var(--fs-sm);padding:var(--spacing-xs) 0;">✓ Observatorio cultural e impacto social</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE GOLDEN WHEEL (Judit Català - Rueda Dorada) ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">LA RUEDA DORADA</span>
+        <h2 class="section-title">El Método en 7 Pasos</h2>
+        <p class="section-subtitle">Así funciona Academia en Caja como sistema completo. La rueda gira o no gira.</p>
+      </div>
+      <div class="rueda-grid">
+        <div class="rueda-step">
+          <div class="step-num">01</div>
+          <h5>Atraer</h5>
+          <p>Contenido que posiciona tu academia como referente cultural</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">02</div>
+          <h5>Captar</h5>
+          <p>Lead magnets y formularios que convierten visitas en contactos</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">03</div>
+          <h5>Nutrir</h5>
+          <p>Secuencias de email que educan y crean deseo</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">04</div>
+          <h5>Vender</h5>
+          <p>Ofertas irresistibles con pricing claro y garantía</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">05</div>
+          <h5>Facturar</h5>
+          <p>Automatización de cobros y gestión financiera</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">06</div>
+          <h5>Fidelizar</h5>
+          <p>Comunidad, certificaciones y membresía recurrente</p>
+        </div>
+        <div class="rueda-step">
+          <div class="step-num">07</div>
+          <h5>Escalar</h5>
+          <p>Franquicias, licencias internacionales y expansión</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS (Vilma Núñez) ===== -->
+  <section class="section section-light" id="testimonios">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">TESTIMONIOS</span>
+        <h2 class="section-title">Lo Que Dicen Quienes Ya Lo Usan</h2>
+        <p class="section-subtitle">Más de 500 estudiantes avalan el sistema.</p>
+      </div>
+      <div class="grid grid-gap-lg" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <div class="testimonial-card" style="text-align:left;">
+          <blockquote>"Gracias a Academia en Caja encontré una nueva forma de conectar con mis raíces. La metodología Richard Tajadillo transformó mi enseñanza y ahora tengo mi propia academia."</blockquote>
+          <div class="testimonial-author" style="justify-content:flex-start;">
+            <div><strong>María García</strong><span>Directora de Akademia Ritmo, Lima</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" style="text-align:left;">
+          <blockquote>"Los 20 volúmenes son un tesoro. El sistema SIGC revolucionó la forma en que documentamos y protegemos nuestras coreografías."</blockquote>
+          <div class="testimonial-author" style="justify-content:flex-start;">
+            <div><strong>Carlos Mendoza</strong><span>Fundador de Cajón & Festejo, Arequipa</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card" style="text-align:left;">
+          <blockquote>"Pasé de dar clases en un salón a tener mi propio centro de formación. El plan de expansión me dio la ruta clara."</blockquote>
+          <div class="testimonial-author" style="justify-content:flex-start;">
+            <div><strong>Lucía Huamán</strong><span>Profesora de Danzas Afroperuanas, Cusco</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING (Judit Català - Transparente y directo) ===== -->
+  <section id="comprar" class="section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">INVIERTE EN TU ACADEMIA</span>
+        <h2 class="section-title">Empieza Hoy. Escala Mañana.</h2>
+        <p class="section-subtitle">Elige el pack que mejor se adapte al momento de tu academia.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p style="font-size:var(--fs-xs);color:var(--color-gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-md);">Para quien empieza</p>
+          <div class="price">€27 <span>/ único</span></div>
+          <ul>
+            <li>Volúmenes 1-5 (Sistema Académico)</li>
+            <li>5 plantillas de clase editables</li>
+            <li>Contratos básicos</li>
+            <li>Acceso a la comunidad privada</li>
+            <li>Actualizaciones gratuitas 6 meses</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">LO QUIERO</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">MÁS VENDIDO</div>
+          <h3>Completo</h3>
+          <p style="font-size:var(--fs-xs);color:var(--color-gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-md);">Tu academia al completo</p>
+          <div class="price">€97 <span>/ único</span></div>
+          <ul>
+            <li>20 volúmenes completos</li>
+            <li>SIGC + SIN-NE + SPCA</li>
+            <li>Matriz de KPIs y proyección financiera</li>
+            <li>Landing page y campus virtual</li>
+            <li>Certificados y licencias de uso</li>
+            <li>Acceso vitalicio + actualizaciones</li>
+            <li>Grupo VIP de asesoría</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">LO QUIERO</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium</h3>
+          <p style="font-size:var(--fs-xs);color:var(--color-gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:var(--spacing-md);">Escala internacional</p>
+          <div class="price">€297 <span>/ único</span></div>
+          <ul>
+            <li>Todo el pack Completo</li>
+            <li>Mentoría 1:1 con Richard (4 sesiones)</li>
+            <li>Licencia de uso metodológico</li>
+            <li>Plan de expansión y franquicias</li>
+            <li>Kit de marketing y ventas</li>
+            <li>Soporte prioritario 24/7</li>
+            <li>Certificación como Academia Afiliada</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">LO QUIERO</a>
+        </div>
+      </div>
+      <div class="guarantee-badge mt-xl">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4" stroke="var(--color-primary)" stroke-width="2"/>
+        </svg>
+        <div>
+          <strong style="font-family:var(--font-primary);font-size:var(--fs-h5);">Garantía de 30 días</strong>
+          <p>Si en 30 días Academia en Caja no transforma la gestión de tu academia, te devolvemos el 100% de tu inversión. Sin preguntas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (Ambas) ===== -->
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="badge badge-accent mb-sm">FAQ</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">Todo lo que necesitas saber antes de decidirte.</p>
+      </div>
+      <div class="faq-grid">
+        <details>
+          <summary>¿Necesito experiencia previa en gestión?</summary>
+          <p>No. Academia en Caja está diseñado para profesores de danza que quieren dar el salto a empresarios. Cada plantilla y documento incluye instrucciones claras. Si sabes bailar y enseñar, el sistema hace el resto.</p>
+        </details>
+        <details>
+          <summary>¿Es solo para danza afroperuana?</summary>
+          <p>El contenido está especializado en danza y percusión afroperuana (festejo, landó, marinera, cajón, etc.), pero la estructura de gestión, los contratos, los sistemas de propiedad intelectual y el plan de expansión son aplicables a cualquier academia de danza o música.</p>
+        </details>
+        <details>
+          <summary>¿Cómo recibo el producto?</summary>
+          <p>Es 100% digital. Al comprar recibes acceso inmediato a una biblioteca privada con todos los volúmenes en PDF, las plantillas en Word/Excel, y acceso al campus virtual con tus certificados.</p>
+        </details>
+        <details>
+          <summary>¿Tiene garantía?</summary>
+          <p>Sí. 30 días de garantía incondicional. Si no ves resultados, te devolvemos el dinero. Prefiero que no lo uses a que pierdas tu inversión.</p>
+        </details>
+        <details>
+          <summary>¿Puedo vender los documentos por separado?</summary>
+          <p>Sí. El Sistema Editorial incluye 20 volúmenes que puedes comercializar como productos digitales independientes (ebooks, manuales, cursos). Además te damos las plantillas de marketing para hacerlo.</p>
+        </details>
+        <details>
+          <summary>¿Hay soporte si tengo dudas?</summary>
+          <p>Sí. Dependiendo del pack, tienes acceso a comunidad privada (Starter), grupo VIP con asesoría (Completo) o mentoría 1:1 con Richard (Premium).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA (Urgencia - Judit Català) ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="badge badge-primary mb-lg" style="background:var(--color-primary);color:var(--color-accent);">ÚLTIMA OPORTUNIDAD</span>
+      <h2>Tu Academia No Puede Esperar</h2>
+      <p style="max-width:600px;margin:0 auto var(--spacing-xl);">
+        Cada día sin sistema es un día que pierdes tiempo, dinero y energía.<br>
+        Mientras otros avanzan, tú sigues improvisando.
+      </p>
+      <p style="font-size:var(--fs-h4);font-family:var(--font-primary);color:var(--color-primary);margin-bottom:var(--spacing-lg);">
+        De bailarín a empresario. De profe a referente.
+      </p>
+      <a href="#comprar" class="btn btn-primary btn-lg">SÍ, QUIERO EMPEZAR AHORA</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns:1fr;text-align:center;">
+        <div class="footer-brand" style="margin:0 auto;">
+          <img src="assets/brand/logo-white.svg" alt="Academia en Caja" style="height:50px">
+          <p>Sistema Integral para Academias de Danza y Percusión Afroperuana.</p>
+          <div class="social-icons" style="margin-top:1rem;justify-content:center;">
+            <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Academia en Caja&reg;. Todos los derechos reservados.</span>
+        <span>Diseño y desarrollo: Richard Tajadillo</span>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/navigation.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+</body>
+</html>
