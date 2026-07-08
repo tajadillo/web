@@ -51,37 +51,64 @@ GREY='\033[1;90m'
 
 
 #tux
+#function tux () {
+#echo -e "${negroColour}       #####      ${endColour}"
+#echo -e "${negroColour}      #######         ${endColour}"
+#echo -e "${negroColour}      ##${blancoColour}O${endColour}${negroColour}#${endColour}${blancoColour}O${endColour}${negroColour}##         ${endColour}"
+#echo -e "${negroColour}      #${yellowColour}#####${endColour}${redColour}${negroColour}#         ${endColour}"
+#echo -e "${negroColour}    ##${endColour}${blancoColour}##${endColour}${yellowColour}###${endColour}${blancoColour}##${endColour}${negroColour}##       ${endColour}"
+#echo -e "${negroColour}   ${negroColour}#${endColour}${blancoColour}##########${endColour}${negroColour}##      ${endColour}"
+#echo -e "${negroColour}  #${endColour}${blancoColour}############${endColour}${negroColour}##     ${endColour}"
+#echo -e "${negroColour}  #${endColour}${blancoColour}#############${endColour}${negroColour}##    ${endColour}"
+#echo -e "${yellowColour} ##${endColour}${negroColour}#${endColour}${blancoColour}###########${endColour}${negroColour}##${endColour}${yellowColour}#    ${endColour}"
+#echo -e "${yellowColour}######${endColour}${negroColour}#${blancoColour}#######${endColour}${yellowColour}####### ${endColour}"
+#echo -e "${yellowColour}#######${endColour}${negroColour}#${endColour}${blancoColour}#####${endColour}${negroColour}#${endColur}${yellowColour}####### ${endColour}"
+#echo -e "${yellowColour}  #####${endColour}${negroColour}#######${endColour}${yellowColour}#####    ${endColour}"
+#echo -e "                 "
+#echo -e "                 "
+
+
+
+
+
+#}
+
+
+
+
+
+
+
 function tux () {
-echo -e " 							"
-echo -e " 							"
-echo -e "                 "
-echo -e "                 "
-echo -e "                 "
-echo -e "${negroColour}       #####      ${endColour}"
-echo -e "${negroColour}      #######         ${endColour}"
-echo -e "${negroColour}      ##${blancoColour}O${endColour}${negroColour}#${endColour}${blancoColour}O${endColour}${negroColour}##         ${endColour}"
-echo -e "${negroColour}      #${yellowColour}#####${endColour}${redColour}${negroColour}#         ${endColour}"
-echo -e "${negroColour}    ##${endColour}${blancoColour}##${endColour}${yellowColour}###${endColour}${blancoColour}##${endColour}${negroColour}##       ${endColour}"
-echo -e "${negroColour}   ${negroColour}#${endColour}${blancoColour}##########${endColour}${negroColour}##      ${endColour}"
-echo -e "${negroColour}  #${endColour}${blancoColour}############${endColour}${negroColour}##     ${endColour}"
-echo -e "${negroColour}  #${endColour}${blancoColour}#############${endColour}${negroColour}##    ${endColour}"
-echo -e "${yellowColour} ##${endColour}${negroColour}#${endColour}${blancoColour}###########${endColour}${negroColour}##${endColour}${yellowColour}#    ${endColour}"
-echo -e "${yellowColour}######${endColour}${negroColour}#${blancoColour}#######${endColour}${yellowColour}####### ${endColour}"
-echo -e "${yellowColour}#######${endColour}${negroColour}#${endColour}${blancoColour}#####${endColour}${negroColour}#${endColur}${yellowColour}####### ${endColour}"
-echo -e "${yellowColour}  #####${endColour}${negroColour}#######${endColour}${yellowColour}#####    ${endColour}"
-echo -e "                 "
-echo -e "                 "
-
-
-
-
-
-
+echo -e "${negroColour}                     WWWWWWWWW                   ${endColour}"
+echo -e "${negroColour}            NNXXNNWW          NNWW               ${endColour}"
+echo -e "${negroColour}           XXXXXXXXXN         XKXN               ${endColour}"
+echo -e "${negroColour}          XXXXXXXXXXXN      WXXXNW               ${endColour}"
+echo -e "${negroColour}         XKXXXXXXXXXXN    XXXXN                  ${endColour}"
+echo -e "${negroColour}          XXXXXXXXXXXN   KKNW                    ${endColour}"
+echo -e "${negroColour}           XXXXXXXXX    XXXNW                    ${endColour}"
+echo -e "${negroColour}            XXXXXX       NXKXW                   ${endColour}"
+echo -e "${negroColour}       XXXXXXXXXXXXXXXXX  WNKKNW                 ${endColour}"
+echo -e "${negroColour}      XXXXXXXXXXXXXXXXXXXX WNXKXW                ${endColour}"
+echo -e "${negroColour}     XXXXXXXXXXXXXXXXXXXXXX WWNKXNW              ${endColour}"
+echo -e "${negroColour}    XXXX   XXXXXXXXX   XXXXXXX WNXXXXW            ${endColour}"
+echo -e "${negroColour}    XXX    XXXXXXXXX    XXXXXXNWNKKKXNNNNNWNNNNNNW${endColour}"
+echo -e "${negroColour}    XXXX   XXXXXXXXX   XXXXXXXWWNNNXKKXNNNWWNNNNNW${endColour}"
+echo -e "${negroColour}     XXXXXXXXXXXXXXXXXXXXXXXXW     WKKXN          ${endColour}"
+echo -e "${negroColour}    XXXXXXXXK00000KXXXXXXXXXNW     WXKXW          ${endColour}"
+echo -e "${negroColour}  XXXXXXXXXOc.....'ckKXXXXXXXXNW   WNKXW          ${endColour}"
+echo -e "${negroColour}  XXXX0xkko'${yellowColour}.......${endColour}${negroColour}.:od0XXXXXXN    WX0XN           ${endColour}"
+echo -e "${negroColour} XXXXX0:.'.${yellowColour} ....... ${endColour}${negroColour}.''xXXXXXNW    WX0XW          ${endColour}"
+echo -e "${negroColour}  XXXXXO:,.${yellowColour} ....... ${endColour}${negroColour}.:dKXXXXXW     WXKXW          ${endColour}"
+echo -e "${negroColour}   XXXXX0o.${yellowColour} ....... ${endColour}${negroColour}'xXXXXXXW      WXKXW          ${endColour}"
+echo -e "${negroColour}    XXXXX0;${yellowColour} .......${endColour}${negroColour}.lKXXXXXW       WXKNW          ${endColour}"
+echo -e "${negroColour}     XXXXXd.${yellowColour}.......${endColour}${negroColour};0XXXXXW        WXKNW          ${endColour}"
+echo -e "${negroColour}       XXXk:,,;:;;;;oKXXNN     ${endColour}"
+echo -e "${negroColour}        NNXXXXNNNXXXNWWWM      ${endColour}"
 
 
 
 }
-
 
 
 
@@ -121,10 +148,13 @@ echo "${greenColour}   ${endColour}${greenColour}Red activa:${endColour}" $(i
     #echo "$GREY   Porcentaje de batería:" $(upower -i $(upower -e | grep BAT) | grep percentage)
     #echo "$GREY Idioma del sistema:" $(echo $LANG)
 echo -e " 							"
-    printf " ${negroColour}FECHA: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
+    #printf " ${negroColour}FECHA: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
+    printf " ${yellowColour}FECHA: " && date | awk '{print $1 " " $2 " " $3 " " $6}'
 
 }
 
 paste <( echo -e "$(tux)" ) <( echo -e "$(info)" )
+
+
 
 
