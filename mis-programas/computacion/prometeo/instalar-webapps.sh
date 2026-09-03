@@ -70,6 +70,7 @@ declare -A URLS
 
 URLS[youtube]="https://www.youtube.com"
 URLS[gmail]="https://mail.google.com"
+URLS[outlook]="https://outlook.live.com/mail/"
 URLS[whatsapp]="https://web.whatsapp.com"
 URLS[spotify]="https://open.spotify.com"
 URLS[instagram]="https://www.instagram.com"
@@ -81,6 +82,7 @@ declare -A NAMES
 
 NAMES[youtube]="YouTube"
 NAMES[gmail]="Gmail"
+NAMES[outlook]="Outlook"
 NAMES[whatsapp]="WhatsApp Web"
 NAMES[spotify]="Spotify"
 NAMES[instagram]="Instagram"
@@ -92,6 +94,7 @@ declare -A COMMENTS
 
 COMMENTS[youtube]="YouTube en Brave"
 COMMENTS[gmail]="Gmail en Brave"
+COMMENTS[outlook]="Outlook en Brave"
 COMMENTS[whatsapp]="WhatsApp Web en Brave"
 COMMENTS[spotify]="Spotify en Brave"
 COMMENTS[instagram]="Instagram en Brave"
@@ -120,7 +123,7 @@ echo
 echo "Descargando iconos..."
 echo
 
-for APP in youtube gmail whatsapp spotify instagram telegram discord github outlook
+for APP in youtube gmail outlook whatsapp spotify instagram telegram discord github
 do
 
     ICON_FILE="$ICON_DIR/$APP.svg"
@@ -144,7 +147,7 @@ echo
 echo "Creando archivos .desktop..."
 echo
 
-for APP in youtube gmail whatsapp spotify instagram telegram discord github
+for APP in youtube gmail outlook whatsapp spotify instagram telegram discord github
 do
 
     DESKTOP_FILE="$DESKTOP_DIR/$APP.desktop"
@@ -178,7 +181,7 @@ echo
 echo "Instalando aplicaciones para Rofi..."
 echo
 
-for APP in youtube gmail whatsapp spotify instagram telegram discord github
+for APP in youtube gmail outlook whatsapp spotify instagram telegram discord github
 do
 
     cp "$DESKTOP_DIR/$APP.desktop" \
@@ -218,6 +221,7 @@ echo "└── webapps/"
 echo "    ├── icons/"
 echo "    │   ├── youtube.svg"
 echo "    │   ├── gmail.svg"
+echo "    │   ├── outlook.svg"
 echo "    │   ├── whatsapp.svg"
 echo "    │   ├── spotify.svg"
 echo "    │   ├── instagram.svg"
@@ -228,6 +232,7 @@ echo "    │"
 echo "    └── applications/"
 echo "        ├── youtube.desktop"
 echo "        ├── gmail.desktop"
+echo "        ├── outlook.desktop"
 echo "        ├── whatsapp.desktop"
 echo "        ├── spotify.desktop"
 echo "        ├── instagram.desktop"
