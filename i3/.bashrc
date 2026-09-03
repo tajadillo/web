@@ -336,6 +336,7 @@ alias instagram='brave-browser --app=https://www.instagram.com &'
 alias telegram='brave-browser --app=https://web.telegram.org &'
 alias discord='brave-browser --app=https://discord.com/app &'
 alias github='brave-browser --app=https://github.com &'
+alias outlook='brave-browser --app=https://outlook.live.com/mail/ &'
 
 # ChatGPT Web — no reemplaza el ChatGPT de terminal
 alias chatgpt-web='brave-browser --app=https://chatgpt.com &'
