@@ -1,3 +1,631 @@
+1. Crea varias aplicaciones web
+
+Primero crea la carpeta:
+
+mkdir -p ~/.local/share/applications
+YouTube
+nano ~/.local/share/applications/youtube.desktop
+
+Contenido:
+
+[Desktop Entry]
+Name=YouTube
+Comment=YouTube
+Exec=brave-browser --new-window https://www.youtube.com
+Icon=brave-browser
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;
+
+
+Gmail
+nano ~/.local/share/applications/gmail.desktop
+[Desktop Entry]
+Name=Gmail
+Comment=Correo Gmail
+Exec=brave-browser --new-window https://mail.google.com
+Icon=brave-browser
+Terminal=false
+Type=Application
+Categories=Network;Email;
+
+
+WhatsApp Web
+nano ~/.local/share/applications/whatsapp.desktop
+[Desktop Entry]
+Name=WhatsApp Web
+Comment=WhatsApp Web
+Exec=brave-browser --new-window https://web.whatsapp.com
+Icon=brave-browser
+Terminal=false
+Type=Application
+Categories=Network;Chat;
+
+
+ChatGPT
+nano ~/.local/share/applications/chatgpt.desktop
+[Desktop Entry]
+Name=ChatGPT
+Comment=ChatGPT
+Exec=brave-browser --new-window https://chatgpt.com
+Icon=brave-browser
+Terminal=false
+Type=Application
+Categories=Network;
+2. Prueba Rofi
+
+Ejecuta:
+
+rofi -show drun
+
+
+
+
+
+
+Sí. De hecho, Brave tiene un modo específico para esto: puedes abrir una web en una ventana independiente usando --app=. La ventana no se comporta como una pestaña normal de Brave.
+
+Por ejemplo, para YouTube:
+
+brave-browser --app=https://www.youtube.com
+1. Modifica tu youtube.desktop
+
+Abre:
+
+nano ~/.local/share/applications/youtube.desktop
+
+Y cambia Exec por:
+
+Exec=brave-browser --app=https://www.youtube.com
+
+Te quedaría:
+
+[Desktop Entry]
+Name=YouTube
+Comment=YouTube
+Exec=brave-browser --app=https://www.youtube.com
+Icon=brave-browser
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;
+
+Ahora, cuando abras YouTube desde Rofi, tendrás una ventana independiente.
+
+
+
+
+
+
+Exactamente: si dejas Icon=brave-browser, todas las aplicaciones web aparecerán con el mismo icono de Brave. Para que Rofi se vea realmente como un lanzador de aplicaciones, lo ideal es darle a cada .desktop su propio icono.
+
+Por ejemplo:
+
+┌────────────────────────────────────┐
+│ Buscar aplicaciones...             │
+├────────────────────────────────────┤
+│  ▶  YouTube                        │
+│  ✉  Gmail                          │
+│  ◉  WhatsApp Web                   │
+│  ✦  ChatGPT                        │
+│  🌐 Brave                          │
+└────────────────────────────────────┘
+Opción recomendada: iconos propios
+
+Puedes crear una carpeta:
+
+mkdir -p ~/.local/share/icons/webapps
+
+Y colocar ahí:
+
+~/.local/share/icons/webapps/
+├── youtube.png
+├── gmail.png
+├── whatsapp.png
+└── chatgpt.png
+
+Luego, por ejemplo, youtube.desktop:
+
+[Desktop Entry]
+Name=YouTube
+Comment=YouTube
+Exec=brave-browser --app=https://www.youtube.com
+Icon=/home/TU_USUARIO/.local/share/icons/webapps/youtube.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;
+
+Gmail:
+
+[Desktop Entry]
+Name=Gmail
+Comment=Gmail
+Exec=brave-browser --app=https://mail.google.com
+Icon=/home/TU_USUARIO/.local/share/icons/webapps/gmail.png
+Terminal=false
+Type=Application
+Categories=Network;Email;
+Mejor todavía: usar SVG
+
+Para tu RT-Linux-Theme, yo usaría SVG en lugar de PNG:
+
+~/.local/share/icons/webapps/youtube.svg
+~/.local/share/icons/webapps/gmail.svg
+~/.local/share/icons/webapps/whatsapp.svg
+~/.local/share/icons/webapps/chatgpt.svg
+
+Y:
+
+Icon=/home/TU_USUARIO/.local/share/icons/webapps/youtube.svg
+
+Esto permite que Rofi escale los iconos correctamente.
+
+Y hay una segunda ventaja
+
+Podemos diseñar iconos propios con la estética AfroPeru Noir, en lugar de simplemente copiar los iconos originales de cada servicio:
+
+
+
+
+
+
+
+
+Sí. Para que quede ordenado y reproducible dentro de tu RT-Linux-Theme, te recomiendo un único script que haga todo:
+
+RT-Linux-Theme/
+└── webapps/
+    ├── icons/
+    │   ├── youtube.svg
+    │   ├── gmail.svg
+    │   ├── whatsapp.svg
+    │   ├── spotify.svg
+    │   ├── instagram.svg
+    │   ├── telegram.svg
+    │   ├── discord.svg
+    │   └── github.svg
+    │
+    └── applications/
+        ├── youtube.desktop
+        ├── gmail.desktop
+        ├── whatsapp.desktop
+        ├── spotify.desktop
+        ├── instagram.desktop
+        ├── telegram.desktop
+        ├── discord.desktop
+        └── github.desktop
+
+Y además el script instalará automáticamente los .desktop en:
+
+~/.local/share/applications/
+
+para que Rofi drun los detecte.
+
+Script completo
+
+Crea:
+
+nano ~/RT-Linux-Theme/instalar-webapps.sh
+
+Si la carpeta todavía no existe:
+
+mkdir -p ~/RT-Linux-Theme
+nano ~/RT-Linux-Theme/instalar-webapps.sh
+
+Pega todo esto:
+
+#!/bin/bash
+
+# ============================================================
+# RT-Linux-Theme — WebApps Installer
+# Aplicaciones web para Brave + Rofi + i3
+#
+# Iconos: Simple Icons
+# Navegador: Brave
+# Lanzador: Rofi
+# ============================================================
+
+set -e
+
+# ------------------------------------------------------------
+# CONFIGURACIÓN
+# ------------------------------------------------------------
+
+THEME_DIR="$HOME/RT-Linux-Theme"
+WEBAPPS_DIR="$THEME_DIR/webapps"
+
+ICON_DIR="$WEBAPPS_DIR/icons"
+DESKTOP_DIR="$WEBAPPS_DIR/applications"
+
+SYSTEM_APPS="$HOME/.local/share/applications"
+
+BASE_URL="https://cdn.simpleicons.org"
+
+# ------------------------------------------------------------
+# COLORES DE TERMINAL
+# ------------------------------------------------------------
+
+RESET="\033[0m"
+BOLD="\033[1m"
+GREEN="\033[32m"
+TERRACOTTA="\033[31m"
+YELLOW="\033[33m"
+CYAN="\033[36m"
+
+# ------------------------------------------------------------
+# FUNCIONES
+# ------------------------------------------------------------
+
+info() {
+    echo -e "${CYAN}[INFO]${RESET} $1"
+}
+
+ok() {
+    echo -e "${GREEN}[ OK ]${RESET} $1"
+}
+
+warn() {
+    echo -e "${YELLOW}[WARN]${RESET} $1"
+}
+
+error() {
+    echo -e "${TERRACOTTA}[ERROR]${RESET} $1"
+}
+
+# ------------------------------------------------------------
+# CABECERA
+# ------------------------------------------------------------
+
+clear
+
+echo
+echo -e "${BOLD}==============================================${RESET}"
+echo -e "${BOLD} RT-Linux-Theme — WebApps${RESET}"
+echo -e "${BOLD}==============================================${RESET}"
+echo
+echo " Brave + Rofi + i3"
+echo " Iconos SVG + aplicaciones .desktop"
+echo
+
+# ------------------------------------------------------------
+# COMPROBAR BRAVE
+# ------------------------------------------------------------
+
+if command -v brave-browser >/dev/null 2>&1; then
+
+    BRAVE="brave-browser"
+
+elif command -v brave >/dev/null 2>&1; then
+
+    BRAVE="brave"
+
+else
+
+    error "No se encontró Brave."
+
+    echo
+    echo "Instala Brave y vuelve a ejecutar este script."
+    echo
+
+    exit 1
+
+fi
+
+ok "Brave encontrado: $BRAVE"
+
+# ------------------------------------------------------------
+# COMPROBAR CURL
+# ------------------------------------------------------------
+
+if ! command -v curl >/dev/null 2>&1; then
+
+    error "curl no está instalado."
+
+    echo
+    echo "Instálalo con:"
+    echo
+    echo "sudo apt install curl"
+    echo
+
+    exit 1
+
+fi
+
+ok "curl encontrado"
+
+# ------------------------------------------------------------
+# CREAR ESTRUCTURA
+# ------------------------------------------------------------
+
+info "Creando estructura de carpetas..."
+
+mkdir -p "$ICON_DIR"
+mkdir -p "$DESKTOP_DIR"
+mkdir -p "$SYSTEM_APPS"
+
+ok "Estructura creada"
+
+echo
+echo "WebApps:"
+echo "  $WEBAPPS_DIR"
+echo
+echo "Iconos:"
+echo "  $ICON_DIR"
+echo
+echo "Archivos .desktop:"
+echo "  $DESKTOP_DIR"
+echo
+echo "Instalación Rofi:"
+echo "  $SYSTEM_APPS"
+echo
+
+# ------------------------------------------------------------
+# DEFINICIÓN DE WEBAPPS
+# ------------------------------------------------------------
+
+declare -A URLS
+
+URLS[youtube]="https://www.youtube.com"
+URLS[gmail]="https://mail.google.com"
+URLS[whatsapp]="https://web.whatsapp.com"
+URLS[spotify]="https://open.spotify.com"
+URLS[instagram]="https://www.instagram.com"
+URLS[telegram]="https://web.telegram.org"
+URLS[discord]="https://discord.com/app"
+URLS[github]="https://github.com"
+
+declare -A NAMES
+
+NAMES[youtube]="YouTube"
+NAMES[gmail]="Gmail"
+NAMES[whatsapp]="WhatsApp Web"
+NAMES[spotify]="Spotify"
+NAMES[instagram]="Instagram"
+NAMES[telegram]="Telegram Web"
+NAMES[discord]="Discord"
+NAMES[github]="GitHub"
+
+declare -A COMMENTS
+
+COMMENTS[youtube]="YouTube en Brave"
+COMMENTS[gmail]="Gmail en Brave"
+COMMENTS[whatsapp]="WhatsApp Web en Brave"
+COMMENTS[spotify]="Spotify en Brave"
+COMMENTS[instagram]="Instagram en Brave"
+COMMENTS[telegram]="Telegram Web en Brave"
+COMMENTS[discord]="Discord en Brave"
+COMMENTS[github]="GitHub en Brave"
+
+# ------------------------------------------------------------
+# DESCARGAR ICONOS
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo -e "${BOLD} DESCARGANDO ICONOS SVG${RESET}"
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    ICON_FILE="$ICON_DIR/$APP.svg"
+    ICON_URL="$BASE_URL/$APP"
+
+    echo -n "  $APP ... "
+
+    if curl -fsSL "$ICON_URL" -o "$ICON_FILE"; then
+
+        echo -e "${GREEN}OK${RESET}"
+
+    else
+
+        echo -e "${TERRACOTTA}ERROR${RESET}"
+
+        rm -f "$ICON_FILE"
+
+    fi
+
+done
+
+# ------------------------------------------------------------
+# CREAR .DESKTOP
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo -e "${BOLD} CREANDO ARCHIVOS .DESKTOP${RESET}"
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    DESKTOP_FILE="$DESKTOP_DIR/$APP.desktop"
+    ICON_FILE="$ICON_DIR/$APP.svg"
+
+    cat > "$DESKTOP_FILE" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=${NAMES[$APP]}
+GenericName=${NAMES[$APP]}
+Comment=${COMMENTS[$APP]}
+
+Exec=$BRAVE --app=${URLS[$APP]}
+Icon=$ICON_FILE
+
+Terminal=false
+StartupNotify=true
+
+Categories=Network;
+EOF
+
+    chmod +x "$DESKTOP_FILE"
+
+    echo -e "  ${GREEN}[OK]${RESET} ${NAMES[$APP]}"
+
+done
+
+# ------------------------------------------------------------
+# INSTALAR .DESKTOP PARA ROFI
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo -e "${BOLD} INSTALANDO APLICACIONES PARA ROFI${RESET}"
+echo -e "${BOLD}----------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    cp "$DESKTOP_DIR/$APP.desktop" \
+       "$SYSTEM_APPS/$APP.desktop"
+
+    chmod +x "$SYSTEM_APPS/$APP.desktop"
+
+    echo -e "  ${GREEN}[OK]${RESET} ${NAMES[$APP]}"
+
+done
+
+# ------------------------------------------------------------
+# ACTUALIZAR BASE DE DATOS
+# ------------------------------------------------------------
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+
+    info "Actualizando base de datos de aplicaciones..."
+
+    update-desktop-database "$SYSTEM_APPS" 2>/dev/null || true
+
+    ok "Base de datos actualizada"
+
+else
+
+    warn "update-desktop-database no está instalado."
+
+fi
+
+# ------------------------------------------------------------
+# FINAL
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}==============================================${RESET}"
+echo -e "${GREEN} INSTALACIÓN COMPLETADA${RESET}"
+echo -e "${BOLD}==============================================${RESET}"
+echo
+
+echo "Aplicaciones instaladas:"
+echo
+
+echo "  ▶ YouTube"
+echo "  ✉ Gmail"
+echo "  ◉ WhatsApp Web"
+echo "  ♪ Spotify"
+echo "  ◎ Instagram"
+echo "  ✈ Telegram Web"
+echo "  ◈ Discord"
+echo "  ◆ GitHub"
+
+echo
+echo "Iconos:"
+echo "  $ICON_DIR"
+
+echo
+echo "WebApps:"
+echo "  $DESKTOP_DIR"
+
+echo
+echo "Rofi:"
+echo "  $SYSTEM_APPS"
+
+echo
+echo -e "${BOLD}Prueba ahora:${RESET}"
+echo
+echo "  rofi -show drun"
+echo
+
+echo -e "${GREEN}Listo.${RESET}"
+echo
+2. Dale permisos
+chmod +x ~/RT-Linux-Theme/instalar-webapps.sh
+3. Ejecútalo
+~/RT-Linux-Theme/instalar-webapps.sh
+
+El resultado será aproximadamente:
+
+RT-Linux-Theme/
+└── webapps/
+    ├── applications/
+    │   ├── youtube.desktop
+    │   ├── gmail.desktop
+    │   ├── whatsapp.desktop
+    │   ├── spotify.desktop
+    │   ├── instagram.desktop
+    │   ├── telegram.desktop
+    │   ├── discord.desktop
+    │   └── github.desktop
+    │
+    └── icons/
+        ├── youtube.svg
+        ├── gmail.svg
+        ├── whatsapp.svg
+        ├── spotify.svg
+        ├── instagram.svg
+        ├── telegram.svg
+        ├── discord.svg
+        └── github.svg
+
+Y además Rofi tendrá copias de los .desktop en:
+
+~/.local/share/applications/
+4. Prueba Rofi
+rofi -show drun
+
+Busca:
+
+YouTube
+
+Deberías tener nombre + icono de YouTube, y al pulsar Enter se ejecutará:
+
+brave-browser --app=https://www.youtube.com
+
+Es decir, una ventana tipo aplicación de Brave, no una pestaña normal.
+
+Una mejora que haría después
+
+Ahora ya tenemos las tres piezas:
+
+        ROFI
+         │
+         │ .desktop + SVG
+         ▼
+      Brave --app
+         │
+         ▼
+        i3
+
+El siguiente paso natural para tu configuración sería hacer que i3 reconozca cada WebApp individualmente. Por ejemplo:
+
+YouTube  → workspace 2
+Spotify  → workspace 3
+WhatsApp → workspace 4
+ChatGPT  → workspace 5
+
+Y además podemos hacer que cada una tenga su propio WM_CLASS, evitando que i3 las confunda con una ventana normal de Brave. Esa parte requiere comprobar qué propiedades está entregando tu versión de Brave, así que conviene hacerlo sobre tu instalación real.
+
+dame el script con el mkdir -p de las carpetas recomendadas
+
+
+
+
+
+
+
+
+
 
 
 Sí. Si quieres que el propio script cree toda la estructura de carpetas antes de descargar los iconos y crear los .desktop, puedes usar este.
@@ -1606,6 +2234,5 @@ Incluso podemos organizar tu .bash_aliases por bloques:
 └── RT-Linux-Theme
 Eso sería bastante más limpio que seguir haciendo crecer el .bashrc que ya tienes.
 
-Los archivos, las imágenes y el análisis de datos no estarán disponibles hasta que tu uso se restablezca a las 7:46 a.m.. Continúa chateando solo con texto o mejora tu plan para tener más acceso.
-Prueba Plus gratis
+
 
