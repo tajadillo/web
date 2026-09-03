@@ -1,0 +1,1611 @@
+
+
+Sí. Si quieres que el propio script cree toda la estructura de carpetas antes de descargar los iconos y crear los .desktop, puedes usar este.
+
+La estructura que creará es:
+
+~/RT-Linux-Theme/
+└── webapps/
+    ├── icons/
+    └── applications/
+Además instalará los .desktop en:
+
+~/.local/share/applications/
+Script
+#!/bin/bash
+
+# ============================================================
+# RT-Linux-Theme — WebApps
+# Brave + Rofi + i3
+# Iconos SVG + archivos .desktop
+# ============================================================
+
+set -e
+
+# ------------------------------------------------------------
+# RUTAS
+# ------------------------------------------------------------
+
+THEME_DIR="$HOME/RT-Linux-Theme"
+WEBAPPS_DIR="$THEME_DIR/webapps"
+
+ICON_DIR="$WEBAPPS_DIR/icons"
+DESKTOP_DIR="$WEBAPPS_DIR/applications"
+
+SYSTEM_APPS="$HOME/.local/share/applications"
+
+# ------------------------------------------------------------
+# CREAR CARPETAS
+# ------------------------------------------------------------
+
+mkdir -p "$THEME_DIR"
+mkdir -p "$WEBAPPS_DIR"
+mkdir -p "$ICON_DIR"
+mkdir -p "$DESKTOP_DIR"
+mkdir -p "$SYSTEM_APPS"
+
+# ------------------------------------------------------------
+# COLORES
+# ------------------------------------------------------------
+
+RESET="\033[0m"
+BOLD="\033[1m"
+GREEN="\033[32m"
+RED="\033[31m"
+YELLOW="\033[33m"
+CYAN="\033[36m"
+
+echo
+echo -e "${BOLD}============================================${RESET}"
+echo -e "${BOLD} RT-Linux-Theme — WebApps${RESET}"
+echo -e "${BOLD}============================================${RESET}"
+echo
+
+echo "Estructura creada:"
+echo
+echo "  $THEME_DIR"
+echo "  └── webapps/"
+echo "      ├── icons/"
+echo "      └── applications/"
+echo
+
+# ------------------------------------------------------------
+# COMPROBAR BRAVE
+# ------------------------------------------------------------
+
+if command -v brave-browser >/dev/null 2>&1; then
+    BRAVE="brave-browser"
+elif command -v brave >/dev/null 2>&1; then
+    BRAVE="brave"
+else
+    echo -e "${RED}[ERROR]${RESET} Brave no está instalado."
+    exit 1
+fi
+
+echo -e "${GREEN}[OK]${RESET} Brave encontrado: $BRAVE"
+
+# ------------------------------------------------------------
+# COMPROBAR CURL
+# ------------------------------------------------------------
+
+if ! command -v curl >/dev/null 2>&1; then
+    echo -e "${RED}[ERROR]${RESET} curl no está instalado."
+    echo
+    echo "Instálalo con:"
+    echo
+    echo "sudo apt install curl"
+    exit 1
+fi
+
+echo -e "${GREEN}[OK]${RESET} curl encontrado"
+
+# ------------------------------------------------------------
+# COMPROBAR UPDATE-DESKTOP-DATABASE
+# ------------------------------------------------------------
+
+if ! command -v update-desktop-database >/dev/null 2>&1; then
+    echo -e "${YELLOW}[WARN]${RESET} update-desktop-database no está instalado."
+    echo "Puedes instalarlo con:"
+    echo
+    echo "sudo apt install desktop-file-utils"
+    echo
+fi
+
+# ------------------------------------------------------------
+# DATOS DE LAS WEBAPPS
+# ------------------------------------------------------------
+
+declare -A URLS
+
+URLS[youtube]="https://www.youtube.com"
+URLS[gmail]="https://mail.google.com"
+URLS[whatsapp]="https://web.whatsapp.com"
+URLS[spotify]="https://open.spotify.com"
+URLS[instagram]="https://www.instagram.com"
+URLS[telegram]="https://web.telegram.org"
+URLS[discord]="https://discord.com/app"
+URLS[github]="https://github.com"
+
+declare -A NAMES
+
+NAMES[youtube]="YouTube"
+NAMES[gmail]="Gmail"
+NAMES[whatsapp]="WhatsApp Web"
+NAMES[spotify]="Spotify"
+NAMES[instagram]="Instagram"
+NAMES[telegram]="Telegram Web"
+NAMES[discord]="Discord"
+NAMES[github]="GitHub"
+
+declare -A COMMENTS
+
+COMMENTS[youtube]="YouTube en Brave"
+COMMENTS[gmail]="Gmail en Brave"
+COMMENTS[whatsapp]="WhatsApp Web en Brave"
+COMMENTS[spotify]="Spotify en Brave"
+COMMENTS[instagram]="Instagram en Brave"
+COMMENTS[telegram]="Telegram Web en Brave"
+COMMENTS[discord]="Discord en Brave"
+COMMENTS[github]="GitHub en Brave"
+
+# ------------------------------------------------------------
+# SIMPLE ICONS
+# ------------------------------------------------------------
+
+BASE_URL="https://cdn.simpleicons.org"
+
+echo
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo -e "${BOLD} DESCARGANDO ICONOS SVG${RESET}"
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    ICON_FILE="$ICON_DIR/$APP.svg"
+
+    echo -n "  $APP.svg ... "
+
+    if curl -fsSL "$BASE_URL/$APP" -o "$ICON_FILE"; then
+        echo -e "${GREEN}OK${RESET}"
+    else
+        echo -e "${RED}ERROR${RESET}"
+        rm -f "$ICON_FILE"
+    fi
+
+done
+
+# ------------------------------------------------------------
+# CREAR ARCHIVOS .DESKTOP
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo -e "${BOLD} CREANDO ARCHIVOS .DESKTOP${RESET}"
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    DESKTOP_FILE="$DESKTOP_DIR/$APP.desktop"
+    ICON_FILE="$ICON_DIR/$APP.svg"
+
+    cat > "$DESKTOP_FILE" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=${NAMES[$APP]}
+GenericName=${NAMES[$APP]}
+Comment=${COMMENTS[$APP]}
+Exec=$BRAVE --app=${URLS[$APP]}
+Icon=$ICON_FILE
+Terminal=false
+StartupNotify=true
+Categories=Network;
+EOF
+
+    chmod +x "$DESKTOP_FILE"
+
+    echo -e "  ${GREEN}[OK]${RESET} ${NAMES[$APP]}"
+
+done
+
+# ------------------------------------------------------------
+# COPIAR .DESKTOP A LA CARPETA DE APLICACIONES
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo -e "${BOLD} INSTALANDO EN ROFI${RESET}"
+echo -e "${BOLD}--------------------------------------------${RESET}"
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    cp "$DESKTOP_DIR/$APP.desktop" \
+       "$SYSTEM_APPS/$APP.desktop"
+
+    chmod +x "$SYSTEM_APPS/$APP.desktop"
+
+    echo -e "  ${GREEN}[OK]${RESET} ${NAMES[$APP]}"
+
+done
+
+# ------------------------------------------------------------
+# ACTUALIZAR BASE DE DATOS
+# ------------------------------------------------------------
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+
+    update-desktop-database "$SYSTEM_APPS" 2>/dev/null || true
+
+    echo
+    echo -e "${GREEN}[OK]${RESET} Base de datos de aplicaciones actualizada."
+
+fi
+
+# ------------------------------------------------------------
+# RESULTADO
+# ------------------------------------------------------------
+
+echo
+echo -e "${BOLD}============================================${RESET}"
+echo -e "${GREEN} INSTALACIÓN COMPLETADA${RESET}"
+echo -e "${BOLD}============================================${RESET}"
+echo
+
+echo "RT-Linux-Theme:"
+echo
+echo "  $THEME_DIR/"
+echo "  └── webapps/"
+echo "      ├── icons/"
+echo "      │   ├── youtube.svg"
+echo "      │   ├── gmail.svg"
+echo "      │   ├── whatsapp.svg"
+echo "      │   ├── spotify.svg"
+echo "      │   ├── instagram.svg"
+echo "      │   ├── telegram.svg"
+echo "      │   ├── discord.svg"
+echo "      │   └── github.svg"
+echo "      │"
+echo "      └── applications/"
+echo "          ├── youtube.desktop"
+echo "          ├── gmail.desktop"
+echo "          ├── whatsapp.desktop"
+echo "          ├── spotify.desktop"
+echo "          ├── instagram.desktop"
+echo "          ├── telegram.desktop"
+echo "          ├── discord.desktop"
+echo "          └── github.desktop"
+echo
+
+echo "Aplicaciones instaladas en:"
+echo
+echo "  $SYSTEM_APPS"
+echo
+
+echo "Para probar Rofi:"
+echo
+echo "  rofi -show drun"
+echo
+Cómo instalarlo
+Primero:
+
+mkdir -p ~/RT-Linux-Theme
+Luego:
+
+nano ~/RT-Linux-Theme/instalar-webapps.sh
+Pega el script, guarda con:
+
+Ctrl + O → Enter → Ctrl + X
+
+Después:
+
+chmod +x ~/RT-Linux-Theme/instalar-webapps.sh
+Y ejecútalo:
+
+~/RT-Linux-Theme/instalar-webapps.sh
+Finalmente:
+
+rofi -show drun
+Con esto ya tienes la estructura organizada dentro de RT-Linux-Theme, los SVG separados de los .desktop, y los lanzadores instalados donde Rofi puede encontrarlos.
+
+Una precisión importante: los iconos descargados desde Simple Icons están sujetos a sus respectivas marcas y a la licencia de Simple Icons; para uso personal en tu escritorio esto es una solución práctica, pero conviene revisar sus condiciones si vas a redistribuir el paquete completo.
+
+
+que el script tenga integrados estos comandos para yo solo darle permiso y enecutarlo mkdir -p ~/RT-Linux-Theme
+
+Sí. Podemos hacer que el propio script cree absolutamente toda la estructura, incluyendo ~/RT-Linux-Theme, así que tú solo necesitas crear el archivo, darle permiso y ejecutarlo.
+
+De hecho, incluso puedes guardar el script directamente en ~/ y no necesitas crear previamente ninguna carpeta.
+
+Script completo
+Crea solamente este archivo:
+
+nano ~/instalar-webapps.sh
+Y pega:
+
+#!/bin/bash
+
+# ============================================================
+# RT-Linux-Theme — Instalador de WebApps
+# Brave + Rofi + i3
+# ============================================================
+
+set -e
+
+# ============================================================
+# 1. CREAR ESTRUCTURA DE CARPETAS
+# ============================================================
+
+mkdir -p ~/RT-Linux-Theme
+mkdir -p ~/RT-Linux-Theme/webapps
+mkdir -p ~/RT-Linux-Theme/webapps/icons
+mkdir -p ~/RT-Linux-Theme/webapps/applications
+
+mkdir -p ~/.local/share/applications
+
+# ============================================================
+# 2. DEFINIR RUTAS
+# ============================================================
+
+THEME_DIR="$HOME/RT-Linux-Theme"
+WEBAPPS_DIR="$THEME_DIR/webapps"
+
+ICON_DIR="$WEBAPPS_DIR/icons"
+DESKTOP_DIR="$WEBAPPS_DIR/applications"
+
+SYSTEM_APPS="$HOME/.local/share/applications"
+
+BASE_URL="https://cdn.simpleicons.org"
+
+# ============================================================
+# 3. COMPROBAR BRAVE
+# ============================================================
+
+if command -v brave-browser >/dev/null 2>&1; then
+    BRAVE="brave-browser"
+elif command -v brave >/dev/null 2>&1; then
+    BRAVE="brave"
+else
+    echo
+    echo "[ERROR] No se encontró Brave."
+    echo
+    exit 1
+fi
+
+# ============================================================
+# 4. COMPROBAR CURL
+# ============================================================
+
+if ! command -v curl >/dev/null 2>&1; then
+    echo
+    echo "[ERROR] curl no está instalado."
+    echo
+    echo "Instálalo con:"
+    echo
+    echo "sudo apt install curl"
+    echo
+    exit 1
+fi
+
+# ============================================================
+# 5. DATOS DE LAS WEBAPPS
+# ============================================================
+
+declare -A URLS
+
+URLS[youtube]="https://www.youtube.com"
+URLS[gmail]="https://mail.google.com"
+URLS[whatsapp]="https://web.whatsapp.com"
+URLS[spotify]="https://open.spotify.com"
+URLS[instagram]="https://www.instagram.com"
+URLS[telegram]="https://web.telegram.org"
+URLS[discord]="https://discord.com/app"
+URLS[github]="https://github.com"
+
+declare -A NAMES
+
+NAMES[youtube]="YouTube"
+NAMES[gmail]="Gmail"
+NAMES[whatsapp]="WhatsApp Web"
+NAMES[spotify]="Spotify"
+NAMES[instagram]="Instagram"
+NAMES[telegram]="Telegram Web"
+NAMES[discord]="Discord"
+NAMES[github]="GitHub"
+
+declare -A COMMENTS
+
+COMMENTS[youtube]="YouTube en Brave"
+COMMENTS[gmail]="Gmail en Brave"
+COMMENTS[whatsapp]="WhatsApp Web en Brave"
+COMMENTS[spotify]="Spotify en Brave"
+COMMENTS[instagram]="Instagram en Brave"
+COMMENTS[telegram]="Telegram Web en Brave"
+COMMENTS[discord]="Discord en Brave"
+COMMENTS[github]="GitHub en Brave"
+
+# ============================================================
+# 6. DESCARGAR ICONOS SVG
+# ============================================================
+
+echo
+echo "=============================================="
+echo " RT-Linux-Theme — WebApps"
+echo "=============================================="
+echo
+
+echo "Creando estructura:"
+echo
+echo "$THEME_DIR"
+echo "└── webapps"
+echo "    ├── icons"
+echo "    └── applications"
+echo
+
+echo "Descargando iconos..."
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    ICON_FILE="$ICON_DIR/$APP.svg"
+
+    echo -n "  $APP.svg ... "
+
+    if curl -fsSL "$BASE_URL/$APP" -o "$ICON_FILE"; then
+        echo "OK"
+    else
+        echo "ERROR"
+        rm -f "$ICON_FILE"
+    fi
+
+done
+
+# ============================================================
+# 7. CREAR ARCHIVOS .DESKTOP
+# ============================================================
+
+echo
+echo "Creando archivos .desktop..."
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    DESKTOP_FILE="$DESKTOP_DIR/$APP.desktop"
+    ICON_FILE="$ICON_DIR/$APP.svg"
+
+    cat > "$DESKTOP_FILE" <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=${NAMES[$APP]}
+GenericName=${NAMES[$APP]}
+Comment=${COMMENTS[$APP]}
+Exec=$BRAVE --app=${URLS[$APP]}
+Icon=$ICON_FILE
+Terminal=false
+StartupNotify=true
+Categories=Network;
+EOF
+
+    chmod +x "$DESKTOP_FILE"
+
+    echo "  [OK] ${NAMES[$APP]}"
+
+done
+
+# ============================================================
+# 8. INSTALAR .DESKTOP PARA ROFI
+# ============================================================
+
+echo
+echo "Instalando aplicaciones para Rofi..."
+echo
+
+for APP in youtube gmail whatsapp spotify instagram telegram discord github
+do
+
+    cp "$DESKTOP_DIR/$APP.desktop" \
+       "$SYSTEM_APPS/$APP.desktop"
+
+    chmod +x "$SYSTEM_APPS/$APP.desktop"
+
+    echo "  [OK] ${NAMES[$APP]}"
+
+done
+
+# ============================================================
+# 9. ACTUALIZAR BASE DE DATOS DE APLICACIONES
+# ============================================================
+
+if command -v update-desktop-database >/dev/null 2>&1; then
+
+    update-desktop-database "$SYSTEM_APPS" 2>/dev/null || true
+
+fi
+
+# ============================================================
+# 10. MOSTRAR RESULTADO
+# ============================================================
+
+echo
+echo "=============================================="
+echo " INSTALACIÓN COMPLETADA"
+echo "=============================================="
+echo
+
+echo "Estructura creada:"
+echo
+
+echo "$THEME_DIR/"
+echo "└── webapps/"
+echo "    ├── icons/"
+echo "    │   ├── youtube.svg"
+echo "    │   ├── gmail.svg"
+echo "    │   ├── whatsapp.svg"
+echo "    │   ├── spotify.svg"
+echo "    │   ├── instagram.svg"
+echo "    │   ├── telegram.svg"
+echo "    │   ├── discord.svg"
+echo "    │   └── github.svg"
+echo "    │"
+echo "    └── applications/"
+echo "        ├── youtube.desktop"
+echo "        ├── gmail.desktop"
+echo "        ├── whatsapp.desktop"
+echo "        ├── spotify.desktop"
+echo "        ├── instagram.desktop"
+echo "        ├── telegram.desktop"
+echo "        ├── discord.desktop"
+echo "        └── github.desktop"
+echo
+
+echo "Los .desktop también están instalados en:"
+echo
+echo "$SYSTEM_APPS"
+echo
+
+echo "Para abrir Rofi:"
+echo
+echo "rofi -show drun"
+echo
+
+echo "=============================================="
+echo " RT-Linux-Theme WebApps listo."
+echo "=============================================="
+echo
+Ahora solo haces 3 cosas
+1. Crear el archivo:
+
+nano ~/instalar-webapps.sh
+Pegas el script y guardas:
+
+Ctrl+O → Enter → Ctrl+X
+
+2. Dar permiso:
+
+chmod +x ~/instalar-webapps.sh
+3. Ejecutarlo:
+
+~/instalar-webapps.sh
+Y listo. No necesitas ejecutar previamente:
+
+mkdir -p ~/RT-Linux-Theme
+porque el script ya contiene:
+
+mkdir -p ~/RT-Linux-Theme
+mkdir -p ~/RT-Linux-Theme/webapps
+mkdir -p ~/RT-Linux-Theme/webapps/icons
+mkdir -p ~/RT-Linux-Theme/webapps/applications
+mkdir -p ~/.local/share/applications
+Además, el script es re-ejecutable: si posteriormente lo vuelves a ejecutar, mkdir -p no da error y los archivos se actualizan.
+
+Después de ejecutarlo, prueba:
+
+rofi -show drun
+y deberías encontrar las ocho WebApps con sus respectivos iconos.
+
+
+dame los alias de .bashrc para las aplicaciones y fijate si estan en este documento # ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+negro="\033[1;30m"
+rojo="\033[1;31m"
+verde="\033[1;32m"
+amarillo="\033[1;33m"
+azul="\033[1;34m"
+morado="\033[1;35m"
+cian="\033[1;36m"
+blanco="\033[1;37m"
+
+
+
+
+#   ____    _    ____  _   _ ____   ____
+#  | __ )  / \  / ___|| | | |  _ \ / ___|
+#  |  _ \ / _ \ \___ \| |_| | |_) | |
+# _| |_) / ___ \ ___) |  _  |  _ <| |___
+#(_)____/_/   \_\____/|_| |_|_| \_\\____|
+
+
+
+
+
+
+
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+#########################################################
+### BLOQUE DE GIT PARA MOSTRAR EN EL PROMPT #############
+#####Código parse_git_block estilo Powerline############
+
+# --- Bloque Git corregido (con colores seguros y contadores) ---
+
+
+parse_git_block() {
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+    if [ -n "$branch" ]; then
+        status=$(git status --porcelain 2>/dev/null)
+        ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)
+        behind=$(git rev-list --count HEAD..@{u} 2>/dev/null || echo 0)
+
+        # Normalizamos si están actualizados
+        [ -z "$ahead" ] && ahead=0
+        [ -z "$behind" ] && behind=0
+
+        emoji=""
+        color="$verde"   # verde limpio por defecto
+        count=""
+
+        if [ -n "$status" ]; then
+            new=$(echo "$status" | grep "^??" | wc -l)
+            modified=$(echo "$status" | grep "^[ M]" | wc -l)
+            conflicts=$(echo "$status" | grep "^UU" | wc -l)
+
+            total=$((new + modified + conflicts))
+            count="$total"
+
+            if [ "$conflicts" -gt 0 ]; then
+                color="$rojo"   # rojo → conflictos
+                emoji="❗"
+            elif [ "$new" -gt 0 ]; then
+                color="$rojo"   # rojo → archivos sin trackear
+                emoji="❗"
+            else
+                color="$amarillo"   # amarillo → modificados
+                emoji=""
+            fi
+        fi
+
+        # Estado remoto
+        [ "$ahead" -gt 0 ] && emoji="$emoji  󰦘  $ahead"
+        [ "$behind" -gt 0 ] && emoji="$emoji  󰦗  $behind"
+
+        # Imprime bloque con colores desde tus variables
+        if [ -n "$count" ]; then
+            echo "   ${branch}   $emoji "
+        else
+            echo "   ${branch}   $emoji"
+        fi
+    fi
+}
+
+############### FIN BLOQUE GIT ########################
+#######################################################
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+# We have color support; assume it's compliant with Ecma-48
+# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+# a case would tend to support setf rather than setaf.)
+color_prompt=yes
+    else
+color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='\nUsuario: \u @ \uHostname: \h: \nDirectorio actual: \w \$: \n'
+
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 2)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 1)<<<<<$(tput sgr0) \n$(parse_git_block) \n\n'
+
+
+
+
+# prompt malo de chatgpt para intentar corregir PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2)\u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)  $(tput setaf 2)\W$(tput sgr0)\n$(parse_git_block) $(tput setaf 3)\$$(tput sgr0) $<<<<<\n'
+
+
+
+else
+
+    PS1=' \nUsuario: \u @ Hostname: \h: \nDirectorio actual: \w \$:  \n'
+
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+ #    PS1='$(tput bold; tput setaf 1)############################## $(tput sgr0) $(tput setaf 6)\nUsuario:$(tput sgr0) $(tput setaf 3)\u$(tput sgr0) @ $(tput setaf 6)Maquina-Hostname:$(tput sgr0)  $(tput setaf 3)\h$(tput sgr0) $(tput setaf 6)\nDirectorio actual:$(tput sgr0) $(tput setaf 2)\w$(tput sgr0) $(tput setaf 1)\$ 😍😍😍 $:$(tput sgr0) \n$(tput bold; tput setaf 1)##############################$(tput sgr0)  \n'
+
+ PS1='$(tput bold; tput setaf 1)\n>>>>>$(tput sgr0) $(tput setaf 2) \u$(tput sgr0)$(tput setaf 3)    $(tput sgr0)$(tput setaf 1)\h$(tput sgr0)$(tput sgr0)   $(tput setaf 0)\W$(tput sgr0) $(tput setaf 3)\$$(tput sgr0) $(tput setaf 1)<<<<<$(tput sgr0)\n\n'
+
+
+fi
+
+
+
+
+##########################################
+#Opciones del Prompt:
+#
+#    \a un caracter ASCII de ring
+#    \d la fecha actual en formato "dia_sem mes día", "dom nov 18"
+#    \e un caracter ASCII de escape
+#    \h el nombre del equipo hasta el primer ., ejemplo linuxtotal de linuxtotal.com.mx
+#    \H el nombre del equipo
+#    \n nueva línea
+#    \r retorno de carro, enter
+#    \s el nombre del shell
+#    \t el tiempo actual en formato de 24 horas HH:MM:SS
+#    \T el tiempo actual en formato de 12 horas HH:MM:SS
+#    \@ el tiempo actual en formaro de 12 horas con am/pm
+#    \u el usuario actual
+#    \v la version de bash
+#    \V el número de release de batch, versión + parche
+#    \w el directorio de trabajo actual, path
+#    \W el nombre del directorio actual
+#    \! el número en el historial del comando
+#    \# el número de comando de este comando
+#    \$ si el usuario es root (UID=0) se indica un '#', un usuario normal '$'
+#    \\ diagonal
+#    \[ inicio de una secuencia de caracteres no imprimibles
+#    \] fin de la secuencia de caracteres no imprimibles
+
+########################################
+
+
+
+
+
+
+
+
+
+
+
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+#mis aliasses
+
+# -> Administrar ficheros y carpetas
+#instalar lsd "sudo apt-get install lsd" y remplazar por el comando "ls"
+#ver lista de ficheros y carpetas
+alias ll='lsd -lah --group-dirs=first'
+alias la='lsd -a --color=auto --group-dirs=first'
+alias ls='lsd --color=auto --group-dirs=first'
+alias l='lsd --group-dirs=first'
+#crear carpetas
+alias mkdir='mkdir -pv'
+#ir a determinadas carpetas
+alias documentos="cd /home/tajadillo/Documentos && ls"
+alias escritorio="cd /home/tajadillo/Escritorio && ls"
+alias descargas="cd /home/tajadillo/Descargas && ls"
+alias musica="cd /home/tajadillo/Música && ls"
+#alias videos="cd /home/tajadillo/Vídeos && ls"
+
+#descomprimir archivos
+#alias tar='tar -xvf'
+
+
+# -> Consulta metereologiga
+#clima
+alias clima="curl wttr.in/arica?lang=es"
+#consulta de pesca
+alias pesca='bash /usr/local/bin/pesca.sh'
+
+alias ver-imagen="kitty +kitten icat"
+alias apagar='sudo shutdown -h now'
+alias reiniciar='sudo shutdown -r now'
+
+# Información archivos multimedia .mp3 y .mp4
+# mediainfo archivo.mp3 ó archivo.mp4
+
+# -> Reproducción multimedia online
+alias radio='bash /home/tajadillo/radio/radio.sh'
+alias tv='bash /home/tajadillo/radio/tv.sh'
+alias video=mpv
+alias reloj='tty-clock -s -c -D'
+alias alarma='bash alarma'
+alias mecano='typespeed'
+alias instalar='sudo apt-get install'
+alias temperatura='sensors | lolcat -a'
+alias ficheros=duf
+alias directorios=duf
+alias vim=nvim
+alias vi=nvim
+alias bateria=acpi
+alias ifconfig=/sbin/ifconfig
+alias soloLectura='sudo mount -o remount,rw /media/tajadillo/TAJA-CEL/'
+#alias neofetch="neofetch --size none"
+alias neofetch="tajafetch"
+alias donde='pwd | lolcat -a'
+
+#juegos
+alias tetris=bastet
+alias pacman=pacman4console
+alias bicicleta=moon-buggy
+alias naves=ninvaders
+
+#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
+#alias cat='cat -n | highlight -O ansi -n'
+# instalar sudo apt-get install highlight para complementar al comando 'cat'
+
+# -> Prevenir borrar o mover ficheros accidentalmente
+#borrar de forma interactiva, recursiva
+alias rm='rm -iv --preserve-root'
+#mover de forma interactiva, recursiva y preservando los archivos de la carpeta root
+alias mv='mv -iv'
+#copiar de forma interactiva, recursiva
+alias cp='cp -rfiuv'
+
+# -> Actualizar todo el sistema
+alias full-update='sudo snap refresh && flatpak update -y && sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
+
+alias invisible='proxychains brave-browser google.com'
+alias procesos='ps -fax'
+
+# -> Consultar a chatgpt
+alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+
+# -> Consultar horas especificas
+alias horaPeru='bash reloj'
+alias horaMundo='bash /usr/local/bin/reloj.sh'
+
+
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+
+
+echo -e $amarillo "                                                               "
+echo "                                   XXX                         "
+echo -e $verde "                                 (o o)                        "
+echo "             ESTOY            ooO--(_)--Ooo           LISTO              "
+echo -e $amarillo " _______           _         _____ _____ _      _      ____   "
+echo " |__   __|/\       | |  /\   |  __ \_   _| |    | |    / __ \  "
+echo "    | |  /  \      | | /  \  | |  | || | | |    | |   | |  | | "
+echo "    | | / /\ \ _   | |/ /\ \ | |  | || | | |    | |   | |  | | "
+echo "    | |/ ____ \ |__| / ____ \| |__| || |_| |____| |___| |__| | "
+echo "    |_/_/    \_\____/_/    \_\_____/_____|______|______\____/  "
+echo "                                                               "
+
+neofetch
+
+#tutorial https://youtu.be/5FLH_YLp7Oo?si=s2LvgumbaUwvBcoI
+#~/geek_ephemeris/dayValidator.sh
+#export C_INCLUDE_PATH=/usr/lib/avr/include
+
+#cmatrix -a
+
+
+# opencode
+export PATH=/home/tajadillo/.opencode/bin:$PATH
+o en este otro 
+    # This file has been auto-generated by i4-config-wizard(1).
+    # It will not be overwritten, so edit it as you like.
+    #
+    # Should you change your keyboard layout some time, delete
+    # this file and re-run i4-config-wizard(1).
+    #recomendaciones de youtube
+    #https://www.youtube.com/watch?v=k10uFJiNnWz4
+    #
+
+    # i4 config file (v4)
+    #
+    # Please see https://i4wm.org/docs/userguide.html for a complete reference!
+
+    #Tecla lider
+    set $mod Mod4
+
+    # Font for window titles. Will also be used by the bar unless a different font
+    # Fuente para títulos de ventanas. También será utilizado por la barra a menos que se utilice una fuente diferente.
+    # is used in the bar {} block below.
+    # se utiliza en el bloque bar {} a continuación.
+    #font -misc-fixed-medium-r-normal--12-120-75-75-C-70-iso10646-1
+font pango: Mononoki Nerd Font Bold Italic 14
+
+    # This font is widely installed, provides lots of unicode glyphs, right-to-left
+    # text rendering and scalability on retina/hidpi displays (thanks to pango).
+    #font pango:DejaVu Sans Mono 9
+
+    # Start XDG autostart .desktop files using dex. See also
+    # https://wiki.archlinux.org/index.php/XDG_Autostart
+    exec --no-startup-id dex --autostart --environment i4
+
+    # The combination of xss-lock, nm-applet and pactl is a popular choice, so
+    # they are included here as an example. Modify as you see fit.
+
+    # xss-lock grabs a logind suspend inhibit lock and will use i4lock to lock the
+    # screen before suspend. Use loginctl lock-session to lock your screen.
+    exec --no-startup-id xss-lock --transfer-sleep-lock -- i4lock --nofork
+    #sudo apt-get install arch-install-scripts
+    #sudo -s
+    #ls -la /mnt
+    #lsblk
+    #mkdir -p /mnt/boot/efi
+    #montar partición donde esta montado el sO ejemplo: (mount /dev/sda6 /mnt)
+    #montamos la partición efi ejemplo: (mount /dev/sda2 /mnt/boot/efi)
+    #arch-chroot /mnt
+    #limpiamos terminal
+    #ls
+    #cd boot/
+    #ls -la
+    #si no tenemos el boot
+    #limpiamos terminal
+    #grub-install nombre del disco ejemplo: (/dev/sda)
+    # NetworkManager is the most popular way to manage wireless networks on Linux,
+    # and nm-applet is a desktop environment-independent system tray GUI for it.
+    exec --no-startup-id nm-applet
+
+    # Use pactl to adjust volume in PulseAudio.
+    #set $refresh_i4status killall -SIGUSR1 i3status
+    #bindsym XF87AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+    #bindsym XF87AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+    #bindsym XF87AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+    #bindsym XF87AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+    set $refresh_i4status killall -SIGUSR1 i3status
+    bindsym Mod1+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+    bindsym Mod1+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+    bindsym Mod1+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+    bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# mocp
+# run mocp
+##bindsym $mod+m exec $term -e mocp
+
+# Control Songs
+##bindsym XF86AudioPlay  exec --no-startup-id mocp -G
+##bindsym XF86AudioPause exec --no-startup-id mocp -G
+#bindsym XF86AudioNext  exec --no-startup-id mocp -f
+##bindsym XF86AudioPrev  exec --no-startup-id mocp -r
+##bindsym XF86AudioStop  exec --no-startup-id mocp -s
+
+
+    #brillo de pantalla
+    #se debe instalar proviamente "brightnessctl"
+    #bindsym XF87MonBrightnessDown exec brightnessctl set 2%-
+    #bindsym XF87MonBrightnessUp exec brightnessctl set +2%
+
+    #Apagar el computador
+    bindsym $mod+CTRL+p exec /usr/local/bin/powermenu
+
+
+    # Use Mouse+$mod to drag floating windows to their wanted position
+    floating_modifier $mod
+
+    # move tiling windows via drag & drop by left-clicking into the title bar,
+    # or left-clicking anywhere into the window while holding the floating modifier.
+    tiling_drag modifier titlebar
+
+    # start a terminal
+    #Abrir terminal
+    #bindsym $mod+Return exec i4-sensible-terminal
+    bindsym $mod+i exec kitty
+
+    # start a navegador web
+    # Abrir a navegador web
+    bindsym $mod+b exec brave-browser-stable
+
+    # start a navegador
+    # Abrir a navegador de archivos
+    # antes ocupaba nautilus, nemo, caja, thunar pero ahora tengo que instalar pcmanfm
+    bindsym $mod+n exec pcmanfm
+    #bindsym $mod+n exec thunar
+
+
+    # start a navegador calculadora
+    # Abrir a navegador calculadora
+    bindsym $mod+c exec qalculate
+
+
+    # kill focused window
+    #Quitar una aplicación
+    #bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
+
+    #abrir dmenu
+    #bindsym $mod+Shift+d exec --no-startup-id i4-dmenu-desktop
+    bindsym $mod+m exec dmenu_run -i -fn "Mononoki Nerd Font Bold Italic 11" -p ejecutar: -l 5 -nb "#0D0D0D" -nf "#F1EBDD" -sb "#A0522D" -sf "#F1EBDD"
+
+    #Iniciar rofi con el tema RT-AfroPeru (drun+run+window, iconos)
+    bindsym $mod+d exec --no-startup-id rofi -show drun -theme ~/.config/rofi/theme.rasi
+    bindsym $mod+F12 exec --no-startup-id rofi -show run -theme ~/.config/rofi/theme.rasi
+    bindsym $mod+semicolon exec --no-startup-id rofi -show window -theme ~/.config/rofi/theme.rasi
+
+    # Utilizar la combinación de teclas TAB + q para abrir rofi en una ventana con las aplicaciones que se están ejecutando
+    #bindsym $mod+q exec rofi -show window -show-icons
+
+    #para cambiar el tema de rofi se coloca este comando en la terminal "rofi-theme-selector"
+    # mi teme elegido es pop dark
+
+
+    # change focus
+    # Moverse entre ventanas
+    bindsym $mod+j focus left
+    bindsym $mod+k focus down
+    bindsym $mod+l focus up
+    bindsym $mod+ntilde focus right
+
+    # alternatively, you can use the cursor keys:
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # move focused window
+    # Mover de lugar las ventanas
+    bindsym $mod+Shift+j move left
+    bindsym $mod+Shift+k move down
+    bindsym $mod+Shift+l move up
+    bindsym $mod+Shift+ntilde move right
+
+    # alternatively, you can use the cursor keys:
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+    # split in horizontal orientation
+    #Colocar nueva ventana en horizontas
+    bindsym $mod+h split h
+
+    # split in vertical orientation
+    #Colocar nueva ventana en vertical
+    bindsym $mod+v split v
+
+    # enter fullscreen mode for the focused container
+    # Abrir ventana actual a pantalla completa (fullscreen)
+    bindsym $mod+f fullscreen toggle
+
+    # change container layout (stacked, tabbed, toggle split)
+    #Colocar todas las ventanas pantalla completa pero en cascada
+    bindsym $mod+s layout stacking
+    #Colocar todas las ventanas pantalla completa pero una a un lado de la otra (como las ventanas del navegador web)
+    bindsym $mod+w layout tabbed
+    #Colocar todas las ventanas pantalla completa pero en modo normal
+    bindsym $mod+e layout toggle split
+
+    # toggle tiling / floating
+    # Ventana flotante
+    bindsym $mod+Shift+f floating toggle
+
+    # change focus between tiling / floating windows
+    # Cambiar el foco de las ventanas flotantes
+    bindsym $mod+space focus mode_toggle
+
+    # focus the parent container
+    bindsym $mod+a focus parent
+
+    # focus the child container
+    #bindsym $mod+d focus child
+
+    # Define names for default workspaces for which we configure key bindings later on.
+    # We use variables to avoid repeating the names in multiple places.
+    #Definir el nombre de c/u de los escritorios
+    #si se trata de caracteres quitar "number" en el apartado siguiente
+    # Fuentes de iconos https://fontawesome.com/icons/categories/
+
+    set $ws1 "1"
+    set $ws2 "2"
+    set $ws3 "3"
+    set $ws4 "4"
+    set $ws5 "5:  "
+    set $ws6 "6:   "
+    set $ws7 "7:  "
+    set $ws8 "8:  "
+    set $ws9 "9:  "
+    set $ws10 "10"
+    #
+
+
+    # switch to workspace
+    # Cambiar de escritorio (campo de trabajo)
+    bindsym $mod+1 workspace  $ws1
+    bindsym $mod+2 workspace  $ws2
+    bindsym $mod+3 workspace  $ws3
+    bindsym $mod+4 workspace  $ws4
+    bindsym $mod+5 workspace  $ws5
+    bindsym $mod+6 workspace  $ws6
+    bindsym $mod+7 workspace  $ws7
+    bindsym $mod+8 workspace  $ws8
+    bindsym $mod+9 workspace  $ws9
+    bindsym $mod+0 workspace  $ws10
+
+    # move focused container to workspace
+    # Mover ventanas a otro escritorio (campo de trabajo)
+    bindsym $mod+Shift+1 move container to workspace number $ws1
+    bindsym $mod+Shift+2 move container to workspace number $ws2
+    bindsym $mod+Shift+3 move container to workspace number $ws3
+    bindsym $mod+Shift+4 move container to workspace number $ws4
+    bindsym $mod+Shift+5 move container to workspace number $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace number $ws10
+
+    #Movimiento por los espacios de trabajo#
+    #Próximo / previo espacio de trabajo
+    bindsym $mod+Tab workspace back_and_forth
+
+    #Navegar al siguiente / previo espacio de trabajo
+    bindsym $mod+Control+Right workspace next
+    bindsym $mod+Control+Left workspace prev
+
+
+    #Poner programas especificos en workspace especificas
+    #assign [class="kitty"] $ws1
+    #assign [class="brave-browser-stable"] $ws2
+    assign [class="Spotify"] $ws5
+    assign [class="thunderbird"] $ws6
+    assign [class="Gimp"] $ws7
+    assign [class="Shotcut"] $ws8
+    assign [class="kdenlive"] $ws8
+    assign [class="Audacity"] $ws10
+
+
+    #Reiniciar la configuración
+    # reload the configuration file
+    bindsym $mod+Shift+c reload
+    # restart i4 inplace (preserves your layout/session, can be used to upgrade i3)
+    #Sin tener q reiniciar el equipo
+    bindsym $mod+Shift+r restart
+    # exit i4 (logs you out of your X session)
+    #Salir de la sesión
+    #bindsym $mod+Shift+e exec "i4-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+    bindsym $mod+Shift+e exec "i4-msg exit"
+
+    #Bloquear la pantalla
+    #bindsym $mod+CTRL+l exec /usr/local/bin/bloqueo.sh
+    #bloqueo automatico
+    #bindsym $mod+l exec xset s 6
+    bindsym $mod+CTRL+l exec dm-tool lock
+
+    #Hibernar el equipo
+    bindsym $mod+CTRL+z exec systemctl suspend-then-hibernate
+
+    # resize window (you can also use the mouse for that)
+    # Cambiar de tamaño las ventanas
+    mode "resize" {
+    # These bindings trigger as soon as you enter the resize mode
+
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 4 px or 3 ppt
+    bindsym k resize grow height 4 px or 3 ppt
+    bindsym l resize shrink height 4 px or 3 ppt
+    bindsym ntilde resize grow width 4 px or 3 ppt
+
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 4 px or 3 ppt
+    bindsym Down resize grow height 4 px or 3 ppt
+    bindsym Up resize shrink height 4 px or 3 ppt
+    bindsym Right resize grow width 4 px or 3 ppt
+
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+    }
+
+    bindsym $mod+r mode "resize"
+
+
+    # Start i4bar to display a workspace bar (plus the system information i3status
+    # finds out, if available)
+
+    #Apariencia de la barra#
+    #Podemos personalizar la barra cambiando fuentes, colores, posicion, etc.
+    bar {
+    #sudo apt-get install i3blocks
+    #position top
+    position bottom
+    mode hide
+    status_command i3status -c ~/.config/i3/i3status.conf
+    #i3bar_command /home/tajadillo/.config/i3/i3blocks
+    #i3bar_command i3bar -t
+    #status_command i3blocks -c ~/.config/i3/i3blocks/config
+    #status_command polybar
+    #separator_symbol ")("
+    height 21
+        colors {
+
+        background #222223
+        #background #ff22ff
+        statusline #eeeeee
+        separator #666667
+        #focused_workspace  #444445 #00aae4 #ffe570
+        active_workspace   #333334 #5f676a #eeffee
+        inactive_workspace #333334 #222222 #00b7eb
+        #urgent_workspace   #3f343a #900000 #ffffff
+
+        # batería normal
+        #focused_workspace  #373b41 #373b41 #81a2be
+
+        # batería baja (LOW)
+        urgent_workspace   #cc6666 #cc6666 #ffffff
+            }
+        }
+
+    #Color de los bordes "la ultima configuracion marca donde se abrira la siguiente ventana" con control+h y control+v (horizontal y vertical)
+    client.focused #444445 #bf7500 #444444 #ffff70
+
+
+    #Podemos mostrar o esconder la barra con una simple combinación de teclas
+    bindsym $mod+CTRL+b bar mode toggle
+
+    # Distingir cual de las ventanas tiene el foco
+    #La ultima configuración de color es para ver donde se colocara la siguiente ventana
+    #client.focused #bf7501 #bf7500 #bf7500 #ffe570
+    client.focused #338AFF #337AFF #337AFF #8633FF
+
+    #Notificaciones
+    # "Para esto tengo que tener instalado dunst"
+    exec --no-startup-id dunst
+
+    # Tema de cursores RT-AfroPeru (el tamaño se aplica en ~/.Xresources)
+    exec_always --no-startup-id xrdb -merge ~/.Xresources
+    exec_always --no-startup-id xsetroot -cursor_name left_ptr
+
+
+    #Bordes de las ventanas
+    # "Para esto tengo que tener instalado i4gaps"
+    gaps outer 6
+    gaps inner 9
+    smart_gaps on
+    smart_borders on
+
+    #Quitar titulos de las ventanas
+    for_window [class="^.*"] border pixel 4
+
+    #Ventana flotante video
+    for_window [class="mpv"] floating enable
+    for_window [class="vlc"] floating enable
+    #for_window [title="video1 - vlc"] sticky enable
+
+
+    #Idioma de teclado
+    #exec "setxkbmap -layout us,de"
+    exec "setxkbmap -layout es_ES"
+    exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
+    #Fondo de escritorio
+    # "Para esto tengo que tener instalado feh"
+    exec feh --bg-fill /home/tajadillo/Imágenes/wallpaper/fondo.jpg
+    #nitrogen
+    #instalando nitrogen se puede cambiar el fondo de pantalla de manera grafica
+    #exec_always --no-startup-id nitrogen --restore
+
+    #Transparencia
+    # "Para esto tengo que tener instalado picom"
+    # confifurar "sudo nvim /etc/xdg/picom.conf"
+    #estudiando bien la ruta correcta se aplica con este comando "cp /usr/share/doc/picom/examples/picom.sample.conf /home/tajadillo/.config/picom/picom.conf"
+    # colocar en false o true (verdadero o falso) "vsync"
+    exec picom -b -f
+
+
+    #Instalar xrandr y arandr para la configuracion de los monitores
+    #Instalar wps-office desde pagina oficial o con sudo apt install
+    #https://github.com/wachin/wps-office-all-mui-win-language
+    #https://github.com/CodigoCristo/wpsoffice
+
+    #Instalar lxappearance (interface grafica para seleccionar el tema, los iconos y la tipografia
+
+    #Instalar pulseaudio
+    #Instalar pavucontrol (controlador de audio de pulse audio)
+
+    #Instalar arc-theme (instala el tema de arc)
+    #Instalar papirus-icon-theme (tema de iconos de papirus)
+
+    #Instalar blueman (administrador de dispositivos y conexiones a través de bluetooth)
+
+    #Screenshot / Captura de pantalla
+    #para eso tengo que instalar scrot
+    bindsym $mod+t exec scrot -e 'mv $f ~/Imágenes/screenshot/'
+
+    #sudo apt-get install cheese
+    #para abrir webcam
+    #sudo apt-get install simplescreenrecorder
+    #para capturar en video lo q pasa en la pantalla del computador
+
+    #instalar texlive-full para comenzar a trabajar con LATEX como editor de texto tipo pdf entre otro tipo de extenciones
+    # instalar pdflatex para compilar pdf
+    #en esta pagina se puede ver algo de la documentacion para trabajar con LATEX    https://aprendeconalf.es/latex-manual/estructura.html
+
+    #notificacon de alerta bateria baja
+    #exec --no-startup-id ~/.config/polybar/battery_notify.sh
+    #exec --no-startup-id dunst
+    #exec --no-startup-id cbatticon -l 8 -c 5
+
+    #Confirma la configuración en lightdm-gtk-greeter.conf
+    #sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+###################################
+    #[greeter]
+#  background=/usr/share/backgrounds/michelangelo.png
+#  #user-background=
+#  theme-name=Arc-Dark
+#  icon-theme-name=Ars-Dark-Icons
+#  #font-name=
+#  #xft-antialias=
+#  #xft-dpi=
+#  #xft-hintstyle=
+#  #xft-rgba=
+#  #indicators=
+#  #clock-format=
+#  #keyboard=
+#  #reader=
+#  position=12% 10%
+#  #screensaver-timeout=
+###################################
+
+#escritorio ligero  y facil de configurar
+#sudo apt-get install --no-install-recommends xfce4
+
+#Alguna configuración de i3wm que me consegui en alguna parte
+#https://h4ckseed.wordpress.com/2020/09/19/i3wm-en-mi-vida-iv/
+
+
+# Autostart
+#exec --no-startup-id kitty &
+
+
+
+
+Sí. Revisé el contenido que pegaste de tu .bashrc y los alias para las WebApps que estamos creando no están definidos, con una excepción importante:
+
+alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+Ese chatgpt ya existe, pero no abre ChatGPT en Brave: ejecuta tu script chat_tgpt.sh para consultar ChatGPT desde la terminal. Por eso no conviene reemplazarlo sin decidir qué comportamiento quieres conservar.
+
+Tampoco encontré alias para:
+
+YouTube
+
+Gmail
+
+WhatsApp Web
+
+Spotify
+
+Instagram
+
+Telegram Web
+
+Discord
+
+GitHub
+
+Alias que te recomiendo agregar
+Yo los pondría en la sección:
+
+# -> Reproducción multimedia online
+o, mejor aún, crear una sección nueva:
+
+# =========================================================
+# WEBAPPS — BRAVE
+# =========================================================
+
+alias youtube='brave-browser --app=https://www.youtube.com &'
+alias gmail='brave-browser --app=https://mail.google.com &'
+alias whatsapp='brave-browser --app=https://web.whatsapp.com &'
+alias spotify='brave-browser --app=https://open.spotify.com &'
+alias instagram='brave-browser --app=https://www.instagram.com &'
+alias telegram='brave-browser --app=https://web.telegram.org &'
+alias discord='brave-browser --app=https://discord.com/app &'
+alias github='brave-browser --app=https://github.com &'
+El & es importante porque permite que Brave se abra y tú recuperes inmediatamente el terminal.
+
+Por ejemplo:
+
+youtube
+abre:
+
+Brave
+  └── YouTube
+      └── ventana independiente --app
+¿Y chatgpt?
+Aquí tienes dos posibilidades.
+
+Opción A — conservar tu ChatGPT de terminal
+No toques esto:
+
+alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+Y crea otro alias para la WebApp:
+
+alias chatgpt-web='brave-browser --app=https://chatgpt.com &'
+Así tendrás:
+
+chatgpt
+→ tu ChatGPT actual de terminal.
+
+chatgpt-web
+→ ChatGPT como ventana independiente de Brave.
+
+Esta es la opción que te recomiendo.
+
+Tu bloque completo quedaría así
+Puedes añadirlo al final de tu sección de aliases:
+
+# =========================================================
+# WEBAPPS — BRAVE
+# RT-Linux-Theme
+# =========================================================
+
+alias youtube='brave-browser --app=https://www.youtube.com &'
+alias gmail='brave-browser --app=https://mail.google.com &'
+alias whatsapp='brave-browser --app=https://web.whatsapp.com &'
+alias spotify='brave-browser --app=https://open.spotify.com &'
+alias instagram='brave-browser --app=https://www.instagram.com &'
+alias telegram='brave-browser --app=https://web.telegram.org &'
+alias discord='brave-browser --app=https://discord.com/app &'
+alias github='brave-browser --app=https://github.com &'
+
+# ChatGPT Web — no reemplaza el ChatGPT de terminal
+alias chatgpt-web='brave-browser --app=https://chatgpt.com &'
+Y mantienes intacto tu:
+
+alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+Después de modificar .bashrc
+No necesitas cerrar la terminal. Ejecuta:
+
+source ~/.bashrc
+o:
+
+. ~/.bashrc
+Y prueba:
+
+youtube
+gmail
+whatsapp
+spotify
+chatgpt-web
+Algo importante que veo en tu configuración
+Ya tienes una estructura bastante grande de aliases y configuraciones personalizadas. No te recomendaría seguir metiendo todos los aliases directamente en .bashrc.
+
+Ya tienes esta parte:
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+Eso significa que Bash ya está preparado para cargar ~/.bash_aliases.
+
+Por tanto, una organización más limpia para tu RT-Linux-Theme sería:
+
+~/
+├── .bashrc
+├── .bash_aliases
+│
+└── RT-Linux-Theme/
+    └── webapps/
+        ├── icons/
+        └── applications/
+Y poner todos los alias de WebApps en ~/.bash_aliases, dejando .bashrc para configuración del shell, prompt, Git, colores, etc.
+
+Incluso podemos organizar tu .bash_aliases por bloques:
+
+.bash_aliases
+│
+├── Archivos
+├── Navegación
+├── Multimedia
+├── Sistema
+├── Juegos
+├── Git
+├── ChatGPT
+├── WebApps
+└── RT-Linux-Theme
+Eso sería bastante más limpio que seguir haciendo crecer el .bashrc que ya tienes.
+
+Los archivos, las imágenes y el análisis de datos no estarán disponibles hasta que tu uso se restablezca a las 7:46 a.m.. Continúa chateando solo con texto o mejora tu plan para tener más acceso.
+Prueba Plus gratis
+
