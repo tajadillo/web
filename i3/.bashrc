@@ -270,9 +270,7 @@ alias apagar='sudo shutdown -h now'
 alias reiniciar='sudo shutdown -r now'
 
 # Información archivos multimedia .mp3 y .mp4
-# mediainfo normbre_del_archivo.formato_del_archivo
-#ejemplo
-# mediainfo archivo.mp3 ó archivo.mp4 ó archivo.acc
+# mediainfo archivo.mp3 ó archivo.mp4
 
 # -> Reproducción multimedia online
 alias radio='bash /home/tajadillo/radio/radio.sh'
@@ -300,7 +298,7 @@ alias pacman=pacman4console
 alias bicicleta=moon-buggy
 alias naves=ninvaders
 
-d#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
+#atención a esta opsión solo si no se puede instalar 'highlight', entonces descargar é instalar 'sudo dpkg https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb'
 #alias cat='cat -n | highlight -O ansi -n'
 # instalar sudo apt-get install highlight para complementar al comando 'cat'
 
@@ -319,12 +317,28 @@ alias invisible='proxychains brave-browser google.com'
 alias procesos='ps -fax'
 
 # -> Consultar a chatgpt
-alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
+#alias chatgpt='bash /usr/local/bin/chat_tgpt.sh'
 
 # -> Consultar horas especificas
 alias horaPeru='bash reloj'
 alias horaMundo='bash /usr/local/bin/reloj.sh'
 
+# =========================================================
+# WEBAPPS — BRAVE
+# RT-Linux-Theme
+# =========================================================
+
+alias youtube='brave-browser --app=https://www.youtube.com &'
+alias gmail='brave-browser --app=https://mail.google.com &'
+alias whatsapp='brave-browser --app=https://web.whatsapp.com &'
+alias spotify='brave-browser --app=https://open.spotify.com &'
+alias instagram='brave-browser --app=https://www.instagram.com &'
+alias telegram='brave-browser --app=https://web.telegram.org &'
+alias discord='brave-browser --app=https://discord.com/app &'
+alias github='brave-browser --app=https://github.com &'
+
+# ChatGPT Web — no reemplaza el ChatGPT de terminal
+alias chatgpt-web='brave-browser --app=https://chatgpt.com &'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -373,3 +387,6 @@ neofetch
 
 #cmatrix -a
 
+
+# opencode
+export PATH=/home/tajadillo/.opencode/bin:$PATH
