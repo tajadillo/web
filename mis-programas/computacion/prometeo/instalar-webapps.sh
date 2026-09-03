@@ -120,7 +120,7 @@ echo
 echo "Descargando iconos..."
 echo
 
-for APP in youtube gmail whatsapp spotify instagram telegram discord github
+for APP in youtube gmail whatsapp spotify instagram telegram discord github outlook
 do
 
     ICON_FILE="$ICON_DIR/$APP.svg"
@@ -250,12 +250,3 @@ echo "=============================================="
 echo " RT-Linux-Theme WebApps listo."
 echo "=============================================="
 echo
-
-
-
-
-# ============================================================
-# 11. ACTUALIZAR ROFI
-# ============================================================
-
-#luego ejecutar "rofi -show drun"
