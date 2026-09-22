@@ -1,0 +1,5 @@
+Con este comando se abre la paleta de temas de la terminal kitty
+
+##########################
+###### kitten themes #####
+##########################
