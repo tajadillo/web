@@ -1,0 +1,1 @@
+guardar en la ruta /home/tajadillo/.local/share
