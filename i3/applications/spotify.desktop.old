@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Spotify
+GenericName=Spotify
+Comment=Spotify en Brave
+Exec=brave-browser --app=https://open.spotify.com
+Icon=/home/tajadillo/Descargas/RT-Linux-Theme/instalador/RT-Linux-Theme/webapps/icons/spotify.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

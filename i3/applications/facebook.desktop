@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Facebook
+GenericName=Facebook
+Comment=Facebook en Brave
+Exec=brave-browser --app=https://www.facebook.com/
+Icon=/home/tajadillo/.local/share/applications/facebook-brands-solid-full.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Outlook
+GenericName=Outlook
+Comment=Outlook en Brave
+Exec=brave-browser --app=https://outlook.live.com/mail/
+Icon=/home/tajadillo/Descargas/RT-Linux-Theme/instalador/RT-Linux-Theme/webapps/icons/outlook.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

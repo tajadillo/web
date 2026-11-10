@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Telegram Web
+GenericName=Telegram Web
+Comment=Telegram Web en Brave
+Exec=brave-browser --app=https://web.telegram.org
+Icon=/home/tajadillo/Descargas/RT-Linux-Theme/instalador/RT-Linux-Theme/webapps/icons/telegram.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

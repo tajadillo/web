@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Chatgpt
+GenericName=Chatgpt
+Comment=Chatgpt Web en Brave
+Exec=brave-browser --app=https://chatgpt.com/
+Icon=/home/tajadillo/Descargas/RT-Linux-Theme/instalador/RT-Linux-Theme/webapps/icons/chatgpt-icon.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

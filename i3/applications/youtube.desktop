@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YouTube
+GenericName=YouTube
+Comment=YouTube en Brave
+Exec=brave-browser --app=https://www.youtube.com
+Icon=/home/tajadillo/Descargas/RT-Linux-Theme/instalador/RT-Linux-Theme/webapps/icons/youtube.svg
+Terminal=false
+StartupNotify=true
+Categories=Network;

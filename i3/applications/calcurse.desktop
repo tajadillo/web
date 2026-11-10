@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Calendario
+Comment=Calendario y gestor de tareas en terminal
+Categories=Office;Calendar;ConsoleOnly;
+Exec=calcurse
+Icon=calcurse
+Terminal=true
+StartupNotify=false
